@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <defs>
+    <pattern id="subtleGrid" patternUnits="userSpaceOnUse" width="20" height="20">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff" stroke-width="0.2" opacity="0.3"/>
+    </pattern>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="partnerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <dropShadow dx="3" dy="3" stdDeviation="4" flood-color="#0000001a"/>
+    </filter>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#subtleGrid)"/>
+  <rect x="0" y="0" width="1920" height="4" fill="url(#headerGradient)"/>
+  
+  <!-- Header -->
+  <g id="header">
+    <text x="960" y="60" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+      Partners &amp; Acknowledgments
+    </text>
+    <text x="960" y="95" font-family="Arial, sans-serif" font-size="18" font-weight="300" text-anchor="middle" fill="#475569">
+      Collaborative Research Network • International Partnership
+    </text>
+  </g>
+  
+  <!-- Heat Center Logo Placeholder -->
+  <g id="heat-center" transform="translate(400, 130)">
+    <rect width="1120" height="120" rx="12" ry="12" fill="url(#partnerGradient)" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+    
+    <!-- Heat Center Logo Symbol -->
+    <g transform="translate(60, 30)">
+      <!-- Stylized sun/heat symbol -->
+      <circle cx="30" cy="30" r="25" fill="#f59e0b" opacity="0.8"/>
+      <g stroke="#f59e0b" stroke-width="3" opacity="0.6">
+        <!-- Sun rays -->
+        <line x1="30" y1="0" x2="30" y2="10"/>
+        <line x1="30" y1="50" x2="30" y2="60"/>
+        <line x1="0" y1="30" x2="10" y2="30"/>
+        <line x1="50" y1="30" x2="60" y2="30"/>
+        <line x1="8.8" y1="8.8" x2="15.9" y2="15.9"/>
+        <line x1="44.1" y1="44.1" x2="51.2" y2="51.2"/>
+        <line x1="51.2" y1="8.8" x2="44.1" y2="15.9"/>
+        <line x1="15.9" y1="44.1" x2="8.8" y2="51.2"/>
+      </g>
+      <!-- Inner circle -->
+      <circle cx="30" cy="30" r="12" fill="#dc2626"/>
+      <text x="30" y="36" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">H</text>
+    </g>
+    
+    <text x="200" y="50" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#dc2626">THE HEAT CENTER</text>
+    <text x="200" y="75" font-family="Arial, sans-serif" font-size="16" fill="#475569">Leading Climate-Health Research Initiative</text>
+    <text x="200" y="95" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">International collaborative network advancing climate-health science</text>
+  </g>
+  
+  <!-- Partner Organizations Grid -->
+  <g id="partners-grid" transform="translate(140, 280)">
+    
+    <!-- Row 1: Primary Academic Partners -->
+    <g transform="translate(0, 0)">
+      <!-- UPGC -->
+      <g>
+        <rect width="520" height="100" rx="8" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+        <circle cx="40" cy="50" r="18" fill="#7c3aed" opacity="0.8"/>
+        <text x="40" y="56" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">UPGC</text>
+        <text x="80" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7c3aed">University of the Witwatersrand</text>
+        <text x="80" y="55" font-family="Arial, sans-serif" font-size="14" fill="#374151">Urban Planning &amp; Geospatial Computing</text>
+        <text x="80" y="75" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">South Africa</text>
+      </g>
+      
+      <!-- UCT Climate Science -->
+      <g transform="translate(560, 0)">
+        <rect width="520" height="100" rx="8" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+        <circle cx="40" cy="50" r="18" fill="#2563eb" opacity="0.8"/>
+        <text x="40" y="56" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff">UCT</text>
+        <text x="80" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">University of Cape Town</text>
+        <text x="80" y="55" font-family="Arial, sans-serif" font-size="14" fill="#374151">Climate Science &amp; Analysis Group</text>
+        <text x="80" y="75" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">South Africa</text>
+      </g>
+      
+      <!-- IBM Research -->
+      <g transform="translate(1120, 0)">
+        <rect width="520" height="100" rx="8" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+        <rect x="25" y="32" width="30" height="36" rx="3" ry="3" fill="#1f2937"/>
+        <rect x="28" y="35" width="24" height="6" fill="#3b82f6"/>
+        <rect x="28" y="43" width="20" height="6" fill="#10b981"/>
+        <rect x="28" y="51" width="16" height="6" fill="#f59e0b"/>
+        <rect x="28" y="59" width="12" height="6" fill="#ef4444"/>
+        <text x="80" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1f2937">IBM Research</text>
+        <text x="80" y="55" font-family="Arial, sans-serif" font-size="14" fill="#374151">Data Science &amp; AI Solutions</text>
+        <text x="80" y="75" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">South Africa</text>
+      </g>
+    </g>
+    
+    <!-- Row 2: International Partners -->
+    <g transform="translate(0, 130)">
+      <!-- Seishar Zimbabwe -->
+      <g>
+        <rect width="520" height="100" rx="8" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+        <circle cx="40" cy="50" r="18" fill="#16a34a" opacity="0.8"/>
+        <text x="40" y="56" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">SEI</text>
+        <text x="80" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">Seishar</text>
+        <text x="80" y="55" font-family="Arial, sans-serif" font-size="14" fill="#374151">Environmental Health Research</text>
+        <text x="80" y="75" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Zimbabwe</text>
+      </g>
+      
+      <!-- University of Michigan -->
+      <g transform="translate(560, 0)">
+        <rect width="520" height="100" rx="8" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+        <rect x="25" y="32" width="30" height="36" rx="3" ry="3" fill="#ffcb05"/>
+        <text x="40" y="56" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#00274c">M</text>
+        <text x="80" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00274c">University of Michigan</text>
+        <text x="80" y="55" font-family="Arial, sans-serif" font-size="14" fill="#374151">Global Health &amp; Climate Science</text>
+        <text x="80" y="75" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">United States</text>
+      </g>
+      
+      <!-- DSI Africa -->
+      <g transform="translate(1120, 0)">
+        <rect width="520" height="100" rx="8" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="2" filter="url(#cardShadow)"/>
+        <circle cx="40" cy="50" r="18" fill="#f97316" opacity="0.8"/>
+        <text x="40" y="56" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">DSI</text>
+        <text x="80" y="35" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#f97316">DSI Africa</text>
+        <text x="80" y="55" font-family="Arial, sans-serif" font-size="14" fill="#374151">Data Science Initiative</text>
+        <text x="80" y="75" font-family="Arial, sans-serif" font-size="12" fill="#6b7280">Continental Network</text>
+      </g>
+    </g>
+    
+    <!-- Row 3: Wits Planetary Health (Special Acknowledgment) -->
+    <g transform="translate(280, 260)">
+      <rect width="1080" height="120" rx="12" ry="12" fill="url(#partnerGradient)" stroke="#16a34a" stroke-width="3" filter="url(#cardShadow)"/>
+      
+      <!-- Planetary Health Symbol -->
+      <g transform="translate(60, 35)">
+        <circle cx="25" cy="25" r="20" fill="none" stroke="#16a34a" stroke-width="2"/>
+        <circle cx="25" cy="25" r="12" fill="none" stroke="#2563eb" stroke-width="2"/>
+        <circle cx="25" cy="25" r="6" fill="#10b981"/>
+        <!-- Orbiting elements -->
+        <circle cx="45" cy="25" r="3" fill="#f59e0b"/>
+        <circle cx="25" cy="45" r="2" fill="#ec4899"/>
+        <circle cx="5" cy="25" r="2" fill="#8b5cf6"/>
+        <circle cx="25" cy="5" r="2" fill="#ef4444"/>
+      </g>
+      
+      <text x="130" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#16a34a">WITS PLANETARY HEALTH</text>
+      <text x="130" y="65" font-family="Arial, sans-serif" font-size="16" fill="#374151">University of the Witwatersrand</text>
+      <text x="130" y="85" font-family="Arial, sans-serif" font-size="14" fill="#6b7280">Interdisciplinary climate-health research excellence</text>
+      <text x="130" y="105" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#16a34a">Special thanks to colleagues and collaborators</text>
+    </g>
+  </g>
+  
+  <!-- Collaborative Excellence Statement -->
+  <g id="collaboration-statement" transform="translate(200, 690)">
+    <rect width="1520" height="140" rx="12" ry="12" fill="#ffffff" stroke="#6366f1" stroke-width="2" filter="url(#cardShadow)"/>
+    
+    <!-- Header bar -->
+    <rect x="0" y="0" width="1520" height="45" rx="12" ry="12" fill="#6366f1"/>
+    <rect x="0" y="30" width="1520" height="15" fill="#6366f1"/>
+    
+    <text x="760" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Collaborative Excellence in Climate-Health Research
+    </text>
+    
+    <g transform="translate(60, 65)">
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#6366f1">
+        This research exemplifies the power of international collaboration:
+      </text>
+      
+      <text x="0" y="50" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Multi-continental expertise spanning data science, climate science, public health, and environmental epidemiology
+      </text>
+      <text x="0" y="70" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • African-led research with global impact, addressing critical climate-health challenges in urban environments
+      </text>
+      <text x="0" y="90" font-family="Arial, sans-serif" font-size="14" fill="#374151">
+        • Integration of cutting-edge statistical methods with local knowledge and community-centered approaches
+      </text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g id="footer" transform="translate(0, 860)">
+    <rect x="140" y="0" width="1640" height="100" rx="10" ry="10" fill="#1e3a8a" opacity="0.95"/>
+    
+    <text x="960" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Global Partnership • Local Impact • Scientific Excellence
+    </text>
+    <text x="960" y="55" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#cbd5e1">
+      Thank you to all partners, colleagues, and collaborators who made this breakthrough research possible
+    </text>
+    
+    <!-- Contact and funding acknowledgment -->
+    <text x="960" y="80" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#94a3b8">
+      Funding support gratefully acknowledged • For collaboration inquiries: planetary.health@wits.ac.za
+    </text>
+  </g>
+  
+  <!-- Slide number -->
+  <text x="1850" y="1060" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b">10 / 11</text>
+  
+</svg>

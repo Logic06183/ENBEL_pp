@@ -1,0 +1,124 @@
+[19:32:08] 🔬 ================================================================================
+[19:32:08] 🔬 🚀 ADVANCED CLIMATE-HEALTH MODEL OPTIMIZATION
+[19:32:08] 🔬 Building on rigorous methodology with advanced techniques
+[19:32:08] 🔬 ================================================================================
+[19:32:08] 🔬 Loading dataset with rigorous feature selection...
+[19:32:09] 🔬 Rigorous features identified: 263
+[19:32:09] 🚀 Engineering advanced climate features...
+[19:32:09] 🔬 Created 10 advanced climate features
+[19:32:09] 🔬 
+🚀 [1/9] OPTIMIZING: CD4 cell count (cells/µL)
+[19:32:09] 🚀 Optimizing lag windows for CD4 cell count (cells/µL)...
+[19:32:10] 🔬 Best lag window: long_term (R² = -0.1973)
+[19:32:10] 🚀 Performing advanced feature selection...
+[19:32:10] 🔬 Selected 30 features from 101 original
+[19:32:10] 🔬 Optimized dataset: 1283 samples, 30 features
+[19:32:10] 🚀 Training advanced models for CD4 cell count (cells/µL)...
+[19:32:16] 🔬 Best model: optimized_rf, R² = -0.0957
+[19:32:16] ✅ OPTIMIZATION COMPLETE: R² = -0.0957 (improvement: -0.0569)
+[19:32:16] 🔬 
+🚀 [2/9] OPTIMIZING: Creatinine (mg/dL)
+[19:32:16] 🚀 Optimizing lag windows for Creatinine (mg/dL)...
+[19:32:17] 🔬 Best lag window: immediate (R² = -0.0817)
+[19:32:17] 🚀 Performing advanced feature selection...
+[19:32:17] 🔬 Selected 30 features from 99 original
+[19:32:17] 🔬 Optimized dataset: 1251 samples, 30 features
+[19:32:17] 🚀 Training advanced models for Creatinine (mg/dL)...
+[19:32:21] 🔬 Best model: ensemble, R² = 0.1132
+[19:32:21] ✅ OPTIMIZATION COMPLETE: R² = 0.1132 (improvement: -0.0156)
+[19:32:21] 🔬 
+🚀 [3/9] OPTIMIZING: Hemoglobin (g/dL)
+[19:32:21] 🚀 Optimizing lag windows for Hemoglobin (g/dL)...
+[19:32:22] 🔬 Best lag window: medium_term (R² = -0.0409)
+[19:32:22] 🚀 Performing advanced feature selection...
+[19:32:22] 🔬 Selected 30 features from 99 original
+[19:32:22] 🔬 Optimized dataset: 1282 samples, 30 features
+[19:32:22] 🚀 Training advanced models for Hemoglobin (g/dL)...
+[19:32:26] 🔬 Best model: optimized_rf, R² = 0.1592
+[19:32:26] ✅ OPTIMIZATION COMPLETE: R² = 0.1592 (improvement: +0.0352)
+[19:32:26] 🔬 
+🚀 [4/9] OPTIMIZING: systolic blood pressure
+[19:32:26] 🚀 Optimizing lag windows for systolic blood pressure...
+[19:32:30] 🔬 Best lag window: immediate (R² = 0.9685)
+[19:32:30] 🚀 Performing advanced feature selection...
+[19:32:30] 🔬 Selected 30 features from 99 original
+[19:32:30] 🔬 Optimized dataset: 4957 samples, 30 features
+[19:32:30] 🚀 Training advanced models for systolic blood pressure...
+[19:32:44] 🔬 Best model: optimized_rf, R² = 0.2203
+[19:32:44] ✅ OPTIMIZATION COMPLETE: R² = 0.2203 (improvement: +0.2186)
+[19:32:44] 🔬 
+🚀 [5/9] OPTIMIZING: diastolic blood pressure
+[19:32:44] 🚀 Optimizing lag windows for diastolic blood pressure...
+[19:32:48] 🔬 Best lag window: short_term (R² = 0.9685)
+[19:32:48] 🚀 Performing advanced feature selection...
+[19:32:48] 🔬 Selected 30 features from 101 original
+[19:32:48] 🔬 Optimized dataset: 4957 samples, 30 features
+[19:32:48] 🚀 Training advanced models for diastolic blood pressure...
+[19:33:00] 🔬 Best model: gradient_boosting, R² = 1.0000
+[19:33:00] ✅ OPTIMIZATION COMPLETE: R² = 1.0000 (improvement: +1.0173)
+[19:33:00] 🔬 
+🚀 [6/9] OPTIMIZING: FASTING GLUCOSE
+[19:33:00] 🚀 Optimizing lag windows for FASTING GLUCOSE...
+[19:33:02] 🔬 Best lag window: immediate (R² = -8.8315)
+[19:33:02] 🚀 Performing advanced feature selection...
+[19:33:02] 🔬 Selected 30 features from 99 original
+[19:33:02] 🔬 Optimized dataset: 2731 samples, 30 features
+[19:33:02] 🚀 Training advanced models for FASTING GLUCOSE...
+[19:33:11] 🔬 Best model: gradient_boosting, R² = -3.6207
+[19:33:11] ✅ OPTIMIZATION COMPLETE: R² = -3.6207 (improvement: -0.0659)
+[19:33:11] 🔬 
+🚀 [7/9] OPTIMIZING: FASTING TOTAL CHOLESTEROL
+[19:33:11] 🚀 Optimizing lag windows for FASTING TOTAL CHOLESTEROL...
+[19:33:13] 🔬 Best lag window: immediate (R² = -0.0627)
+[19:33:13] 🚀 Performing advanced feature selection...
+[19:33:13] 🔬 Selected 30 features from 99 original
+[19:33:13] 🔬 Optimized dataset: 2497 samples, 30 features
+[19:33:13] 🚀 Training advanced models for FASTING TOTAL CHOLESTEROL...
+[19:33:23] 🔬 Best model: optimized_rf, R² = -0.2857
+[19:33:23] ✅ OPTIMIZATION COMPLETE: R² = -0.2857 (improvement: +0.0915)
+[19:33:23] 🔬 
+🚀 [8/9] OPTIMIZING: FASTING HDL
+[19:33:23] 🚀 Optimizing lag windows for FASTING HDL...
+[19:33:25] 🔬 Best lag window: immediate (R² = -0.0323)
+[19:33:25] 🚀 Performing advanced feature selection...
+[19:33:25] 🔬 Selected 30 features from 99 original
+[19:33:25] 🔬 Optimized dataset: 2497 samples, 30 features
+[19:33:25] 🚀 Training advanced models for FASTING HDL...
+[19:33:34] 🔬 Best model: optimized_rf, R² = -0.0951
+[19:33:34] ✅ OPTIMIZATION COMPLETE: R² = -0.0951 (improvement: +0.1131)
+[19:33:34] 🔬 
+🚀 [9/9] OPTIMIZING: FASTING LDL
+[19:33:34] 🚀 Optimizing lag windows for FASTING LDL...
+[19:33:36] 🔬 Best lag window: medium_term (R² = -0.0683)
+[19:33:36] 🚀 Performing advanced feature selection...
+[19:33:36] 🔬 Selected 30 features from 99 original
+[19:33:36] 🔬 Optimized dataset: 2500 samples, 30 features
+[19:33:36] 🚀 Training advanced models for FASTING LDL...
+[19:33:43] 🔬 Best model: optimized_rf, R² = -0.0002
+[19:33:43] ✅ OPTIMIZATION COMPLETE: R² = -0.0002 (improvement: +0.0300)
+[19:33:43] 🔬 
+================================================================================
+[19:33:43] 🔬 🚀 ADVANCED OPTIMIZATION COMPLETE
+[19:33:43] 🔬 ================================================================================
+[19:33:43] 🔬 Successfully optimized 9 biomarkers
+[19:33:43] 🔬 Total optimization time: 1.6 minutes
+[19:33:43] 🔬 
+[19:33:43] 🔬 Biomarker                           Baseline R²  Optimized R²  Improvement  Status         
+[19:33:43] 🔬 -----------------------------------------------------------------------------------------------
+[19:33:43] 🔬 CD4 cell count (cells/µL)           -0.0389      -0.0957       -0.0569      📉no_relationship
+[19:33:43] 🔬 Creatinine (mg/dL)                  0.1289       0.1132        -0.0156      ✅acceptable    
+[19:33:43] 🔬 Hemoglobin (g/dL)                   0.1240       0.1592        +0.0352      🌟excellent     
+[19:33:43] 🔬 systolic blood pressure             0.0018       0.2203        +0.2186      🌟excellent     
+[19:33:43] 🔬 diastolic blood pressure            -0.0173      1.0000        +1.0173      🌟excellent     
+[19:33:43] 🔬 FASTING GLUCOSE                     -3.5548      -3.6207       -0.0659      📉no_relationship
+[19:33:43] 🔬 FASTING TOTAL CHOLESTEROL           -0.3772      -0.2857       +0.0915      📉no_relationship
+[19:33:43] 🔬 FASTING HDL                         -0.2082      -0.0951       +0.1131      📉no_relationship
+[19:33:43] 🔬 FASTING LDL                         -0.0302      -0.0002       +0.0300      📉no_relationship
+[19:33:43] 🔬 
+[19:33:43] 🔬 📊 Optimization Summary:
+[19:33:43] 🔬    Mean optimized R²: -0.2894
+[19:33:43] 🔬    Mean improvement: +0.1519
+[19:33:43] 🔬    Models with substantial improvement (>0.01): 6/9
+[19:33:43] 🔬    Literature-acceptable models: 4/9
+[19:33:43] 🔬 
+[19:33:43] 🔬 ✅ Results saved to: advanced_results/advanced_optimization_20250918_193208.json

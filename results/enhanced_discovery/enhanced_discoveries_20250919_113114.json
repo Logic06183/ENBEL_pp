@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "timestamp": "20250919_113114",
+    "analysis_type": "enhanced_discovery_analysis",
+    "strategies_implemented": 5,
+    "analysis_time_minutes": 0.057012534141540526,
+    "total_discoveries": 3
+  },
+  "discoveries": {
+    "composite_indices": {},
+    "subpopulation_effects": {},
+    "interaction_effects": {},
+    "temporal_patterns": {
+      "FASTING GLUCOSE_longterm_climate": {
+        "biomarker": "FASTING GLUCOSE",
+        "pattern_type": "long_term_annual",
+        "r2": 0.7322564198332118,
+        "n_years": 6,
+        "climate_features": [
+          "temperature_tas_lag0",
+          "land_temp_tas_lag0",
+          "apparent_temp_lag0"
+        ]
+      },
+      "FASTING TOTAL CHOLESTEROL_longterm_climate": {
+        "biomarker": "FASTING TOTAL CHOLESTEROL",
+        "pattern_type": "long_term_annual",
+        "r2": 0.41759562844724774,
+        "n_years": 7,
+        "climate_features": [
+          "temperature_tas_lag0",
+          "land_temp_tas_lag0",
+          "apparent_temp_lag0"
+        ]
+      },
+      "FASTING HDL_longterm_climate": {
+        "biomarker": "FASTING HDL",
+        "pattern_type": "long_term_annual",
+        "r2": 0.3724597706721203,
+        "n_years": 7,
+        "climate_features": [
+          "temperature_tas_lag0",
+          "land_temp_tas_lag0",
+          "apparent_temp_lag0"
+        ]
+      }
+    },
+    "multi_output": {}
+  }
+}

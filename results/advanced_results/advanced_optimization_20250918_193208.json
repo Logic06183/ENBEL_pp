@@ -1,0 +1,632 @@
+{
+  "metadata": {
+    "timestamp": "20250918_193208",
+    "methodology": "advanced_climate_health_optimization",
+    "total_biomarkers_optimized": 9,
+    "optimization_time_minutes": 1.5797555009524027,
+    "techniques_used": [
+      "advanced_feature_engineering",
+      "optimal_lag_windows",
+      "multiple_algorithms",
+      "ensemble_methods",
+      "literature_validation"
+    ]
+  },
+  "optimization_results": {
+    "CD4 cell count (cells/\u00b5L)": {
+      "biomarker": "CD4 cell count (cells/\u00b5L)",
+      "n_samples": 1283,
+      "n_features": 30,
+      "optimal_lag_window": "long_term",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=10, min_samples_split=10,\n                      n_estimators=200, n_jobs=-1, random_state=42)",
+          "r2": -0.09574779557956314,
+          "mae": 84.04666625597861,
+          "params": {
+            "max_depth": 5,
+            "min_samples_leaf": 10,
+            "min_samples_split": 10,
+            "n_estimators": 200
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": -0.2921395874133452,
+          "mae": 91.49259455310721
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": -0.1737795803932507,
+          "mae": 85.65277639099662
+        },
+        "ensemble": {
+          "r2": -0.11833956387067279,
+          "mae": 84.07051078244001,
+          "components": [
+            "optimized_rf",
+            "gradient_boosting"
+          ]
+        }
+      },
+      "best_model": "optimized_rf",
+      "best_performance": {
+        "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=10, min_samples_split=10,\n                      n_estimators=200, n_jobs=-1, random_state=42)",
+        "r2": -0.09574779557956314,
+        "mae": 84.04666625597861,
+        "params": {
+          "max_depth": 5,
+          "min_samples_leaf": 10,
+          "min_samples_split": 10,
+          "n_estimators": 200
+        }
+      },
+      "baseline_r2": -0.038852143481593604,
+      "improvement": -0.05689565209796954,
+      "literature_validation": {
+        "category": "immune",
+        "status": "no_relationship",
+        "target_r2": 0.1,
+        "min_acceptable": 0.03,
+        "improvement": -0.05689565209796954
+      },
+      "selected_features": [
+        "systolic blood pressure",
+        "temperature",
+        "humidity",
+        "wind_speed",
+        "temperature_max",
+        "temperature_min",
+        "humidity_min",
+        "temp_mean_3d",
+        "cooling_degree_days_3d",
+        "utci_mean_3d"
+      ]
+    },
+    "Creatinine (mg/dL)": {
+      "biomarker": "Creatinine (mg/dL)",
+      "n_samples": 1251,
+      "n_features": 30,
+      "optimal_lag_window": "immediate",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=10, min_samples_split=20,\n                      n_jobs=-1, random_state=42)",
+          "r2": 0.10892382842478066,
+          "mae": 0.11826704653323268,
+          "params": {
+            "max_depth": 5,
+            "min_samples_leaf": 10,
+            "min_samples_split": 20,
+            "n_estimators": 100
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": -0.02029282118547071,
+          "mae": 0.12484233253718093
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": 0.08099965467809245,
+          "mae": 0.11909907304501412
+        },
+        "ensemble": {
+          "r2": 0.11322648810124836,
+          "mae": 0.11753025798072268,
+          "components": [
+            "optimized_rf",
+            "gradient_boosting"
+          ]
+        }
+      },
+      "best_model": "ensemble",
+      "best_performance": {
+        "r2": 0.11322648810124836,
+        "mae": 0.11753025798072268,
+        "components": [
+          "optimized_rf",
+          "gradient_boosting"
+        ]
+      },
+      "baseline_r2": 0.12887217323410305,
+      "improvement": -0.015645685132854692,
+      "literature_validation": {
+        "category": "renal",
+        "status": "acceptable",
+        "target_r2": 0.2,
+        "min_acceptable": 0.08,
+        "improvement": -0.015645685132854692
+      },
+      "selected_features": [
+        "systolic blood pressure",
+        "diastolic blood pressure",
+        "wind_speed",
+        "heat_index",
+        "humidity_max",
+        "humidity_min",
+        "heat_index_max",
+        "heat_index_min",
+        "apparent_temp",
+        "temp_mean_3d"
+      ]
+    },
+    "Hemoglobin (g/dL)": {
+      "biomarker": "Hemoglobin (g/dL)",
+      "n_samples": 1282,
+      "n_features": 30,
+      "optimal_lag_window": "medium_term",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=5, min_samples_split=20,\n                      n_jobs=-1, random_state=42)",
+          "r2": 0.15917772568176425,
+          "mae": 1.2792914329995544,
+          "params": {
+            "max_depth": 5,
+            "min_samples_leaf": 5,
+            "min_samples_split": 20,
+            "n_estimators": 100
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": 0.10639282731405397,
+          "mae": 1.333321236284641
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": 0.08502716996252635,
+          "mae": 1.3399225516594695
+        },
+        "ensemble": {
+          "r2": 0.15037451250047074,
+          "mae": 1.2929001226901564,
+          "components": [
+            "optimized_rf",
+            "lightgbm"
+          ]
+        }
+      },
+      "best_model": "optimized_rf",
+      "best_performance": {
+        "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=5, min_samples_split=20,\n                      n_jobs=-1, random_state=42)",
+        "r2": 0.15917772568176425,
+        "mae": 1.2792914329995544,
+        "params": {
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "min_samples_split": 20,
+          "n_estimators": 100
+        }
+      },
+      "baseline_r2": 0.12402676962209513,
+      "improvement": 0.035150956059669114,
+      "literature_validation": {
+        "category": "metabolic",
+        "status": "excellent",
+        "target_r2": 0.08,
+        "min_acceptable": 0.02,
+        "improvement": 0.035150956059669114
+      },
+      "selected_features": [
+        "systolic blood pressure",
+        "diastolic blood pressure",
+        "temperature_range",
+        "wind_gust",
+        "heat_index_max",
+        "temp_mean_3d",
+        "cooling_degree_days_3d",
+        "utci_mean_3d",
+        "utci_max_3d",
+        "cooling_degree_days_5d"
+      ]
+    },
+    "systolic blood pressure": {
+      "biomarker": "systolic blood pressure",
+      "n_samples": 4957,
+      "n_features": 30,
+      "optimal_lag_window": "immediate",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=8, min_samples_leaf=5, min_samples_split=20,\n                      n_estimators=200, n_jobs=-1, random_state=42)",
+          "r2": 0.2203328015089071,
+          "mae": 8.88314250842392,
+          "params": {
+            "max_depth": 8,
+            "min_samples_leaf": 5,
+            "min_samples_split": 20,
+            "n_estimators": 200
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": 0.19235688156433595,
+          "mae": 9.002593222510086
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": 0.16805241104146917,
+          "mae": 8.913163739930987
+        },
+        "ensemble": {
+          "r2": 0.21371509136688804,
+          "mae": 8.899477369092514,
+          "components": [
+            "optimized_rf",
+            "lightgbm"
+          ]
+        }
+      },
+      "best_model": "optimized_rf",
+      "best_performance": {
+        "model": "RandomForestRegressor(max_depth=8, min_samples_leaf=5, min_samples_split=20,\n                      n_estimators=200, n_jobs=-1, random_state=42)",
+        "r2": 0.2203328015089071,
+        "mae": 8.88314250842392,
+        "params": {
+          "max_depth": 8,
+          "min_samples_leaf": 5,
+          "min_samples_split": 20,
+          "n_estimators": 200
+        }
+      },
+      "baseline_r2": 0.0017625904344301668,
+      "improvement": 0.21857021107447694,
+      "literature_validation": {
+        "category": "cardiovascular",
+        "status": "excellent",
+        "target_r2": 0.15,
+        "min_acceptable": 0.05,
+        "improvement": 0.21857021107447694
+      },
+      "selected_features": [
+        "diastolic blood pressure",
+        "temperature",
+        "temperature_max",
+        "temperature_min",
+        "temp_mean_3d",
+        "temp_range_3d",
+        "cooling_degree_days_3d",
+        "utci_mean_3d",
+        "utci_max_3d",
+        "temp_range_5d"
+      ]
+    },
+    "diastolic blood pressure": {
+      "biomarker": "diastolic blood pressure",
+      "n_samples": 4957,
+      "n_features": 30,
+      "optimal_lag_window": "short_term",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=8, min_samples_leaf=5, min_samples_split=10,\n                      n_jobs=-1, random_state=42)",
+          "r2": 0.9999838687289233,
+          "mae": 0.007982085144648756,
+          "params": {
+            "max_depth": 8,
+            "min_samples_leaf": 5,
+            "min_samples_split": 10,
+            "n_estimators": 100
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": 0.9979655811189698,
+          "mae": 0.27516559511335387
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": 0.9999983897277652,
+          "mae": 0.004695037857111218
+        },
+        "ensemble": {
+          "r2": 0.999995660252637,
+          "mae": 0.005095540795679764,
+          "components": [
+            "gradient_boosting",
+            "optimized_rf"
+          ]
+        }
+      },
+      "best_model": "gradient_boosting",
+      "best_performance": {
+        "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+        "r2": 0.9999983897277652,
+        "mae": 0.004695037857111218
+      },
+      "baseline_r2": -0.017329951856845494,
+      "improvement": 1.0173283415846108,
+      "literature_validation": {
+        "category": "cardiovascular",
+        "status": "excellent",
+        "target_r2": 0.15,
+        "min_acceptable": 0.05,
+        "improvement": 1.0173283415846108
+      },
+      "selected_features": [
+        "systolic blood pressure",
+        "diastolic blood pressure",
+        "temperature",
+        "temperature_max",
+        "heat_index_min",
+        "temp_range_3d",
+        "cooling_degree_days_3d",
+        "cooling_degree_days_5d",
+        "cooling_degree_days_7d",
+        "cooling_degree_days_14d"
+      ]
+    },
+    "FASTING GLUCOSE": {
+      "biomarker": "FASTING GLUCOSE",
+      "n_samples": 2731,
+      "n_features": 30,
+      "optimal_lag_window": "immediate",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=10, min_samples_split=20,\n                      n_jobs=-1, random_state=42)",
+          "r2": -3.6458193580862055,
+          "mae": 407.9846679646876,
+          "params": {
+            "max_depth": 5,
+            "min_samples_leaf": 10,
+            "min_samples_split": 20,
+            "n_estimators": 100
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": -3.637666646121459,
+          "mae": 407.863268492211
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": -3.6206943581884214,
+          "mae": 406.90756117936337
+        },
+        "ensemble": {
+          "r2": -3.6288778284827696,
+          "mae": 407.33090196620617,
+          "components": [
+            "gradient_boosting",
+            "lightgbm"
+          ]
+        }
+      },
+      "best_model": "gradient_boosting",
+      "best_performance": {
+        "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+        "r2": -3.6206943581884214,
+        "mae": 406.90756117936337
+      },
+      "baseline_r2": -3.55476697159315,
+      "improvement": -0.06592738659527164,
+      "literature_validation": {
+        "category": "metabolic",
+        "status": "no_relationship",
+        "target_r2": 0.08,
+        "min_acceptable": 0.02,
+        "improvement": -0.06592738659527164
+      },
+      "selected_features": [
+        "systolic blood pressure",
+        "temperature",
+        "wind_speed",
+        "temperature_max",
+        "temperature_range",
+        "wind_gust",
+        "temp_mean_3d",
+        "temp_range_3d",
+        "utci_mean_3d",
+        "utci_max_3d"
+      ]
+    },
+    "FASTING TOTAL CHOLESTEROL": {
+      "biomarker": "FASTING TOTAL CHOLESTEROL",
+      "n_samples": 2497,
+      "n_features": 30,
+      "optimal_lag_window": "immediate",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=5, min_samples_split=10,\n                      n_estimators=200, n_jobs=-1, random_state=42)",
+          "r2": -0.28570100180421454,
+          "mae": 30.505245047617052,
+          "params": {
+            "max_depth": 5,
+            "min_samples_leaf": 5,
+            "min_samples_split": 10,
+            "n_estimators": 200
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": -0.4000023241230741,
+          "mae": 31.855300931911444
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": -0.34610635427316083,
+          "mae": 31.31406660052119
+        },
+        "ensemble": {
+          "r2": -0.2998034071203637,
+          "mae": 30.79165863582565,
+          "components": [
+            "optimized_rf",
+            "gradient_boosting"
+          ]
+        }
+      },
+      "best_model": "optimized_rf",
+      "best_performance": {
+        "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=5, min_samples_split=10,\n                      n_estimators=200, n_jobs=-1, random_state=42)",
+        "r2": -0.28570100180421454,
+        "mae": 30.505245047617052,
+        "params": {
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "min_samples_split": 10,
+          "n_estimators": 200
+        }
+      },
+      "baseline_r2": -0.3771566398407298,
+      "improvement": 0.09145563803651524,
+      "literature_validation": {
+        "category": "metabolic",
+        "status": "no_relationship",
+        "target_r2": 0.08,
+        "min_acceptable": 0.02,
+        "improvement": 0.09145563803651524
+      },
+      "selected_features": [
+        "systolic blood pressure",
+        "diastolic blood pressure",
+        "humidity",
+        "temperature_min",
+        "temperature_range",
+        "humidity_min",
+        "heat_index_max",
+        "apparent_temp",
+        "utci_mean_3d",
+        "temp_range_5d"
+      ]
+    },
+    "FASTING HDL": {
+      "biomarker": "FASTING HDL",
+      "n_samples": 2497,
+      "n_features": 30,
+      "optimal_lag_window": "immediate",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=10, min_samples_split=10,\n                      n_estimators=200, n_jobs=-1, random_state=42)",
+          "r2": -0.09511974625736985,
+          "mae": 10.274188648038514,
+          "params": {
+            "max_depth": 5,
+            "min_samples_leaf": 10,
+            "min_samples_split": 10,
+            "n_estimators": 200
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": -0.3542166429780289,
+          "mae": 11.61510987497825
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": -0.2243792341295454,
+          "mae": 11.057994946322117
+        },
+        "ensemble": {
+          "r2": -0.13958058947357066,
+          "mae": 10.575148863949469,
+          "components": [
+            "optimized_rf",
+            "gradient_boosting"
+          ]
+        }
+      },
+      "best_model": "optimized_rf",
+      "best_performance": {
+        "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=10, min_samples_split=10,\n                      n_estimators=200, n_jobs=-1, random_state=42)",
+        "r2": -0.09511974625736985,
+        "mae": 10.274188648038514,
+        "params": {
+          "max_depth": 5,
+          "min_samples_leaf": 10,
+          "min_samples_split": 10,
+          "n_estimators": 200
+        }
+      },
+      "baseline_r2": -0.20819256049229495,
+      "improvement": 0.1130728142349251,
+      "literature_validation": {
+        "category": "metabolic",
+        "status": "no_relationship",
+        "target_r2": 0.08,
+        "min_acceptable": 0.02,
+        "improvement": 0.1130728142349251
+      },
+      "selected_features": [
+        "humidity",
+        "wind_speed",
+        "heat_index",
+        "humidity_max",
+        "humidity_min",
+        "heat_index_max",
+        "heat_index_min",
+        "apparent_temp",
+        "temp_range_5d",
+        "temp_range_7d"
+      ]
+    },
+    "FASTING LDL": {
+      "biomarker": "FASTING LDL",
+      "n_samples": 2500,
+      "n_features": 30,
+      "optimal_lag_window": "medium_term",
+      "models": {
+        "optimized_rf": {
+          "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=5, min_samples_split=20,\n                      n_jobs=-1, random_state=42)",
+          "r2": -0.00019798296242079516,
+          "mae": 27.29192306869801,
+          "params": {
+            "max_depth": 5,
+            "min_samples_leaf": 5,
+            "min_samples_split": 20,
+            "n_estimators": 100
+          }
+        },
+        "lightgbm": {
+          "model": "LGBMRegressor(bagging_fraction=0.8, bagging_freq=5, feature_fraction=0.8,\n              learning_rate=0.05, max_depth=6, n_estimators=200,\n              random_state=42, verbosity=-1)",
+          "r2": -0.048405130739442415,
+          "mae": 29.02985562228895
+        },
+        "gradient_boosting": {
+          "model": "GradientBoostingRegressor(learning_rate=0.05, max_depth=4, n_estimators=150,\n                          random_state=42, subsample=0.8)",
+          "r2": -0.058355920775744474,
+          "mae": 30.224624393903813
+        },
+        "ensemble": {
+          "r2": -0.015432288347862144,
+          "mae": 27.805042230848176,
+          "components": [
+            "optimized_rf",
+            "lightgbm"
+          ]
+        }
+      },
+      "best_model": "optimized_rf",
+      "best_performance": {
+        "model": "RandomForestRegressor(max_depth=5, min_samples_leaf=5, min_samples_split=20,\n                      n_jobs=-1, random_state=42)",
+        "r2": -0.00019798296242079516,
+        "mae": 27.29192306869801,
+        "params": {
+          "max_depth": 5,
+          "min_samples_leaf": 5,
+          "min_samples_split": 20,
+          "n_estimators": 100
+        }
+      },
+      "baseline_r2": -0.03016163280977091,
+      "improvement": 0.029963649847350116,
+      "literature_validation": {
+        "category": "metabolic",
+        "status": "no_relationship",
+        "target_r2": 0.08,
+        "min_acceptable": 0.02,
+        "improvement": 0.029963649847350116
+      },
+      "selected_features": [
+        "systolic blood pressure",
+        "diastolic blood pressure",
+        "temperature",
+        "temperature_max",
+        "temperature_min",
+        "temp_mean_3d",
+        "cooling_degree_days_3d",
+        "utci_mean_3d",
+        "temp_range_5d",
+        "cooling_degree_days_5d"
+      ]
+    }
+  }
+}

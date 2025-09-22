@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <!-- Clean background -->
+  <defs>
+    <pattern id="subtleGrid" patternUnits="userSpaceOnUse" width="30" height="30">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.2"/>
+    </pattern>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#subtleGrid)"/>
+  <rect x="0" y="0" width="1920" height="6" fill="url(#headerGradient)"/>
+  
+  <!-- Header with assertion-evidence approach -->
+  <g id="header">
+    <text x="960" y="75" font-family="Arial, sans-serif" font-size="52" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+      Climate exposure affects four distinct physiological systems
+    </text>
+    <text x="960" y="125" font-family="Arial, sans-serif" font-size="24" font-weight="300" text-anchor="middle" fill="#475569">
+      Novel temporal patterns demonstrate multi-system vulnerability to temperature variation
+    </text>
+  </g>
+  
+  <!-- Four system panels with improved spacing -->
+  <g id="systems-grid" transform="translate(60, 170)">
+    
+    <!-- CARDIOVASCULAR -->
+    <g transform="translate(0, 0)">
+      <rect width="900" height="320" rx="15" ry="15" fill="#ffffff" stroke="#dc2626" stroke-width="3"/>
+      <rect x="0" y="0" width="900" height="60" rx="15" ry="15" fill="#dc2626"/>
+      <rect x="0" y="45" width="900" height="15" fill="#dc2626"/>
+      
+      <!-- Heart icon -->
+      <g transform="translate(20, 20)">
+        <path d="M 0 5 C -3 0, -8 0, -8 5 C -8 0, -13 0, -13 5 C -13 10, 0 20, 0 20 C 0 20, 13 10, 13 5 C 13 0, 8 0, 8 5 C 8 0, 3 0, 0 5 Z" 
+              fill="#ffffff" opacity="0.9"/>
+      </g>
+      <text x="70" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">CARDIOVASCULAR</text>
+      
+      <g transform="translate(30, 85)">
+        <text x="0" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#dc2626">Extended 21-day blood pressure effects</text>
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">First evidence of chronic cardiovascular adaptation</text>
+        
+        <rect x="0" y="70" width="830" height="130" rx="8" ry="8" fill="#fef2f2" stroke="#fca5a5" stroke-width="1"/>
+        <g transform="translate(25, 95)">
+          <text x="0" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#dc2626">n = 4,957  •  p &lt; 10⁻¹⁵</text>
+          <text x="0" y="45" font-family="Arial, sans-serif" font-size="16" fill="#7f1d1d">• Temperature correlation: r = -0.114</text>
+          <text x="0" y="65" font-family="Arial, sans-serif" font-size="16" fill="#7f1d1d">• Effect magnitude: 2.9 mmHg per 1°C</text>
+          <text x="0" y="85" font-family="Arial, sans-serif" font-size="16" fill="#7f1d1d">• Peak response: 21-day temporal lag</text>
+          <text x="0" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">WHO clinical threshold exceeded (>2 mmHg)</text>
+          
+          <text x="420" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">Novel Discovery</text>
+          <text x="420" y="45" font-family="Arial, sans-serif" font-size="14" fill="#7f1d1d">Extended temporal pattern</text>
+          <text x="420" y="65" font-family="Arial, sans-serif" font-size="14" fill="#7f1d1d">Literature gap: 7-21 days</text>
+          <text x="420" y="85" font-family="Arial, sans-serif" font-size="14" fill="#7f1d1d">Chronic adaptation pathway</text>
+          <text x="420" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">Population health impact</text>
+        </g>
+        
+        <text x="0" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">BREAKTHROUGH: Novel chronic cardiovascular climate response</text>
+      </g>
+    </g>
+    
+    <!-- METABOLIC -->
+    <g transform="translate(940, 0)">
+      <rect width="900" height="320" rx="15" ry="15" fill="#ffffff" stroke="#2563eb" stroke-width="3"/>
+      <rect x="0" y="0" width="900" height="60" rx="15" ry="15" fill="#2563eb"/>
+      <rect x="0" y="45" width="900" height="15" fill="#2563eb"/>
+      
+      <!-- Glucose molecule icon -->
+      <g transform="translate(25, 25)">
+        <circle cx="0" cy="0" r="6" fill="#ffffff" opacity="0.9"/>
+        <circle cx="-6" cy="-6" r="3" fill="#ffffff" opacity="0.7"/>
+        <circle cx="6" cy="-6" r="3" fill="#ffffff" opacity="0.7"/>
+        <circle cx="0" cy="8" r="3" fill="#ffffff" opacity="0.7"/>
+        <!-- Connection lines -->
+        <line x1="-4" y1="-4" x2="-2" y2="-2" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+        <line x1="4" y1="-4" x2="2" y2="-2" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+        <line x1="0" y1="2" x2="0" y2="5" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+      </g>
+      <text x="70" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff">METABOLIC</text>
+      
+      <g transform="translate(30, 85)">
+        <text x="0" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#2563eb">Immediate glucose stress responses</text>
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">Dual-timeline metabolic stress pattern</text>
+        
+        <rect x="0" y="70" width="830" height="130" rx="8" ry="8" fill="#f0f9ff" stroke="#93c5fd" stroke-width="1"/>
+        <g transform="translate(25, 95)">
+          <text x="0" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">n = 2,731  •  p &lt; 10⁻¹⁰</text>
+          <text x="0" y="45" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">• Immediate response: r = 0.118 (lag 0)</text>
+          <text x="0" y="65" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">• Peak response: r = 0.131 (lag 3)</text>
+          <text x="0" y="85" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">• Effect magnitude: 8.2 mg/dL per 1°C</text>
+          <text x="0" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">ADA clinical threshold exceeded (>5 mg/dL)</text>
+          
+          <text x="420" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">Stress Response</text>
+          <text x="420" y="45" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a">Heat → metabolic stress</text>
+          <text x="420" y="65" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a">Immediate onset (0-3 days)</text>
+          <text x="420" y="85" font-family="Arial, sans-serif" font-size="14" fill="#1e3a8a">Treatment-relevant magnitude</text>
+          <text x="420" y="105" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Diabetic population at risk</text>
+        </g>
+        
+        <text x="0" y="230" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">KEY FINDING: Acute heat-induced metabolic stress</text>
+      </g>
+    </g>
+    
+    <!-- IMMUNE -->
+    <g transform="translate(0, 350)">
+      <rect width="900" height="280" rx="15" ry="15" fill="#ffffff" stroke="#16a34a" stroke-width="3"/>
+      <rect x="0" y="0" width="900" height="50" rx="15" ry="15" fill="#16a34a"/>
+      <rect x="0" y="35" width="900" height="15" fill="#16a34a"/>
+      
+      <!-- T-cell/immune icon -->
+      <g transform="translate(20, 15)">
+        <circle cx="0" cy="0" r="8" fill="#ffffff" opacity="0.9"/>
+        <!-- Nuclear structure -->
+        <circle cx="-3" cy="-3" r="2" fill="#16a34a" opacity="0.8"/>
+        <circle cx="3" cy="3" r="2" fill="#16a34a" opacity="0.8"/>
+        <circle cx="0" cy="0" r="1" fill="#16a34a" opacity="0.9"/>
+        <!-- Cell membrane -->
+        <circle cx="0" cy="0" r="8" fill="none" stroke="#16a34a" stroke-width="1" opacity="0.6"/>
+      </g>
+      <text x="60" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">IMMUNE</text>
+      
+      <g transform="translate(30, 65)">
+        <text x="0" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">CD4+ immune climate sensitivity</text>
+        <text x="0" y="40" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">Heat-vulnerable immune function</text>
+        
+        <rect x="0" y="55" width="830" height="100" rx="8" ry="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+        <g transform="translate(25, 75)">
+          <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#16a34a">n = 1,283  •  Cohen's d = 0.261</text>
+          <text x="0" y="40" font-family="Arial, sans-serif" font-size="14" fill="#15803d">• CD4+ count decreases with heat exposure</text>
+          <text x="0" y="60" font-family="Arial, sans-serif" font-size="14" fill="#15803d">• Medium effect size for population health</text>
+          <text x="0" y="80" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">HIV-positive populations particularly vulnerable</text>
+          
+          <text x="420" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">Immune Vulnerability</text>
+          <text x="420" y="40" font-family="Arial, sans-serif" font-size="12" fill="#15803d">Temperature-dependent response</text>
+          <text x="420" y="60" font-family="Arial, sans-serif" font-size="12" fill="#15803d">Climate-immune interaction</text>
+          <text x="420" y="80" font-family="Arial, sans-serif" font-size="12" fill="#15803d">Adaptive immune modulation</text>
+        </g>
+        
+        <text x="0" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">DISCOVERY: Novel immune-climate vulnerability pathway</text>
+      </g>
+    </g>
+    
+    <!-- RENAL -->
+    <g transform="translate(940, 350)">
+      <rect width="900" height="280" rx="15" ry="15" fill="#ffffff" stroke="#7c3aed" stroke-width="3"/>
+      <rect x="0" y="0" width="900" height="50" rx="15" ry="15" fill="#7c3aed"/>
+      <rect x="0" y="35" width="900" height="15" fill="#7c3aed"/>
+      
+      <!-- Kidney icon -->
+      <g transform="translate(20, 15)">
+        <ellipse cx="0" cy="0" rx="6" ry="9" fill="#ffffff" opacity="0.9"/>
+        <!-- Internal structure -->
+        <ellipse cx="-2" cy="-2" rx="1.5" ry="3" fill="#7c3aed" opacity="0.6"/>
+        <ellipse cx="2" cy="2" rx="1" ry="2" fill="#7c3aed" opacity="0.4"/>
+        <!-- Outline -->
+        <ellipse cx="0" cy="0" rx="6" ry="9" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0.7"/>
+      </g>
+      <text x="60" y="30" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff">RENAL</text>
+      
+      <g transform="translate(30, 65)">
+        <text x="0" y="20" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7c3aed">Heat-dehydration kidney stress</text>
+        <text x="0" y="40" font-family="Arial, sans-serif" font-size="14" fill="#0f172a">Creatinine elevation with temperature</text>
+        
+        <rect x="0" y="55" width="830" height="100" rx="8" ry="8" fill="#faf5ff" stroke="#c4b5fd" stroke-width="1"/>
+        <g transform="translate(25, 75)">
+          <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7c3aed">n = 1,251  •  p = 0.078</text>
+          <text x="0" y="40" font-family="Arial, sans-serif" font-size="14" fill="#581c87">• Creatinine slope: +0.007 mg/dL per °C</text>
+          <text x="0" y="60" font-family="Arial, sans-serif" font-size="14" fill="#581c87">• Dose-response relationship evident</text>
+          <text x="0" y="80" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7c3aed">Heat-dehydration stress mechanism</text>
+          
+          <text x="420" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">Emerging Pattern</text>
+          <text x="420" y="40" font-family="Arial, sans-serif" font-size="12" fill="#581c87">Trending toward significance</text>
+          <text x="420" y="60" font-family="Arial, sans-serif" font-size="12" fill="#581c87">Kidney stress pathway</text>
+          <text x="420" y="80" font-family="Arial, sans-serif" font-size="12" fill="#581c87">Requires monitoring</text>
+        </g>
+        
+        <text x="0" y="180" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7c3aed">EMERGING: Climate-induced renal stress pathway</text>
+      </g>
+    </g>
+    
+  </g>
+  
+  <!-- Climate pathway connections -->
+  <g id="climate-pathways" transform="translate(100, 730)" opacity="0.7">
+    <!-- Central climate icon -->
+    <g transform="translate(800, 50)">
+      <circle cx="0" cy="0" r="30" fill="#f59e0b" opacity="0.2"/>
+      <circle cx="0" cy="0" r="18" fill="#f59e0b"/>
+      <!-- Thermometer -->
+      <rect x="-3" y="-10" width="6" height="20" rx="3" fill="#ffffff"/>
+      <circle cx="0" cy="12" r="6" fill="#ffffff"/>
+      <text x="0" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#f59e0b">CLIMATE</text>
+    </g>
+    
+    <!-- Connection arrows to systems -->
+    <!-- To Cardiovascular -->
+    <path d="M 410 100 Q 600 80 770 75" stroke="#dc2626" stroke-width="3" fill="none" opacity="0.6"/>
+    <polygon points="405,95 420,100 405,105" fill="#dc2626" opacity="0.6"/>
+    
+    <!-- To Metabolic -->
+    <path d="M 1270 100 Q 1080 80 830 75" stroke="#2563eb" stroke-width="3" fill="none" opacity="0.6"/>
+    <polygon points="1275,105 1260,100 1275,95" fill="#2563eb" opacity="0.6"/>
+    
+    <!-- To Immune -->
+    <path d="M 410 480 Q 600 450 770 125" stroke="#16a34a" stroke-width="3" fill="none" opacity="0.6"/>
+    <polygon points="405,485 420,480 405,475" fill="#16a34a" opacity="0.6"/>
+    
+    <!-- To Renal -->
+    <path d="M 1270 480 Q 1080 450 830 125" stroke="#7c3aed" stroke-width="3" fill="none" opacity="0.6"/>
+    <polygon points="1275,475 1260,480 1275,485" fill="#7c3aed" opacity="0.6"/>
+  </g>
+  
+  <!-- Statistical significance badges -->
+  <g id="significance-badges">
+    <!-- Cardiovascular badge -->
+    <g transform="translate(150, 450)">
+      <circle cx="0" cy="0" r="20" fill="#dc2626"/>
+      <text x="0" y="-5" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#ffffff">p&lt;</text>
+      <text x="0" y="8" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#ffffff">10⁻¹⁵</text>
+    </g>
+    
+    <!-- Metabolic badge -->
+    <g transform="translate(1030, 450)">
+      <circle cx="0" cy="0" r="20" fill="#2563eb"/>
+      <text x="0" y="-5" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#ffffff">p&lt;</text>
+      <text x="0" y="8" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#ffffff">10⁻¹⁰</text>
+    </g>
+    
+    <!-- Immune badge -->
+    <g transform="translate(150, 830)">
+      <circle cx="0" cy="0" r="20" fill="#16a34a"/>
+      <text x="0" y="-5" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#ffffff">d=</text>
+      <text x="0" y="8" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#ffffff">0.261</text>
+    </g>
+    
+    <!-- Renal badge -->
+    <g transform="translate(1030, 830)">
+      <circle cx="0" cy="0" r="20" fill="#7c3aed"/>
+      <text x="0" y="-5" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#ffffff">p=</text>
+      <text x="0" y="8" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#ffffff">0.078</text>
+    </g>
+  </g>
+  
+  <!-- Footer with evidence summary -->
+  <g id="footer" transform="translate(0, 680)">
+    <rect x="60" y="0" width="1800" height="100" rx="10" ry="10" fill="#1e3a8a" opacity="0.95"/>
+    <text x="960" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Climate exposure affects four distinct physiological systems
+    </text>
+    <text x="960" y="60" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#cbd5e1">
+      Novel temporal patterns: 21-day cardiovascular • 0-3 day metabolic • Immune vulnerability • Emerging renal stress
+    </text>
+    <text x="960" y="80" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#94a3b8">
+      WHO/ADA clinical thresholds exceeded • Population-scale health impacts • Multi-system climate vulnerability
+    </text>
+  </g>
+  
+  <!-- Slide number -->
+  <text x="1850" y="1060" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b">3 / 11</text>
+  
+</svg>

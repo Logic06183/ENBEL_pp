@@ -1,0 +1,293 @@
+{
+  "metadata": {
+    "timestamp": "20250919_113923",
+    "validation_methods": [
+      "Cross-validation with multiple algorithms",
+      "Bootstrap confidence intervals",
+      "Permutation significance testing",
+      "Spurious correlation detection",
+      "SHAP analysis for interpretability",
+      "Leave-one-out validation for small samples"
+    ]
+  },
+  "validation_results": {
+    "short_term": {
+      "systolic_bp": {
+        "biomarker": "systolic blood pressure",
+        "n_samples": 4957,
+        "n_features": 30,
+        "reported_r2": 0.221,
+        "validated_r2": -0.04329868984761091,
+        "cv_results": {
+          "elastic_net": {
+            "mean_r2": -0.04329868984761091,
+            "std_r2": 0.03637621657046645,
+            "scores": [
+              -0.08564086085703182,
+              -0.08832615031998614,
+              -0.027047496814978977,
+              -0.008921967730295632,
+              -0.00655697351576201
+            ]
+          },
+          "random_forest": {
+            "mean_r2": -0.06676634258870795,
+            "std_r2": 0.04320670805436323,
+            "scores": [
+              -0.11680582348415736,
+              -0.10403748103998,
+              -0.08163220534406013,
+              -0.015684097214913928,
+              -0.01567210586042833
+            ]
+          },
+          "gradient_boosting": {
+            "mean_r2": -0.09430019647085879,
+            "std_r2": 0.05083120752712871,
+            "scores": [
+              -0.13861595699894047,
+              -0.13204699456827096,
+              -0.1366132574627812,
+              -0.0337415563013832,
+              -0.03048321702291812
+            ]
+          }
+        },
+        "bootstrap_ci": [
+          0.008463802475742254,
+          0.021936594228098672
+        ],
+        "p_value": 1.0,
+        "is_significant": "False",
+        "noise_baseline_r2": -0.05517491801804879,
+        "validation_status": "NOT_SIGNIFICANT"
+      }
+    },
+    "long_term": {
+      "glucose": {
+        "biomarker": "FASTING GLUCOSE",
+        "n_years": 5,
+        "n_features": 3,
+        "samples_per_year": 536.6,
+        "reported_r2": 0.732,
+        "validated_r2": 0.24324995636976843,
+        "model_comparison": {
+          "linear": {
+            "r2": 0.6183094243031615,
+            "rmse": 45.66571924620225,
+            "n_years": 5
+          },
+          "ridge": {
+            "r2": 0.26877830321982144,
+            "rmse": 63.20611812407743,
+            "n_years": 5
+          },
+          "elastic_net": {
+            "r2": 0.24324995636976843,
+            "rmse": 64.29997604782416,
+            "n_years": 5
+          }
+        },
+        "loo_cv_r2": -0.2132672301336679,
+        "loo_cv_std": 1.0942971681474833,
+        "temporal_trend_corr": -0.11488437780476225,
+        "temporal_trend_p": 0.8540470743713114,
+        "climate_corr": 0.4895787181548711,
+        "climate_p": 0.4025328760665883,
+        "random_baseline_r2": 0.009012296055574964,
+        "validation_status": "NOT_VALIDATED"
+      },
+      "cholesterol": {
+        "biomarker": "FASTING TOTAL CHOLESTEROL",
+        "n_years": 6,
+        "n_features": 3,
+        "samples_per_year": 413.0,
+        "reported_r2": 0.418,
+        "validated_r2": 0.0003895358774133051,
+        "model_comparison": {
+          "linear": {
+            "r2": 0.046520634775776504,
+            "rmse": 13.538723822634715,
+            "n_years": 6
+          },
+          "ridge": {
+            "r2": 0.004649460918511039,
+            "rmse": 13.832800318613105,
+            "n_years": 6
+          },
+          "elastic_net": {
+            "r2": 0.0003895358774133051,
+            "rmse": 13.862369689275521,
+            "n_years": 6
+          }
+        },
+        "loo_cv_r2": -2.6925468024851256,
+        "loo_cv_std": 5.825871113925108,
+        "temporal_trend_corr": 0.5261285480912681,
+        "temporal_trend_p": 0.2836263281596282,
+        "climate_corr": 0.03879990620872594,
+        "climate_p": 0.9418293460111161,
+        "random_baseline_r2": 0.3551958149957579,
+        "validation_status": "NOT_VALIDATED"
+      },
+      "hdl": {
+        "biomarker": "FASTING HDL",
+        "n_years": 6,
+        "n_features": 3,
+        "samples_per_year": 413.0,
+        "reported_r2": 0.372,
+        "validated_r2": 0.0,
+        "model_comparison": {
+          "linear": {
+            "r2": 0.08224084995135639,
+            "rmse": 4.689003609020792,
+            "n_years": 6
+          },
+          "ridge": {
+            "r2": 0.013467786146261429,
+            "rmse": 4.861517361034219,
+            "n_years": 6
+          },
+          "elastic_net": {
+            "r2": 0.0,
+            "rmse": 4.894588725114748,
+            "n_years": 6
+          }
+        },
+        "loo_cv_r2": -0.8290042207308632,
+        "loo_cv_std": 1.8007971082743568,
+        "temporal_trend_corr": 0.7968041543504881,
+        "temporal_trend_p": 0.05773799644576298,
+        "climate_corr": 0.05442122870434573,
+        "climate_p": 0.9184487458073277,
+        "random_baseline_r2": 0.4968611518709867,
+        "validation_status": "NOT_VALIDATED"
+      }
+    },
+    "xai": {
+      "systolic_bp": {
+        "biomarker": "systolic blood pressure",
+        "time_scale": "immediate",
+        "model_r2": 0.07749979942327756,
+        "top_features": [
+          {
+            "feature": "temperature_tas_lag21",
+            "importance": 1.0505339567935748
+          },
+          {
+            "feature": "land_temp_tas_lag14",
+            "importance": 0.37069593538454065
+          },
+          {
+            "feature": "temperature_tas_lag14",
+            "importance": 0.31502212327255685
+          },
+          {
+            "feature": "land_temp_tas_lag0",
+            "importance": 0.22759310030499383
+          },
+          {
+            "feature": "wind_ws_lag0",
+            "importance": 0.2259340537252838
+          },
+          {
+            "feature": "apparent_temp_lag0",
+            "importance": 0.2002187314654091
+          },
+          {
+            "feature": "wind_ws_lag10",
+            "importance": 0.19878606824814382
+          },
+          {
+            "feature": "temperature_tas_lag10",
+            "importance": 0.18938273324321564
+          },
+          {
+            "feature": "wind_ws_lag2",
+            "importance": 0.18356275733345684
+          },
+          {
+            "feature": "land_temp_tas_lag21",
+            "importance": 0.16862146358563718
+          }
+        ],
+        "shap_summary": {
+          "mean_abs_shap": 0.20136513504766992,
+          "max_abs_shap": 2.952426523217631
+        }
+      },
+      "glucose_annual": {
+        "biomarker": "FASTING GLUCOSE",
+        "time_scale": "annual",
+        "n_years": 6,
+        "model_r2": 0.8610761433029199,
+        "feature_coefficients": [
+          {
+            "feature": "apparent_temp_lag0",
+            "coefficient": -385.4014174554543,
+            "abs_coefficient": 385.4014174554543
+          },
+          {
+            "feature": "temperature_tas_lag0",
+            "coefficient": 318.55282418998576,
+            "abs_coefficient": 318.55282418998576
+          },
+          {
+            "feature": "land_temp_tas_lag0",
+            "coefficient": 206.66782632480854,
+            "abs_coefficient": 206.66782632480854
+          }
+        ],
+        "intercept": -2541.020193645554
+      }
+    }
+  },
+  "summary": {
+    "validated_relationships": [],
+    "rejected_relationships": [
+      {
+        "name": "systolic_bp",
+        "biomarker": "systolic blood pressure",
+        "reported_r2": 0.221,
+        "validated_r2": -0.04329868984761091,
+        "status": "NOT_SIGNIFICANT"
+      },
+      {
+        "name": "glucose",
+        "biomarker": "FASTING GLUCOSE",
+        "reported_r2": 0.732,
+        "validated_r2": 0.24324995636976843,
+        "status": "NOT_VALIDATED"
+      },
+      {
+        "name": "cholesterol",
+        "biomarker": "FASTING TOTAL CHOLESTEROL",
+        "reported_r2": 0.418,
+        "validated_r2": 0.0003895358774133051,
+        "status": "NOT_VALIDATED"
+      },
+      {
+        "name": "hdl",
+        "biomarker": "FASTING HDL",
+        "reported_r2": 0.372,
+        "validated_r2": 0.0,
+        "status": "NOT_VALIDATED"
+      },
+      {
+        "name": "systolic_bp",
+        "biomarker": "systolic blood pressure",
+        "reported_r2": "N/A",
+        "validated_r2": "N/A",
+        "status": "UNKNOWN"
+      },
+      {
+        "name": "glucose_annual",
+        "biomarker": "FASTING GLUCOSE",
+        "reported_r2": "N/A",
+        "validated_r2": "N/A",
+        "status": "UNKNOWN"
+      }
+    ],
+    "requires_caution": []
+  }
+}

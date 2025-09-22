@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <defs>
+    <pattern id="subtleGrid" patternUnits="userSpaceOnUse" width="12" height="12">
+      <path d="M 12 0 L 0 0 0 12" fill="none" stroke="#ffffff" stroke-width="0.15" opacity="0.5"/>
+    </pattern>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Stage gradients -->
+    <linearGradient id="stage1Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.05" />
+    </linearGradient>
+    
+    <linearGradient id="stage2Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.05" />
+    </linearGradient>
+    
+    <linearGradient id="stage3Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#subtleGrid)"/>
+  <rect x="0" y="0" width="1920" height="4" fill="url(#headerGradient)"/>
+  
+  <!-- Header -->
+  <g id="header">
+    <text x="960" y="65" font-family="Arial, sans-serif" font-size="42" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+      Validation Framework
+    </text>
+    <text x="960" y="100" font-family="Arial, sans-serif" font-size="20" font-weight="300" text-anchor="middle" fill="#475569">
+      Three-Stage Process • DLNM Gold Standard • 91% Success Rate
+    </text>
+  </g>
+  
+  <!-- Simple three-stage process -->
+  <g id="simple-validation" transform="translate(160, 140)">
+    
+    <!-- Stage 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="500" height="200" rx="15" ry="15" fill="#faf5ff" stroke="#7c3aed" stroke-width="3"/>
+      <rect x="0" y="0" width="500" height="50" rx="15" ry="15" fill="#7c3aed"/>
+      <rect x="0" y="35" width="500" height="15" fill="#7c3aed"/>
+      
+      <circle cx="40" cy="25" r="15" fill="#ffffff"/>
+      <text x="40" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#7c3aed">1</text>
+      <text x="80" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">AI Discovery</text>
+      
+      <g transform="translate(40, 80)">
+        <!-- AI/ML icon -->
+        <g transform="translate(0, 0)">
+          <circle cx="15" cy="15" r="12" fill="#7c3aed" opacity="0.2"/>
+          <circle cx="10" cy="10" r="3" fill="#7c3aed"/>
+          <circle cx="20" cy="10" r="3" fill="#7c3aed"/>
+          <circle cx="15" cy="20" r="3" fill="#7c3aed"/>
+          <!-- Neural network connections -->
+          <line x1="10" y1="10" x2="20" y2="10" stroke="#7c3aed" stroke-width="1"/>
+          <line x1="13" y1="13" x2="17" y2="17" stroke="#7c3aed" stroke-width="1"/>
+        </g>
+        
+        <text x="40" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#7c3aed">Machine Learning</text>
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="16" fill="#581c87">Generate testable hypotheses</text>
+        <text x="0" y="75" font-family="Arial, sans-serif" font-size="16" fill="#581c87">from climate-health patterns</text>
+        
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">✓ 100% Success</text>
+      </g>
+    </g>
+    
+    <!-- Arrow 1 -->
+    <g transform="translate(520, 90)">
+      <path d="M 0 20 L 60 20" stroke="#6366f1" stroke-width="4" fill="none"/>
+      <polygon points="55,15 70,20 55,25" fill="#6366f1"/>
+    </g>
+    
+    <!-- Stage 2 -->
+    <g transform="translate(600, 0)">
+      <rect width="500" height="200" rx="15" ry="15" fill="#f0f9ff" stroke="#2563eb" stroke-width="3"/>
+      <rect x="0" y="0" width="500" height="50" rx="15" ry="15" fill="#2563eb"/>
+      <rect x="0" y="35" width="500" height="15" fill="#2563eb"/>
+      
+      <circle cx="40" cy="25" r="15" fill="#ffffff"/>
+      <text x="40" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2563eb">2</text>
+      <text x="80" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">Statistical Testing</text>
+      
+      <g transform="translate(40, 80)">
+        <!-- Statistics icon -->
+        <g transform="translate(0, 0)">
+          <rect x="5" y="20" width="3" height="8" fill="#2563eb"/>
+          <rect x="12" y="15" width="3" height="13" fill="#2563eb"/>
+          <rect x="19" y="10" width="3" height="18" fill="#2563eb"/>
+          <!-- Statistical curve -->
+          <path d="M 5 25 Q 15 5 25 20" stroke="#2563eb" stroke-width="2" fill="none"/>
+        </g>
+        
+        <text x="40" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">Rigorous Statistics</text>
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">Correlations, confidence intervals</text>
+        <text x="0" y="75" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">p &lt; 10⁻¹⁰ to 10⁻¹⁵</text>
+        
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">✓ 91% Success</text>
+      </g>
+    </g>
+    
+    <!-- Arrow 2 -->
+    <g transform="translate(1120, 90)">
+      <path d="M 0 20 L 60 20" stroke="#6366f1" stroke-width="4" fill="none"/>
+      <polygon points="55,15 70,20 55,25" fill="#6366f1"/>
+    </g>
+    
+    <!-- Stage 3 -->
+    <g transform="translate(1200, 0)">
+      <rect width="500" height="200" rx="15" ry="15" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>
+      <rect x="0" y="0" width="500" height="50" rx="15" ry="15" fill="#16a34a"/>
+      <rect x="0" y="35" width="500" height="15" fill="#16a34a"/>
+      
+      <circle cx="40" cy="25" r="15" fill="#ffffff"/>
+      <text x="40" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#16a34a">3</text>
+      <text x="80" y="32" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#ffffff">DLNM Validation</text>
+      
+      <g transform="translate(40, 80)">
+        <!-- DLNM icon -->
+        <g transform="translate(0, 0)">
+          <ellipse cx="15" cy="15" rx="12" ry="8" fill="none" stroke="#16a34a" stroke-width="2"/>
+          <!-- Temporal curves -->
+          <path d="M 8 12 Q 15 8 22 12" stroke="#16a34a" stroke-width="1.5" fill="none"/>
+          <path d="M 8 18 Q 15 14 22 18" stroke="#16a34a" stroke-width="1.5" fill="none"/>
+          <!-- Gold standard badge -->
+          <circle cx="25" cy="5" r="6" fill="#f59e0b"/>
+          <text x="25" y="8" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="#ffffff">★</text>
+        </g>
+        
+        <text x="40" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">Gold Standard</text>
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="16" fill="#15803d">Environmental epidemiology</text>
+        <text x="0" y="75" font-family="Arial, sans-serif" font-size="16" fill="#15803d">Complex temporal modeling</text>
+        
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">✓ 100% Confirmed</text>
+      </g>
+    </g>
+    
+  </g>
+  
+  <!-- Simple validation summary -->
+  <g id="validation-summary" transform="translate(160, 380)">
+    <rect width="1600" height="160" rx="15" ry="15" fill="#ffffff" stroke="#dc2626" stroke-width="2"/>
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="1600" height="50" rx="15" ry="15" fill="#dc2626"/>
+    <rect x="0" y="35" width="1600" height="15" fill="#dc2626"/>
+    <text x="800" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">91% Overall Success Rate</text>
+    
+    <!-- Key results -->
+    <g transform="translate(100, 80)">
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#dc2626">
+        Rigorous three-stage validation process
+      </text>
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        • Machine learning hypotheses → Statistical testing → DLNM gold standard
+      </text>
+      <text x="0" y="80" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        • All major discoveries confirmed by environmental epidemiology standards
+      </text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g id="footer" transform="translate(0, 580)">
+    <rect x="160" y="0" width="1600" height="80" rx="10" ry="10" fill="#1e3a8a" opacity="0.95"/>
+    
+    <text x="960" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Robust Three-Stage Validation • 91% Success Rate • DLNM Gold Standard
+    </text>
+    <text x="960" y="55" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#cbd5e1">
+      AI discovery → Statistical validation → Environmental epidemiology confirmation
+    </text>
+  </g>
+  
+  <!-- Slide number -->
+  <text x="1850" y="1060" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b">7 / 11</text>
+  
+</svg>

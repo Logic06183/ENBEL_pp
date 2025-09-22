@@ -1,0 +1,240 @@
+{
+  "metadata": {
+    "timestamp": "20250919_150811",
+    "analysis_type": "Targeted XAI Breakthrough Analysis",
+    "target_biomarkers": [
+      "FASTING GLUCOSE",
+      "systolic blood pressure",
+      "CD4 cell count"
+    ],
+    "focus": "Validated climate-health relationships with XAI interpretation"
+  },
+  "summary": {
+    "total_breakthroughs": 1,
+    "breakthrough_categories": {
+      "VALIDATED_BREAKTHROUGH": 1
+    },
+    "max_r2_achieved": 0.39306482527498576,
+    "average_r2": 0.39306482527498576,
+    "validated_targets_analyzed": 3
+  },
+  "detailed_results": {
+    "FASTING GLUCOSE": {
+      "biomarker": "FASTING GLUCOSE",
+      "model_performance": {
+        "train_r2": 0.716830969740688,
+        "test_r2": 0.39306482527498576,
+        "n_samples": 2731,
+        "n_features": 27
+      },
+      "shap_analysis": {
+        "feature_importance": [
+          {
+            "feature": "temperature_tas_lag10_x_Race",
+            "shap_importance": 19.835970866519524,
+            "shap_std": 13.018202785758405
+          },
+          {
+            "feature": "temperature_tas_lag21_x_Race",
+            "shap_importance": 18.64404678223219,
+            "shap_std": 12.08598007824919
+          },
+          {
+            "feature": "temperature_tas_lag2_x_Race",
+            "shap_importance": 15.41679057038584,
+            "shap_std": 10.435405033534124
+          },
+          {
+            "feature": "temperature_tas_lag21",
+            "shap_importance": 14.332362190596784,
+            "shap_std": 12.02535579965206
+          },
+          {
+            "feature": "temperature_tas_lag0_x_Race",
+            "shap_importance": 13.256851729652876,
+            "shap_std": 10.674534510424472
+          },
+          {
+            "feature": "temperature_tas_lag14_x_Race",
+            "shap_importance": 11.933690006639207,
+            "shap_std": 9.394105059394285
+          },
+          {
+            "feature": "temperature_tas_lag7_x_Race",
+            "shap_importance": 11.68943884845814,
+            "shap_std": 7.844687151636557
+          },
+          {
+            "feature": "temperature_tas_lag3_x_Race",
+            "shap_importance": 11.618252409795321,
+            "shap_std": 9.188111968852787
+          },
+          {
+            "feature": "temperature_tas_lag2",
+            "shap_importance": 11.521313628008555,
+            "shap_std": 10.413542979839079
+          },
+          {
+            "feature": "temperature_tas_lag1_x_Race",
+            "shap_importance": 11.394190427611592,
+            "shap_std": 9.856553297791322
+          }
+        ],
+        "mean_abs_shap": 8.70280135497767,
+        "interactions": {}
+      },
+      "demographic_insights": {
+        "race_11": {
+          "r2": -0.2933343671080246,
+          "n_samples": 1724
+        },
+        "race_5": {
+          "r2": -634.7033361139952,
+          "n_samples": 924
+        },
+        "race_4": {
+          "r2": 1.0,
+          "n_samples": 81
+        }
+      },
+      "temporal_patterns": {
+        "lag_0": {
+          "total_importance": 36.382378132805215,
+          "n_features": 5,
+          "features": [
+            "temperature_tas_lag0",
+            "land_temp_tas_lag0",
+            "heat_index_lag0",
+            "temperature_tas_lag0_x_Race",
+            "land_temp_tas_lag0_x_Race"
+          ]
+        },
+        "lag_1": {
+          "total_importance": 76.16153896424609,
+          "n_features": 9,
+          "features": [
+            "temperature_tas_lag1",
+            "temperature_tas_lag10",
+            "temperature_tas_lag14",
+            "land_temp_tas_lag1",
+            "land_temp_tas_lag10",
+            "land_temp_tas_lag14",
+            "temperature_tas_lag1_x_Race",
+            "temperature_tas_lag10_x_Race",
+            "temperature_tas_lag14_x_Race"
+          ]
+        },
+        "lag_2": {
+          "total_importance": 72.37237960167386,
+          "n_features": 6,
+          "features": [
+            "temperature_tas_lag2",
+            "temperature_tas_lag21",
+            "land_temp_tas_lag2",
+            "land_temp_tas_lag21",
+            "temperature_tas_lag2_x_Race",
+            "temperature_tas_lag21_x_Race"
+          ]
+        },
+        "lag_3": {
+          "total_importance": 26.388575589057435,
+          "n_features": 3,
+          "features": [
+            "temperature_tas_lag3",
+            "land_temp_tas_lag3",
+            "temperature_tas_lag3_x_Race"
+          ]
+        },
+        "lag_5": {
+          "total_importance": 7.370548520453106,
+          "n_features": 2,
+          "features": [
+            "temperature_tas_lag5_x_Race",
+            "temperature_tas_lag5"
+          ]
+        },
+        "lag_7": {
+          "total_importance": 16.300215776161323,
+          "n_features": 2,
+          "features": [
+            "temperature_tas_lag7_x_Race",
+            "temperature_tas_lag7"
+          ]
+        },
+        "lag_14": {
+          "total_importance": 27.576635819724757,
+          "n_features": 3,
+          "features": [
+            "temperature_tas_lag14",
+            "land_temp_tas_lag14",
+            "temperature_tas_lag14_x_Race"
+          ]
+        },
+        "lag_21": {
+          "total_importance": 39.817412808093394,
+          "n_features": 3,
+          "features": [
+            "temperature_tas_lag21",
+            "land_temp_tas_lag21",
+            "temperature_tas_lag21_x_Race"
+          ]
+        }
+      },
+      "breakthrough_status": "VALIDATED_BREAKTHROUGH"
+    }
+  },
+  "key_insights": {
+    "top_climate_predictors": {
+      "temperature_tas_lag10_x_Race": {
+        "total_importance": 19.835970866519524,
+        "affects_biomarkers": 1,
+        "biomarker_impacts": [
+          [
+            "FASTING GLUCOSE",
+            19.835970866519524
+          ]
+        ]
+      },
+      "temperature_tas_lag21_x_Race": {
+        "total_importance": 18.64404678223219,
+        "affects_biomarkers": 1,
+        "biomarker_impacts": [
+          [
+            "FASTING GLUCOSE",
+            18.64404678223219
+          ]
+        ]
+      },
+      "temperature_tas_lag2_x_Race": {
+        "total_importance": 15.41679057038584,
+        "affects_biomarkers": 1,
+        "biomarker_impacts": [
+          [
+            "FASTING GLUCOSE",
+            15.41679057038584
+          ]
+        ]
+      }
+    },
+    "demographic_patterns": {},
+    "temporal_insights": {},
+    "interaction_discoveries": {}
+  },
+  "clinical_implications": {
+    "immediate_applications": [
+      "Personalized climate health risk assessment",
+      "Targeted monitoring for high-risk populations",
+      "Climate-informed clinical decision making"
+    ],
+    "research_priorities": [
+      "Mechanistic validation of discovered pathways",
+      "Intervention trials for identified relationships",
+      "Population-specific threshold determination"
+    ],
+    "public_health_impact": [
+      "Early warning system development",
+      "Health equity climate adaptation strategies",
+      "Population health surveillance enhancement"
+    ]
+  }
+}

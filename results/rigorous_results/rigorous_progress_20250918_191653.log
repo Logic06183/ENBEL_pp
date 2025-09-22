@@ -1,0 +1,160 @@
+[19:16:53] 🔬 ================================================================================
+[19:16:53] 🔬 🔬 RIGOROUS CLIMATE-HEALTH ANALYSIS
+[19:16:53] 🔬 Literature-validated methodology with data leakage prevention
+[19:16:53] 🔬 ================================================================================
+[19:16:53] 🔬 Loading dataset for rigorous analysis...
+[19:16:53] 🔬 Dataset loaded: 18,205 records, 343 columns
+[19:16:53] 🔬 Performing data integrity analysis...
+[19:16:53] ⚠️ WARNING: Found 1 suspicious column patterns
+[19:16:53] ⚠️   - target_population
+[19:16:53] 🔬 Temporal span: 6831 days
+[19:16:53] 🔬 Creating rigorous feature set with strict exclusions...
+[19:16:53] 🔬 Feature selection results:
+[19:16:53] 🔬   Climate features identified: 256
+[19:16:53] 🔬   Demographic features identified: 7
+[19:16:53] 🔬   Features after exclusions: 258
+[19:16:53] 🔬   Exclusion rate: 1.9%
+[19:16:53] 🔬 
+🔬 [1/9] RIGOROUS ANALYSIS: CD4 cell count (cells/µL)
+[19:16:53] 🔬 Clean dataset: 1,283 samples, 258 features
+[19:16:53] 🔬 Detecting potential data leakage for CD4 cell count (cells/µL)...
+[19:16:53] ⚠️ High correlation: year (r=0.724)
+[19:16:53] ✅ No data leakage detected
+[19:16:53] ⚠️ No temporal information available, using standard split
+[19:16:53] 🔬 Training conservative models for CD4 cell count (cells/µL)...
+[19:16:53] 🔬 Training conservative Random Forest...
+[19:16:53] 🔬 RF Conservative: R² = -0.2926, MAE = 86.323
+[19:16:53] 🔬 Training conservative XGBoost...
+[19:16:54] 🔬 XGB Conservative: R² = -0.0389, MAE = 80.494
+[19:16:54] 🔬 Performance below expected range: R² = -0.039 (expected: 0.030-0.150)
+[19:16:54] 🔬 Rigorous model saved: rigorous_model_CD4_cell_count_cellsµL_20250918_191653.joblib
+[19:16:54] 🔬 
+🔬 [2/9] RIGOROUS ANALYSIS: Creatinine (mg/dL)
+[19:16:54] 🔬 Clean dataset: 1,251 samples, 258 features
+[19:16:54] 🔬 Detecting potential data leakage for Creatinine (mg/dL)...
+[19:16:54] ✅ No data leakage detected
+[19:16:54] ⚠️ No temporal information available, using standard split
+[19:16:54] 🔬 Training conservative models for Creatinine (mg/dL)...
+[19:16:54] 🔬 Training conservative Random Forest...
+[19:16:54] 🔬 RF Conservative: R² = 0.0355, MAE = 0.120
+[19:16:54] 🔬 Training conservative XGBoost...
+[19:16:54] 🔬 XGB Conservative: R² = 0.1289, MAE = 0.114
+[19:16:54] ✅ Performance within expected range: R² = 0.129
+[19:16:54] 🔬 Rigorous model saved: rigorous_model_Creatinine_mgdL_20250918_191653.joblib
+[19:16:54] 🔬 
+🔬 [3/9] RIGOROUS ANALYSIS: Hemoglobin (g/dL)
+[19:16:54] 🔬 Clean dataset: 1,282 samples, 258 features
+[19:16:54] 🔬 Detecting potential data leakage for Hemoglobin (g/dL)...
+[19:16:54] ✅ No data leakage detected
+[19:16:54] ⚠️ No temporal information available, using standard split
+[19:16:54] 🔬 Training conservative models for Hemoglobin (g/dL)...
+[19:16:54] 🔬 Training conservative Random Forest...
+[19:16:54] 🔬 RF Conservative: R² = 0.0447, MAE = 1.425
+[19:16:54] 🔬 Training conservative XGBoost...
+[19:16:54] 🔬 XGB Conservative: R² = 0.1240, MAE = 1.328
+[19:16:54] ⚠️ Performance above expected range: R² = 0.124 (expected: 0.020-0.120)
+[19:16:54] 🔬 Rigorous model saved: rigorous_model_Hemoglobin_gdL_20250918_191653.joblib
+[19:16:54] 🔬 
+🔬 [4/9] RIGOROUS ANALYSIS: systolic blood pressure
+[19:16:55] 🔬 Clean dataset: 4,957 samples, 258 features
+[19:16:55] 🔬 Detecting potential data leakage for systolic blood pressure...
+[19:16:55] ✅ No data leakage detected
+[19:16:55] ⚠️ No temporal information available, using standard split
+[19:16:55] 🔬 Training conservative models for systolic blood pressure...
+[19:16:55] 🔬 Training conservative Random Forest...
+[19:16:55] 🔬 RF Conservative: R² = -0.0040, MAE = 10.247
+[19:16:55] 🔬 Training conservative XGBoost...
+[19:16:55] 🔬 XGB Conservative: R² = 0.0018, MAE = 10.206
+[19:16:55] 🔬 Performance below expected range: R² = 0.002 (expected: 0.050-0.200)
+[19:16:55] 🔬 Rigorous model saved: rigorous_model_systolic_blood_pressure_20250918_191653.joblib
+[19:16:55] 🔬 
+🔬 [5/9] RIGOROUS ANALYSIS: diastolic blood pressure
+[19:16:55] 🔬 Clean dataset: 4,957 samples, 258 features
+[19:16:55] 🔬 Detecting potential data leakage for diastolic blood pressure...
+[19:16:56] ✅ No data leakage detected
+[19:16:56] ⚠️ No temporal information available, using standard split
+[19:16:56] 🔬 Training conservative models for diastolic blood pressure...
+[19:16:56] 🔬 Training conservative Random Forest...
+[19:16:56] 🔬 RF Conservative: R² = -0.0323, MAE = 7.933
+[19:16:56] 🔬 Training conservative XGBoost...
+[19:16:56] 🔬 XGB Conservative: R² = -0.0173, MAE = 7.871
+[19:16:56] 🔬 Performance below expected range: R² = -0.017 (expected: 0.050-0.200)
+[19:16:56] 🔬 Rigorous model saved: rigorous_model_diastolic_blood_pressure_20250918_191653.joblib
+[19:16:56] 🔬 
+🔬 [6/9] RIGOROUS ANALYSIS: FASTING GLUCOSE
+[19:16:56] 🔬 Clean dataset: 2,731 samples, 258 features
+[19:16:56] 🔬 Detecting potential data leakage for FASTING GLUCOSE...
+[19:16:57] ✅ No data leakage detected
+[19:16:57] ⚠️ No temporal information available, using standard split
+[19:16:57] 🔬 Training conservative models for FASTING GLUCOSE...
+[19:16:57] 🔬 Training conservative Random Forest...
+[19:16:57] 🔬 RF Conservative: R² = -3.5548, MAE = 404.097
+[19:16:57] 🔬 Training conservative XGBoost...
+[19:16:57] 🔬 XGB Conservative: R² = -3.5714, MAE = 404.808
+[19:16:57] 🔬 Performance below expected range: R² = -3.555 (expected: 0.020-0.120)
+[19:16:57] 🔬 Rigorous model saved: rigorous_model_FASTING_GLUCOSE_20250918_191653.joblib
+[19:16:57] 🔬 
+🔬 [7/9] RIGOROUS ANALYSIS: FASTING TOTAL CHOLESTEROL
+[19:16:57] 🔬 Clean dataset: 2,497 samples, 258 features
+[19:16:57] 🔬 Detecting potential data leakage for FASTING TOTAL CHOLESTEROL...
+[19:16:57] ✅ No data leakage detected
+[19:16:57] ⚠️ No temporal information available, using standard split
+[19:16:57] 🔬 Training conservative models for FASTING TOTAL CHOLESTEROL...
+[19:16:57] 🔬 Training conservative Random Forest...
+[19:16:57] 🔬 RF Conservative: R² = -0.5408, MAE = 33.996
+[19:16:57] 🔬 Training conservative XGBoost...
+[19:16:58] 🔬 XGB Conservative: R² = -0.3772, MAE = 31.923
+[19:16:58] 🔬 Performance below expected range: R² = -0.377 (expected: 0.020-0.120)
+[19:16:58] 🔬 Rigorous model saved: rigorous_model_FASTING_TOTAL_CHOLESTEROL_20250918_191653.joblib
+[19:16:58] 🔬 
+🔬 [8/9] RIGOROUS ANALYSIS: FASTING HDL
+[19:16:58] 🔬 Clean dataset: 2,497 samples, 258 features
+[19:16:58] 🔬 Detecting potential data leakage for FASTING HDL...
+[19:16:58] ✅ No data leakage detected
+[19:16:58] ⚠️ No temporal information available, using standard split
+[19:16:58] 🔬 Training conservative models for FASTING HDL...
+[19:16:58] 🔬 Training conservative Random Forest...
+[19:16:58] 🔬 RF Conservative: R² = -0.3240, MAE = 11.771
+[19:16:58] 🔬 Training conservative XGBoost...
+[19:16:58] 🔬 XGB Conservative: R² = -0.2082, MAE = 11.015
+[19:16:58] 🔬 Performance below expected range: R² = -0.208 (expected: 0.020-0.120)
+[19:16:58] 🔬 Rigorous model saved: rigorous_model_FASTING_HDL_20250918_191653.joblib
+[19:16:58] 🔬 
+🔬 [9/9] RIGOROUS ANALYSIS: FASTING LDL
+[19:16:58] 🔬 Clean dataset: 2,500 samples, 258 features
+[19:16:58] 🔬 Detecting potential data leakage for FASTING LDL...
+[19:16:58] ✅ No data leakage detected
+[19:16:58] ⚠️ No temporal information available, using standard split
+[19:16:58] 🔬 Training conservative models for FASTING LDL...
+[19:16:58] 🔬 Training conservative Random Forest...
+[19:16:59] 🔬 RF Conservative: R² = -0.0319, MAE = 28.385
+[19:16:59] 🔬 Training conservative XGBoost...
+[19:16:59] 🔬 XGB Conservative: R² = -0.0302, MAE = 29.178
+[19:16:59] 🔬 Performance below expected range: R² = -0.030 (expected: 0.020-0.120)
+[19:16:59] 🔬 Rigorous model saved: rigorous_model_FASTING_LDL_20250918_191653.joblib
+[19:16:59] 🔬 
+================================================================================
+[19:16:59] 🔬 🔬 RIGOROUS ANALYSIS COMPLETE
+[19:16:59] 🔬 ================================================================================
+[19:16:59] 🔬 Successfully analyzed 9 biomarkers
+[19:16:59] 🔬 Total analysis time: 0.1 minutes
+[19:16:59] 🔬 
+[19:16:59] 🔬 Biomarker                           R²       Status       Expected Range 
+[19:16:59] 🔬 --------------------------------------------------------------------------------
+[19:16:59] 🔬 CD4 cell count (cells/µL)           -0.0389  📉weak        0.03-0.15      
+[19:16:59] 🔬 Creatinine (mg/dL)                  0.1289   ✅normal      0.08-0.25      
+[19:16:59] 🔬 Hemoglobin (g/dL)                   0.1240   ⚠️ high        0.02-0.12      
+[19:16:59] 🔬 systolic blood pressure             0.0018   📉weak        0.05-0.20      
+[19:16:59] 🔬 diastolic blood pressure            -0.0173  📉weak        0.05-0.20      
+[19:16:59] 🔬 FASTING GLUCOSE                     -3.5548  📉weak        0.02-0.12      
+[19:16:59] 🔬 FASTING TOTAL CHOLESTEROL           -0.3772  📉weak        0.02-0.12      
+[19:16:59] 🔬 FASTING HDL                         -0.2082  📉weak        0.02-0.12      
+[19:16:59] 🔬 FASTING LDL                         -0.0302  📉weak        0.02-0.12      
+[19:16:59] 🔬 
+[19:16:59] 🔬 📊 Performance Summary:
+[19:16:59] 🔬    Mean R²: -0.4413
+[19:16:59] 🔬    Realistic models: 2/9
+[19:16:59] 🔬    Literature-validated methodology: ✅
+[19:16:59] 🔬 
+[19:16:59] 🔬 ✅ Results saved to: rigorous_results/rigorous_analysis_20250918_191653.json
+[19:16:59] 🔬 📋 Progress log: rigorous_results/rigorous_progress_20250918_191653.log

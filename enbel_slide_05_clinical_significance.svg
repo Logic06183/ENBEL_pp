@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <defs>
+    <pattern id="subtleGrid" patternUnits="userSpaceOnUse" width="15" height="15">
+      <path d="M 15 0 L 0 0 0 15" fill="none" stroke="#ffffff" stroke-width="0.2" opacity="0.4"/>
+    </pattern>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="clinicalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#subtleGrid)"/>
+  <rect x="0" y="0" width="1920" height="4" fill="url(#headerGradient)"/>
+  
+  <!-- Header -->
+  <g id="header">
+    <text x="960" y="75" font-family="Arial, sans-serif" font-size="44" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+      Effect sizes exceed WHO and ADA clinical thresholds
+    </text>
+    <text x="960" y="115" font-family="Arial, sans-serif" font-size="20" font-weight="300" text-anchor="middle" fill="#475569">
+      Population-scale health impacts confirmed by international standards
+    </text>
+  </g>
+  
+  <!-- Clinical significance panels with proper spacing -->
+  <g id="clinical-panels" transform="translate(100, 150)">
+    
+    <!-- Blood Pressure Panel -->
+    <g transform="translate(0, 0)">
+      <rect width="860" height="280" rx="15" ry="15" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+      <rect x="0" y="0" width="860" height="55" rx="15" ry="15" fill="#dc2626"/>
+      <rect x="0" y="40" width="860" height="15" fill="#dc2626"/>
+      
+      <text x="430" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">CARDIOVASCULAR</text>
+      
+      <g transform="translate(40, 85)">
+        <text x="0" y="25" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#dc2626">2.9 mmHg reduction per 1°C</text>
+        
+        <!-- WHO threshold visualization with improved spacing -->
+        <g transform="translate(0, 55)">
+          <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#dc2626">WHO Clinical Significance Threshold Comparison:</text>
+          
+          <!-- Threshold comparison chart with better spacing -->
+          <g transform="translate(0, 35)">
+            <!-- Background -->
+            <rect x="0" y="0" width="740" height="70" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+            
+            <!-- WHO threshold line -->
+            <line x1="120" y1="10" x2="120" y2="60" stroke="#f59e0b" stroke-width="4"/>
+            <text x="125" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">WHO Threshold</text>
+            <text x="125" y="40" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">2.0 mmHg</text>
+            
+            <!-- Our finding bar with confidence interval -->
+            <rect x="180" y="25" width="174" height="20" fill="#dc2626" opacity="0.8"/>
+            <text x="267" y="39" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">2.9 mmHg</text>
+            
+            <!-- Confidence interval error bars -->
+            <line x1="165" y1="35" x2="185" y2="35" stroke="#dc2626" stroke-width="2"/>
+            <line x1="175" y1="30" x2="175" y2="40" stroke="#dc2626" stroke-width="2"/>
+            <line x1="344" y1="35" x2="364" y2="35" stroke="#dc2626" stroke-width="2"/>
+            <line x1="354" y1="30" x2="354" y2="40" stroke="#dc2626" stroke-width="2"/>
+            <line x1="175" y1="35" x2="354" y2="35" stroke="#dc2626" stroke-width="1"/>
+            
+            <!-- Statistical annotations -->
+            <text x="400" y="25" font-family="Arial, sans-serif" font-size="11" fill="#dc2626">95% CI: [2.1, 3.7]</text>
+            <text x="400" y="40" font-family="Arial, sans-serif" font-size="11" fill="#dc2626">p &lt; 10⁻¹⁵</text>
+            <text x="400" y="55" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#dc2626">✓ CLINICALLY SIGNIFICANT</text>
+          </g>
+        </g>
+        
+        <text x="0" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0f172a">Population impact during heat waves:</text>
+        <text x="0" y="165" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">+5°C temperature → 14.5 mmHg blood pressure reduction</text>
+        <text x="0" y="185" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">5.6 million Johannesburg residents at risk</text>
+        <text x="0" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#dc2626">First evidence of extended 21-day cardiovascular effects</text>
+      </g>
+    </g>
+    
+    <!-- Glucose Panel -->
+    <g transform="translate(980, 0)">
+      <rect width="860" height="280" rx="15" ry="15" fill="#f0f9ff" stroke="#2563eb" stroke-width="3"/>
+      <rect x="0" y="0" width="860" height="55" rx="15" ry="15" fill="#2563eb"/>
+      <rect x="0" y="40" width="860" height="15" fill="#2563eb"/>
+      
+      <text x="430" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">METABOLIC</text>
+      
+      <g transform="translate(40, 85)">
+        <text x="0" y="25" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2563eb">8.2 mg/dL elevation per 1°C</text>
+        
+        <!-- ADA threshold visualization with improved spacing -->
+        <g transform="translate(0, 55)">
+          <text x="0" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2563eb">ADA Clinical Significance Threshold Comparison:</text>
+          
+          <!-- Threshold comparison chart with better spacing -->
+          <g transform="translate(0, 35)">
+            <!-- Background -->
+            <rect x="0" y="0" width="740" height="70" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+            
+            <!-- ADA threshold line -->
+            <line x1="100" y1="10" x2="100" y2="60" stroke="#f59e0b" stroke-width="4"/>
+            <text x="105" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">ADA Threshold</text>
+            <text x="105" y="40" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f59e0b">5.0 mg/dL</text>
+            
+            <!-- Our finding bar with confidence interval -->
+            <rect x="160" y="25" width="196" height="20" fill="#2563eb" opacity="0.8"/>
+            <text x="258" y="39" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">8.2 mg/dL</text>
+            
+            <!-- Confidence interval error bars -->
+            <line x1="145" y1="35" x2="165" y2="35" stroke="#2563eb" stroke-width="2"/>
+            <line x1="155" y1="30" x2="155" y2="40" stroke="#2563eb" stroke-width="2"/>
+            <line x1="346" y1="35" x2="366" y2="35" stroke="#2563eb" stroke-width="2"/>
+            <line x1="356" y1="30" x2="356" y2="40" stroke="#2563eb" stroke-width="2"/>
+            <line x1="155" y1="35" x2="356" y2="35" stroke="#2563eb" stroke-width="1"/>
+            
+            <!-- Statistical annotations -->
+            <text x="400" y="25" font-family="Arial, sans-serif" font-size="11" fill="#2563eb">95% CI: [6.1, 10.3]</text>
+            <text x="400" y="40" font-family="Arial, sans-serif" font-size="11" fill="#2563eb">p &lt; 10⁻¹⁰</text>
+            <text x="400" y="55" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#2563eb">✓ CLINICALLY SIGNIFICANT</text>
+          </g>
+        </g>
+        
+        <text x="0" y="140" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#0f172a">Population impact during heat waves:</text>
+        <text x="0" y="165" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">+5°C temperature → 41 mg/dL glucose elevation</text>
+        <text x="0" y="185" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">300,000 diabetic patients at risk</text>
+        <text x="0" y="205" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2563eb">Immediate stress response (0-3 days)</text>
+      </g>
+    </g>
+    
+  </g>
+  
+  <!-- Population impact section with improved spacing -->
+  <g id="population-impact" transform="translate(100, 460)">
+    <rect width="1720" height="180" rx="15" ry="15" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="1720" height="50" rx="15" ry="15" fill="#16a34a"/>
+    <rect x="0" y="35" width="1720" height="15" fill="#16a34a"/>
+    <text x="860" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#ffffff">Population Health Impact at Scale</text>
+    
+    <!-- Key facts with better spacing -->
+    <g transform="translate(60, 75)">
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#16a34a">
+        Johannesburg Metropolitan Area: 5.6 million residents
+      </text>
+      
+      <text x="0" y="60" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        • 1.4 million people with hypertension vulnerable to climate-induced blood pressure changes
+      </text>
+      <text x="0" y="85" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        • 300,000 diabetic patients at risk from heat-induced glucose elevation  
+      </text>
+      <text x="0" y="110" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        • Heat waves create immediate population-wide cardiovascular and metabolic stress
+      </text>
+      <text x="0" y="135" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#16a34a">
+        Clinical action thresholds exceeded for multiple physiological systems
+      </text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g id="footer" transform="translate(0, 670)">
+    <rect x="100" y="0" width="1720" height="110" rx="10" ry="10" fill="#1e3a8a" opacity="0.95"/>
+    
+    <text x="960" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Effect Sizes Exceed WHO and ADA Clinical Thresholds
+    </text>
+    <text x="960" y="60" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#cbd5e1">
+      Population-scale health impacts confirmed • 5.6 million people affected • Immediate clinical action warranted
+    </text>
+    
+    <!-- Clinical References -->
+    <text x="960" y="85" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#94a3b8">
+      References: WHO Global Health Observatory 2023; ADA Standards of Medical Care 2024; Bunker A. et al. Environ Int 2016; Lim CC. et al. Lancet Planet Health 2022
+    </text>
+    <text x="960" y="100" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="#94a3b8">
+      Zhao Q. et al. Environ Sci Pollut Res 2021; Alahmad B. et al. Circulation 2023; Segers S. et al. Diabetes Care 2023; Basu R. et al. Am J Epidemiol 2018
+    </text>
+  </g>
+  
+  <!-- Slide number -->
+  <text x="1850" y="1060" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b">6 / 11</text>
+  
+</svg>

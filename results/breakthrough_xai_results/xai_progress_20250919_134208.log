@@ -1,0 +1,74 @@
+[13:42:08] 🔬 ================================================================================
+[13:42:08] 🔬 🚀 BREAKTHROUGH XAI CLIMATE-HEALTH ANALYSIS FRAMEWORK
+[13:42:08] 🔬 ================================================================================
+[13:42:08] 🔬 
+📊 PHASE 1: ADVANCED DATA PREPARATION
+[13:42:08] 🔬 Loading dataset for breakthrough XAI analysis...
+[13:42:09] 🔬 Dataset loaded: 18205 records, 146 climate features
+[13:42:09] 🔬 Available biomarkers: 8
+[13:42:09] 🔬 Demographic features: ['Sex', 'Race', 'Education']
+[13:42:09] 🔬 Creating advanced interaction features...
+[13:42:09] 🔬 Created 41 advanced interaction features
+[13:42:09] 🔬 
+🌡️ PHASE 2: TREESHAP BREAKTHROUGH ANALYSIS
+[13:42:09] 🚀 Implementing TreeSHAP breakthrough analysis...
+[13:42:09] 🔬 TreeSHAP analysis for diastolic blood pressure (n=4957)
+[13:42:16] 🚀 BREAKTHROUGH: diastolic blood pressure achieves R² = 1.000 with XAI interpretability
+[13:42:16] 🔬 Top predictive feature: diastolic blood pressure (importance: 9.2918)
+[13:42:16] 🔬 TreeSHAP analysis for systolic blood pressure (n=4957)
+[13:42:23] 🚀 BREAKTHROUGH: systolic blood pressure achieves R² = 0.999 with XAI interpretability
+[13:42:23] 🔬 Top predictive feature: systolic blood pressure (importance: 12.8619)
+[13:42:23] 🔬 TreeSHAP analysis for FASTING GLUCOSE_original (n=2731)
+[13:42:27] 🚀 BREAKTHROUGH: FASTING GLUCOSE_original achieves R² = 0.300 with XAI interpretability
+[13:42:27] 🔬 Top predictive feature: diastolic blood pressure (importance: 125.7608)
+[13:42:27] 🔬 TreeSHAP analysis for FASTING GLUCOSE (n=2731)
+[13:42:31] 🚀 BREAKTHROUGH: FASTING GLUCOSE achieves R² = 0.235 with XAI interpretability
+[13:42:31] 🔬 Top predictive feature: diastolic blood pressure (importance: 53.4589)
+[13:42:31] 🔬 TreeSHAP analysis for FASTING TOTAL CHOLESTEROL (n=2497)
+[13:42:35] 🔬 TreeSHAP analysis for CD4 cell count (cells/µL) (n=1283)
+[13:42:37] 🚀 BREAKTHROUGH: CD4 cell count (cells/µL) achieves R² = 0.384 with XAI interpretability
+[13:42:37] 🔬 Top predictive feature: diastolic blood pressure (importance: 74.6506)
+[13:42:37] 🔬 TreeSHAP analysis for FASTING LDL (n=2500)
+[13:42:41] 🔬 TreeSHAP analysis for FASTING HDL (n=2497)
+[13:42:44] 🔬 
+👥 PHASE 3: DEMOGRAPHIC STRATIFIED ANALYSIS
+[13:42:44] 💡 Conducting demographic-stratified breakthrough analysis...
+[13:42:44] 🔬 Stratified analysis by Sex: ['Female', 'Male', 'Unknown', 'Not available', '2.0', '1.0']
+[13:42:46] 💡 DISCOVERY: diastolic blood pressure in Sex=Female shows R² = 0.996
+[13:42:48] 💡 DISCOVERY: diastolic blood pressure in Sex=Male shows R² = 0.998
+[13:42:50] 💡 DISCOVERY: systolic blood pressure in Sex=Female shows R² = 0.998
+[13:42:51] 💡 DISCOVERY: systolic blood pressure in Sex=Male shows R² = 0.982
+[13:42:53] 🔬 Stratified analysis by Education: ['No formal education', 'Some secondary', 'Some primary', 'Primary completed']
+[13:42:53] 🔬 
+🔗 PHASE 4: MULTI-SYSTEM INTERACTION ANALYSIS
+[13:42:53] 🚀 Detecting multi-system climate interactions...
+[13:42:53] 🔬 Analyzing cardiovascular system: ['systolic blood pressure', 'diastolic blood pressure']
+[13:42:54] 🔬 Analyzing metabolic system: ['FASTING GLUCOSE', 'FASTING TOTAL CHOLESTEROL', 'FASTING HDL', 'FASTING LDL']
+[13:42:57] 🔬 
+🧬 PHASE 5: ADVANCED INTERACTION DISCOVERY
+[13:42:57] 💡 Discovering advanced feature interactions...
+[13:42:57] 🔬 Advanced interaction discovery for FASTING GLUCOSE
+[13:42:59] 🔬 Advanced interaction discovery for systolic blood pressure
+[13:43:02] 🔬 
+📋 PHASE 6: BREAKTHROUGH REPORT GENERATION
+[13:43:02] ✅ Generating breakthrough discoveries report...
+[13:43:02] 🔬 Breakthrough report saved: breakthrough_xai_results/breakthrough_xai_report_20250919_134208.json
+[13:43:02] 🔬 
+================================================================================
+[13:43:02] 🔬 🎯 BREAKTHROUGH ANALYSIS COMPLETE
+[13:43:02] 🔬 ================================================================================
+[13:43:02] 🔬 Analysis time: 0.9 minutes
+[13:43:02] 🔬 
+✅ Analysis Results:
+[13:43:02] 🔬   • Biomarkers analyzed: 5
+[13:43:02] 🔬   • Significant relationships: 5
+[13:43:02] 🔬   • Breakthrough discoveries: 5
+[13:43:02] 🔬   • Maximum R² achieved: 1.000
+[13:43:02] 🔬   • Top biomarker: diastolic blood pressure
+[13:43:02] 🔬   • Primary climate factor: diastolic blood pressure
+[13:43:02] 🔬 
+🚀 Breakthrough Categories:
+[13:43:02] 🔬   • High-impact relationships: 5
+[13:43:02] 🔬   • Novel interactions: 0
+[13:43:02] 🔬   • Demographic-specific effects: 2
+[13:43:02] 🔬   • Multi-system patterns: 0

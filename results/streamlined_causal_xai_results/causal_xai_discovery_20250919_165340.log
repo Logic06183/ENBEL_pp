@@ -1,0 +1,96 @@
+2025-09-19 16:53:40,726 - 🚀 Starting Streamlined Causal XAI Discovery Analysis
+2025-09-19 16:53:40,726 - ======================================================================
+2025-09-19 16:53:40,726 - 🔬 Loading comprehensive dataset for causal XAI discovery
+2025-09-19 16:53:41,080 - Dataset loaded: 18205 records, 343 variables
+2025-09-19 16:53:41,081 - health_outcomes: 15 features available
+2025-09-19 16:53:41,081 - climate_immediate: 6 features available
+2025-09-19 16:53:41,081 - climate_lagged: 189 features available
+2025-09-19 16:53:41,082 - socioeconomic: 7 features available
+2025-09-19 16:53:41,082 - demographics: 7 features available
+2025-09-19 16:53:41,082 - 🔧 Engineering systematic interaction features for causal discovery
+2025-09-19 16:53:41,135 - Created 47 systematic interaction features
+2025-09-19 16:53:41,138 - 🧬 Discovering multi-system physiological interactions using feature importance
+2025-09-19 16:53:41,138 - 
+🔍 Analyzing cardiovascular system with 2 biomarkers
+2025-09-19 16:53:41,138 -   Analyzing systolic blood pressure
+2025-09-19 16:53:41,155 -     systolic blood pressure analysis: 4957 samples, 82 features
+2025-09-19 16:53:48,109 -     ✅ systolic blood pressure analysis complete - R² = -0.071
+2025-09-19 16:53:48,109 -   Analyzing diastolic blood pressure
+2025-09-19 16:53:48,123 -     diastolic blood pressure analysis: 4957 samples, 82 features
+2025-09-19 16:53:55,084 -     ✅ diastolic blood pressure analysis complete - R² = -0.025
+2025-09-19 16:53:55,084 - 
+🔍 Analyzing metabolic system with 5 biomarkers
+2025-09-19 16:53:55,084 -   Analyzing FASTING GLUCOSE
+2025-09-19 16:53:55,094 -     FASTING GLUCOSE analysis: 2731 samples, 82 features
+2025-09-19 16:53:59,254 -     ✅ FASTING GLUCOSE analysis complete - R² = 0.329
+2025-09-19 16:53:59,254 -   Analyzing FASTING LDL
+2025-09-19 16:53:59,263 -     FASTING LDL analysis: 2500 samples, 82 features
+2025-09-19 16:54:03,325 -     ✅ FASTING LDL analysis complete - R² = 0.043
+2025-09-19 16:54:03,325 -   Analyzing FASTING TOTAL CHOLESTEROL
+2025-09-19 16:54:03,334 -     FASTING TOTAL CHOLESTEROL analysis: 2497 samples, 82 features
+2025-09-19 16:54:07,300 -     ✅ FASTING TOTAL CHOLESTEROL analysis complete - R² = 0.058
+2025-09-19 16:54:07,300 -   Analyzing FASTING HDL
+2025-09-19 16:54:07,311 -     FASTING HDL analysis: 2497 samples, 82 features
+2025-09-19 16:54:11,325 -     ✅ FASTING HDL analysis complete - R² = -0.020
+2025-09-19 16:54:11,325 -   Analyzing FASTING TRIGLYCERIDES
+2025-09-19 16:54:11,335 -     FASTING TRIGLYCERIDES analysis: 972 samples, 82 features
+2025-09-19 16:54:12,993 -     ✅ FASTING TRIGLYCERIDES analysis complete - R² = -0.691
+2025-09-19 16:54:12,993 - 
+🔍 Analyzing hepatic system with 2 biomarkers
+2025-09-19 16:54:12,993 -   Analyzing ALT (U/L)
+2025-09-19 16:54:13,001 -     ALT (U/L) analysis: 1254 samples, 82 features
+2025-09-19 16:54:15,170 -     ✅ ALT (U/L) analysis complete - R² = -0.257
+2025-09-19 16:54:15,170 -   Analyzing AST (U/L)
+2025-09-19 16:54:15,179 -     AST (U/L) analysis: 1254 samples, 82 features
+2025-09-19 16:54:17,341 -     ✅ AST (U/L) analysis complete - R² = -0.416
+2025-09-19 16:54:17,341 - 
+🔍 Analyzing renal system with 1 biomarkers
+2025-09-19 16:54:17,341 -   Analyzing Creatinine (mg/dL)
+2025-09-19 16:54:17,349 -     Creatinine (mg/dL) analysis: 1251 samples, 82 features
+2025-09-19 16:54:19,540 -     ✅ Creatinine (mg/dL) analysis complete - R² = 0.115
+2025-09-19 16:54:19,540 - 
+🔍 Analyzing hematologic system with 2 biomarkers
+2025-09-19 16:54:19,540 -   Analyzing Hemoglobin (g/dL)
+2025-09-19 16:54:19,553 -     Hemoglobin (g/dL) analysis: 1282 samples, 82 features
+2025-09-19 16:54:21,942 -     ✅ Hemoglobin (g/dL) analysis complete - R² = 0.116
+2025-09-19 16:54:21,943 -   Analyzing Hematocrit (%)
+2025-09-19 16:54:21,957 -     Hematocrit (%) analysis: 1066 samples, 82 features
+2025-09-19 16:54:23,866 -     ✅ Hematocrit (%) analysis complete - R² = 0.048
+2025-09-19 16:54:23,866 - 
+🔍 Analyzing immune system with 1 biomarkers
+2025-09-19 16:54:23,866 -   Analyzing CD4 cell count (cells/µL)
+2025-09-19 16:54:23,879 -     CD4 cell count (cells/µL) analysis: 1283 samples, 82 features
+2025-09-19 16:54:26,102 -     ✅ CD4 cell count (cells/µL) analysis complete - R² = 0.400
+2025-09-19 16:54:26,102 - 
+🔍 Analyzing anthropometric system with 2 biomarkers
+2025-09-19 16:54:26,102 -   Analyzing Height
+2025-09-19 16:54:26,115 -     Height analysis: 6617 samples, 82 features
+2025-09-19 16:54:35,916 -     ✅ Height analysis complete - R² = 0.972
+2025-09-19 16:54:35,917 -   Analyzing weight
+2025-09-19 16:54:35,931 -     weight analysis: 6621 samples, 82 features
+2025-09-19 16:54:45,516 -     ✅ weight analysis complete - R² = 0.024
+2025-09-19 16:54:45,517 - 🔗 Discovering cross-system interaction patterns
+2025-09-19 16:54:45,517 - Found 21 cross-system interaction patterns
+2025-09-19 16:54:45,517 - 
+🎯 BREAKTHROUGH DISCOVERY SUMMARY
+2025-09-19 16:54:45,517 - ==================================================
+2025-09-19 16:54:45,517 - ✅ Successful biomarker analyses: 6/15
+2025-09-19 16:54:45,517 - ✅ Cross-system patterns discovered: 21
+2025-09-19 16:54:45,517 - 
+🔬 Top Biomarker Discoveries:
+2025-09-19 16:54:45,517 -   • FASTING GLUCOSE: R² = 0.329, 15 interactions
+2025-09-19 16:54:45,517 -   • FASTING TOTAL CHOLESTEROL: R² = 0.058, 15 interactions
+2025-09-19 16:54:45,517 -   • Creatinine (mg/dL): R² = 0.115, 15 interactions
+2025-09-19 16:54:45,517 -   • Hemoglobin (g/dL): R² = 0.116, 15 interactions
+2025-09-19 16:54:45,517 -   • CD4 cell count (cells/µL): R² = 0.400, 15 interactions
+2025-09-19 16:54:45,517 -   • Height: R² = 0.972, 15 interactions
+2025-09-19 16:54:45,517 - 
+🔗 Top Cross-System Patterns:
+2025-09-19 16:54:45,517 -   • heat_index_x_Race: importance = 0.077, affects hematologic, metabolic, renal, immune, anthropometric
+2025-09-19 16:54:45,517 -   • temperature_x_Race: importance = 0.025, affects renal, immune, anthropometric, metabolic
+2025-09-19 16:54:45,517 -   • temperature_tas_lag7_x_Sex: importance = 0.022, affects renal, hematologic, immune
+2025-09-19 16:54:45,517 -   • temperature_x_Sex: importance = 0.015, affects renal, anthropometric, metabolic
+2025-09-19 16:54:45,517 -   • apparent_temp_x_Race: importance = 0.014, affects renal, hematologic, anthropometric, metabolic
+2025-09-19 16:54:45,517 - 
+🎯 Analysis Status: STREAMLINED XAI DISCOVERY COMPLETE
+2025-09-19 16:54:45,521 - 📁 Results saved to: streamlined_causal_xai_results/streamlined_causal_xai_results_20250919_165445.json

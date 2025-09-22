@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <defs>
+    <pattern id="subtleGrid" patternUnits="userSpaceOnUse" width="10" height="10">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#ffffff" stroke-width="0.1" opacity="0.6"/>
+    </pattern>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Impact area gradients -->
+    <linearGradient id="clinicalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:0.05" />
+    </linearGradient>
+    
+    <linearGradient id="researchGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0.05" />
+    </linearGradient>
+    
+    <linearGradient id="policyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:0.05" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#subtleGrid)"/>
+  <rect x="0" y="0" width="1920" height="4" fill="url(#headerGradient)"/>
+  
+  <!-- Header -->
+  <g id="header">
+    <text x="960" y="60" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+      Clinical &amp; Policy Implications
+    </text>
+    <text x="960" y="95" font-family="Arial, sans-serif" font-size="20" font-weight="300" text-anchor="middle" fill="#475569">
+      Immediate Action Required • Evidence-Based Protocols • Population Health Protection
+    </text>
+  </g>
+  
+  <!-- Simple three key implications -->
+  <g id="simple-implications" transform="translate(160, 130)">
+    
+    <!-- Clinical -->
+    <g transform="translate(0, 0)">
+      <rect width="530" height="200" rx="15" ry="15" fill="#fef2f2" stroke="#dc2626" stroke-width="3"/>
+      <rect x="0" y="0" width="530" height="50" rx="15" ry="15" fill="#dc2626"/>
+      <rect x="0" y="35" width="530" height="15" fill="#dc2626"/>
+      
+      <text x="265" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">CLINICAL</text>
+      
+      <g transform="translate(40, 80)">
+        <!-- Clinical monitoring icon -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="20" height="15" rx="2" ry="2" fill="none" stroke="#dc2626" stroke-width="2"/>
+          <!-- Screen with vital signs -->
+          <line x1="5" y1="5" x2="15" y2="5" stroke="#dc2626" stroke-width="1"/>
+          <path d="M 5 8 Q 8 6 10 8 T 15 8" stroke="#dc2626" stroke-width="1" fill="none"/>
+        </g>
+        
+        <text x="30" y="15" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#dc2626">Extended Monitoring Required</text>
+        <text x="0" y="40" font-family="Arial, sans-serif" font-size="16" fill="#7f1d1d">• 21-day BP surveillance</text>
+        <text x="0" y="65" font-family="Arial, sans-serif" font-size="16" fill="#7f1d1d">• Immediate glucose monitoring</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="16" fill="#7f1d1d">• Climate-informed protocols</text>
+      </g>
+    </g>
+    
+    <!-- Research -->
+    <g transform="translate(570, 0)">
+      <rect width="530" height="200" rx="15" ry="15" fill="#f0f9ff" stroke="#2563eb" stroke-width="3"/>
+      <rect x="0" y="0" width="530" height="50" rx="15" ry="15" fill="#2563eb"/>
+      <rect x="0" y="35" width="530" height="15" fill="#2563eb"/>
+      
+      <text x="265" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">RESEARCH</text>
+      
+      <g transform="translate(40, 80)">
+        <!-- Research advancement icon -->
+        <g transform="translate(0, 0)">
+          <circle cx="10" cy="10" r="8" fill="none" stroke="#2563eb" stroke-width="2"/>
+          <!-- Innovation arrows -->
+          <path d="M 15 5 L 20 10 L 15 15 M 16 10 L 24 10" stroke="#2563eb" stroke-width="2" fill="none"/>
+          <!-- Lightbulb concept -->
+          <circle cx="10" cy="8" r="3" fill="#2563eb" opacity="0.3"/>
+        </g>
+        
+        <text x="35" y="15" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">Paradigm Shift</text>
+        <text x="0" y="40" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">• Extended temporal patterns</text>
+        <text x="0" y="65" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">• Multi-system approach</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="16" fill="#1e3a8a">• AI-driven discovery</text>
+      </g>
+    </g>
+    
+    <!-- Policy -->
+    <g transform="translate(1140, 0)">
+      <rect width="530" height="200" rx="15" ry="15" fill="#f0fdf4" stroke="#16a34a" stroke-width="3"/>
+      <rect x="0" y="0" width="530" height="50" rx="15" ry="15" fill="#16a34a"/>
+      <rect x="0" y="35" width="530" height="15" fill="#16a34a"/>
+      
+      <text x="265" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">POLICY</text>
+      
+      <g transform="translate(40, 80)">
+        <!-- Policy implementation icon -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="18" height="12" rx="2" ry="2" fill="none" stroke="#16a34a" stroke-width="2"/>
+          <!-- Document lines -->
+          <line x1="3" y1="4" x2="15" y2="4" stroke="#16a34a" stroke-width="1"/>
+          <line x1="3" y1="7" x2="12" y2="7" stroke="#16a34a" stroke-width="1"/>
+          <!-- Implementation arrow -->
+          <path d="M 20 6 L 28 6 M 25 3 L 28 6 L 25 9" stroke="#16a34a" stroke-width="2" fill="none"/>
+        </g>
+        
+        <text x="35" y="15" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">Population Protection</text>
+        <text x="0" y="40" font-family="Arial, sans-serif" font-size="16" fill="#15803d">• Urban planning integration</text>
+        <text x="0" y="65" font-family="Arial, sans-serif" font-size="16" fill="#15803d">• Early warning systems</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="16" fill="#15803d">• Health surveillance</text>
+      </g>
+    </g>
+    
+  </g>
+  
+  <!-- Urban African Context -->
+  <g id="urban-context" transform="translate(160, 360)">
+    <rect width="1600" height="180" rx="15" ry="15" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="1600" height="50" rx="15" ry="15" fill="#f59e0b"/>
+    <rect x="0" y="35" width="1600" height="15" fill="#f59e0b"/>
+    <text x="800" y="35" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#ffffff">Urban African Population Impact</text>
+    
+    <!-- Key facts -->
+    <g transform="translate(100, 80)">
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#92400e">
+        5.6 million people in Johannesburg Metro affected
+      </text>
+      <text x="0" y="55" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        • Heat island effects amplify climate vulnerability • Limited healthcare access for chronic diseases
+      </text>
+      <text x="0" y="80" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        • Evidence-based interventions now possible • Replicable across sub-Saharan urban centers
+      </text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g id="footer" transform="translate(0, 580)">
+    <rect x="160" y="0" width="1600" height="80" rx="10" ry="10" fill="#1e3a8a" opacity="0.95"/>
+    
+    <text x="960" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Immediate Action Required • Evidence-Based Protocols Available • Population Health at Risk
+    </text>
+    <text x="960" y="55" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#cbd5e1">
+      Climate health discoveries demand urgent clinical and policy implementation
+    </text>
+  </g>
+  
+  <!-- Slide number -->
+  <text x="1850" y="1060" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b">8 / 11</text>
+  
+</svg>

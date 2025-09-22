@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for biomarker categories -->
+    <linearGradient id="cardiovascularGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f77b4;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#2ca02c;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="metabolicGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d62728;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#ff7f0e;stop-opacity:0.8"/>
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropshadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="600" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#2c3e50">
+    Figure 1: Validated Climate-Health Correlations with 95% Confidence Intervals
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="450" y="55" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#7f8c8d">
+    All relationships pass Bonferroni correction (α = 0.0125) with statistical power ≥ 0.999
+  </text>
+  
+  <!-- Main plotting area background -->
+  <rect x="120" y="100" width="680" height="400" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1" rx="5"/>
+  
+  <!-- Y-axis: Biomarkers -->
+  <text x="50" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50" transform="rotate(-90, 50, 180)">
+    Health Biomarkers
+  </text>
+  
+  <!-- X-axis: Climate Variables -->
+  <text x="460" y="540" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2c3e50">
+    Climate Variables
+  </text>
+  
+  <!-- Climate variable labels -->
+  <text x="220" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#495057">Temperature (21-day lag)</text>
+  <text x="360" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#495057">Apparent Temp (21-day lag)</text>
+  <text x="540" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#495057">Land Temp (3-day lag)</text>
+  <text x="700" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#495057">Temperature (immediate)</text>
+  
+  <!-- Biomarker labels with color coding -->
+  <rect x="80" y="160" width="15" height="15" fill="url(#cardiovascularGradient)" rx="2"/>
+  <text x="105" y="172" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">Systolic Blood Pressure</text>
+  <text x="105" y="185" font-family="Arial, sans-serif" font-size="10" fill="#6c757d">(Cardiovascular System)</text>
+  
+  <rect x="80" y="300" width="15" height="15" fill="url(#metabolicGradient)" rx="2"/>
+  <text x="105" y="312" font-family="Arial, sans-serif" font-size="12" fill="#2c3e50" font-weight="bold">Fasting Glucose</text>
+  <text x="105" y="325" font-family="Arial, sans-serif" font-size="10" fill="#6c757d">(Metabolic System)</text>
+  
+  <!-- Correlation 1: Systolic BP - Temperature 21-day lag -->
+  <g id="corr1" filter="url(#dropshadow)">
+    <!-- Confidence interval bar -->
+    <rect x="198" y="177" width="44" height="8" fill="#3498db" opacity="0.3" rx="4"/>
+    <!-- Error bars -->
+    <line x1="198" y1="175" x2="198" y2="187" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="242" y1="175" x2="242" y2="187" stroke="#2c3e50" stroke-width="2"/>
+    <!-- Point estimate -->
+    <circle cx="220" cy="181" r="5" fill="#e74c3c" stroke="#2c3e50" stroke-width="2"/>
+    <!-- Statistical annotations -->
+    <text x="220" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">r = -0.114***</text>
+    <text x="220" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">p = 8.79×10⁻¹⁶</text>
+    <text x="220" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">n = 4,957</text>
+    <text x="220" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">95% CI: [-0.141, -0.088]</text>
+  </g>
+  
+  <!-- Correlation 2: Systolic BP - Apparent Temperature 21-day lag -->
+  <g id="corr2" filter="url(#dropshadow)">
+    <!-- Confidence interval bar -->
+    <rect x="338" y="177" width="44" height="8" fill="#3498db" opacity="0.3" rx="4"/>
+    <!-- Error bars -->
+    <line x1="338" y1="175" x2="338" y2="187" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="382" y1="175" x2="382" y2="187" stroke="#2c3e50" stroke-width="2"/>
+    <!-- Point estimate -->
+    <circle cx="360" cy="181" r="5" fill="#e74c3c" stroke="#2c3e50" stroke-width="2"/>
+    <!-- Statistical annotations -->
+    <text x="360" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">r = -0.113***</text>
+    <text x="360" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">p = 1.57×10⁻¹⁵</text>
+    <text x="360" y="224" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">n = 4,957</text>
+    <text x="360" y="236" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">95% CI: [-0.141, -0.087]</text>
+  </g>
+  
+  <!-- Correlation 3: Fasting Glucose - Land Temperature 3-day lag -->
+  <g id="corr3" filter="url(#dropshadow)">
+    <!-- Confidence interval bar -->
+    <rect x="518" y="317" width="44" height="8" fill="#f39c12" opacity="0.3" rx="4"/>
+    <!-- Error bars -->
+    <line x1="518" y1="315" x2="518" y2="327" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="562" y1="315" x2="562" y2="327" stroke="#2c3e50" stroke-width="2"/>
+    <!-- Point estimate -->
+    <circle cx="540" cy="321" r="5" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
+    <!-- Statistical annotations -->
+    <text x="540" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">r = +0.131***</text>
+    <text x="540" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">p = 5.67×10⁻¹²</text>
+    <text x="540" y="364" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">n = 2,731</text>
+    <text x="540" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">95% CI: [+0.096, +0.166]</text>
+  </g>
+  
+  <!-- Correlation 4: Fasting Glucose - Temperature immediate -->
+  <g id="corr4" filter="url(#dropshadow)">
+    <!-- Confidence interval bar -->
+    <rect x="678" y="317" width="44" height="8" fill="#f39c12" opacity="0.3" rx="4"/>
+    <!-- Error bars -->
+    <line x1="678" y1="315" x2="678" y2="327" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="722" y1="315" x2="722" y2="327" stroke="#2c3e50" stroke-width="2"/>
+    <!-- Point estimate -->
+    <circle cx="700" cy="321" r="5" fill="#27ae60" stroke="#2c3e50" stroke-width="2"/>
+    <!-- Statistical annotations -->
+    <text x="700" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2c3e50">r = +0.118***</text>
+    <text x="700" y="352" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">p = 6.32×10⁻¹⁰</text>
+    <text x="700" y="364" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">n = 2,731</text>
+    <text x="700" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6c757d">95% CI: [+0.080, +0.152]</text>
+  </g>
+  
+  <!-- Zero reference line -->
+  <line x1="140" y1="250" x2="780" y2="250" stroke="#95a5a6" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="145" y="245" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">r = 0</text>
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="520" y="90" width="250" height="60" fill="#ffffff" stroke="#dee2e6" stroke-width="1" rx="5"/>
+    <text x="530" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2c3e50">Legend</text>
+    
+    <circle cx="540" cy="120" r="4" fill="#e74c3c"/>
+    <text x="550" y="125" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Negative correlation</text>
+    
+    <circle cx="540" cy="135" r="4" fill="#27ae60"/>
+    <text x="550" y="140" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Positive correlation</text>
+    
+    <text x="650" y="125" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">*** p &lt; 0.001</text>
+    <text x="650" y="140" font-family="Arial, sans-serif" font-size="10" fill="#2c3e50">Error bars = 95% CI</text>
+  </g>
+  
+  <!-- Study validation stamp -->
+  <g id="validation-stamp">
+    <rect x="650" y="450" width="120" height="80" fill="#e8f5e8" stroke="#27ae60" stroke-width="2" rx="8"/>
+    <text x="710" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#27ae60">VALIDATED</text>
+    <text x="710" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">Statistical Power ≥ 0.999</text>
+    <text x="710" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">Bonferroni Corrected</text>
+    <text x="710" y="511" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">95% CI Excludes Zero</text>
+    <text x="710" y="524" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">n = 18,205 total</text>
+  </g>
+  
+  <!-- Caption -->
+  <text x="50" y="580" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    <tspan font-weight="bold">Figure 1.</tspan> Correlation coefficients with 95% confidence intervals for four validated climate-health relationships.
+  </text>
+  <text x="50" y="595" font-family="Arial, sans-serif" font-size="11" fill="#2c3e50">
+    All correlations are statistically significant after Bonferroni correction (α = 0.0125) with statistical power ≥ 0.999.
+  </text>
+  
+</svg>

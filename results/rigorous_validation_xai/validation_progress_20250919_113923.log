@@ -1,0 +1,43 @@
+[11:39:23] 🔬 ================================================================================
+[11:39:23] 🔬 🔬 RIGOROUS SCIENTIFIC VALIDATION AND EXPLAINABLE AI ANALYSIS
+[11:39:23] 🔬 ================================================================================
+[11:39:23] 🔬 Loading data for rigorous validation...
+[11:39:23] 🔬 
+📊 VALIDATING SHORT-TERM RELATIONSHIPS
+[11:39:23] 🔍 Validating short-term relationships...
+[11:39:23] 🔬 Validating systolic_bp: systolic blood pressure (reported R² = 0.221)
+[11:39:33] 🔬 Validation: R² = -0.043 (CI: 0.008-0.022), p = 1.0000
+[11:39:33] 🔬 
+📊 VALIDATING LONG-TERM RELATIONSHIPS
+[11:39:33] 🔍 Validating long-term relationships...
+[11:39:33] 🔬 Validating glucose: FASTING GLUCOSE (reported R² = 0.732)
+[11:39:33] 🔬 Annual validation: R² = 0.243, LOO-CV R² = -0.213
+[11:39:33] 🔬 Validating cholesterol: FASTING TOTAL CHOLESTEROL (reported R² = 0.418)
+[11:39:33] 🔬 Annual validation: R² = 0.000, LOO-CV R² = -2.693
+[11:39:33] 🔬 Validating hdl: FASTING HDL (reported R² = 0.372)
+[11:39:33] 🔬 Annual validation: R² = 0.000, LOO-CV R² = -0.829
+[11:39:33] 🔬 
+🤖 APPLYING EXPLAINABLE AI METHODS
+[11:39:33] 🔍 Applying Explainable AI methods...
+[11:39:33] 🔬 XAI analysis for systolic blood pressure (immediate)
+[11:39:34] 🔬 Top feature: temperature_tas_lag21 (importance: 1.0505)
+[11:39:34] 🔬 XAI analysis for FASTING GLUCOSE (annual)
+[11:39:34] 🔬 Generating validation report...
+[11:39:34] 🔬 Validation report saved to: rigorous_validation_xai/validation_report_20250919_113923.json
+[11:39:34] 🔬 
+================================================================================
+[11:39:34] 🔬 VALIDATION COMPLETE
+[11:39:34] 🔬 ================================================================================
+[11:39:34] 🔬 Validation time: 0.2 minutes
+[11:39:34] 🔬 
+✅ Validated relationships: 0
+[11:39:34] 🔬 
+⚠️  Requires caution: 0
+[11:39:34] 🔬 
+❌ Rejected relationships: 6
+[11:39:34] 🔬   - systolic blood pressure: NOT_SIGNIFICANT
+[11:39:34] 🔬   - FASTING GLUCOSE: NOT_VALIDATED
+[11:39:34] 🔬   - FASTING TOTAL CHOLESTEROL: NOT_VALIDATED
+[11:39:34] 🔬   - FASTING HDL: NOT_VALIDATED
+[11:39:34] 🔬   - systolic blood pressure: UNKNOWN
+[11:39:34] 🔬   - FASTING GLUCOSE: UNKNOWN

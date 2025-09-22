@@ -1,0 +1,508 @@
+{
+  "metadata": {
+    "biomarker": "systolic blood pressure",
+    "timestamp": "20250919_133053",
+    "evaluation_time": 5.086073875427246,
+    "n_samples": 1500,
+    "n_features": 25,
+    "features": [
+      "temperature_tas_lag21",
+      "land_temp_tas_lag21",
+      "temperature_tas_lag14",
+      "apparent_temp_lag3",
+      "apparent_temp_lag0",
+      "heat_index_lag3",
+      "temperature_tas_lag3",
+      "land_temp_tas_lag7",
+      "temperature_tas_lag0",
+      "heat_index_lag0",
+      "land_temp_tas_lag14",
+      "land_temp_tas_lag0",
+      "heat_index_lag7",
+      "temperature_tas_lag7",
+      "temperature_tas_lag10",
+      "apparent_temp_lag7",
+      "apparent_temp_lag5",
+      "apparent_temp_lag1",
+      "heat_index_lag1",
+      "temperature_tas_lag1",
+      "land_temp_tas_lag3",
+      "land_temp_tas_lag10",
+      "land_temp_tas_lag5",
+      "land_temp_tas_lag1",
+      "temperature_tas_lag5"
+    ]
+  },
+  "xai_results": {
+    "tree_shap": {
+      "random_forest": {
+        "computation_time": 0.15166187286376953,
+        "model_r2": 0.31299485170336283,
+        "feature_importance": {
+          "temperature_tas_lag21": 0.6189277706466056,
+          "land_temp_tas_lag21": 0.45930525839098,
+          "temperature_tas_lag14": 0.4701128880412428,
+          "apparent_temp_lag3": 0.20208483239797914,
+          "apparent_temp_lag0": 1.3792138512295729,
+          "heat_index_lag3": 0.09768320314968722,
+          "temperature_tas_lag3": 0.2217393698386127,
+          "land_temp_tas_lag7": 0.4550794062465788,
+          "temperature_tas_lag0": 0.20664605473707817,
+          "heat_index_lag0": 0.23489656460003341,
+          "land_temp_tas_lag14": 0.45717271670398196,
+          "land_temp_tas_lag0": 0.3137118176730341,
+          "heat_index_lag7": 0.231922226912308,
+          "temperature_tas_lag7": 0.14713223605957748,
+          "temperature_tas_lag10": 0.40401410994528236,
+          "apparent_temp_lag7": 0.3775740778614929,
+          "apparent_temp_lag5": 0.5317729297147042,
+          "apparent_temp_lag1": 0.5441238708292534,
+          "heat_index_lag1": 0.13700079056275632,
+          "temperature_tas_lag1": 0.13162750045048743,
+          "land_temp_tas_lag3": 0.2571192638311587,
+          "land_temp_tas_lag10": 0.4593497170055102,
+          "land_temp_tas_lag5": 0.18362037099117642,
+          "land_temp_tas_lag1": 0.7305737547765477,
+          "temperature_tas_lag5": 0.2882514274428468
+        },
+        "shap_values_computed": true,
+        "expected_value": "[126.61273889]",
+        "sample_size": 200
+      },
+      "gradient_boosting": {
+        "computation_time": 0.03184700012207031,
+        "model_r2": 0.4198999277509883,
+        "feature_importance": {
+          "temperature_tas_lag21": 0.9230728370846911,
+          "land_temp_tas_lag21": 0.6021151700375259,
+          "temperature_tas_lag14": 1.1565411451278478,
+          "apparent_temp_lag3": 1.4103690168133713,
+          "apparent_temp_lag0": 1.761122448867529,
+          "heat_index_lag3": 0.3445242311492435,
+          "temperature_tas_lag3": 0.20189652815674206,
+          "land_temp_tas_lag7": 0.4413123780881461,
+          "temperature_tas_lag0": 0.6443649683572817,
+          "heat_index_lag0": 0.32442914450733584,
+          "land_temp_tas_lag14": 0.7467027234894376,
+          "land_temp_tas_lag0": 0.525615816041965,
+          "heat_index_lag7": 0.18541374261332286,
+          "temperature_tas_lag7": 0.6999025022173722,
+          "temperature_tas_lag10": 0.43629154217774735,
+          "apparent_temp_lag7": 0.9309388738985264,
+          "apparent_temp_lag5": 0.9577852980981603,
+          "apparent_temp_lag1": 0.9527285774819763,
+          "heat_index_lag1": 0.38232872338574736,
+          "temperature_tas_lag1": 0.7012121193287939,
+          "land_temp_tas_lag3": 0.7719616295447352,
+          "land_temp_tas_lag10": 0.875032714959627,
+          "land_temp_tas_lag5": 0.3872214404654298,
+          "land_temp_tas_lag1": 1.540128214759942,
+          "temperature_tas_lag5": 0.6578222961081979
+        },
+        "shap_values_computed": true,
+        "expected_value": "[126.62522222]",
+        "sample_size": 200
+      }
+    },
+    "linear_shap": {
+      "computation_time": 0.003496885299682617,
+      "model_r2": 0.020749269051144492,
+      "feature_importance": {
+        "temperature_tas_lag21": 0.46572609883458604,
+        "land_temp_tas_lag21": 0.6312396811829837,
+        "temperature_tas_lag14": 0.9814328455792238,
+        "apparent_temp_lag3": 0.05094803255845539,
+        "apparent_temp_lag0": 0.5632374500877593,
+        "heat_index_lag3": 0.09543932189000466,
+        "temperature_tas_lag3": 0.0950524685610469,
+        "land_temp_tas_lag7": 0.7466045050249899,
+        "temperature_tas_lag0": 0.320790999438733,
+        "heat_index_lag0": 0.31997421715767693,
+        "land_temp_tas_lag14": 0.5337624155767685,
+        "land_temp_tas_lag0": 0.49614335722230146,
+        "heat_index_lag7": 0.0,
+        "temperature_tas_lag7": 0.0,
+        "temperature_tas_lag10": 0.11239325414630312,
+        "apparent_temp_lag7": 0.3760810956746172,
+        "apparent_temp_lag5": 0.0,
+        "apparent_temp_lag1": 0.5709549385190997,
+        "heat_index_lag1": 0.0,
+        "temperature_tas_lag1": 0.0,
+        "land_temp_tas_lag3": 0.3150064027681878,
+        "land_temp_tas_lag10": 0.3229117583549687,
+        "land_temp_tas_lag5": 0.0,
+        "land_temp_tas_lag1": 0.5140554962583169,
+        "temperature_tas_lag5": 0.07972694849446893
+      },
+      "coefficients": {
+        "temperature_tas_lag21": -0.5666562959102933,
+        "land_temp_tas_lag21": -0.761394203044709,
+        "temperature_tas_lag14": -1.1630595498154424,
+        "apparent_temp_lag3": -0.061238911954944866,
+        "apparent_temp_lag0": -0.6819046716285485,
+        "heat_index_lag3": 0.113364020274577,
+        "temperature_tas_lag3": 0.11290451105176633,
+        "land_temp_tas_lag7": -0.8379929727999043,
+        "temperature_tas_lag0": -0.38415736411781404,
+        "heat_index_lag0": -0.3831792415124492,
+        "land_temp_tas_lag14": 0.6114247567654746,
+        "land_temp_tas_lag0": -0.5830839634299212,
+        "heat_index_lag7": 0.0,
+        "temperature_tas_lag7": 0.0,
+        "temperature_tas_lag10": -0.12720622922311037,
+        "apparent_temp_lag7": 0.4223187957108071,
+        "apparent_temp_lag5": -0.0,
+        "apparent_temp_lag1": 0.7454474678507346,
+        "heat_index_lag1": 0.0,
+        "temperature_tas_lag1": 0.0,
+        "land_temp_tas_lag3": 0.3769889489384745,
+        "land_temp_tas_lag10": 0.3672148289214584,
+        "land_temp_tas_lag5": -0.0,
+        "land_temp_tas_lag1": 0.6367497605489839,
+        "temperature_tas_lag5": 0.09518827095518163
+      },
+      "exact_calculation": true
+    },
+    "permutation": {
+      "random_forest": {
+        "computation_time": 3.0538382530212402,
+        "model_r2": 0.31299485170336283,
+        "feature_importance": {
+          "temperature_tas_lag21": 0.06270359752157682,
+          "land_temp_tas_lag21": 0.039246391888407915,
+          "temperature_tas_lag14": 0.05770876950513058,
+          "apparent_temp_lag3": 0.017903391643348976,
+          "apparent_temp_lag0": 0.11225477222074269,
+          "heat_index_lag3": 0.008154343802893583,
+          "temperature_tas_lag3": 0.012795813237520725,
+          "land_temp_tas_lag7": 0.039517502700962034,
+          "temperature_tas_lag0": 0.014850333356915013,
+          "heat_index_lag0": 0.01426051924561711,
+          "land_temp_tas_lag14": 0.05597240326967875,
+          "land_temp_tas_lag0": 0.027205697717351596,
+          "heat_index_lag7": 0.020976841984422234,
+          "temperature_tas_lag7": 0.011130022012846963,
+          "temperature_tas_lag10": 0.03860372707089001,
+          "apparent_temp_lag7": 0.03163603863099509,
+          "apparent_temp_lag5": 0.04250827860506753,
+          "apparent_temp_lag1": 0.05380686923915588,
+          "heat_index_lag1": 0.010570387990588603,
+          "temperature_tas_lag1": 0.010135007785674222,
+          "land_temp_tas_lag3": 0.01908277599116024,
+          "land_temp_tas_lag10": 0.043679806090687376,
+          "land_temp_tas_lag5": 0.015635760143382714,
+          "land_temp_tas_lag1": 0.14948157605678128,
+          "temperature_tas_lag5": 0.016180136005184455
+        },
+        "importance_std": {
+          "temperature_tas_lag21": 0.005279604507854006,
+          "land_temp_tas_lag21": 0.002471741350084346,
+          "temperature_tas_lag14": 0.004240636572726889,
+          "apparent_temp_lag3": 0.0015726807803572943,
+          "apparent_temp_lag0": 0.0076887416858936256,
+          "heat_index_lag3": 0.000846725596601013,
+          "temperature_tas_lag3": 0.001644062409866138,
+          "land_temp_tas_lag7": 0.0038818074808994094,
+          "temperature_tas_lag0": 0.0016478460493313469,
+          "heat_index_lag0": 0.001712498762549399,
+          "land_temp_tas_lag14": 0.005218319702742454,
+          "land_temp_tas_lag0": 0.004019086342559779,
+          "heat_index_lag7": 0.002847076220328885,
+          "temperature_tas_lag7": 0.0013752075403690451,
+          "temperature_tas_lag10": 0.002996589386698815,
+          "apparent_temp_lag7": 0.003613737766490276,
+          "apparent_temp_lag5": 0.0031692287137169203,
+          "apparent_temp_lag1": 0.0031885485140710043,
+          "heat_index_lag1": 0.0013667984370248957,
+          "temperature_tas_lag1": 0.0011001662239335218,
+          "land_temp_tas_lag3": 0.002276626060970247,
+          "land_temp_tas_lag10": 0.0034400141452054283,
+          "land_temp_tas_lag5": 0.0013827684922377945,
+          "land_temp_tas_lag1": 0.010984811383124057,
+          "temperature_tas_lag5": 0.0020174639019347736
+        },
+        "robust_to_correlations": true
+      },
+      "gradient_boosting": {
+        "computation_time": 0.07698988914489746,
+        "model_r2": 0.4198999277509883,
+        "feature_importance": {
+          "temperature_tas_lag21": 0.07898487713530364,
+          "land_temp_tas_lag21": 0.024420781592879737,
+          "temperature_tas_lag14": 0.12781675735566672,
+          "apparent_temp_lag3": 0.10917249191303786,
+          "apparent_temp_lag0": 0.11274123301522074,
+          "heat_index_lag3": 0.01734818177928339,
+          "temperature_tas_lag3": 0.010565285416346114,
+          "land_temp_tas_lag7": 0.05402516186376388,
+          "temperature_tas_lag0": 0.03597371454330263,
+          "heat_index_lag0": 0.023663775800602405,
+          "land_temp_tas_lag14": 0.047414848710232584,
+          "land_temp_tas_lag0": 0.03551778575194201,
+          "heat_index_lag7": 0.004808407360696076,
+          "temperature_tas_lag7": 0.15061080812067418,
+          "temperature_tas_lag10": 0.034954083474046216,
+          "apparent_temp_lag7": 0.05509634982244958,
+          "apparent_temp_lag5": 0.10031439423230393,
+          "apparent_temp_lag1": 0.11447530820730485,
+          "heat_index_lag1": 0.014315365620627962,
+          "temperature_tas_lag1": 0.05240857840583133,
+          "land_temp_tas_lag3": 0.056098518702081455,
+          "land_temp_tas_lag10": 0.14322889681525938,
+          "land_temp_tas_lag5": 0.024412156923213336,
+          "land_temp_tas_lag1": 0.5785000847452169,
+          "temperature_tas_lag5": 0.03177722346976945
+        },
+        "importance_std": {
+          "temperature_tas_lag21": 0.004507465437499061,
+          "land_temp_tas_lag21": 0.0051350115730319276,
+          "temperature_tas_lag14": 0.007724425014297523,
+          "apparent_temp_lag3": 0.006939672937165873,
+          "apparent_temp_lag0": 0.006934696702933179,
+          "heat_index_lag3": 0.003110436910791241,
+          "temperature_tas_lag3": 0.0022725736383556704,
+          "land_temp_tas_lag7": 0.006125106459814881,
+          "temperature_tas_lag0": 0.005182484198590716,
+          "heat_index_lag0": 0.003518211708250519,
+          "land_temp_tas_lag14": 0.004743365667588696,
+          "land_temp_tas_lag0": 0.004690036222682593,
+          "heat_index_lag7": 0.0027434095343886124,
+          "temperature_tas_lag7": 0.011545345322901862,
+          "temperature_tas_lag10": 0.004425007628602308,
+          "apparent_temp_lag7": 0.005942811835283335,
+          "apparent_temp_lag5": 0.0052243382537299175,
+          "apparent_temp_lag1": 0.010881848430163774,
+          "heat_index_lag1": 0.001438210122517989,
+          "temperature_tas_lag1": 0.00497379628077052,
+          "land_temp_tas_lag3": 0.006769243813998139,
+          "land_temp_tas_lag10": 0.004995343730216792,
+          "land_temp_tas_lag5": 0.0019108072264999128,
+          "land_temp_tas_lag1": 0.026555166561387768,
+          "temperature_tas_lag5": 0.00381915252975007
+        },
+        "robust_to_correlations": true
+      },
+      "elastic_net": {
+        "computation_time": 0.14101195335388184,
+        "model_r2": 0.020749269051144492,
+        "feature_importance": {
+          "temperature_tas_lag21": 0.0033877831810054325,
+          "land_temp_tas_lag21": 0.005489287353499239,
+          "temperature_tas_lag14": 0.01037834343151287,
+          "apparent_temp_lag3": 0.00013287855592311048,
+          "apparent_temp_lag0": 0.0039531249258300425,
+          "heat_index_lag3": -4.796297808091765e-05,
+          "temperature_tas_lag3": -4.811700632398885e-05,
+          "land_temp_tas_lag7": 0.005862364372381612,
+          "temperature_tas_lag0": 0.0014278584961451512,
+          "heat_index_lag0": 0.0014217256891305707,
+          "land_temp_tas_lag14": 0.0025434988727041086,
+          "land_temp_tas_lag0": 0.0029760455418998744,
+          "heat_index_lag7": 1.1102230246251565e-16,
+          "temperature_tas_lag7": 1.1102230246251565e-16,
+          "temperature_tas_lag10": 0.00032149659282965093,
+          "apparent_temp_lag7": 0.0011007150747091466,
+          "apparent_temp_lag5": 1.1102230246251565e-16,
+          "apparent_temp_lag1": 0.0038057022529723095,
+          "heat_index_lag1": 1.1102230246251565e-16,
+          "temperature_tas_lag1": 1.1102230246251565e-16,
+          "land_temp_tas_lag3": 0.0005276008596921122,
+          "land_temp_tas_lag10": 0.0007160001332608745,
+          "land_temp_tas_lag5": 1.1102230246251565e-16,
+          "land_temp_tas_lag1": 0.0027151152669501965,
+          "temperature_tas_lag5": -6.724990107060957e-05
+        },
+        "importance_std": {
+          "temperature_tas_lag21": 0.0015668046219361627,
+          "land_temp_tas_lag21": 0.002045669787670834,
+          "temperature_tas_lag14": 0.002189387859050638,
+          "apparent_temp_lag3": 0.00016421611662599235,
+          "apparent_temp_lag0": 0.0015816190119484384,
+          "heat_index_lag3": 0.0003042451752140511,
+          "temperature_tas_lag3": 0.0003030150324617734,
+          "land_temp_tas_lag7": 0.0023149072938510947,
+          "temperature_tas_lag0": 0.000878590408384795,
+          "heat_index_lag0": 0.0008763390262513378,
+          "land_temp_tas_lag14": 0.0012171954520188882,
+          "land_temp_tas_lag0": 0.0012696005874674773,
+          "heat_index_lag7": 0.0,
+          "temperature_tas_lag7": 0.0,
+          "temperature_tas_lag10": 0.0002461401393377505,
+          "apparent_temp_lag7": 0.0011320414431056748,
+          "apparent_temp_lag5": 0.0,
+          "apparent_temp_lag1": 0.0018618521429271454,
+          "heat_index_lag1": 0.0,
+          "temperature_tas_lag1": 0.0,
+          "land_temp_tas_lag3": 0.0009269850385904407,
+          "land_temp_tas_lag10": 0.000724161571671394,
+          "land_temp_tas_lag5": 0.0,
+          "land_temp_tas_lag1": 0.0016945773588753167,
+          "temperature_tas_lag5": 0.0002379808636372672
+        },
+        "robust_to_correlations": true
+      }
+    },
+    "temporal_patterns": {
+      "0": {
+        "total_importance": 2.1344682882397183,
+        "n_features": 4,
+        "avg_importance": 0.5336170720599296,
+        "features": [
+          "apparent_temp_lag0",
+          "temperature_tas_lag0",
+          "heat_index_lag0",
+          "land_temp_tas_lag0"
+        ]
+      },
+      "1": {
+        "total_importance": 3.3339753483150614,
+        "n_features": 8,
+        "avg_importance": 0.41674691853938267,
+        "features": [
+          "temperature_tas_lag14",
+          "land_temp_tas_lag14",
+          "temperature_tas_lag10",
+          "apparent_temp_lag1",
+          "heat_index_lag1",
+          "temperature_tas_lag1",
+          "land_temp_tas_lag10",
+          "land_temp_tas_lag1"
+        ]
+      },
+      "2": {
+        "total_importance": 1.0782330290375857,
+        "n_features": 2,
+        "avg_importance": 0.5391165145187928,
+        "features": [
+          "temperature_tas_lag21",
+          "land_temp_tas_lag21"
+        ]
+      },
+      "3": {
+        "total_importance": 0.7786266692174377,
+        "n_features": 4,
+        "avg_importance": 0.19465666730435943,
+        "features": [
+          "apparent_temp_lag3",
+          "heat_index_lag3",
+          "temperature_tas_lag3",
+          "land_temp_tas_lag3"
+        ]
+      },
+      "5": {
+        "total_importance": 1.0036447281487275,
+        "n_features": 3,
+        "avg_importance": 0.3345482427162425,
+        "features": [
+          "apparent_temp_lag5",
+          "land_temp_tas_lag5",
+          "temperature_tas_lag5"
+        ]
+      },
+      "7": {
+        "total_importance": 1.2117079470799572,
+        "n_features": 4,
+        "avg_importance": 0.3029269867699893,
+        "features": [
+          "land_temp_tas_lag7",
+          "heat_index_lag7",
+          "temperature_tas_lag7",
+          "apparent_temp_lag7"
+        ]
+      },
+      "10": {
+        "total_importance": 0.8633638269507926,
+        "n_features": 2,
+        "avg_importance": 0.4316819134753963,
+        "features": [
+          "temperature_tas_lag10",
+          "land_temp_tas_lag10"
+        ]
+      },
+      "14": {
+        "total_importance": 0.9272856047452247,
+        "n_features": 2,
+        "avg_importance": 0.46364280237261235,
+        "features": [
+          "temperature_tas_lag14",
+          "land_temp_tas_lag14"
+        ]
+      },
+      "21": {
+        "total_importance": 1.0782330290375857,
+        "n_features": 2,
+        "avg_importance": 0.5391165145187928,
+        "features": [
+          "temperature_tas_lag21",
+          "land_temp_tas_lag21"
+        ]
+      }
+    },
+    "climate_groups": {
+      "temperature": {
+        "total_importance": 8.839153224813705,
+        "n_features": 21,
+        "avg_importance": 0.42091205832446216,
+        "top_features": [
+          [
+            "apparent_temp_lag0",
+            1.3792138512295729
+          ],
+          [
+            "land_temp_tas_lag1",
+            0.7305737547765477
+          ],
+          [
+            "temperature_tas_lag21",
+            0.6189277706466056
+          ]
+        ]
+      },
+      "heat_stress": {
+        "total_importance": 0.701502785224785,
+        "n_features": 4,
+        "avg_importance": 0.17537569630619626,
+        "top_features": [
+          [
+            "heat_index_lag0",
+            0.23489656460003341
+          ],
+          [
+            "heat_index_lag7",
+            0.231922226912308
+          ],
+          [
+            "heat_index_lag1",
+            0.13700079056275632
+          ]
+        ]
+      }
+    }
+  },
+  "visualization": "practical_xai_results/xai_comparison_systolic blood pressure_20250919_133053.png",
+  "summary": {
+    "methods_evaluated": [
+      "tree_shap",
+      "linear_shap",
+      "permutation"
+    ],
+    "best_performing_models": {
+      "tree_shap_random_forest": 0.31299485170336283,
+      "tree_shap_gradient_boosting": 0.4198999277509883,
+      "perm_random_forest": 0.31299485170336283,
+      "perm_gradient_boosting": 0.4198999277509883,
+      "perm_elastic_net": 0.020749269051144492
+    },
+    "computation_times": {
+      "tree_shap_random_forest": 0.15166187286376953,
+      "tree_shap_gradient_boosting": 0.03184700012207031,
+      "perm_random_forest": 3.0538382530212402,
+      "perm_gradient_boosting": 0.07698988914489746,
+      "perm_elastic_net": 0.14101195335388184
+    },
+    "key_findings": [
+      "Critical lag periods: ['Day 1', 'Day 0']",
+      "Most important climate types: ['temperature', 'heat_stress']"
+    ]
+  }
+}

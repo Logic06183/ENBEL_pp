@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "timestamp": "20250919_150502",
+    "analysis_type": "Rigorous XAI Climate-Health Discovery",
+    "n_discoveries": 0
+  },
+  "discoveries": {},
+  "summary": {
+    "total_biomarkers_with_relationships": 0,
+    "max_r2": 0,
+    "average_r2": 0,
+    "total_samples_analyzed": 0
+  }
+}

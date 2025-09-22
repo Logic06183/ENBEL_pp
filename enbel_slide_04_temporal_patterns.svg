@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+  <defs>
+    <pattern id="subtleGrid" patternUnits="userSpaceOnUse" width="20" height="20">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff" stroke-width="0.2" opacity="0.3"/>
+    </pattern>
+    
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3730a3;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient for timeline -->
+    <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#eab308;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#subtleGrid)"/>
+  <rect x="0" y="0" width="1920" height="4" fill="url(#headerGradient)"/>
+  
+  <!-- Header -->
+  <g id="header">
+    <text x="960" y="70" font-family="Arial, sans-serif" font-size="44" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+      Temporal Pattern Discovery
+    </text>
+    <text x="960" y="110" font-family="Arial, sans-serif" font-size="20" font-weight="300" text-anchor="middle" fill="#475569">
+      Extended Effects Challenge Acute-Only Paradigm
+    </text>
+  </g>
+  
+  <!-- Literature Timeline Comparison -->
+  <g id="literature-comparison" transform="translate(200, 150)">
+    <!-- Background panel -->
+    <rect width="1520" height="280" rx="15" ry="15" fill="#ffffff" stroke="#e2e8f0" stroke-width="2"/>
+    
+    <!-- Header -->
+    <text x="760" y="30" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#1e3a8a">
+      Literature Comparison: Monitoring Duration
+    </text>
+    
+    <!-- Literature studies timeline -->
+    <g transform="translate(60, 60)">
+      <rect width="650" height="90" rx="10" ry="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+      <text x="325" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#dc2626">
+        Previous Studies (n=1,000-1,800)
+      </text>
+      
+      <!-- Timeline for literature -->
+      <g transform="translate(50, 35)">
+        <line x1="0" y1="20" x2="200" y2="20" stroke="#dc2626" stroke-width="4"/>
+        <circle cx="0" cy="20" r="4" fill="#dc2626"/>
+        <circle cx="200" cy="20" r="4" fill="#dc2626"/>
+        <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#dc2626">Day 0</text>
+        <text x="200" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#dc2626">Day 7</text>
+        <text x="100" y="10" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#dc2626">0-7 Days Only</text>
+        
+        <!-- Sample size indicators -->
+        <text x="400" y="15" font-family="Arial, sans-serif" font-size="12" fill="#dc2626">Sample sizes:</text>
+        <text x="400" y="30" font-family="Arial, sans-serif" font-size="11" fill="#dc2626">• 1,000-1,800 participants</text>
+        <text x="400" y="45" font-family="Arial, sans-serif" font-size="11" fill="#dc2626">• Limited follow-up</text>
+      </g>
+    </g>
+    
+    <!-- Our study timeline -->
+    <g transform="translate(780, 60)">
+      <rect width="650" height="90" rx="10" ry="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+      <text x="325" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#16a34a">
+        Our Study (n=4,957 BP, n=2,731 Glucose)
+      </text>
+      
+      <!-- Extended timeline -->
+      <g transform="translate(50, 35)">
+        <line x1="0" y1="20" x2="300" y2="20" stroke="#16a34a" stroke-width="4"/>
+        <circle cx="0" cy="20" r="4" fill="#2563eb"/>
+        <circle cx="43" cy="20" r="4" fill="#2563eb"/>
+        <circle cx="300" cy="20" r="6" fill="#dc2626"/>
+        <text x="0" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#2563eb">Day 0</text>
+        <text x="43" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#2563eb">Day 3</text>
+        <text x="300" y="38" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#dc2626">Day 21 PEAK</text>
+        <text x="150" y="10" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#16a34a">0-21 Days Extended</text>
+        
+        <!-- Sample size advantage -->
+        <text x="400" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#16a34a">2.7-4.9× larger samples</text>
+        <text x="400" y="30" font-family="Arial, sans-serif" font-size="11" fill="#16a34a">• 4,957 BP measurements</text>
+        <text x="400" y="45" font-family="Arial, sans-serif" font-size="11" fill="#16a34a">• Extended monitoring</text>
+      </g>
+    </g>
+    
+    <!-- Discovery gap highlighting -->
+    <g transform="translate(60, 180)">
+      <rect width="1400" height="60" rx="10" ry="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+      <text x="700" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#92400e">
+        DISCOVERY GAP: Days 7-21 Previously Unstudied
+      </text>
+      <text x="700" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#92400e">
+        Our extended monitoring revealed peak blood pressure effects at day 21
+      </text>
+    </g>
+    
+  </g>
+  </g>
+  
+  <!-- Simple implications -->
+  <g id="implications" transform="translate(200, 460)">
+    <rect width="1520" height="200" rx="15" ry="15" fill="#fffbeb" stroke="#fbbf24" stroke-width="2"/>
+    
+    <!-- Header -->
+    <text x="760" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#92400e">
+      Clinical Implications
+    </text>
+    
+    <!-- Three key implications -->
+    <g transform="translate(80, 70)">
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#dc2626">
+        1. EXTENDED MONITORING:
+      </text>
+      <text x="300" y="30" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        21-day surveillance needed for blood pressure effects
+      </text>
+      
+      <text x="0" y="70" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#2563eb">
+        2. DUAL SURVEILLANCE:
+      </text>
+      <text x="300" y="70" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        Immediate glucose monitoring + extended BP tracking
+      </text>
+      
+      <text x="0" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#16a34a">
+        3. PARADIGM SHIFT:
+      </text>
+      <text x="300" y="110" font-family="Arial, sans-serif" font-size="16" fill="#0f172a">
+        From acute-only to chronic climate health surveillance
+      </text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g id="footer" transform="translate(100, 690)">
+    <rect width="1720" height="110" rx="10" ry="10" fill="#1e3a8a" opacity="0.95"/>
+    
+    <text x="860" y="25" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Extended Temporal Patterns Change Climate Health Surveillance
+    </text>
+    
+    <text x="860" y="45" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#cbd5e1">
+      21-day monitoring required • Paradigm shift from acute-only effects • Clinical protocols need updating
+    </text>
+    
+    <!-- References -->
+    <text x="860" y="70" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#94a3b8">
+      References: Gasparrini A. et al. Distributed lag non-linear models. Stat Med 2010; Armstrong B. et al. Epidemiology 2006
+    </text>
+    <text x="860" y="85" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#94a3b8">
+      Chen K. et al. Temporal variation in associations. Environ Health Perspect 2018; Vicedo-Cabrera AM. et al. Nat Med 2021
+    </text>
+    <text x="860" y="100" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#94a3b8">
+      Zhao Q. et al. Spatial Bayesian distributed lag models. Int J Epidemiol 2024
+    </text>
+  </g>
+  
+  <!-- Slide number -->
+  <text x="1850" y="1060" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#64748b">5 / 11</text>
+  
+</svg>

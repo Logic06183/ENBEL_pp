@@ -1,0 +1,1340 @@
+{
+  "metadata": {
+    "timestamp": "20250919_153434",
+    "analysis_type": "Robust Alternative Discovery",
+    "focus": "Traditional epidemiology + robust demographics + systematic exploration"
+  },
+  "discoveries": {
+    "traditional_systolic blood pressure": {
+      "biomarker": "systolic blood pressure",
+      "n_samples": 4957,
+      "correlations": [
+        {
+          "climate_variable": "temperature_tas_lag21",
+          "correlation": -0.11389050100248449,
+          "p_value": 8.785956862706073e-16,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag21",
+          "correlation": -0.11288814540152092,
+          "p_value": 1.5677699735835017e-15,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag21",
+          "correlation": -0.11199466864331954,
+          "p_value": 2.615714246667709e-15,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag14",
+          "correlation": -0.1050584323373078,
+          "p_value": 1.2125552245312212e-13,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag14",
+          "correlation": -0.10504269326985709,
+          "p_value": 1.222818791857054e-13,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag3",
+          "correlation": -0.10284719053976955,
+          "p_value": 3.9145355651765987e-13,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag0",
+          "correlation": -0.10029647190237308,
+          "p_value": 1.467350045172098e-12,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": -0.10016401932958971,
+          "p_value": 1.570163925335255e-12,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag7",
+          "correlation": -0.09994827019869618,
+          "p_value": 1.7529540141663675e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag10",
+          "correlation": -0.09902502958367147,
+          "p_value": 2.8007984842045e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": -0.09886040508832993,
+          "p_value": 3.0435142176405715e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag14",
+          "correlation": -0.09834641024869575,
+          "p_value": 3.941738247832167e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag0",
+          "correlation": -0.09808638221345531,
+          "p_value": 4.490423424157435e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag7",
+          "correlation": -0.09667545096261582,
+          "p_value": 9.053942089004839e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag10",
+          "correlation": -0.09619721928702432,
+          "p_value": 1.1457317209781966e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag7",
+          "correlation": -0.096068611240207,
+          "p_value": 1.2203781538746123e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag5",
+          "correlation": -0.09392766845303686,
+          "p_value": 3.447817449054149e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag1",
+          "correlation": -0.09369204929868742,
+          "p_value": 3.859910179621213e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": -0.09359273642237922,
+          "p_value": 4.047701109101551e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag3",
+          "correlation": -0.09285954121659064,
+          "p_value": 5.739333842908934e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag10",
+          "correlation": -0.09220859927348786,
+          "p_value": 7.80776065749722e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag5",
+          "correlation": -0.0904003695725376,
+          "p_value": 1.81561365875971e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag1",
+          "correlation": -0.09009549319238117,
+          "p_value": 2.0898777276881286e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": -0.09008735165657378,
+          "p_value": 2.0977305193813627e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag2",
+          "correlation": -0.08922524947380561,
+          "p_value": 3.1146911336321207e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": -0.08794764628379989,
+          "p_value": 5.55737251418025e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag2",
+          "correlation": -0.08573609953961474,
+          "p_value": 1.4853669071890125e-09,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "wind_ws_lag5",
+          "correlation": 0.04209832932579544,
+          "p_value": 0.0030313562086784437,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag3",
+          "correlation": 0.03316129975177422,
+          "p_value": 0.01955352581603039,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag10",
+          "correlation": 0.02793056807285033,
+          "p_value": 0.04925631709640404,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag0",
+          "correlation": 0.025999917929105606,
+          "p_value": 0.06719058561141833,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag2",
+          "correlation": 0.018394390155487772,
+          "p_value": 0.19536931293648335,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag14",
+          "correlation": 0.016937142684058007,
+          "p_value": 0.2331590549044864,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag1",
+          "correlation": 0.01477980809964255,
+          "p_value": 0.298162903035019,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag7",
+          "correlation": 0.00798759840888764,
+          "p_value": 0.5739513414537066,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag21",
+          "correlation": 0.0032630615728898482,
+          "p_value": 0.8183391372470722,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "False"
+        }
+      ],
+      "significant_relationships": [
+        {
+          "climate_variable": "temperature_tas_lag21",
+          "correlation": -0.11389050100248449,
+          "p_value": 8.785956862706073e-16,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag21",
+          "correlation": -0.11288814540152092,
+          "p_value": 1.5677699735835017e-15,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag21",
+          "correlation": -0.11199466864331954,
+          "p_value": 2.615714246667709e-15,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag14",
+          "correlation": -0.1050584323373078,
+          "p_value": 1.2125552245312212e-13,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag14",
+          "correlation": -0.10504269326985709,
+          "p_value": 1.222818791857054e-13,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag3",
+          "correlation": -0.10284719053976955,
+          "p_value": 3.9145355651765987e-13,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag0",
+          "correlation": -0.10029647190237308,
+          "p_value": 1.467350045172098e-12,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": -0.10016401932958971,
+          "p_value": 1.570163925335255e-12,
+          "n_pairs": 4957,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag7",
+          "correlation": -0.09994827019869618,
+          "p_value": 1.7529540141663675e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag10",
+          "correlation": -0.09902502958367147,
+          "p_value": 2.8007984842045e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": -0.09886040508832993,
+          "p_value": 3.0435142176405715e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag14",
+          "correlation": -0.09834641024869575,
+          "p_value": 3.941738247832167e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag0",
+          "correlation": -0.09808638221345531,
+          "p_value": 4.490423424157435e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag7",
+          "correlation": -0.09667545096261582,
+          "p_value": 9.053942089004839e-12,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag10",
+          "correlation": -0.09619721928702432,
+          "p_value": 1.1457317209781966e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag7",
+          "correlation": -0.096068611240207,
+          "p_value": 1.2203781538746123e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag5",
+          "correlation": -0.09392766845303686,
+          "p_value": 3.447817449054149e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag1",
+          "correlation": -0.09369204929868742,
+          "p_value": 3.859910179621213e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": -0.09359273642237922,
+          "p_value": 4.047701109101551e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag3",
+          "correlation": -0.09285954121659064,
+          "p_value": 5.739333842908934e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag10",
+          "correlation": -0.09220859927348786,
+          "p_value": 7.80776065749722e-11,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag5",
+          "correlation": -0.0904003695725376,
+          "p_value": 1.81561365875971e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag1",
+          "correlation": -0.09009549319238117,
+          "p_value": 2.0898777276881286e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": -0.09008735165657378,
+          "p_value": 2.0977305193813627e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag2",
+          "correlation": -0.08922524947380561,
+          "p_value": 3.1146911336321207e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": -0.08794764628379989,
+          "p_value": 5.55737251418025e-10,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag2",
+          "correlation": -0.08573609953961474,
+          "p_value": 1.4853669071890125e-09,
+          "n_pairs": 4957,
+          "effect_size": "negligible",
+          "significant": "True"
+        }
+      ]
+    },
+    "traditional_FASTING GLUCOSE": {
+      "biomarker": "FASTING GLUCOSE",
+      "n_samples": 2731,
+      "correlations": [
+        {
+          "climate_variable": "land_temp_tas_lag3",
+          "correlation": 0.13128744101192688,
+          "p_value": 5.6726913233780225e-12,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": 0.12488956711770939,
+          "p_value": 5.7819734584598836e-11,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag5",
+          "correlation": 0.12202248353572755,
+          "p_value": 1.5766261286255174e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": 0.12092737178817546,
+          "p_value": 2.29876954484537e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag2",
+          "correlation": 0.11829220894369785,
+          "p_value": 5.618371582100919e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": 0.11794304622735972,
+          "p_value": 6.315471259138065e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag0",
+          "correlation": 0.11780074456698275,
+          "p_value": 6.623158960968636e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag5",
+          "correlation": 0.11746140336574025,
+          "p_value": 7.417065703044663e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag3",
+          "correlation": 0.11656802284823611,
+          "p_value": 9.977194142244755e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag21",
+          "correlation": 0.11291829369352108,
+          "p_value": 3.2741776881172755e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag21",
+          "correlation": 0.11277270506034809,
+          "p_value": 3.4304950437380345e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag7",
+          "correlation": 0.11238440473968925,
+          "p_value": 3.8837677072485595e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag0",
+          "correlation": 0.11141055854902257,
+          "p_value": 5.292090310076448e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag21",
+          "correlation": 0.11063174271851244,
+          "p_value": 6.76505239552946e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag1",
+          "correlation": 0.10964113005145885,
+          "p_value": 9.22286017961212e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": 0.10769115708973029,
+          "p_value": 1.6841267658516455e-08,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag7",
+          "correlation": 0.1070212538411526,
+          "p_value": 2.066166731518871e-08,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": 0.1029806593405128,
+          "p_value": 6.908137259407124e-08,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag7",
+          "correlation": 0.10078556506139427,
+          "p_value": 1.3061425032670247e-07,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag1",
+          "correlation": 0.09698361382898452,
+          "p_value": 3.815946586974647e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag2",
+          "correlation": 0.09651635283795906,
+          "p_value": 4.341565972536102e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag14",
+          "correlation": 0.09636888144201718,
+          "p_value": 4.5214826210569105e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag10",
+          "correlation": 0.09564225936111749,
+          "p_value": 5.518165550124667e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag14",
+          "correlation": 0.09357211594130432,
+          "p_value": 9.657392801734273e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag10",
+          "correlation": 0.08937054301599091,
+          "p_value": 2.90200027183979e-06,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag14",
+          "correlation": 0.08874183561935087,
+          "p_value": 3.4073690494562217e-06,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag10",
+          "correlation": 0.08585240923778084,
+          "p_value": 7.0292337845411e-06,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "wind_ws_lag2",
+          "correlation": 0.0720725172358716,
+          "p_value": 0.00016350013975530993,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "wind_ws_lag5",
+          "correlation": 0.035663525130878816,
+          "p_value": 0.06239495323689997,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag0",
+          "correlation": 0.030065973522377405,
+          "p_value": 0.11621688689604665,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag7",
+          "correlation": 0.02863149538826074,
+          "p_value": 0.1346864587425171,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag1",
+          "correlation": 0.027323879155119565,
+          "p_value": 0.15342701109188808,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag14",
+          "correlation": 0.022999901748977643,
+          "p_value": 0.2295340998385722,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag10",
+          "correlation": 0.019464846496195135,
+          "p_value": 0.3092278923796668,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag3",
+          "correlation": 0.01805904247263717,
+          "p_value": 0.3454805136739485,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "False"
+        },
+        {
+          "climate_variable": "wind_ws_lag21",
+          "correlation": -0.017666081642319906,
+          "p_value": 0.35607985409213494,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "False"
+        }
+      ],
+      "significant_relationships": [
+        {
+          "climate_variable": "land_temp_tas_lag3",
+          "correlation": 0.13128744101192688,
+          "p_value": 5.6726913233780225e-12,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": 0.12488956711770939,
+          "p_value": 5.7819734584598836e-11,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag5",
+          "correlation": 0.12202248353572755,
+          "p_value": 1.5766261286255174e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": 0.12092737178817546,
+          "p_value": 2.29876954484537e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag2",
+          "correlation": 0.11829220894369785,
+          "p_value": 5.618371582100919e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": 0.11794304622735972,
+          "p_value": 6.315471259138065e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag0",
+          "correlation": 0.11780074456698275,
+          "p_value": 6.623158960968636e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag5",
+          "correlation": 0.11746140336574025,
+          "p_value": 7.417065703044663e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag3",
+          "correlation": 0.11656802284823611,
+          "p_value": 9.977194142244755e-10,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag21",
+          "correlation": 0.11291829369352108,
+          "p_value": 3.2741776881172755e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag21",
+          "correlation": 0.11277270506034809,
+          "p_value": 3.4304950437380345e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag7",
+          "correlation": 0.11238440473968925,
+          "p_value": 3.8837677072485595e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag0",
+          "correlation": 0.11141055854902257,
+          "p_value": 5.292090310076448e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag21",
+          "correlation": 0.11063174271851244,
+          "p_value": 6.76505239552946e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag1",
+          "correlation": 0.10964113005145885,
+          "p_value": 9.22286017961212e-09,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": 0.10769115708973029,
+          "p_value": 1.6841267658516455e-08,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag7",
+          "correlation": 0.1070212538411526,
+          "p_value": 2.066166731518871e-08,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": 0.1029806593405128,
+          "p_value": 6.908137259407124e-08,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag7",
+          "correlation": 0.10078556506139427,
+          "p_value": 1.3061425032670247e-07,
+          "n_pairs": 2731,
+          "effect_size": "small",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag1",
+          "correlation": 0.09698361382898452,
+          "p_value": 3.815946586974647e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag2",
+          "correlation": 0.09651635283795906,
+          "p_value": 4.341565972536102e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag14",
+          "correlation": 0.09636888144201718,
+          "p_value": 4.5214826210569105e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "land_temp_tas_lag10",
+          "correlation": 0.09564225936111749,
+          "p_value": 5.518165550124667e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag14",
+          "correlation": 0.09357211594130432,
+          "p_value": 9.657392801734273e-07,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "temperature_tas_lag10",
+          "correlation": 0.08937054301599091,
+          "p_value": 2.90200027183979e-06,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag14",
+          "correlation": 0.08874183561935087,
+          "p_value": 3.4073690494562217e-06,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "apparent_temp_lag10",
+          "correlation": 0.08585240923778084,
+          "p_value": 7.0292337845411e-06,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        },
+        {
+          "climate_variable": "wind_ws_lag2",
+          "correlation": 0.0720725172358716,
+          "p_value": 0.00016350013975530993,
+          "n_pairs": 2731,
+          "effect_size": "negligible",
+          "significant": "True"
+        }
+      ]
+    },
+    "sex_stratified_systolic blood pressure": {
+      "Female": [
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": -0.11611412487534009,
+          "p_value": 3.590898524361599e-08,
+          "n_samples": 2239
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": -0.12817454845206824,
+          "p_value": 1.152568117052776e-09,
+          "n_samples": 2239
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": -0.10362410685730841,
+          "p_value": 8.933337619290136e-07,
+          "n_samples": 2239
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": -0.1180300698756088,
+          "p_value": 2.12595887075864e-08,
+          "n_samples": 2239
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": -0.10671673705689211,
+          "p_value": 4.164747350067846e-07,
+          "n_samples": 2239
+        }
+      ]
+    },
+    "sex_stratified_diastolic blood pressure": {
+      "Female": [
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": -0.06002038911398294,
+          "p_value": 0.004496884082144271,
+          "n_samples": 2239
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": -0.05941505328372068,
+          "p_value": 0.0049185472037966416,
+          "n_samples": 2239
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": -0.05295899408652218,
+          "p_value": 0.012201000391647721,
+          "n_samples": 2239
+        }
+      ],
+      "Male": [
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": 0.09626850284411807,
+          "p_value": 7.577647096680313e-06,
+          "n_samples": 2155
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": 0.12756303448274886,
+          "p_value": 2.8056356805288724e-09,
+          "n_samples": 2155
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": 0.09669148069739444,
+          "p_value": 6.906673561793133e-06,
+          "n_samples": 2155
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": 0.07864221846661994,
+          "p_value": 0.00025791511227915467,
+          "n_samples": 2155
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": 0.11706770132988062,
+          "p_value": 5.033860652014371e-08,
+          "n_samples": 2155
+        }
+      ]
+    },
+    "sex_stratified_FASTING GLUCOSE": {
+      "Female": [
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": 0.12759499338915145,
+          "p_value": 2.6960311082582744e-05,
+          "n_samples": 1076
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": 0.11110600729429042,
+          "p_value": 0.0002605882627595974,
+          "n_samples": 1076
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": 0.11629992069419395,
+          "p_value": 0.00013158769219814625,
+          "n_samples": 1076
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": 0.1461854038594202,
+          "p_value": 1.4679083260043123e-06,
+          "n_samples": 1076
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": 0.1498388451104305,
+          "p_value": 7.922580920311153e-07,
+          "n_samples": 1076
+        }
+      ],
+      "Male": [
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": 0.15002591842932764,
+          "p_value": 5.823400979415142e-06,
+          "n_samples": 905
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": 0.13146431743840686,
+          "p_value": 7.289565942911738e-05,
+          "n_samples": 905
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": 0.15304256720028733,
+          "p_value": 3.7474146875581205e-06,
+          "n_samples": 905
+        },
+        {
+          "climate_variable": "temperature_tas_lag3",
+          "correlation": 0.1641662944049789,
+          "p_value": 6.850635764027656e-07,
+          "n_samples": 905
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": 0.16325055077076248,
+          "p_value": 7.914111247590116e-07,
+          "n_samples": 905
+        }
+      ]
+    },
+    "sex_stratified_FASTING TOTAL CHOLESTEROL": {
+      "Female": [
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": -0.0772796855727374,
+          "p_value": 0.015477617867038902,
+          "n_samples": 981
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": -0.0721293775680375,
+          "p_value": 0.02386962227597453,
+          "n_samples": 981
+        }
+      ]
+    },
+    "sex_stratified_FASTING HDL": {
+      "Female": [
+        {
+          "climate_variable": "temperature_tas_lag0",
+          "correlation": -0.07853157988231475,
+          "p_value": 0.01388031889407841,
+          "n_samples": 981
+        },
+        {
+          "climate_variable": "temperature_tas_lag1",
+          "correlation": -0.08023357403549619,
+          "p_value": 0.01194249422721447,
+          "n_samples": 981
+        },
+        {
+          "climate_variable": "temperature_tas_lag2",
+          "correlation": -0.0746867857411291,
+          "p_value": 0.01930727056012049,
+          "n_samples": 981
+        },
+        {
+          "climate_variable": "temperature_tas_lag5",
+          "correlation": -0.07312777424084081,
+          "p_value": 0.021987931217459965,
+          "n_samples": 981
+        }
+      ]
+    },
+    "temporal_systolic blood pressure": {
+      "lag_0": {
+        "best_feature": "apparent_temp_lag0",
+        "correlation": -0.10029647190237308,
+        "n_features_tested": 3
+      },
+      "lag_1": {
+        "best_feature": "temperature_tas_lag14",
+        "correlation": -0.1050584323373078,
+        "n_features_tested": 9
+      },
+      "lag_2": {
+        "best_feature": "temperature_tas_lag21",
+        "correlation": -0.11389050100248449,
+        "n_features_tested": 6
+      },
+      "lag_3": {
+        "best_feature": "apparent_temp_lag3",
+        "correlation": -0.10284719053976955,
+        "n_features_tested": 3
+      },
+      "lag_5": {
+        "best_feature": "apparent_temp_lag5",
+        "correlation": -0.09392766845303686,
+        "n_features_tested": 3
+      },
+      "lag_7": {
+        "best_feature": "land_temp_tas_lag7",
+        "correlation": -0.09994827019869618,
+        "n_features_tested": 3
+      },
+      "lag_14": {
+        "best_feature": "temperature_tas_lag14",
+        "correlation": -0.1050584323373078,
+        "n_features_tested": 3
+      },
+      "lag_21": {
+        "best_feature": "temperature_tas_lag21",
+        "correlation": -0.11389050100248449,
+        "n_features_tested": 3
+      }
+    },
+    "temporal_FASTING GLUCOSE": {
+      "lag_0": {
+        "best_feature": "temperature_tas_lag0",
+        "correlation": 0.11794304622735972,
+        "n_features_tested": 3
+      },
+      "lag_1": {
+        "best_feature": "land_temp_tas_lag1",
+        "correlation": 0.10964113005145885,
+        "n_features_tested": 9
+      },
+      "lag_2": {
+        "best_feature": "land_temp_tas_lag2",
+        "correlation": 0.11829220894369785,
+        "n_features_tested": 6
+      },
+      "lag_3": {
+        "best_feature": "land_temp_tas_lag3",
+        "correlation": 0.13128744101192688,
+        "n_features_tested": 3
+      },
+      "lag_5": {
+        "best_feature": "temperature_tas_lag5",
+        "correlation": 0.12488956711770939,
+        "n_features_tested": 3
+      },
+      "lag_7": {
+        "best_feature": "land_temp_tas_lag7",
+        "correlation": 0.11238440473968925,
+        "n_features_tested": 3
+      },
+      "lag_14": {
+        "best_feature": "land_temp_tas_lag14",
+        "correlation": 0.09636888144201718,
+        "n_features_tested": 3
+      },
+      "lag_21": {
+        "best_feature": "apparent_temp_lag21",
+        "correlation": 0.11291829369352108,
+        "n_features_tested": 3
+      }
+    },
+    "biomarker_interactions": {
+      "systolic blood pressure_x_diastolic blood pressure": {
+        "biomarker_correlation": 0.720662169199116,
+        "biomarker_p_value": 0.0,
+        "climate_correlation": -0.06324126171650654,
+        "best_climate_feature": "temperature_tas_lag3",
+        "n_samples": 4957
+      }
+    }
+  },
+  "summary": {
+    "total_discovery_categories": 10,
+    "traditional_epidemiology": 2,
+    "sex_stratified": 5,
+    "temporal_patterns": 2,
+    "climate_systematic": 0,
+    "biomarker_interactions": 1
+  }
+}
