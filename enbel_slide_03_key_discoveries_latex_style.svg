@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="latexTealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006666;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- TikZ-style gradient for cardiovascular -->
+    <linearGradient id="tikzCardio" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC143C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B71C1C;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- TikZ-style gradient for metabolic -->
+    <linearGradient id="tikzMetabolic" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#404040" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- TikZ-style grid pattern -->
+    <pattern id="tikzGrid" patternUnits="userSpaceOnUse" width="20" height="20">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>
+    </pattern>
+    
+    <!-- LaTeX typography styles -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+      .tikz-axis { font-family: "Helvetica", "Computer Modern Sans", sans-serif; font-size: 10px; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer frame title -->
+  <g id="frame-title">
+    <rect x="60" y="30" width="1800" height="50" rx="4" ry="4" fill="url(#latexBlueGradient)"/>
+    <text x="80" y="60" class="latex-serif" font-size="28" font-weight="bold" fill="#ffffff">
+      21-day cardiovascular effects represent novel temporal pattern
+    </text>
+  </g>
+  
+  <!-- Two-column LaTeX Beamer layout -->
+  <g id="two-column-layout">
+    
+    <!-- Left Column: Cardiovascular System -->
+    <g transform="translate(80, 110)">
+      
+      <!-- LaTeX Beamer block for cardiovascular -->
+      <g filter="url(#academicShadow)">
+        <rect width="850" height="320" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        <rect x="0" y="0" width="850" height="40" rx="6" ry="6" fill="url(#tikzCardio)"/>
+        <rect x="0" y="32" width="850" height="8" fill="url(#tikzCardio)"/>
+        
+        <!-- Heart icon -->
+        <g transform="translate(20, 18)">
+          <path d="M 0 5 C -2 2, -5 2, -5 5 C -5 2, -8 2, -8 5 C -8 8, 0 15, 0 15 C 0 15, 8 8, 8 5 C 8 2, 5 2, 5 5 C 5 2, 2 2, 0 5 Z" 
+                fill="#ffffff" opacity="0.9" transform="scale(0.8)"/>
+        </g>
+        <text x="50" y="28" class="latex-sans" font-size="18" font-weight="bold" fill="#ffffff">CARDIOVASCULAR SYSTEM</text>
+        
+        <!-- Block content -->
+        <g transform="translate(25, 55)">
+          <text x="0" y="25" class="latex-serif" font-size="16" font-weight="bold" fill="#DC143C">Novel Extended Temporal Effects</text>
+          <text x="0" y="45" class="latex-sans" font-size="14" fill="#404040">Temperature → Systolic BP</text>
+          
+          <!-- LaTeX-style statistical box -->
+          <rect x="0" y="60" width="790" height="90" rx="4" ry="4" fill="#fef2f2" stroke="#DC143C" stroke-width="1"/>
+          <g transform="translate(15, 80)">
+            <text x="0" y="20" class="latex-sans" font-size="12" font-weight="bold" fill="#404040">Correlation Analysis:</text>
+            <text x="0" y="35" class="math-notation" font-size="14" fill="#DC143C">r = -0.114, ρ &lt; 10⁻¹⁵, n = 4,957</text>
+            <text x="0" y="55" class="latex-sans" font-size="12" font-weight="bold" fill="#404040">DLNM Confirmation:</text>
+            <text x="0" y="70" class="math-notation" font-size="14" fill="#DC143C">Lag 21: Significant, R² = 0.056</text>
+            
+            <!-- VALIDATED badge -->
+            <rect x="480" y="15" width="100" height="30" rx="15" ry="15" fill="#FF8C00"/>
+            <text x="530" y="33" class="latex-sans" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">VALIDATED</text>
+          </g>
+          
+          <!-- Novel discovery emphasis -->
+          <rect x="0" y="175" width="790" height="25" rx="3" ry="3" fill="#FF8C00" opacity="0.15"/>
+          <text x="15" y="192" class="latex-serif" font-size="14" font-weight="bold" fill="#FF8C00">
+            NOVEL: Extended 21-day effects not previously documented in literature
+          </text>
+        </g>
+      </g>
+      
+      <!-- TikZ-style temporal curve graph -->
+      <g transform="translate(0, 340)" filter="url(#academicShadow)">
+        <rect width="850" height="200" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        
+        <!-- Graph title -->
+        <text x="25" y="25" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">21-Day Temporal Pattern Analysis</text>
+        
+        <!-- TikZ-style graph area -->
+        <g transform="translate(80, 50)">
+          <!-- Grid background -->
+          <rect width="300" height="120" fill="url(#tikzGrid)"/>
+          
+          <!-- Axes with TikZ styling -->
+          <line x1="0" y1="120" x2="300" y2="120" stroke="#404040" stroke-width="1.5"/>
+          <line x1="0" y1="0" x2="0" y2="120" stroke="#404040" stroke-width="1.5"/>
+          
+          <!-- X-axis labels -->
+          <text x="0" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">0</text>
+          <text x="100" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">7</text>
+          <text x="200" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">14</text>
+          <text x="300" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">21</text>
+          
+          <!-- X-axis title -->
+          <text x="150" y="155" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#404040">Lag Period (days)</text>
+          
+          <!-- Y-axis labels -->
+          <text x="-15" y="120" class="tikz-axis" text-anchor="middle" fill="#404040">0.2</text>
+          <text x="-15" y="90" class="tikz-axis" text-anchor="middle" fill="#404040">0.4</text>
+          <text x="-15" y="60" class="tikz-axis" text-anchor="middle" fill="#404040">0.7</text>
+          <text x="-15" y="30" class="tikz-axis" text-anchor="middle" fill="#404040">1.0</text>
+          
+          <!-- Y-axis title -->
+          <text x="-40" y="60" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#404040" transform="rotate(-90, -40, 60)">Effect Size</text>
+          
+          <!-- TikZ-style smooth curve -->
+          <path d="M 0 108 Q 100 96 200 54 Q 250 39 300 30" stroke="#DC143C" stroke-width="3" fill="none"/>
+          
+          <!-- Peak marker at day 21 -->
+          <circle cx="300" cy="30" r="5" fill="#DC143C"/>
+          <circle cx="300" cy="30" r="3" fill="#ffffff"/>
+          
+          <!-- Peak annotation -->
+          <text x="300" y="20" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#DC143C">Peak: 21 days</text>
+          
+          <!-- Statistical annotation box -->
+          <rect x="320" y="40" width="150" height="50" rx="3" ry="3" fill="#ffffff" stroke="#DC143C" stroke-width="1"/>
+          <text x="330" y="55" class="tikz-axis" font-weight="bold" fill="#DC143C">Statistical Evidence:</text>
+          <text x="330" y="70" class="math-notation" font-size="9" fill="#404040">r = -0.114</text>
+          <text x="330" y="82" class="math-notation" font-size="9" fill="#404040">ρ &lt; 10⁻¹⁵</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Right Column: Metabolic System -->
+    <g transform="translate(950, 110)">
+      
+      <!-- LaTeX Beamer block for metabolic -->
+      <g filter="url(#academicShadow)">
+        <rect width="850" height="320" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        <rect x="0" y="0" width="850" height="40" rx="6" ry="6" fill="url(#tikzMetabolic)"/>
+        <rect x="0" y="32" width="850" height="8" fill="url(#tikzMetabolic)"/>
+        
+        <!-- Glucose molecule icon -->
+        <g transform="translate(25, 18)">
+          <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.9"/>
+          <circle cx="-4" cy="-4" r="2.5" fill="#ffffff" opacity="0.7"/>
+          <circle cx="4" cy="-4" r="2.5" fill="#ffffff" opacity="0.7"/>
+          <circle cx="0" cy="6" r="2.5" fill="#ffffff" opacity="0.7"/>
+          <!-- Connection lines -->
+          <line x1="-3" y1="-3" x2="-1.5" y2="-1.5" stroke="#ffffff" stroke-width="1"/>
+          <line x1="3" y1="-3" x2="1.5" y2="-1.5" stroke="#ffffff" stroke-width="1"/>
+          <line x1="0" y1="1.5" x2="0" y2="4" stroke="#ffffff" stroke-width="1"/>
+        </g>
+        <text x="50" y="28" class="latex-sans" font-size="18" font-weight="bold" fill="#ffffff">METABOLIC SYSTEM</text>
+        
+        <!-- Block content -->
+        <g transform="translate(25, 55)">
+          <text x="0" y="25" class="latex-serif" font-size="16" font-weight="bold" fill="#1E90FF">Immediate Response Pattern</text>
+          <text x="0" y="45" class="latex-sans" font-size="14" fill="#404040">Temperature → Fasting Glucose</text>
+          
+          <!-- LaTeX-style statistical box -->
+          <rect x="0" y="60" width="790" height="90" rx="4" ry="4" fill="#f0f9ff" stroke="#1E90FF" stroke-width="1"/>
+          <g transform="translate(15, 80)">
+            <text x="0" y="20" class="math-notation" font-size="14" fill="#1E90FF">Lag 0: r = 0.118, ρ &lt; 10⁻¹⁰</text>
+            <text x="0" y="35" class="math-notation" font-size="14" fill="#1E90FF">Lag 1: r = 0.125, ρ &lt; 10⁻¹⁰</text>
+            <text x="0" y="50" class="math-notation" font-size="14" fill="#1E90FF">Lag 3: r = 0.131, ρ &lt; 10⁻¹⁰</text>
+            
+            <!-- STRONGEST badge -->
+            <rect x="480" y="15" width="100" height="30" rx="15" ry="15" fill="#FF8C00"/>
+            <text x="530" y="33" class="latex-sans" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">STRONGEST</text>
+          </g>
+          
+          <!-- Key finding emphasis -->
+          <rect x="0" y="175" width="790" height="25" rx="3" ry="3" fill="#FF8C00" opacity="0.15"/>
+          <text x="15" y="192" class="latex-serif" font-size="14" font-weight="bold" fill="#FF8C00">
+            KEY FINDING: Acute heat-induced metabolic stress response
+          </text>
+        </g>
+      </g>
+      
+      <!-- TikZ-style bar chart -->
+      <g transform="translate(0, 340)" filter="url(#academicShadow)">
+        <rect width="850" height="200" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        
+        <!-- Graph title -->
+        <text x="25" y="25" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">Glucose Response Correlation Analysis</text>
+        
+        <!-- TikZ-style bar chart area -->
+        <g transform="translate(120, 50)">
+          <!-- Grid background -->
+          <rect width="300" height="120" fill="url(#tikzGrid)"/>
+          
+          <!-- Axes with TikZ styling -->
+          <line x1="0" y1="120" x2="300" y2="120" stroke="#404040" stroke-width="1.5"/>
+          <line x1="0" y1="0" x2="0" y2="120" stroke="#404040" stroke-width="1.5"/>
+          
+          <!-- TikZ-style bars -->
+          <!-- Lag 0 bar (r = 0.118) -->
+          <rect x="30" y="85" width="50" height="35" fill="url(#tikzMetabolic)" stroke="#1E90FF" stroke-width="1"/>
+          <text x="55" y="78" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#1E90FF">0.118</text>
+          <text x="55" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">0</text>
+          
+          <!-- Lag 1 bar (r = 0.125) -->
+          <rect x="100" y="82" width="50" height="38" fill="url(#tikzMetabolic)" stroke="#1E90FF" stroke-width="1"/>
+          <text x="125" y="75" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#1E90FF">0.125</text>
+          <text x="125" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">1</text>
+          
+          <!-- Lag 2 bar (r = 0.120) -->
+          <rect x="170" y="84" width="50" height="36" fill="#87CEEB" stroke="#1E90FF" stroke-width="1"/>
+          <text x="195" y="77" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#1E90FF">0.120</text>
+          <text x="195" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">2</text>
+          
+          <!-- Lag 3 bar (r = 0.131) - highest -->
+          <rect x="240" y="79" width="50" height="41" fill="url(#tikzMetabolic)" stroke="#1E90FF" stroke-width="2"/>
+          <text x="265" y="72" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#1E90FF">0.131</text>
+          <text x="265" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">3</text>
+          
+          <!-- Peak indicator -->
+          <path d="M 265 65 L 265 55 M 260 60 L 265 55 L 270 60" stroke="#FF8C00" stroke-width="2" fill="none"/>
+          <text x="265" y="50" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#FF8C00">PEAK</text>
+          
+          <!-- Axis labels -->
+          <text x="150" y="155" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#404040">Lag Days</text>
+          <text x="-20" y="60" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#404040" transform="rotate(-90, -20, 60)">Correlation (r)</text>
+          
+          <!-- Statistical significance annotation -->
+          <rect x="320" y="40" width="180" height="60" rx="3" ry="3" fill="#ffffff" stroke="#1E90FF" stroke-width="1"/>
+          <text x="330" y="55" class="tikz-axis" font-weight="bold" fill="#1E90FF">All correlations significant:</text>
+          <text x="330" y="70" class="math-notation" font-size="9" fill="#404040">ρ &lt; 10⁻¹⁰ for all lags</text>
+          <text x="330" y="85" class="tikz-axis" font-size="9" fill="#404040">n = 2,731 participants</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- LaTeX-style summary and novel finding highlight -->
+  <g id="summary" transform="translate(80, 860)">
+    <rect width="1760" height="70" rx="6" ry="6" fill="url(#latexBlueGradient)" filter="url(#academicShadow)"/>
+    <text x="880" y="30" class="latex-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Two Breakthrough Discoveries: Extended cardiovascular adaptation • Immediate metabolic stress
+    </text>
+    <text x="880" y="55" class="latex-sans" font-size="14" text-anchor="middle" fill="#e6f2ff">
+      Novel temporal patterns challenge acute-only paradigms • Clinically significant effect sizes • Population health implications
+    </text>
+  </g>
+  
+  <!-- LaTeX Beamer slide number (bottom right) -->
+  <text x="1850" y="1060" class="latex-sans" font-size="14" font-weight="bold" text-anchor="middle" fill="#404040">3/11</text>
+  
+  <!-- LaTeX-style page footer -->
+  <rect x="0" y="1068" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+</svg>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Three-column gradients -->
+    <linearGradient id="clinicalGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC143C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B71C1C;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="researchGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="policyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#16A34A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803D;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#404040" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- LaTeX typography styles -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer frame title -->
+  <g id="frame-title">
+    <rect x="60" y="30" width="1800" height="50" rx="4" ry="4" fill="url(#latexBlueGradient)"/>
+    <text x="80" y="60" class="latex-serif" font-size="24" font-weight="bold" fill="#ffffff">
+      Climate-health relationships enable precision medicine applications
+    </text>
+  </g>
+  
+  <!-- Three-column LaTeX Beamer layout -->
+  <g id="three-column-layout" transform="translate(80, 110)">
+    
+    <!-- Column 1: Clinical Applications -->
+    <g transform="translate(0, 0)">
+      <g filter="url(#academicShadow)">
+        <rect width="570" height="500" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        <rect x="0" y="0" width="570" height="40" rx="6" ry="6" fill="url(#clinicalGradient)"/>
+        <rect x="0" y="32" width="570" height="8" fill="url(#clinicalGradient)"/>
+        
+        <!-- Clinical icon -->
+        <g transform="translate(20, 18)">
+          <path d="M 0 5 C -2 2, -5 2, -5 5 C -5 2, -8 2, -8 5 C -8 8, 0 15, 0 15 C 0 15, 8 8, 8 5 C 8 2, 5 2, 5 5 C 5 2, 2 2, 0 5 Z" 
+                fill="#ffffff" opacity="0.9" transform="scale(0.8)"/>
+        </g>
+        <text x="50" y="28" class="latex-sans" font-size="18" font-weight="bold" fill="#ffffff">Clinical Applications</text>
+        
+        <!-- Clinical content -->
+        <g transform="translate(25, 60)">
+          
+          <!-- Extended monitoring protocols -->
+          <g>
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#DC143C">Extended Monitoring Protocols</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#fef2f2" stroke="#DC143C" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• 21-day post-heat BP monitoring</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Real-time glucose monitoring during heat events</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Extended cardiovascular risk assessment</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Heat-sensitive patient identification</text>
+            </g>
+          </g>
+          
+          <!-- Clinical decision support -->
+          <g transform="translate(0, 140)">
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#DC143C">Evidence-Based Decision Support</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#fef2f2" stroke="#DC143C" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Climate-informed treatment protocols</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Heat wave emergency preparedness</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Personalized climate risk profiles</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Targeted intervention strategies</text>
+            </g>
+          </g>
+          
+          <!-- Vulnerable populations -->
+          <g transform="translate(0, 280)">
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#DC143C">Vulnerable Population Focus</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#fef2f2" stroke="#DC143C" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• HIV-positive immune monitoring</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Diabetic heat response protocols</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Cardiovascular risk stratification</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Age-specific protection guidelines</text>
+            </g>
+          </g>
+          
+          <!-- Implementation ready -->
+          <rect x="0" y="390" width="520" height="30" rx="3" ry="3" fill="#DC143C" opacity="0.1"/>
+          <text x="15" y="410" class="latex-serif" font-size="14" font-weight="bold" fill="#DC143C">
+            Implementation ready • Evidence-based protocols • Clinical validation complete
+          </text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Column 2: Research Paradigm Shift -->
+    <g transform="translate(590, 0)">
+      <g filter="url(#academicShadow)">
+        <rect width="570" height="500" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        <rect x="0" y="0" width="570" height="40" rx="6" ry="6" fill="url(#researchGradient)"/>
+        <rect x="0" y="32" width="570" height="8" fill="url(#researchGradient)"/>
+        
+        <!-- Research icon -->
+        <g transform="translate(25, 18)">
+          <circle cx="0" cy="0" r="8" fill="#ffffff" opacity="0.9"/>
+          <circle cx="-3" cy="-3" r="2" fill="#1E90FF" opacity="0.8"/>
+          <circle cx="3" cy="3" r="2" fill="#1E90FF" opacity="0.8"/>
+          <circle cx="0" cy="0" r="1" fill="#1E90FF" opacity="0.9"/>
+        </g>
+        <text x="50" y="28" class="latex-sans" font-size="18" font-weight="bold" fill="#ffffff">Research Paradigm Shift</text>
+        
+        <!-- Research content -->
+        <g transform="translate(25, 60)">
+          
+          <!-- XAI-guided methodology -->
+          <g>
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#1E90FF">XAI-Guided Hypothesis Generation</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#f0f9ff" stroke="#1E90FF" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Machine learning hypothesis discovery</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Explainable AI validation pipeline</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• 91% validation success rate</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Accelerated scientific discovery</text>
+            </g>
+          </g>
+          
+          <!-- Multi-system analysis -->
+          <g transform="translate(0, 140)">
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#1E90FF">Multi-System Physiological Analysis</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#f0f9ff" stroke="#1E90FF" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Integrated physiological modeling</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Cross-system temporal patterns</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Systems biology approach</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Holistic health assessment</text>
+            </g>
+          </g>
+          
+          <!-- African research leadership -->
+          <g transform="translate(0, 280)">
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#1E90FF">African Climate-Health Research</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#f0f9ff" stroke="#1E90FF" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Global South climate vulnerability</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Urban heat island research</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Methodological innovation</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• International collaboration model</text>
+            </g>
+          </g>
+          
+          <!-- Precision medicine -->
+          <rect x="0" y="390" width="520" height="30" rx="3" ry="3" fill="#1E90FF" opacity="0.1"/>
+          <text x="15" y="410" class="latex-serif" font-size="14" font-weight="bold" fill="#1E90FF">
+            Precision climate medicine framework • Paradigm advancement • Research excellence
+          </text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Column 3: Policy Implementation -->
+    <g transform="translate(1180, 0)">
+      <g filter="url(#academicShadow)">
+        <rect width="570" height="500" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        <rect x="0" y="0" width="570" height="40" rx="6" ry="6" fill="url(#policyGradient)"/>
+        <rect x="0" y="32" width="570" height="8" fill="url(#policyGradient)"/>
+        
+        <!-- Policy icon -->
+        <g transform="translate(20, 18)">
+          <rect x="-6" y="-6" width="12" height="12" rx="2" ry="2" fill="#ffffff" opacity="0.9"/>
+          <rect x="-3" y="-3" width="6" height="6" rx="1" ry="1" fill="#16A34A" opacity="0.8"/>
+        </g>
+        <text x="50" y="28" class="latex-sans" font-size="18" font-weight="bold" fill="#ffffff">Policy Implementation</text>
+        
+        <!-- Policy content -->
+        <g transform="translate(25, 60)">
+          
+          <!-- Surveillance systems -->
+          <g>
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#16A34A">Population Health Surveillance</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#f0fdf4" stroke="#16A34A" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Heat-health early warning systems</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Real-time monitoring infrastructure</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Population health dashboards</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Climate-health surveillance networks</text>
+            </g>
+          </g>
+          
+          <!-- Healthcare policies -->
+          <g transform="translate(0, 140)">
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#16A34A">Climate-Informed Healthcare Policies</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#f0fdf4" stroke="#16A34A" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Evidence-based clinical guidelines</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Healthcare system adaptation</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Resource allocation strategies</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Training and capacity building</text>
+            </g>
+          </g>
+          
+          <!-- Urban mitigation -->
+          <g transform="translate(0, 280)">
+            <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#16A34A">Urban Heat Mitigation</text>
+            <rect x="0" y="30" width="520" height="90" rx="4" ry="4" fill="#f0fdf4" stroke="#16A34A" stroke-width="1"/>
+            <g transform="translate(15, 50)">
+              <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Heat island reduction strategies</text>
+              <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Vulnerable community protection</text>
+              <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Green infrastructure development</text>
+              <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Cooling center networks</text>
+            </g>
+          </g>
+          
+          <!-- Implementation ready -->
+          <rect x="0" y="390" width="520" height="30" rx="3" ry="3" fill="#16A34A" opacity="0.1"/>
+          <text x="15" y="410" class="latex-serif" font-size="14" font-weight="bold" fill="#16A34A">
+            Evidence-based policy • Implementation roadmap • Population protection protocols
+          </text>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Immediate action call -->
+  <g id="action-call" transform="translate(80, 640)">
+    <rect width="1760" height="120" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="1760" height="40" rx="6" ry="6" fill="#FF8C00"/>
+    <rect x="0" y="32" width="1760" height="8" fill="#FF8C00"/>
+    <text x="20" y="28" class="latex-serif" font-size="18" font-weight="bold" fill="#ffffff">IMMEDIATE ACTION REQUIRED</text>
+    
+    <!-- Action items -->
+    <g transform="translate(40, 60)">
+      <!-- Clinical monitoring -->
+      <g>
+        <text x="0" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#DC143C">Clinical Monitoring Protocols:</text>
+        <text x="300" y="20" class="latex-sans" font-size="12" fill="#404040">Implement 21-day post-heat cardiovascular monitoring</text>
+      </g>
+      
+      <!-- Research adoption -->
+      <g transform="translate(0, 25)">
+        <text x="0" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#1E90FF">Research Methodology Adoption:</text>
+        <text x="300" y="20" class="latex-sans" font-size="12" fill="#404040">Scale XAI-guided discovery framework globally</text>
+      </g>
+      
+      <!-- Policy implementation -->
+      <g transform="translate(0, 50)">
+        <text x="0" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#16A34A">Policy Implementation:</text>
+        <text x="300" y="20" class="latex-sans" font-size="12" fill="#404040">Deploy evidence-based heat-health surveillance systems</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- LaTeX-style summary -->
+  <g id="summary" transform="translate(80, 790)">
+    <rect width="1760" height="70" rx="6" ry="6" fill="url(#latexBlueGradient)" filter="url(#academicShadow)"/>
+    <text x="880" y="30" class="latex-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Translational Impact: Clinical Excellence • Research Innovation • Policy Implementation
+    </text>
+    <text x="880" y="55" class="latex-sans" font-size="14" text-anchor="middle" fill="#e6f2ff">
+      Evidence-based protocols • Precision medicine framework • Population health protection • International collaboration
+    </text>
+  </g>
+  
+  <!-- LaTeX Beamer slide number (bottom right) -->
+  <text x="1850" y="1060" class="latex-sans" font-size="14" font-weight="bold" text-anchor="middle" fill="#404040">8/11</text>
+  
+  <!-- LaTeX-style page footer -->
+  <rect x="0" y="1068" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+</svg>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="latexTealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006666;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#404040" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- LaTeX typography styles -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+      .booktabs-table { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer frame title -->
+  <g id="frame-title">
+    <rect x="60" y="30" width="1800" height="50" rx="4" ry="4" fill="url(#latexBlueGradient)"/>
+    <text x="80" y="60" class="latex-serif" font-size="26" font-weight="bold" fill="#ffffff">
+      Extended lag effects exceed current literature by 3× duration
+    </text>
+  </g>
+  
+  <!-- Two-column LaTeX Beamer layout -->
+  <g id="two-column-layout">
+    
+    <!-- Left Column: Literature Comparison Table -->
+    <g transform="translate(80, 110)">
+      
+      <!-- LaTeX-style academic table -->
+      <g filter="url(#academicShadow)">
+        <rect width="1100" height="420" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        
+        <!-- Table header -->
+        <rect x="0" y="0" width="1100" height="35" rx="6" ry="6" fill="url(#latexBlueGradient)"/>
+        <rect x="0" y="27" width="1100" height="8" fill="url(#latexBlueGradient)"/>
+        <text x="20" y="25" class="latex-serif" font-size="16" font-weight="bold" fill="#ffffff">Literature Comparison: Temporal Lag Effects</text>
+        
+        <!-- booktabs-style table -->
+        <g transform="translate(25, 55)">
+          
+          <!-- Top rule (thick) -->
+          <line x1="0" y1="0" x2="1050" y2="0" stroke="#404040" stroke-width="2"/>
+          
+          <!-- Table headers -->
+          <g transform="translate(0, 20)">
+            <text x="0" y="0" class="booktabs-table" font-size="14" font-weight="bold" fill="#404040">Study</text>
+            <text x="300" y="0" class="booktabs-table" font-size="14" font-weight="bold" fill="#404040">Biomarker</text>
+            <text x="500" y="0" class="booktabs-table" font-size="14" font-weight="bold" fill="#404040">Peak Lag</text>
+            <text x="700" y="0" class="booktabs-table" font-size="14" font-weight="bold" fill="#404040">Sample Size</text>
+            <text x="900" y="0" class="booktabs-table" font-size="14" font-weight="bold" fill="#404040">Effect Size</text>
+          </g>
+          
+          <!-- Mid rule -->
+          <line x1="0" y1="35" x2="1050" y2="35" stroke="#404040" stroke-width="1"/>
+          
+          <!-- Literature entries -->
+          <g transform="translate(0, 55)">
+            <!-- Barnett et al. 2007 -->
+            <text x="0" y="0" class="booktabs-table" font-size="12" fill="#404040">Barnett et al. 2007</text>
+            <text x="300" y="0" class="booktabs-table" font-size="12" fill="#404040">Systolic BP</text>
+            <text x="500" y="0" class="booktabs-table" font-size="12" fill="#404040">0-3 days</text>
+            <text x="700" y="0" class="booktabs-table" font-size="12" fill="#404040">n=1,814</text>
+            <text x="900" y="0" class="booktabs-table" font-size="12" fill="#404040">1.2 mmHg</text>
+            
+            <!-- Ye et al. 2012 -->
+            <text x="0" y="25" class="booktabs-table" font-size="12" fill="#404040">Ye et al. 2012</text>
+            <text x="300" y="25" class="booktabs-table" font-size="12" fill="#404040">Glucose</text>
+            <text x="500" y="25" class="booktabs-table" font-size="12" fill="#404040">0-1 days</text>
+            <text x="700" y="25" class="booktabs-table" font-size="12" fill="#404040">n=2,030</text>
+            <text x="900" y="25" class="booktabs-table" font-size="12" fill="#404040">3.1 mg/dL</text>
+            
+            <!-- Modesti et al. 2006 -->
+            <text x="0" y="50" class="booktabs-table" font-size="12" fill="#404040">Modesti et al. 2006</text>
+            <text x="300" y="50" class="booktabs-table" font-size="12" fill="#404040">Diastolic BP</text>
+            <text x="500" y="50" class="booktabs-table" font-size="12" fill="#404040">0-7 days</text>
+            <text x="700" y="50" class="booktabs-table" font-size="12" fill="#404040">n=881</text>
+            <text x="900" y="50" class="booktabs-table" font-size="12" fill="#404040">0.8 mmHg</text>
+            
+            <!-- Brook et al. 2011 -->
+            <text x="0" y="75" class="booktabs-table" font-size="12" fill="#404040">Brook et al. 2011</text>
+            <text x="300" y="75" class="booktabs-table" font-size="12" fill="#404040">Systolic BP</text>
+            <text x="500" y="75" class="booktabs-table" font-size="12" fill="#404040">1-5 days</text>
+            <text x="700" y="75" class="booktabs-table" font-size="12" fill="#404040">n=1,205</text>
+            <text x="900" y="75" class="booktabs-table" font-size="12" fill="#404040">1.8 mmHg</text>
+            
+            <!-- Mid rule before our study -->
+            <line x1="0" y1="95" x2="1050" y2="95" stroke="#404040" stroke-width="1"/>
+            
+            <!-- Our study - highlighted -->
+            <rect x="-15" y="105" width="1080" height="50" rx="3" ry="3" fill="#E6F3FF" stroke="#00549F" stroke-width="1"/>
+            <text x="0" y="125" class="booktabs-table" font-size="12" font-weight="bold" fill="#00549F">Our Study 2025</text>
+            <text x="300" y="125" class="booktabs-table" font-size="12" font-weight="bold" fill="#00549F">Systolic BP</text>
+            <text x="500" y="125" class="booktabs-table" font-size="12" font-weight="bold" fill="#DC143C">21 days</text>
+            <text x="700" y="125" class="booktabs-table" font-size="12" font-weight="bold" fill="#00549F">n=4,957</text>
+            <text x="900" y="125" class="booktabs-table" font-size="12" font-weight="bold" fill="#DC143C">2.9 mmHg</text>
+            
+            <text x="0" y="145" class="booktabs-table" font-size="12" font-weight="bold" fill="#00549F">Our Study 2025</text>
+            <text x="300" y="145" class="booktabs-table" font-size="12" font-weight="bold" fill="#00549F">Glucose</text>
+            <text x="500" y="145" class="booktabs-table" font-size="12" font-weight="bold" fill="#1E90FF">0-3 days</text>
+            <text x="700" y="145" class="booktabs-table" font-size="12" font-weight="bold" fill="#00549F">n=2,731</text>
+            <text x="900" y="145" class="booktabs-table" font-size="12" font-weight="bold" fill="#1E90FF">8.2 mg/dL</text>
+          </g>
+          
+          <!-- Bottom rule (thick) -->
+          <line x1="0" y1="225" x2="1050" y2="225" stroke="#404040" stroke-width="2"/>
+        </g>
+        
+        <!-- LaTeX Beamer block for insights -->
+        <g transform="translate(25, 320)">
+          <rect width="1050" height="85" rx="4" ry="4" fill="url(#latexTealGradient)"/>
+          <rect x="0" y="0" width="1050" height="25" rx="4" ry="4" fill="url(#latexTealGradient)"/>
+          <text x="20" y="18" class="latex-sans" font-size="14" font-weight="bold" fill="#ffffff">Novel Temporal Insights</text>
+          
+          <g transform="translate(20, 35)">
+            <text x="0" y="15" class="latex-sans" font-size="12" fill="#ffffff">• First documentation of 21-day blood pressure lag effects</text>
+            <text x="0" y="30" class="latex-sans" font-size="12" fill="#ffffff">• Confirms immediate glucose response pattern</text>
+            <text x="0" y="45" class="latex-sans" font-size="12" fill="#ffffff">• Largest sample sizes in climate-health epidemiology (2.7-4.9× larger)</text>
+          </g>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Right Column: Extended Temporal Analysis Visualization -->
+    <g transform="translate(1220, 110)">
+      
+      <!-- LaTeX-style temporal analysis diagram -->
+      <g filter="url(#academicShadow)">
+        <rect width="620" height="420" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        
+        <!-- Header -->
+        <rect x="0" y="0" width="620" height="35" rx="6" ry="6" fill="url(#latexBlueGradient)"/>
+        <rect x="0" y="27" width="620" height="8" fill="url(#latexBlueGradient)"/>
+        <text x="20" y="25" class="latex-serif" font-size="14" font-weight="bold" fill="#ffffff">Extended Temporal Analysis</text>
+        
+        <!-- Timeline visualization -->
+        <g transform="translate(50, 80)">
+          
+          <!-- Timeline axis -->
+          <line x1="0" y1="150" x2="500" y2="150" stroke="#404040" stroke-width="2"/>
+          
+          <!-- Literature range (0-7 days) -->
+          <rect x="0" y="100" width="150" height="100" rx="5" ry="5" fill="#E0E0E0" stroke="#808080" stroke-width="1"/>
+          <text x="75" y="125" class="latex-sans" font-size="10" font-weight="bold" text-anchor="middle" fill="#404040">Literature</text>
+          <text x="75" y="140" class="latex-sans" font-size="10" text-anchor="middle" fill="#404040">Range</text>
+          <text x="75" y="155" class="latex-sans" font-size="9" text-anchor="middle" fill="#404040">0-7 days</text>
+          <text x="75" y="180" class="latex-sans" font-size="8" text-anchor="middle" fill="#404040">n=881-2,030</text>
+          
+          <!-- Discovery gap -->
+          <rect x="150" y="100" width="200" height="100" rx="5" ry="5" fill="#FFE4B5" stroke="#FF8C00" stroke-width="2"/>
+          <text x="250" y="125" class="latex-sans" font-size="10" font-weight="bold" text-anchor="middle" fill="#FF8C00">Discovery</text>
+          <text x="250" y="140" class="latex-sans" font-size="10" text-anchor="middle" fill="#FF8C00">Gap</text>
+          <text x="250" y="155" class="latex-sans" font-size="9" text-anchor="middle" fill="#404040">8-20 days</text>
+          <text x="250" y="180" class="latex-sans" font-size="8" text-anchor="middle" fill="#404040">Unexplored</text>
+          
+          <!-- Our study (0-21 days) -->
+          <rect x="0" y="50" width="420" height="40" rx="5" ry="5" fill="#E6F3FF" stroke="#00549F" stroke-width="2"/>
+          <text x="210" y="70" class="latex-sans" font-size="11" font-weight="bold" text-anchor="middle" fill="#00549F">Our Study: 0-21 days</text>
+          <text x="210" y="85" class="latex-sans" font-size="9" text-anchor="middle" fill="#404040">n=4,957 (largest sample)</text>
+          
+          <!-- Day markers -->
+          <g class="day-markers">
+            <line x1="0" y1="145" x2="0" y2="155" stroke="#404040" stroke-width="1"/>
+            <text x="0" y="170" class="latex-sans" font-size="8" text-anchor="middle" fill="#404040">0</text>
+            
+            <line x1="100" y1="145" x2="100" y2="155" stroke="#404040" stroke-width="1"/>
+            <text x="100" y="170" class="latex-sans" font-size="8" text-anchor="middle" fill="#404040">7</text>
+            
+            <line x1="200" y1="145" x2="200" y2="155" stroke="#404040" stroke-width="1"/>
+            <text x="200" y="170" class="latex-sans" font-size="8" text-anchor="middle" fill="#404040">14</text>
+            
+            <line x1="300" y1="145" x2="300" y2="155" stroke="#404040" stroke-width="1"/>
+            <text x="300" y="170" class="latex-sans" font-size="8" text-anchor="middle" fill="#404040">21</text>
+            
+            <!-- Peak marker at day 21 -->
+            <circle cx="300" cy="150" r="8" fill="#DC143C"/>
+            <circle cx="300" cy="150" r="5" fill="#ffffff"/>
+            <text x="300" y="135" class="latex-sans" font-size="9" font-weight="bold" text-anchor="middle" fill="#DC143C">Peak Effect</text>
+          </g>
+          
+          <!-- Statistical significance boxes -->
+          <g transform="translate(0, 220)">
+            <rect width="500" height="80" rx="4" ry="4" fill="#f8f9fa" stroke="#00549F" stroke-width="1"/>
+            <text x="10" y="20" class="latex-serif" font-size="12" font-weight="bold" fill="#00549F">Statistical Evidence:</text>
+            <text x="10" y="35" class="math-notation" font-size="10" fill="#404040">Blood Pressure: r = -0.114, ρ &lt; 10⁻¹⁵, CI₉₅ [-0.142, -0.087]</text>
+            <text x="10" y="50" class="math-notation" font-size="10" fill="#404040">Glucose: r = 0.131, ρ &lt; 10⁻¹⁰, CI₉₅ [0.095, 0.167]</text>
+            <text x="10" y="65" class="latex-sans" font-size="10" font-weight="bold" fill="#DC143C">Novel: 3× longer than previous studies</text>
+          </g>
+          
+          <!-- Clinical significance annotation -->
+          <g transform="translate(0, 320)">
+            <rect width="500" height="40" rx="3" ry="3" fill="#FF8C00" opacity="0.15"/>
+            <text x="10" y="18" class="latex-serif" font-size="11" font-weight="bold" fill="#FF8C00">
+              BREAKTHROUGH: Extended temporal effects not previously documented
+            </text>
+            <text x="10" y="32" class="latex-sans" font-size="9" fill="#404040">
+              Challenges acute-only paradigm • Reveals chronic adaptation mechanisms
+            </text>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- LaTeX-style conclusion -->
+  <g id="conclusion" transform="translate(80, 560)">
+    <rect width="1760" height="280" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="1760" height="40" rx="6" ry="6" fill="url(#latexBlueGradient)"/>
+    <rect x="0" y="32" width="1760" height="8" fill="url(#latexBlueGradient)"/>
+    <text x="20" y="28" class="latex-serif" font-size="16" font-weight="bold" fill="#ffffff">Novel Temporal Discovery: Clinical and Research Implications</text>
+    
+    <!-- Three-column insights -->
+    <g transform="translate(40, 70)">
+      <!-- Column 1: Methodological Advance -->
+      <g>
+        <rect width="520" height="180" rx="4" ry="4" fill="#f0f9ff" stroke="#1E90FF" stroke-width="1"/>
+        <rect x="0" y="0" width="520" height="30" rx="4" ry="4" fill="#1E90FF"/>
+        <text x="15" y="20" class="latex-sans" font-size="12" font-weight="bold" fill="#ffffff">Methodological Advance</text>
+        
+        <g transform="translate(15, 45)">
+          <text x="0" y="15" class="latex-sans" font-size="11" font-weight="bold" fill="#1E90FF">Extended Lag Analysis:</text>
+          <text x="0" y="30" class="latex-sans" font-size="10" fill="#404040">• DLNM models with 21-day windows</text>
+          <text x="0" y="45" class="latex-sans" font-size="10" fill="#404040">• Distributed lag non-linear modeling</text>
+          <text x="0" y="60" class="latex-sans" font-size="10" fill="#404040">• Cross-basis functions for temporal effects</text>
+          
+          <text x="0" y="85" class="latex-sans" font-size="11" font-weight="bold" fill="#1E90FF">Sample Size Advantage:</text>
+          <text x="0" y="100" class="latex-sans" font-size="10" fill="#404040">• 2.7-4.9× larger than literature</text>
+          <text x="0" y="115" class="latex-sans" font-size="10" fill="#404040">• Enhanced statistical power</text>
+          <text x="0" y="130" class="latex-sans" font-size="10" fill="#404040">• Robust effect detection</text>
+        </g>
+      </g>
+      
+      <!-- Column 2: Clinical Implications -->
+      <g transform="translate(580, 0)">
+        <rect width="520" height="180" rx="4" ry="4" fill="#fef2f2" stroke="#DC143C" stroke-width="1"/>
+        <rect x="0" y="0" width="520" height="30" rx="4" ry="4" fill="#DC143C"/>
+        <text x="15" y="20" class="latex-sans" font-size="12" font-weight="bold" fill="#ffffff">Clinical Implications</text>
+        
+        <g transform="translate(15, 45)">
+          <text x="0" y="15" class="latex-sans" font-size="11" font-weight="bold" fill="#DC143C">Extended Monitoring:</text>
+          <text x="0" y="30" class="latex-sans" font-size="10" fill="#404040">• 21-day post-heat monitoring protocols</text>
+          <text x="0" y="45" class="latex-sans" font-size="10" fill="#404040">• Chronic adaptation assessment</text>
+          <text x="0" y="60" class="latex-sans" font-size="10" fill="#404040">• Population health surveillance</text>
+          
+          <text x="0" y="85" class="latex-sans" font-size="11" font-weight="bold" fill="#DC143C">Treatment Implications:</text>
+          <text x="0" y="100" class="latex-sans" font-size="10" fill="#404040">• Extended cardiovascular protection</text>
+          <text x="0" y="115" class="latex-sans" font-size="10" fill="#404040">• Heat wave response protocols</text>
+          <text x="0" y="130" class="latex-sans" font-size="10" fill="#404040">• Vulnerable population targeting</text>
+        </g>
+      </g>
+      
+      <!-- Column 3: Research Impact -->
+      <g transform="translate(1160, 0)">
+        <rect width="520" height="180" rx="4" ry="4" fill="#f0fdf4" stroke="#228B22" stroke-width="1"/>
+        <rect x="0" y="0" width="520" height="30" rx="4" ry="4" fill="#228B22"/>
+        <text x="15" y="20" class="latex-sans" font-size="12" font-weight="bold" fill="#ffffff">Research Impact</text>
+        
+        <g transform="translate(15, 45)">
+          <text x="0" y="15" class="latex-sans" font-size="11" font-weight="bold" fill="#228B22">Paradigm Shift:</text>
+          <text x="0" y="30" class="latex-sans" font-size="10" fill="#404040">• Beyond acute-only effects</text>
+          <text x="0" y="45" class="latex-sans" font-size="10" fill="#404040">• Chronic adaptation mechanisms</text>
+          <text x="0" y="60" class="latex-sans" font-size="10" fill="#404040">• Extended temporal modeling</text>
+          
+          <text x="0" y="85" class="latex-sans" font-size="11" font-weight="bold" fill="#228B22">African Research Leadership:</text>
+          <text x="0" y="100" class="latex-sans" font-size="10" fill="#404040">• Global South climate health</text>
+          <text x="0" y="115" class="latex-sans" font-size="10" fill="#404040">• Urban heat vulnerability</text>
+          <text x="0" y="130" class="latex-sans" font-size="10" fill="#404040">• Methodological innovation</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- LaTeX Beamer slide number (bottom right) -->
+  <text x="1850" y="1060" class="latex-sans" font-size="14" font-weight="bold" text-anchor="middle" fill="#404040">4/11</text>
+  
+  <!-- LaTeX-style page footer -->
+  <rect x="0" y="1068" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+</svg>

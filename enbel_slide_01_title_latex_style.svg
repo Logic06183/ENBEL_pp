@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="latexTealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006666;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX Beamer header bar -->
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#404040" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- Math notation styling -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer institutional header -->
+  <g id="institutional-header">
+    <rect x="60" y="30" width="1800" height="45" rx="3" ry="3" fill="#00549F" opacity="0.95"/>
+    <text x="80" y="55" class="latex-sans" font-size="16" font-weight="bold" fill="#ffffff">
+      ENBEL 2025 • Environmental Burden of Disease • Climate Health Research
+    </text>
+    <text x="1840" y="55" class="latex-sans" font-size="14" text-anchor="end" fill="#ffffff">
+      HE2AT Center • Wits Planetary Health Research
+    </text>
+  </g>
+  
+  <!-- Main title block with LaTeX Beamer styling -->
+  <g id="title-block" filter="url(#academicShadow)">
+    <rect x="120" y="150" width="1680" height="280" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="120" y="150" width="1680" height="40" rx="8" ry="8" fill="url(#latexBlueGradient)"/>
+    <rect x="120" y="178" width="1680" height="12" fill="url(#latexBlueGradient)"/>
+    
+    <!-- LaTeX-quality title typography -->
+    <text x="960" y="240" class="latex-serif" font-size="54" font-weight="bold" text-anchor="middle" fill="#00549F">
+      Climate exposure affects four distinct
+    </text>
+    <text x="960" y="300" class="latex-serif" font-size="54" font-weight="bold" text-anchor="middle" fill="#00549F">
+      physiological systems
+    </text>
+    
+    <!-- Academic subtitle with LaTeX styling -->
+    <text x="960" y="350" class="latex-serif" font-size="28" font-weight="300" text-anchor="middle" fill="#404040">
+      Novel 21-Day Cardiovascular Adaptation Effects in African Urban Populations
+    </text>
+    
+    <!-- Mathematical notation for statistical significance -->
+    <text x="960" y="390" class="math-notation" font-size="20" text-anchor="middle" fill="#008080">
+      ρ &lt; 10⁻¹⁵, η² = 0.056, Cohen's d = 0.261
+    </text>
+  </g>
+  
+  <!-- LaTeX Beamer author block -->
+  <g id="author-block" filter="url(#academicShadow)">
+    <rect x="120" y="460" width="1680" height="200" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="120" y="460" width="1680" height="30" rx="8" ry="8" fill="url(#latexTealGradient)"/>
+    <rect x="120" y="483" width="1680" height="7" fill="url(#latexTealGradient)"/>
+    
+    <!-- Academic author list with proper LaTeX superscript styling -->
+    <text x="960" y="520" class="latex-serif" font-size="20" font-weight="600" text-anchor="middle" fill="#404040">
+      Craig Parker¹*, Matthew Chersich¹, Nicholas Brink¹, Ruvimbo Forget¹,
+    </text>
+    <text x="960" y="545" class="latex-serif" font-size="20" font-weight="600" text-anchor="middle" fill="#404040">
+      Kimberly McAlpine¹, Christopher Jack², Yao Etienne Kouakou³⁴, Brama Koné³⁴
+    </text>
+    
+    <!-- LaTeX-style institutional affiliations -->
+    <g transform="translate(140, 575)">
+      <text x="0" y="20" class="latex-sans" font-size="13" fill="#404040">¹Wits Planetary Health Research, University of the Witwatersrand</text>
+      <text x="0" y="35" class="latex-sans" font-size="13" fill="#404040">²Climate System Analysis Group, University of Cape Town</text>
+      <text x="0" y="50" class="latex-sans" font-size="13" fill="#404040">³University Peleforo Gon Coulibaly, Korhogo, Côte d'Ivoire</text>
+      
+      <text x="900" y="20" class="latex-sans" font-size="13" fill="#404040">⁴Centre Suisse de Recherches Scientifiques, Abidjan</text>
+      <text x="900" y="35" class="latex-sans" font-size="13" fill="#404040">*Corresponding author: craig.parker@wits.ac.za</text>
+      <text x="900" y="50" class="latex-sans" font-size="13" fill="#404040">HE2AT Center • DSI Africa • IBM Research Africa</text>
+    </g>
+  </g>
+  
+  <!-- LaTeX-style conference information block -->
+  <g id="conference-block" filter="url(#academicShadow)">
+    <rect x="120" y="690" width="1680" height="100" rx="8" ry="8" fill="#00549F" opacity="0.95"/>
+    
+    <!-- Conference title with LaTeX academic formatting -->
+    <text x="960" y="720" class="latex-serif" font-size="26" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      ENBEL Conference 2025 • Climate Health Research
+    </text>
+    <text x="960" y="750" class="latex-sans" font-size="18" text-anchor="middle" fill="#e6f2ff">
+      18,205 participants • Johannesburg 2010-2020 • DLNM validated • WHO/ADA thresholds exceeded
+    </text>
+    <text x="960" y="770" class="latex-sans" font-size="14" text-anchor="middle" fill="#ccddff">
+      University of the Witwatersrand • Johannesburg, South Africa
+    </text>
+  </g>
+  
+  <!-- LaTeX-style scientific visualization icons -->
+  <g id="scientific-icons" transform="translate(200, 820)">
+    <!-- Temperature-Health Connection Visual -->
+    <g transform="translate(0, 0)">
+      <circle cx="0" cy="0" r="20" fill="#FF8C00" opacity="0.2"/>
+      <circle cx="0" cy="0" r="12" fill="#FF8C00"/>
+      <!-- Thermometer icon -->
+      <rect x="-2" y="-6" width="4" height="12" rx="2" fill="#ffffff"/>
+      <circle cx="0" cy="6" r="3" fill="#ffffff"/>
+      <text x="0" y="35" class="latex-sans" font-size="11" font-weight="bold" text-anchor="middle" fill="#FF8C00">Climate</text>
+    </g>
+    
+    <!-- Arrow showing causation -->
+    <path d="M 25 0 L 75 0" stroke="#404040" stroke-width="2" fill="none"/>
+    <polygon points="70,-4 80,0 70,4" fill="#404040"/>
+    
+    <!-- Multi-system health icons -->
+    <g transform="translate(100, 0)">
+      <!-- Cardiovascular -->
+      <g transform="translate(0, -15)">
+        <circle cx="0" cy="0" r="8" fill="#DC143C" opacity="0.8"/>
+        <path d="M 0 3 C -2 0, -5 0, -5 3 C -5 0, -8 0, -8 3 C -8 6, 0 12, 0 12 C 0 12, 8 6, 8 3 C 8 0, 5 0, 5 3 C 5 0, 2 0, 0 3 Z" 
+              fill="#ffffff" transform="scale(0.3)"/>
+        <text x="0" y="20" class="latex-sans" font-size="9" text-anchor="middle" fill="#DC143C">CV</text>
+      </g>
+      
+      <!-- Metabolic -->
+      <g transform="translate(40, -15)">
+        <circle cx="0" cy="0" r="8" fill="#1E90FF"/>
+        <circle cx="-3" cy="-3" r="2" fill="#ffffff" opacity="0.9"/>
+        <circle cx="3" cy="3" r="2" fill="#ffffff" opacity="0.9"/>
+        <text x="0" y="20" class="latex-sans" font-size="9" text-anchor="middle" fill="#1E90FF">MET</text>
+      </g>
+      
+      <!-- Immune -->
+      <g transform="translate(80, -15)">
+        <circle cx="0" cy="0" r="8" fill="#228B22"/>
+        <circle cx="-2" cy="-2" r="1.5" fill="#ffffff"/>
+        <circle cx="2" cy="2" r="1.5" fill="#ffffff"/>
+        <text x="0" y="20" class="latex-sans" font-size="9" text-anchor="middle" fill="#228B22">IMM</text>
+      </g>
+      
+      <!-- Renal -->
+      <g transform="translate(120, -15)">
+        <ellipse cx="0" cy="0" rx="6" ry="8" fill="#8A2BE2"/>
+        <ellipse cx="-2" cy="-2" rx="1" ry="2" fill="#ffffff" opacity="0.7"/>
+        <text x="0" y="20" class="latex-sans" font-size="9" text-anchor="middle" fill="#8A2BE2">REN</text>
+      </g>
+    </g>
+    
+    <!-- Scientific findings summary -->
+    <text x="300" y="5" class="latex-serif" font-size="14" font-weight="bold" fill="#00549F">
+      Multi-System Climate-Health Vulnerability
+    </text>
+  </g>
+  
+  <!-- Academic metadata box -->
+  <g id="metadata-box" transform="translate(1400, 820)">
+    <rect x="0" y="0" width="300" height="80" rx="4" ry="4" fill="#f8f9fa" stroke="#00549F" stroke-width="1"/>
+    <text x="10" y="18" class="latex-sans" font-size="10" font-weight="bold" fill="#00549F">Research Metadata</text>
+    <text x="10" y="32" class="latex-mono" font-size="9" fill="#404040">Sample size: n = 18,205</text>
+    <text x="10" y="44" class="latex-mono" font-size="9" fill="#404040">Study period: 2010-2020</text>
+    <text x="10" y="56" class="latex-mono" font-size="9" fill="#404040">Location: Johannesburg, SA</text>
+    <text x="10" y="68" class="latex-mono" font-size="9" fill="#404040">Methods: DLNM, ML, XAI</text>
+  </g>
+  
+  <!-- LaTeX Beamer slide number (bottom right) -->
+  <text x="1850" y="1060" class="latex-sans" font-size="14" font-weight="bold" text-anchor="middle" fill="#404040">1/11</text>
+  
+  <!-- LaTeX-style page footer -->
+  <rect x="0" y="1068" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+</svg>

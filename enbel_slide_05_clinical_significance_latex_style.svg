@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="latexTealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006666;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Clinical significance gradients -->
+    <linearGradient id="bpSignificance" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC143C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B71C1C;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="glucoseSignificance" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#404040" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- TikZ-style grid pattern for charts -->
+    <pattern id="tikzGrid" patternUnits="userSpaceOnUse" width="20" height="20">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e0e0e0" stroke-width="0.5"/>
+    </pattern>
+    
+    <!-- LaTeX typography styles -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+      .tikz-axis { font-family: "Helvetica", "Computer Modern Sans", sans-serif; font-size: 10px; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer frame title -->
+  <g id="frame-title">
+    <rect x="60" y="30" width="1800" height="50" rx="4" ry="4" fill="url(#latexBlueGradient)"/>
+    <text x="80" y="60" class="latex-serif" font-size="26" font-weight="bold" fill="#ffffff">
+      Effect sizes exceed WHO and ADA clinical thresholds
+    </text>
+  </g>
+  
+  <!-- Two-column LaTeX Beamer layout -->
+  <g id="two-column-layout">
+    
+    <!-- Left Column: Blood Pressure Impact -->
+    <g transform="translate(80, 110)">
+      
+      <!-- LaTeX Beamer block for blood pressure -->
+      <g filter="url(#academicShadow)">
+        <rect width="850" height="380" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        <rect x="0" y="0" width="850" height="40" rx="6" ry="6" fill="url(#bpSignificance)"/>
+        <rect x="0" y="32" width="850" height="8" fill="url(#bpSignificance)"/>
+        
+        <!-- Heart icon -->
+        <g transform="translate(20, 18)">
+          <path d="M 0 5 C -2 2, -5 2, -5 5 C -5 2, -8 2, -8 5 C -8 8, 0 15, 0 15 C 0 15, 8 8, 8 5 C 8 2, 5 2, 5 5 C 5 2, 2 2, 0 5 Z" 
+                fill="#ffffff" opacity="0.9" transform="scale(0.8)"/>
+        </g>
+        <text x="50" y="28" class="latex-sans" font-size="18" font-weight="bold" fill="#ffffff">Blood Pressure Impact</text>
+        
+        <!-- Clinical findings -->
+        <g transform="translate(25, 55)">
+          <text x="0" y="25" class="latex-serif" font-size="18" font-weight="bold" fill="#DC143C">2.9 mmHg reduction per 1°C temperature rise</text>
+          
+          <!-- Clinical significance box -->
+          <rect x="0" y="45" width="790" height="80" rx="4" ry="4" fill="#fef2f2" stroke="#DC143C" stroke-width="1"/>
+          <g transform="translate(15, 65)">
+            <text x="0" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#FF8C00">CLINICALLY MEANINGFUL</text>
+            <text x="0" y="40" class="latex-sans" font-size="12" fill="#404040">WHO: &gt;2 mmHg population significant</text>
+            <text x="0" y="60" class="latex-sans" font-size="12" font-weight="bold" fill="#404040">Our finding: 2.9 mmHg (45% above threshold)</text>
+            
+            <!-- Confidence intervals -->
+            <text x="400" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#DC143C">Confidence Intervals</text>
+            <text x="400" y="40" class="math-notation" font-size="12" fill="#404040">BP: 95% CI [-3.2, -2.6]</text>
+            <text x="400" y="60" class="latex-sans" font-size="12" font-weight="bold" fill="#FF8C00">ROBUST ESTIMATES</text>
+          </g>
+          
+          <!-- TikZ-style horizontal bar chart -->
+          <g transform="translate(0, 140)">
+            <text x="0" y="0" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">Effect Size vs. Clinical Threshold</text>
+            
+            <!-- Chart area -->
+            <g transform="translate(50, 20)">
+              <!-- Grid background -->
+              <rect width="400" height="120" fill="url(#tikzGrid)"/>
+              
+              <!-- Y-axis -->
+              <line x1="0" y1="0" x2="0" y2="120" stroke="#404040" stroke-width="1.5"/>
+              
+              <!-- X-axis -->
+              <line x1="0" y1="120" x2="400" y2="120" stroke="#404040" stroke-width="1.5"/>
+              
+              <!-- WHO threshold bar -->
+              <rect x="10" y="70" width="120" height="30" fill="#808080" stroke="#404040" stroke-width="1"/>
+              <text x="10" y="65" class="tikz-axis" font-weight="bold" fill="#404040">WHO Threshold</text>
+              <text x="135" y="88" class="tikz-axis" fill="#ffffff">2.0 mmHg</text>
+              
+              <!-- Our finding bar -->
+              <rect x="10" y="30" width="174" height="30" fill="url(#bpSignificance)" stroke="#DC143C" stroke-width="2"/>
+              <text x="10" y="25" class="tikz-axis" font-weight="bold" fill="#DC143C">Our Finding</text>
+              <text x="190" y="48" class="tikz-axis" fill="#ffffff" font-weight="bold">2.9 mmHg</text>
+              
+              <!-- Confidence interval error bars -->
+              <line x1="192" y1="35" x2="192" y2="55" stroke="#B71C1C" stroke-width="2"/>
+              <line x1="156" y1="35" x2="156" y2="55" stroke="#B71C1C" stroke-width="2"/>
+              <line x1="156" y1="45" x2="192" y2="45" stroke="#B71C1C" stroke-width="1"/>
+              <text x="200" y="48" class="tikz-axis" font-size="8" fill="#B71C1C">[2.6, 3.2]</text>
+              
+              <!-- X-axis labels -->
+              <text x="0" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">0</text>
+              <text x="60" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">1</text>
+              <text x="120" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">2</text>
+              <text x="180" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">3</text>
+              <text x="240" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">4</text>
+              
+              <!-- X-axis title -->
+              <text x="200" y="155" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#404040">Effect Size (mmHg)</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Right Column: Glucose Impact -->
+    <g transform="translate(950, 110)">
+      
+      <!-- LaTeX Beamer block for glucose -->
+      <g filter="url(#academicShadow)">
+        <rect width="850" height="380" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+        <rect x="0" y="0" width="850" height="40" rx="6" ry="6" fill="url(#glucoseSignificance)"/>
+        <rect x="0" y="32" width="850" height="8" fill="url(#glucoseSignificance)"/>
+        
+        <!-- Glucose molecule icon -->
+        <g transform="translate(25, 18)">
+          <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.9"/>
+          <circle cx="-4" cy="-4" r="2.5" fill="#ffffff" opacity="0.7"/>
+          <circle cx="4" cy="-4" r="2.5" fill="#ffffff" opacity="0.7"/>
+          <circle cx="0" cy="6" r="2.5" fill="#ffffff" opacity="0.7"/>
+          <!-- Connection lines -->
+          <line x1="-3" y1="-3" x2="-1.5" y2="-1.5" stroke="#ffffff" stroke-width="1"/>
+          <line x1="3" y1="-3" x2="1.5" y2="-1.5" stroke="#ffffff" stroke-width="1"/>
+          <line x1="0" y1="1.5" x2="0" y2="4" stroke="#ffffff" stroke-width="1"/>
+        </g>
+        <text x="50" y="28" class="latex-sans" font-size="18" font-weight="bold" fill="#ffffff">Glucose Impact</text>
+        
+        <!-- Clinical findings -->
+        <g transform="translate(25, 55)">
+          <text x="0" y="25" class="latex-serif" font-size="18" font-weight="bold" fill="#1E90FF">8.2 mg/dL increase per 1°C temperature rise</text>
+          
+          <!-- Clinical significance box -->
+          <rect x="0" y="45" width="790" height="80" rx="4" ry="4" fill="#f0f9ff" stroke="#1E90FF" stroke-width="1"/>
+          <g transform="translate(15, 65)">
+            <text x="0" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#FF8C00">CLINICALLY SIGNIFICANT</text>
+            <text x="0" y="40" class="latex-sans" font-size="12" fill="#404040">ADA: &gt;5 mg/dL treatment relevant</text>
+            <text x="0" y="60" class="latex-sans" font-size="12" font-weight="bold" fill="#404040">Our finding: 8.2 mg/dL (64% above threshold)</text>
+            
+            <!-- Confidence intervals -->
+            <text x="400" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#1E90FF">Confidence Intervals</text>
+            <text x="400" y="40" class="math-notation" font-size="12" fill="#404040">Glucose: 95% CI [6.1, 10.3]</text>
+            <text x="400" y="60" class="latex-sans" font-size="12" font-weight="bold" fill="#FF8C00">ROBUST ESTIMATES</text>
+          </g>
+          
+          <!-- TikZ-style horizontal bar chart -->
+          <g transform="translate(0, 140)">
+            <text x="0" y="0" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">Effect Size vs. Clinical Threshold</text>
+            
+            <!-- Chart area -->
+            <g transform="translate(50, 20)">
+              <!-- Grid background -->
+              <rect width="400" height="120" fill="url(#tikzGrid)"/>
+              
+              <!-- Y-axis -->
+              <line x1="0" y1="0" x2="0" y2="120" stroke="#404040" stroke-width="1.5"/>
+              
+              <!-- X-axis -->
+              <line x1="0" y1="120" x2="400" y2="120" stroke="#404040" stroke-width="1.5"/>
+              
+              <!-- ADA threshold bar -->
+              <rect x="10" y="70" width="100" height="30" fill="#808080" stroke="#404040" stroke-width="1"/>
+              <text x="10" y="65" class="tikz-axis" font-weight="bold" fill="#404040">ADA Threshold</text>
+              <text x="115" y="88" class="tikz-axis" fill="#ffffff">5.0 mg/dL</text>
+              
+              <!-- Our finding bar -->
+              <rect x="10" y="30" width="164" height="30" fill="url(#glucoseSignificance)" stroke="#1E90FF" stroke-width="2"/>
+              <text x="10" y="25" class="tikz-axis" font-weight="bold" fill="#1E90FF">Our Finding</text>
+              <text x="180" y="48" class="tikz-axis" fill="#ffffff" font-weight="bold">8.2 mg/dL</text>
+              
+              <!-- Confidence interval error bars -->
+              <line x1="122" y1="35" x2="122" y2="55" stroke="#1565C0" stroke-width="2"/>
+              <line x1="206" y1="35" x2="206" y2="55" stroke="#1565C0" stroke-width="2"/>
+              <line x1="122" y1="45" x2="206" y2="45" stroke="#1565C0" stroke-width="1"/>
+              <text x="214" y="48" class="tikz-axis" font-size="8" fill="#1565C0">[6.1, 10.3]</text>
+              
+              <!-- X-axis labels -->
+              <text x="0" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">0</text>
+              <text x="50" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">2.5</text>
+              <text x="100" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">5.0</text>
+              <text x="150" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">7.5</text>
+              <text x="200" y="135" class="tikz-axis" text-anchor="middle" fill="#404040">10.0</text>
+              
+              <!-- X-axis title -->
+              <text x="200" y="155" class="tikz-axis" text-anchor="middle" font-weight="bold" fill="#404040">Effect Size (mg/dL)</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Population Health Impact Block -->
+  <g id="population-impact" transform="translate(80, 520)">
+    <rect width="1760" height="200" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <!-- Header -->
+    <rect x="0" y="0" width="1760" height="40" rx="6" ry="6" fill="url(#latexBlueGradient)"/>
+    <rect x="0" y="32" width="1760" height="8" fill="url(#latexBlueGradient)"/>
+    <text x="20" y="28" class="latex-serif" font-size="16" font-weight="bold" fill="#ffffff">Population Health Impact — Johannesburg Metro (5.6M people)</text>
+    
+    <!-- Three impact scenarios -->
+    <g transform="translate(40, 70)">
+      
+      <!-- Heat wave scenario -->
+      <g>
+        <rect width="520" height="110" rx="4" ry="4" fill="#fff7ed" stroke="#FF8C00" stroke-width="2"/>
+        <rect x="0" y="0" width="520" height="25" rx="4" ry="4" fill="#FF8C00"/>
+        <text x="15" y="18" class="latex-sans" font-size="12" font-weight="bold" fill="#ffffff">Heat Wave Scenario (+5°C)</text>
+        
+        <g transform="translate(15, 35)">
+          <text x="0" y="15" class="latex-sans" font-size="11" font-weight="bold" fill="#FF8C00">Cardiovascular Impact:</text>
+          <text x="0" y="30" class="latex-sans" font-size="10" fill="#404040">• 14.5 mmHg BP reduction population-wide</text>
+          <text x="0" y="45" class="latex-sans" font-size="10" fill="#404040">• 1.8M adults affected (cardiovascular risk modulation)</text>
+          <text x="0" y="60" class="latex-sans" font-size="10" fill="#404040">• Potential emergency department surge</text>
+          <text x="0" y="75" class="math-notation" font-size="9" fill="#FF8C00">Effect = 2.9 × 5°C = 14.5 mmHg</text>
+        </g>
+      </g>
+      
+      <!-- Metabolic impact -->
+      <g transform="translate(570, 0)">
+        <rect width="520" height="110" rx="4" ry="4" fill="#f0f9ff" stroke="#1E90FF" stroke-width="2"/>
+        <rect x="0" y="0" width="520" height="25" rx="4" ry="4" fill="#1E90FF"/>
+        <text x="15" y="18" class="latex-sans" font-size="12" font-weight="bold" fill="#ffffff">Metabolic Impact (+5°C)</text>
+        
+        <g transform="translate(15, 35)">
+          <text x="0" y="15" class="latex-sans" font-size="11" font-weight="bold" fill="#1E90FF">Glucose Elevation:</text>
+          <text x="0" y="30" class="latex-sans" font-size="10" fill="#404040">• 41 mg/dL glucose increase</text>
+          <text x="0" y="45" class="latex-sans" font-size="10" fill="#404040">• 300,000 diabetic patients at risk</text>
+          <text x="0" y="60" class="latex-sans" font-size="10" fill="#404040">• Treatment adjustment requirements</text>
+          <text x="0" y="75" class="math-notation" font-size="9" fill="#1E90FF">Effect = 8.2 × 5°C = 41 mg/dL</text>
+        </g>
+      </g>
+      
+      <!-- Public health response -->
+      <g transform="translate(1140, 0)">
+        <rect width="520" height="110" rx="4" ry="4" fill="#f0fdf4" stroke="#228B22" stroke-width="2"/>
+        <rect x="0" y="0" width="520" height="25" rx="4" ry="4" fill="#228B22"/>
+        <text x="15" y="18" class="latex-sans" font-size="12" font-weight="bold" fill="#ffffff">Public Health Response</text>
+        
+        <g transform="translate(15, 35)">
+          <text x="0" y="15" class="latex-sans" font-size="11" font-weight="bold" fill="#228B22">Monitoring Systems:</text>
+          <text x="0" y="30" class="latex-sans" font-size="10" fill="#404040">• Heat-health early warning systems</text>
+          <text x="0" y="45" class="latex-sans" font-size="10" fill="#404040">• Extended monitoring protocols (21 days)</text>
+          <text x="0" y="60" class="latex-sans" font-size="10" fill="#404040">• Vulnerable population protection</text>
+          <text x="0" y="75" class="latex-sans" font-size="9" font-weight="bold" fill="#228B22">Evidence-based policy implementation</text>
+        </g>
+      </g>
+    </g>
+  </g>
+  
+  <!-- LaTeX-style clinical significance summary -->
+  <g id="significance-summary" transform="translate(80, 750)">
+    <rect width="1760" height="70" rx="6" ry="6" fill="url(#latexBlueGradient)" filter="url(#academicShadow)"/>
+    <text x="880" y="30" class="latex-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Clinical Thresholds Exceeded • Population Health Impact Confirmed • Evidence-Based Policy Ready
+    </text>
+    <text x="880" y="55" class="latex-sans" font-size="14" text-anchor="middle" fill="#e6f2ff">
+      WHO cardiovascular criteria: +45% • ADA metabolic criteria: +64% • Robust confidence intervals • Population-scale effects
+    </text>
+  </g>
+  
+  <!-- LaTeX Beamer slide number (bottom right) -->
+  <text x="1850" y="1060" class="latex-sans" font-size="14" font-weight="bold" text-anchor="middle" fill="#404040">5/11</text>
+  
+  <!-- LaTeX-style page footer -->
+  <rect x="0" y="1068" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+</svg>

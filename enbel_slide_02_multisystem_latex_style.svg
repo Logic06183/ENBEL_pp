@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="latexTealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006666;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX Beamer block colors -->
+    <linearGradient id="cardiovascularBlock" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#DC143C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B71C1C;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="metabolicBlock" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="immuneBlock" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="renalBlock" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8A2BE2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6A1B9A;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#404040" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- LaTeX typography styles -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer frame title -->
+  <g id="frame-title">
+    <rect x="60" y="30" width="1800" height="50" rx="4" ry="4" fill="url(#latexBlueGradient)"/>
+    <text x="80" y="60" class="latex-serif" font-size="32" font-weight="bold" fill="#ffffff">
+      Climate exposure affects four distinct physiological systems
+    </text>
+  </g>
+  
+  <!-- LaTeX Beamer academic blocks in 2x2 grid -->
+  <g id="beamer-blocks">
+    
+    <!-- CARDIOVASCULAR SYSTEM (Top Left) -->
+    <g transform="translate(80, 120)" filter="url(#academicShadow)">
+      <rect width="820" height="350" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+      
+      <!-- LaTeX Beamer block title -->
+      <rect x="0" y="0" width="820" height="45" rx="6" ry="6" fill="url(#cardiovascularBlock)"/>
+      <rect x="0" y="35" width="820" height="10" fill="url(#cardiovascularBlock)"/>
+      
+      <!-- Heart icon -->
+      <g transform="translate(20, 20)">
+        <path d="M 0 5 C -3 0, -8 0, -8 5 C -8 0, -13 0, -13 5 C -13 10, 0 20, 0 20 C 0 20, 13 10, 13 5 C 13 0, 8 0, 8 5 C 8 0, 3 0, 0 5 Z" 
+              fill="#ffffff" opacity="0.9"/>
+      </g>
+      <text x="60" y="32" class="latex-sans" font-size="20" font-weight="bold" fill="#ffffff">CARDIOVASCULAR SYSTEM</text>
+      
+      <!-- LaTeX-style block content -->
+      <g transform="translate(25, 65)">
+        <text x="0" y="25" class="latex-serif" font-size="18" font-weight="bold" fill="#DC143C">Novel 21-day blood pressure effects</text>
+        <text x="0" y="45" class="latex-sans" font-size="14" fill="#404040">Sample: n=4,957 participants</text>
+        <text x="0" y="65" class="latex-sans" font-size="14" fill="#404040">Statistical significance: ρ &lt; 10⁻¹²</text>
+        <text x="0" y="85" class="latex-sans" font-size="14" fill="#404040">Effect: Systolic BP decreases with temperature</text>
+        <text x="0" y="105" class="latex-sans" font-size="14" fill="#404040">Clinical relevance: Dose-response confirmed</text>
+        
+        <!-- LaTeX-style mathematical box -->
+        <rect x="0" y="125" width="750" height="80" rx="4" ry="4" fill="#fef2f2" stroke="#DC143C" stroke-width="1"/>
+        <g transform="translate(15, 145)">
+          <text x="0" y="20" class="math-notation" font-size="16" fill="#DC143C">Temperature-BP correlation: r = -0.114, CI₉₅ [-0.142, -0.087]</text>
+          <text x="0" y="40" class="latex-sans" font-size="14" font-weight="bold" fill="#B71C1C">Effect magnitude: 2.9 mmHg per 1°C (WHO threshold exceeded)</text>
+          <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">Peak response at 21-day lag • Novel temporal pattern • Population health impact</text>
+        </g>
+        
+        <!-- LaTeX emphasis box -->
+        <rect x="0" y="220" width="750" height="35" rx="3" ry="3" fill="#DC143C" opacity="0.1"/>
+        <text x="15" y="240" class="latex-serif" font-size="14" font-weight="bold" fill="#DC143C">
+          BREAKTHROUGH: First documentation of extended cardiovascular climate adaptation
+        </text>
+      </g>
+    </g>
+    
+    <!-- METABOLIC SYSTEM (Top Right) -->
+    <g transform="translate(920, 120)" filter="url(#academicShadow)">
+      <rect width="820" height="350" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+      
+      <!-- LaTeX Beamer block title -->
+      <rect x="0" y="0" width="820" height="45" rx="6" ry="6" fill="url(#metabolicBlock)"/>
+      <rect x="0" y="35" width="820" height="10" fill="url(#metabolicBlock)"/>
+      
+      <!-- Glucose molecule icon -->
+      <g transform="translate(25, 22)">
+        <circle cx="0" cy="0" r="6" fill="#ffffff" opacity="0.9"/>
+        <circle cx="-6" cy="-6" r="3" fill="#ffffff" opacity="0.7"/>
+        <circle cx="6" cy="-6" r="3" fill="#ffffff" opacity="0.7"/>
+        <circle cx="0" cy="8" r="3" fill="#ffffff" opacity="0.7"/>
+        <!-- Connection lines -->
+        <line x1="-4" y1="-4" x2="-2" y2="-2" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+        <line x1="4" y1="-4" x2="2" y2="-2" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+        <line x1="0" y1="2" x2="0" y2="5" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+      </g>
+      <text x="60" y="32" class="latex-sans" font-size="20" font-weight="bold" fill="#ffffff">METABOLIC SYSTEM</text>
+      
+      <!-- LaTeX-style block content -->
+      <g transform="translate(25, 65)">
+        <text x="0" y="25" class="latex-serif" font-size="18" font-weight="bold" fill="#1E90FF">Immediate glucose responses (0-3 days)</text>
+        <text x="0" y="45" class="latex-sans" font-size="14" fill="#404040">Sample: n=2,731 participants</text>
+        <text x="0" y="65" class="latex-sans" font-size="14" fill="#404040">Statistical significance: ρ &lt; 10⁻¹⁰</text>
+        <text x="0" y="85" class="latex-sans" font-size="14" fill="#404040">Effect: Glucose increases with temperature</text>
+        <text x="0" y="105" class="latex-sans" font-size="14" fill="#404040">Clinical relevance: ADA threshold exceeded</text>
+        
+        <!-- LaTeX-style mathematical box -->
+        <rect x="0" y="125" width="750" height="80" rx="4" ry="4" fill="#f0f9ff" stroke="#1E90FF" stroke-width="1"/>
+        <g transform="translate(15, 145)">
+          <text x="0" y="20" class="math-notation" font-size="16" fill="#1E90FF">Lag patterns: r₀ = 0.118, r₁ = 0.125, r₃ = 0.131 (peak)</text>
+          <text x="0" y="40" class="latex-sans" font-size="14" font-weight="bold" fill="#1565C0">Effect magnitude: 8.2 mg/dL per 1°C (ADA threshold exceeded)</text>
+          <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">Immediate onset • Heat-stress pathway • Diabetic population at risk</text>
+        </g>
+        
+        <!-- LaTeX emphasis box -->
+        <rect x="0" y="220" width="750" height="35" rx="3" ry="3" fill="#1E90FF" opacity="0.1"/>
+        <text x="15" y="240" class="latex-serif" font-size="14" font-weight="bold" fill="#1E90FF">
+          KEY FINDING: Acute metabolic stress response pattern confirmed
+        </text>
+      </g>
+    </g>
+    
+    <!-- IMMUNE SYSTEM (Bottom Left) -->
+    <g transform="translate(80, 490)" filter="url(#academicShadow)">
+      <rect width="820" height="330" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+      
+      <!-- LaTeX Beamer block title -->
+      <rect x="0" y="0" width="820" height="45" rx="6" ry="6" fill="url(#immuneBlock)"/>
+      <rect x="0" y="35" width="820" height="10" fill="url(#immuneBlock)"/>
+      
+      <!-- T-cell/immune icon -->
+      <g transform="translate(20, 22)">
+        <circle cx="0" cy="0" r="8" fill="#ffffff" opacity="0.9"/>
+        <!-- Nuclear structure -->
+        <circle cx="-3" cy="-3" r="2" fill="#228B22" opacity="0.8"/>
+        <circle cx="3" cy="3" r="2" fill="#228B22" opacity="0.8"/>
+        <circle cx="0" cy="0" r="1" fill="#228B22" opacity="0.9"/>
+        <!-- Cell membrane -->
+        <circle cx="0" cy="0" r="8" fill="none" stroke="#228B22" stroke-width="1" opacity="0.6"/>
+      </g>
+      <text x="60" y="32" class="latex-sans" font-size="20" font-weight="bold" fill="#ffffff">IMMUNE SYSTEM</text>
+      
+      <!-- LaTeX-style block content -->
+      <g transform="translate(25, 65)">
+        <text x="0" y="25" class="latex-serif" font-size="18" font-weight="bold" fill="#228B22">CD4+ extreme heat sensitivity</text>
+        <text x="0" y="45" class="latex-sans" font-size="14" fill="#404040">Sample: n=1,283 participants</text>
+        <text x="0" y="65" class="latex-sans" font-size="14" fill="#404040">Statistical significance: ρ = 0.0075</text>
+        <text x="0" y="85" class="latex-sans" font-size="14" fill="#404040">Effect size: Cohen's d = 0.261</text>
+        <text x="0" y="105" class="latex-sans" font-size="14" fill="#404040">Context: Critical for HIV-endemic regions</text>
+        
+        <!-- LaTeX-style mathematical box -->
+        <rect x="0" y="125" width="750" height="80" rx="4" ry="4" fill="#f0fdf4" stroke="#228B22" stroke-width="1"/>
+        <g transform="translate(15, 145)">
+          <text x="0" y="20" class="math-notation" font-size="16" fill="#228B22">Effect size: d = 0.261 [95% CI: 0.084, 0.438]</text>
+          <text x="0" y="40" class="latex-sans" font-size="14" font-weight="bold" fill="#2E7D32">CD4+ count decreases with heat exposure (medium effect size)</text>
+          <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">HIV-positive populations particularly vulnerable • Adaptive immune modulation</text>
+        </g>
+        
+        <!-- LaTeX emphasis box -->
+        <rect x="0" y="220" width="750" height="35" rx="3" ry="3" fill="#228B22" opacity="0.1"/>
+        <text x="15" y="240" class="latex-serif" font-size="14" font-weight="bold" fill="#228B22">
+          DISCOVERY: Novel immune-climate vulnerability pathway identified
+        </text>
+      </g>
+    </g>
+    
+    <!-- RENAL SYSTEM (Bottom Right) -->
+    <g transform="translate(920, 490)" filter="url(#academicShadow)">
+      <rect width="820" height="330" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+      
+      <!-- LaTeX Beamer block title -->
+      <rect x="0" y="0" width="820" height="45" rx="6" ry="6" fill="url(#renalBlock)"/>
+      <rect x="0" y="35" width="820" height="10" fill="url(#renalBlock)"/>
+      
+      <!-- Kidney icon -->
+      <g transform="translate(20, 22)">
+        <ellipse cx="0" cy="0" rx="6" ry="9" fill="#ffffff" opacity="0.9"/>
+        <!-- Internal structure -->
+        <ellipse cx="-2" cy="-2" rx="1.5" ry="3" fill="#8A2BE2" opacity="0.6"/>
+        <ellipse cx="2" cy="2" rx="1" ry="2" fill="#8A2BE2" opacity="0.4"/>
+        <!-- Outline -->
+        <ellipse cx="0" cy="0" rx="6" ry="9" fill="none" stroke="#8A2BE2" stroke-width="1" opacity="0.7"/>
+      </g>
+      <text x="60" y="32" class="latex-sans" font-size="20" font-weight="bold" fill="#ffffff">RENAL SYSTEM</text>
+      
+      <!-- LaTeX-style block content -->
+      <g transform="translate(25, 65)">
+        <text x="0" y="25" class="latex-serif" font-size="18" font-weight="bold" fill="#8A2BE2">Creatinine-temperature relationship</text>
+        <text x="0" y="45" class="latex-sans" font-size="14" fill="#404040">Sample: n=1,251 participants</text>
+        <text x="0" y="65" class="latex-sans" font-size="14" fill="#404040">Statistical significance: ρ = 0.078 (trending)</text>
+        <text x="0" y="85" class="latex-sans" font-size="14" fill="#404040">Effect: Heat → dehydration → kidney stress</text>
+        <text x="0" y="105" class="latex-sans" font-size="14" fill="#404040">Dose-response: 0.75 → 0.77 mg/dL</text>
+        
+        <!-- LaTeX-style mathematical box -->
+        <rect x="0" y="125" width="750" height="80" rx="4" ry="4" fill="#faf5ff" stroke="#8A2BE2" stroke-width="1"/>
+        <g transform="translate(15, 145)">
+          <text x="0" y="20" class="math-notation" font-size="16" fill="#8A2BE2">Slope: β = +0.007 mg/dL per °C [SE = 0.004]</text>
+          <text x="0" y="40" class="latex-sans" font-size="14" font-weight="bold" fill="#6A1B9A">Dose-response relationship evident (trending significance)</text>
+          <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">Heat-dehydration stress mechanism • Emerging pattern • Requires monitoring</text>
+        </g>
+        
+        <!-- LaTeX emphasis box -->
+        <rect x="0" y="220" width="750" height="35" rx="3" ry="3" fill="#8A2BE2" opacity="0.1"/>
+        <text x="15" y="240" class="latex-serif" font-size="14" font-weight="bold" fill="#8A2BE2">
+          EMERGING: Climate-induced renal stress pathway under investigation
+        </text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- LaTeX-style comprehensive analysis conclusion -->
+  <g id="conclusion" transform="translate(80, 860)">
+    <rect width="1760" height="70" rx="6" ry="6" fill="url(#latexBlueGradient)" filter="url(#academicShadow)"/>
+    <text x="880" y="30" class="latex-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      COMPREHENSIVE ANALYSIS demonstrates distinct temporal patterns
+    </text>
+    <text x="880" y="55" class="latex-sans" font-size="16" text-anchor="middle" fill="#e6f2ff">
+      Clinically relevant effects • Multi-system physiological responses • Population health implications
+    </text>
+  </g>
+  
+  <!-- LaTeX Beamer slide number (bottom right) -->
+  <text x="1850" y="1060" class="latex-sans" font-size="14" font-weight="bold" text-anchor="middle" fill="#404040">2/11</text>
+  
+  <!-- LaTeX-style page footer -->
+  <rect x="0" y="1068" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+</svg>

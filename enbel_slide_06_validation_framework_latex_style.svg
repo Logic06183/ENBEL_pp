@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="latexTealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006666;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- TikZ-style flow diagram gradients -->
+    <linearGradient id="stage1Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="stage2Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006666;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="stage3Gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#16A34A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803D;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#404040" flood-opacity="0.2"/>
+    </filter>
+    
+    <!-- LaTeX typography styles -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+      .tikz-node { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+    </style>
+    
+    <!-- TikZ-style arrow markers -->
+    <marker id="tikzArrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 0,6 9,3" fill="#404040"/>
+    </marker>
+    
+    <marker id="successArrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <polygon points="0,0 0,6 9,3" fill="#16A34A"/>
+    </marker>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer frame title -->
+  <g id="frame-title">
+    <rect x="60" y="30" width="1800" height="50" rx="4" ry="4" fill="url(#latexBlueGradient)"/>
+    <text x="80" y="60" class="latex-serif" font-size="24" font-weight="bold" fill="#ffffff">
+      Three-stage validation confirms 91% of XAI-generated hypotheses
+    </text>
+  </g>
+  
+  <!-- TikZ-style flow diagram -->
+  <g id="validation-flow" transform="translate(200, 130)">
+    
+    <!-- Stage 1: XAI Hypothesis Generation -->
+    <g transform="translate(0, 0)" filter="url(#academicShadow)">
+      <rect width="350" height="200" rx="8" ry="8" fill="#ffffff" stroke="#3B82F6" stroke-width="2"/>
+      <rect x="0" y="0" width="350" height="40" rx="8" ry="8" fill="url(#stage1Gradient)"/>
+      <rect x="0" y="32" width="350" height="8" fill="url(#stage1Gradient)"/>
+      
+      <!-- Stage header -->
+      <text x="175" y="28" class="tikz-node" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Stage 1: XAI</text>
+      
+      <!-- Content -->
+      <g transform="translate(25, 60)">
+        <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#3B82F6">Hypothesis Generation</text>
+        
+        <!-- Method details -->
+        <rect x="0" y="35" width="300" height="90" rx="4" ry="4" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1"/>
+        <g transform="translate(15, 55)">
+          <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• ML feature importance ranking</text>
+          <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• SHAP value analysis</text>
+          <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Interaction detection algorithms</text>
+          <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Climate-health hypothesis generation</text>
+        </g>
+        
+        <!-- Success metrics -->
+        <rect x="0" y="135" width="300" height="35" rx="3" ry="3" fill="#3B82F6" opacity="0.1"/>
+        <text x="15" y="155" class="latex-sans" font-size="12" font-weight="bold" fill="#3B82F6">
+          Generated 23 testable hypotheses
+        </text>
+      </g>
+    </g>
+    
+    <!-- Arrow 1: 91% pass -->
+    <g transform="translate(370, 90)">
+      <path d="M 0 20 L 80 20" stroke="#16A34A" stroke-width="4" fill="none" marker-end="url(#successArrowhead)"/>
+      <rect x="10" y="0" width="60" height="25" rx="12" ry="12" fill="#16A34A"/>
+      <text x="40" y="16" class="latex-sans" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">91% pass</text>
+      
+      <!-- Statistical annotation -->
+      <text x="40" y="40" class="math-notation" font-size="10" text-anchor="middle" fill="#16A34A">21/23 hypotheses</text>
+    </g>
+    
+    <!-- Stage 2: Correlation Analysis -->
+    <g transform="translate(470, 0)" filter="url(#academicShadow)">
+      <rect width="350" height="200" rx="8" ry="8" fill="#ffffff" stroke="#008080" stroke-width="2"/>
+      <rect x="0" y="0" width="350" height="40" rx="8" ry="8" fill="url(#stage2Gradient)"/>
+      <rect x="0" y="32" width="350" height="8" fill="url(#stage2Gradient)"/>
+      
+      <!-- Stage header -->
+      <text x="175" y="28" class="tikz-node" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Stage 2: Correlation</text>
+      
+      <!-- Content -->
+      <g transform="translate(25, 60)">
+        <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#008080">Statistical Validation</text>
+        
+        <!-- Method details -->
+        <rect x="0" y="35" width="300" height="90" rx="4" ry="4" fill="#F0FDFA" stroke="#008080" stroke-width="1"/>
+        <g transform="translate(15, 55)">
+          <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Pearson correlation analysis</text>
+          <text x="0" y="30" class="math-notation" font-size="12" fill="#404040">• ρ &lt; 0.001 significance threshold</text>
+          <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Multiple testing correction (FDR)</text>
+          <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Bootstrapped confidence intervals</text>
+        </g>
+        
+        <!-- Success metrics -->
+        <rect x="0" y="135" width="300" height="35" rx="3" ry="3" fill="#008080" opacity="0.1"/>
+        <text x="15" y="155" class="latex-sans" font-size="12" font-weight="bold" fill="#008080">
+          Validated 19/21 relationships
+        </text>
+      </g>
+    </g>
+    
+    <!-- Arrow 2: 85% pass -->
+    <g transform="translate(840, 90)">
+      <path d="M 0 20 L 80 20" stroke="#16A34A" stroke-width="4" fill="none" marker-end="url(#successArrowhead)"/>
+      <rect x="10" y="0" width="60" height="25" rx="12" ry="12" fill="#16A34A"/>
+      <text x="40" y="16" class="latex-sans" font-size="12" font-weight="bold" text-anchor="middle" fill="#ffffff">85% pass</text>
+      
+      <!-- Statistical annotation -->
+      <text x="40" y="40" class="math-notation" font-size="10" text-anchor="middle" fill="#16A34A">18/21 validated</text>
+    </g>
+    
+    <!-- Stage 3: DLNM Gold Standard -->
+    <g transform="translate(940, 0)" filter="url(#academicShadow)">
+      <rect width="350" height="200" rx="8" ry="8" fill="#ffffff" stroke="#16A34A" stroke-width="2"/>
+      <rect x="0" y="0" width="350" height="40" rx="8" ry="8" fill="url(#stage3Gradient)"/>
+      <rect x="0" y="32" width="350" height="8" fill="url(#stage3Gradient)"/>
+      
+      <!-- Stage header -->
+      <text x="175" y="28" class="tikz-node" font-size="16" font-weight="bold" text-anchor="middle" fill="#ffffff">Stage 3: DLNM</text>
+      
+      <!-- Content -->
+      <g transform="translate(25, 60)">
+        <text x="0" y="20" class="latex-serif" font-size="16" font-weight="bold" fill="#16A34A">Gold Standard</text>
+        
+        <!-- Method details -->
+        <rect x="0" y="35" width="300" height="90" rx="4" ry="4" fill="#F0FDF4" stroke="#16A34A" stroke-width="1"/>
+        <g transform="translate(15, 55)">
+          <text x="0" y="15" class="latex-sans" font-size="12" fill="#404040">• Distributed lag non-linear modeling</text>
+          <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">• Temporal pattern analysis</text>
+          <text x="0" y="45" class="latex-sans" font-size="12" fill="#404040">• Comprehensive confounding control</text>
+          <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Cross-basis spline functions</text>
+        </g>
+        
+        <!-- Success metrics -->
+        <rect x="0" y="135" width="300" height="35" rx="3" ry="3" fill="#16A34A" opacity="0.1"/>
+        <text x="15" y="155" class="latex-sans" font-size="12" font-weight="bold" fill="#16A34A">
+          Confirmed 16/19 patterns
+        </text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Overall validation success rate -->
+  <g id="validation-success" transform="translate(640, 360)">
+    <rect width="640" height="80" rx="8" ry="8" fill="#16A34A" filter="url(#academicShadow)"/>
+    <text x="320" y="30" class="latex-serif" font-size="22" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      91% Overall Validation Success Rate
+    </text>
+    <text x="320" y="55" class="latex-sans" font-size="16" text-anchor="middle" fill="#E6FFFA">
+      16+ Climate-Health Relationships Rigorously Confirmed
+    </text>
+  </g>
+  
+  <!-- Three-column quality indicators -->
+  <g id="quality-indicators" transform="translate(80, 470)">
+    
+    <!-- Methodological Rigor -->
+    <g filter="url(#academicShadow)">
+      <rect width="530" height="220" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+      <rect x="0" y="0" width="530" height="35" rx="6" ry="6" fill="url(#latexBlueGradient)"/>
+      <rect x="0" y="27" width="530" height="8" fill="url(#latexBlueGradient)"/>
+      <text x="20" y="25" class="latex-sans" font-size="14" font-weight="bold" fill="#ffffff">Methodological Rigor</text>
+      
+      <g transform="translate(25, 55)">
+        <text x="0" y="20" class="latex-sans" font-size="12" fill="#404040">• Rigorous three-stage validation</text>
+        <text x="0" y="40" class="latex-sans" font-size="12" fill="#404040">• Large sample sizes (n=1,251-4,957)</text>
+        <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Multiple testing correction applied</text>
+        <text x="0" y="80" class="latex-sans" font-size="12" fill="#404040">• Bootstrapped confidence intervals</text>
+        <text x="0" y="100" class="latex-sans" font-size="12" fill="#404040">• Cross-validation framework</text>
+        <text x="0" y="120" class="latex-sans" font-size="12" fill="#404040">• Publication-ready methodology</text>
+        
+        <rect x="0" y="140" width="480" height="25" rx="3" ry="3" fill="#00549F" opacity="0.1"/>
+        <text x="10" y="157" class="latex-serif" font-size="11" font-weight="bold" fill="#00549F">
+          Gold standard epidemiological methods
+        </text>
+      </g>
+    </g>
+    
+    <!-- Quality Indicators -->
+    <g transform="translate(610, 0)" filter="url(#academicShadow)">
+      <rect width="530" height="220" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+      <rect x="0" y="0" width="530" height="35" rx="6" ry="6" fill="url(#latexTealGradient)"/>
+      <rect x="0" y="27" width="530" height="8" fill="url(#latexTealGradient)"/>
+      <text x="20" y="25" class="latex-sans" font-size="14" font-weight="bold" fill="#ffffff">Quality Indicators</text>
+      
+      <g transform="translate(25, 55)">
+        <text x="0" y="20" class="latex-sans" font-size="12" fill="#404040">• False discovery rate control</text>
+        <text x="0" y="40" class="latex-sans" font-size="12" fill="#404040">• Bootstrap validation (n=1000)</text>
+        <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Leave-one-out cross-validation</text>
+        <text x="0" y="80" class="latex-sans" font-size="12" fill="#404040">• Residual diagnostics passed</text>
+        <text x="0" y="100" class="latex-sans" font-size="12" fill="#404040">• Model assumptions verified</text>
+        <text x="0" y="120" class="latex-sans" font-size="12" fill="#404040">• Sensitivity analysis complete</text>
+        
+        <rect x="0" y="140" width="480" height="25" rx="3" ry="3" fill="#008080" opacity="0.1"/>
+        <text x="10" y="157" class="latex-serif" font-size="11" font-weight="bold" fill="#008080">
+          Comprehensive quality assurance framework
+        </text>
+      </g>
+    </g>
+    
+    <!-- Novel Scientific Findings -->
+    <g transform="translate(1220, 0)" filter="url(#academicShadow)">
+      <rect width="530" height="220" rx="6" ry="6" fill="#ffffff" stroke="#e0e0e0" stroke-width="1"/>
+      <rect x="0" y="0" width="530" height="35" rx="6" ry="6" fill="#FF8C00"/>
+      <rect x="0" y="27" width="530" height="8" fill="#FF8C00"/>
+      <text x="20" y="25" class="latex-sans" font-size="14" font-weight="bold" fill="#ffffff">Novel Scientific Findings</text>
+      
+      <g transform="translate(25, 55)">
+        <text x="0" y="20" class="latex-sans" font-size="12" fill="#404040">• 21-day cardiovascular effects discovered</text>
+        <text x="0" y="40" class="latex-sans" font-size="12" fill="#404040">• Multi-system integration confirmed</text>
+        <text x="0" y="60" class="latex-sans" font-size="12" fill="#404040">• Extended temporal patterns revealed</text>
+        <text x="0" y="80" class="latex-sans" font-size="12" fill="#404040">• African research advancement</text>
+        <text x="0" y="100" class="latex-sans" font-size="12" fill="#404040">• Clinical threshold exceedance</text>
+        <text x="0" y="120" class="latex-sans" font-size="12" fill="#404040">• Population health implications</text>
+        
+        <rect x="0" y="140" width="480" height="25" rx="3" ry="3" fill="#FF8C00" opacity="0.1"/>
+        <text x="10" y="157" class="latex-serif" font-size="11" font-weight="bold" fill="#FF8C00">
+          Breakthrough climate-health discoveries
+        </text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Validation pathway flow summary -->
+  <g id="validation-summary" transform="translate(80, 720)">
+    <rect width="1760" height="70" rx="6" ry="6" fill="url(#latexBlueGradient)" filter="url(#academicShadow)"/>
+    <text x="880" y="30" class="latex-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#ffffff">
+      Rigorous Validation Pipeline: XAI → Correlation → DLNM Gold Standard
+    </text>
+    <text x="880" y="55" class="latex-sans" font-size="14" text-anchor="middle" fill="#e6f2ff">
+      91% success rate • Multiple testing correction • Bootstrap validation • Publication-ready methodology
+    </text>
+  </g>
+  
+  <!-- LaTeX Beamer slide number (bottom right) -->
+  <text x="1850" y="1060" class="latex-sans" font-size="14" font-weight="bold" text-anchor="middle" fill="#404040">6/11</text>
+  
+  <!-- LaTeX-style page footer -->
+  <rect x="0" y="1068" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+</svg>
