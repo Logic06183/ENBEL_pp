@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "../MLPaper/03_flexible_discovery"
+		},
+		{
+			"path": "../MLPaper/results"
+		},
+		{
+			"path": "../MLPaper/analysis_scripts"
+		},
+		{
+			"path": "../MLPaper/documentation"
+		},
+		{
+			"path": "../MLPaper/04_rigorous_methodology"
+		},
+		{
+			"path": "../MLPaper/02_cohort_separation"
+		},
+		{
+			"path": "../MLPaper/01_initial_analysis"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,1607 @@
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.4.15)  23 SEP 2025 11:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**enbel_table3_climate_data_latex.tex
+(./enbel_table3_climate_data_latex.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count192
+\c@section=\count193
+\c@subsection=\count194
+\c@subsubsection=\count195
+\c@paragraph=\count196
+\c@subparagraph=\count197
+\c@figure=\count198
+\c@table=\count199
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count266
+\Gm@cntv=\count267
+\c@Gm@tempcnt=\count268
+\Gm@bindingoffset=\dimen142
+\Gm@wd@mp=\dimen143
+\Gm@odd@mp=\dimen144
+\Gm@even@mp=\dimen145
+\Gm@layoutwidth=\dimen146
+\Gm@layoutheight=\dimen147
+\Gm@layouthoffset=\dimen148
+\Gm@layoutvoffset=\dimen149
+\Gm@dimlist=\toks18
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen150
+\lightrulewidth=\dimen151
+\cmidrulewidth=\dimen152
+\belowrulesep=\dimen153
+\belowbottomsep=\dimen154
+\aboverulesep=\dimen155
+\abovetopsep=\dimen156
+\cmidrulesep=\dimen157
+\cmidrulekern=\dimen158
+\defaultaddspace=\dimen159
+\@cmidla=\count269
+\@cmidlb=\count270
+\@aboverulesep=\dimen160
+\@belowrulesep=\dimen161
+\@thisruleclass=\count271
+\@lastruleclass=\count272
+\@thisrulewidth=\dimen162
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/tools/array.sty
+Package: array 2024/10/17 v2.6g Tabular extension package (FMi)
+\col@sep=\dimen163
+\ar@mcellbox=\box52
+\extrarowheight=\dimen164
+\NC@list=\toks19
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box53
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: xetex.def on input line 274.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/xetex.def
+File: xetex.def 2022/09/22 v5.0n Graphics/color driver for xetex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
+\everycr=\toks20
+\minrowclearance=\skip53
+\rownum=\count273
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2025/02/26 v1.3c Adjusting TeX boxes (trim, clip, ...)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks21
+\XKV@tempa@toks=\toks22
+)
+\XKV@depth=\count274
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2025/02/21 v1.2a Trim and clip general TeX material
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 106.
+)
+\Gin@req@height=\dimen165
+\Gin@req@width=\dimen166
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
+\collectedbox=\box54
+)
+\tc@llx=\dimen167
+\tc@lly=\dimen168
+\tc@urx=\dimen169
+\tc@ury=\dimen170
+Package trimclip Info: Using driver 'tc-xetex.def'.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/adjustbox/tc-xetex.def
+File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
+))
+\adjbox@Width=\dimen171
+\adjbox@Height=\dimen172
+\adjbox@Depth=\dimen173
+\adjbox@Totalheight=\dimen174
+\adjbox@pwidth=\dimen175
+\adjbox@pheight=\dimen176
+\adjbox@pdepth=\dimen177
+\adjbox@ptotalheight=\dimen178
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
+\c@checkoddpage=\count275
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box55
+\sift@deathcycles=\count276
+\@vwid@loff=\dimen179
+\@vwid@roff=\dimen180
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
+\multirow@colwidth=\skip54
+\multirow@cntb=\count277
+\multirow@dima=\skip55
+\bigstrutjot=\dimen181
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
+x
+\pgfutil@everybye=\toks23
+\pgfutil@tempdima=\dimen182
+\pgfutil@tempdimb=\dimen183
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box56
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfil
+tered.code.tex
+\pgfkeys@tmptoks=\toks26
+))
+\pgf@x=\dimen184
+\pgf@y=\dimen185
+\pgf@xa=\dimen186
+\pgf@ya=\dimen187
+\pgf@xb=\dimen188
+\pgf@yb=\dimen189
+\pgf@xc=\dimen190
+\pgf@yc=\dimen191
+\pgf@xd=\dimen192
+\pgf@yd=\dimen193
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count278
+\c@pgf@countb=\count279
+\c@pgf@countc=\count280
+\c@pgf@countd=\count281
+\t@pgf@toka=\toks27
+\t@pgf@tokb=\toks28
+\t@pgf@tokc=\toks29
+\pgf@sys@id@count=\count282
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-xetex.de
+f
+File: pgfsys-xetex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-dvipdfmx
+.def
+File: pgfsys-dvipdfmx.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
+df.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)
+\pgfsys@objnum=\count283
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
+code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count284
+\pgfsyssoftpath@bigbuffer@items=\count285
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
+code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen194
+\pgfmath@count=\count286
+\pgfmath@box=\box57
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
+nometric.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
+m.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
+rison.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
+code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
+erarithmetics.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count287
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
+de.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen195
+\pgf@picmaxx=\dimen196
+\pgf@picminy=\dimen197
+\pgf@picmaxy=\dimen198
+\pgf@pathminx=\dimen199
+\pgf@pathmaxx=\dimen256
+\pgf@pathminy=\dimen257
+\pgf@pathmaxy=\dimen258
+\pgf@xx=\dimen259
+\pgf@xy=\dimen260
+\pgf@yx=\dimen261
+\pgf@yy=\dimen262
+\pgf@zx=\dimen263
+\pgf@zy=\dimen264
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
+ruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen265
+\pgf@path@lasty=\dimen266
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
+.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen267
+\pgf@shorten@start@additional=\dimen268
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
+de.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box58
+\pgf@hbox=\box59
+\pgf@layerbox@main=\box60
+\pgf@picture@serial@count=\count288
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
+ate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen269
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
+ations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen270
+\pgf@pt@y=\dimen271
+\pgf@pt@temp=\dimen272
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
+e.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
+ode.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
+ssing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
+de.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen273
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
+e.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen274
+\pgf@sys@shading@range@num=\count289
+\pgf@shadingcount=\count290
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
+e.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
+code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box61
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
+de.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
+ncy.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
+code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
+tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
+e.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box62
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
+tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen275
+\pgf@nodesepend=\dimen276
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
+-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen277
+\pgffor@skip=\dimen278
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
+))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
+e.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
+dlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count291
+\pgfplotmarksize=\dimen279
+)
+\tikz@lastx=\dimen280
+\tikz@lasty=\dimen281
+\tikz@lastxsaved=\dimen282
+\tikz@lastysaved=\dimen283
+\tikz@lastmovetox=\dimen284
+\tikz@lastmovetoy=\dimen285
+\tikzleveldistance=\dimen286
+\tikzsiblingdistance=\dimen287
+\tikz@figbox=\box63
+\tikz@figbox@bg=\box64
+\tikz@tempbox=\box65
+\tikz@tempbox@bg=\box66
+\tikztreelevel=\count292
+\tikznumberofchildren=\count293
+\tikznumberofcurrentchild=\count294
+\tikz@fig@count=\count295
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
+e.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count296
+\pgfmatrixcurrentcolumn=\count297
+\pgf@matrix@numberofcolumns=\count298
+)
+\tikz@expandcount=\count299
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-01-18 L3 programming layer (loader) 
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
+File: l3backend-xetex.def 2024-05-08 L3 backend support: XeTeX
+\g__graphics_track_int=\count300
+\l__pdf_internal_box=\box67
+\g__pdf_backend_annotation_int=\count301
+\g__pdf_backend_link_int=\count302
+))
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)
+Package: fontspec 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTeX
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec-xetex.sty
+Package: fontspec-xetex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaTe
+X
+\l__fontspec_script_int=\count303
+\l__fontspec_language_int=\count304
+\l__fontspec_strnum_int=\count305
+\l__fontspec_tmp_int=\count306
+\l__fontspec_tmpa_int=\count307
+\l__fontspec_tmpb_int=\count308
+\l__fontspec_tmpc_int=\count309
+\l__fontspec_em_int=\count310
+\l__fontspec_emdef_int=\count311
+\l__fontspec_strong_int=\count312
+\l__fontspec_strongdef_int=\count313
+\l__fontspec_tmpa_dim=\dimen288
+\l__fontspec_tmpb_dim=\dimen289
+\l__fontspec_tmpc_dim=\dimen290
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontspec/fontspec.cfg)))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/opensans/opensans.sty
+Package: opensans 2019/06/20 Style file for Open Sans.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+Package: fontaxes 2020/07/21 v1.0e Font selection axes
+LaTeX Info: Redefining \upshape on input line 29.
+LaTeX Info: Redefining \itshape on input line 31.
+LaTeX Info: Redefining \slshape on input line 33.
+LaTeX Info: Redefining \swshape on input line 35.
+LaTeX Info: Redefining \scshape on input line 37.
+LaTeX Info: Redefining \sscshape on input line 39.
+LaTeX Info: Redefining \ulcshape on input line 41.
+LaTeX Info: Redefining \textsw on input line 47.
+LaTeX Info: Redefining \textssc on input line 48.
+LaTeX Info: Redefining \textulc on input line 49.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+Requested font "[OpenSans-Regular.ttf]/OT" at 10.94997pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+Requested font "[OpenSans-Regular.ttf]/OT" at 10.95003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+Requested font "[OpenSans-Light.ttf]/OT:script=latn;language=dflt;" at 10.95003
+pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Light.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Light scale = 0.95.
+
+Requested font "[OpenSans-LightItalic.ttf]/OT:script=latn;language=dflt;" at 10
+.95003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-LightItalic.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-LightItalic scale = 0.95.
+
+Requested font "[OpenSansCondensed-Light.ttf]/OT:script=latn;language=dflt;" at
+ 10.95003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+sCondensed-Light.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Light scale = 0.95.
+
+Requested font "[OpenSansCondensed-LightItalic.ttf]/OT:script=latn;language=dfl
+t;" at 10.95003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+sCondensed-LightItalic.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-LightItalic scale = 0.95.
+
+Requested font "[OpenSans-SemiBold.ttf]/OT:script=latn;language=dflt;" at 10.95
+003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-SemiBold.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBold scale = 0.95.
+
+Requested font "[OpenSans-SemiBoldItalic.ttf]/OT:script=latn;language=dflt;" at
+ 10.95003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-SemiBoldItalic.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBoldItalic scale = 0.95.
+
+Requested font "[OpenSans-Bold.ttf]/OT:script=latn;language=dflt;" at 10.95003p
+t
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Bold.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Bold scale = 0.95.
+
+Requested font "[OpenSans-BoldItalic.ttf]/OT:script=latn;language=dflt;" at 10.
+95003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-BoldItalic.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-BoldItalic scale = 0.95.
+
+Requested font "[OpenSansCondensed-Bold.ttf]/OT:script=latn;language=dflt;" at 
+10.95003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+sCondensed-Bold.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Bold scale = 0.95.
+
+Requested font "[OpenSans-ExtraBold.ttf]/OT:script=latn;language=dflt;" at 10.9
+5003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-ExtraBold.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBold scale = 0.95.
+
+Requested font "[OpenSans-ExtraBoldItalic.ttf]/OT:script=latn;language=dflt;" a
+t 10.95003pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-ExtraBoldItalic.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBoldItalic scale = 0.95.
+
+Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;" at 10.950
+03pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+Requested font "[OpenSans-Italic.ttf]/OT:script=latn;language=dflt;" at 10.9500
+3pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Italic.ttf
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Italic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'opensans-TLF' created for font 'OpenSans'
+(fontspec)             with options
+(fontspec)             [Extension=.ttf,Ligatures={TeX,Common},Scale=0.95,FontFa
+ce={l}{n}{*-Light},FontFace={l}{it}{*-LightItalic},FontFace={lc}{n}{*Condensed-
+Light},FontFace={lc}{it}{*Condensed-LightItalic},UprightFont={*-Regular},Italic
+Font={*-Italic},FontFace={sb}{n}{*-SemiBold},FontFace={sb}{it}{*-SemiBoldItalic
+},FontFace={b}{n}{*-Bold},FontFace={b}{it}{*-BoldItalic},BoldFont={*-Bold},Bold
+ItalicFont={*-BoldItalic},FontFace={bc}{n}{*Condensed-Bold},FontFace={eb}{n}{*-
+ExtraBold},FontFace={eb}{it}{*-ExtraBoldItalic},Numbers={Monospaced,Lining},NFS
+SFamily=opensans-TLF].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - (l/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Light.ttf]/OT:script=latn;language
+=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (l/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-LightItalic.ttf]/OT:script=latn;la
+nguage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (lc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Light.ttf]/OT:script=latn
+;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (lc/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-LightItalic.ttf]/OT:scrip
+t=latn;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (sb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBold.ttf]/OT:script=latn;langu
+age=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (sb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBoldItalic.ttf]/OT:script=latn
+;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Bold.ttf]/OT:script=latn;language=
+dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-BoldItalic.ttf]/OT:script=latn;lan
+guage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (bc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Bold.ttf]/OT:script=latn;
+language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (eb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBold.ttf]/OT:script=latn;lang
+uage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (eb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBoldItalic.ttf]/OT:script=lat
+n;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Regular.ttf]/OT:script=latn;langua
+ge=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Italic.ttf]/OT:script=latn;languag
+e=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-BoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Italic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'opensans-LF' created for font 'OpenSans'
+(fontspec)             with options
+(fontspec)             [Extension=.ttf,Ligatures={TeX,Common},Scale=0.95,FontFa
+ce={l}{n}{*-Light},FontFace={l}{it}{*-LightItalic},FontFace={lc}{n}{*Condensed-
+Light},FontFace={lc}{it}{*Condensed-LightItalic},UprightFont={*-Regular},Italic
+Font={*-Italic},FontFace={sb}{n}{*-SemiBold},FontFace={sb}{it}{*-SemiBoldItalic
+},FontFace={b}{n}{*-Bold},FontFace={b}{it}{*-BoldItalic},BoldFont={*-Bold},Bold
+ItalicFont={*-BoldItalic},FontFace={bc}{n}{*Condensed-Bold},FontFace={eb}{n}{*-
+ExtraBold},FontFace={eb}{it}{*-ExtraBoldItalic},Numbers={Proportional,Lining},N
+FSSFamily=opensans-LF].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - (l/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Light.ttf]/OT:script=latn;language
+=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - (l/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-LightItalic.ttf]/OT:script=latn;la
+nguage=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - (lc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Light.ttf]/OT:script=latn
+;language=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - (lc/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-LightItalic.ttf]/OT:scrip
+t=latn;language=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - (sb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBold.ttf]/OT:script=latn;langu
+age=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - (sb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBoldItalic.ttf]/OT:script=latn
+;language=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Bold.ttf]/OT:script=latn;language=
+dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-BoldItalic.ttf]/OT:script=latn;lan
+guage=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - (bc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Bold.ttf]/OT:script=latn;
+language=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - (eb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBold.ttf]/OT:script=latn;lang
+uage=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - (eb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBoldItalic.ttf]/OT:script=lat
+n;language=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Regular.ttf]/OT:script=latn;langua
+ge=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Italic.ttf]/OT:script=latn;languag
+e=dflt;+liga;+pnum;+lnum;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-BoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Italic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'opensans-TOsF' created for font 'OpenSans'
+(fontspec)             with options
+(fontspec)             [Extension=.ttf,Ligatures={TeX,Common},Scale=0.95,FontFa
+ce={l}{n}{*-Light},FontFace={l}{it}{*-LightItalic},FontFace={lc}{n}{*Condensed-
+Light},FontFace={lc}{it}{*Condensed-LightItalic},UprightFont={*-Regular},Italic
+Font={*-Italic},FontFace={sb}{n}{*-SemiBold},FontFace={sb}{it}{*-SemiBoldItalic
+},FontFace={b}{n}{*-Bold},FontFace={b}{it}{*-BoldItalic},BoldFont={*-Bold},Bold
+ItalicFont={*-BoldItalic},FontFace={bc}{n}{*Condensed-Bold},FontFace={eb}{n}{*-
+ExtraBold},FontFace={eb}{it}{*-ExtraBoldItalic},Numbers={Monospaced,OldStyle},N
+FSSFamily=opensans-TOsF].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - (l/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Light.ttf]/OT:script=latn;language
+=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - (l/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-LightItalic.ttf]/OT:script=latn;la
+nguage=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - (lc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Light.ttf]/OT:script=latn
+;language=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - (lc/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-LightItalic.ttf]/OT:scrip
+t=latn;language=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - (sb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBold.ttf]/OT:script=latn;langu
+age=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - (sb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBoldItalic.ttf]/OT:script=latn
+;language=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Bold.ttf]/OT:script=latn;language=
+dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-BoldItalic.ttf]/OT:script=latn;lan
+guage=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - (bc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Bold.ttf]/OT:script=latn;
+language=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - (eb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBold.ttf]/OT:script=latn;lang
+uage=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - (eb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBoldItalic.ttf]/OT:script=lat
+n;language=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Regular.ttf]/OT:script=latn;langua
+ge=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Italic.ttf]/OT:script=latn;languag
+e=dflt;+liga;+tnum;+onum;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-BoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Italic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'opensans-OsF' created for font 'OpenSans'
+(fontspec)             with options
+(fontspec)             [Extension=.ttf,Ligatures={TeX,Common},Scale=0.95,FontFa
+ce={l}{n}{*-Light},FontFace={l}{it}{*-LightItalic},FontFace={lc}{n}{*Condensed-
+Light},FontFace={lc}{it}{*Condensed-LightItalic},UprightFont={*-Regular},Italic
+Font={*-Italic},FontFace={sb}{n}{*-SemiBold},FontFace={sb}{it}{*-SemiBoldItalic
+},FontFace={b}{n}{*-Bold},FontFace={b}{it}{*-BoldItalic},BoldFont={*-Bold},Bold
+ItalicFont={*-BoldItalic},FontFace={bc}{n}{*Condensed-Bold},FontFace={eb}{n}{*-
+ExtraBold},FontFace={eb}{it}{*-ExtraBoldItalic},Numbers={Proportional,OldStyle}
+,NFSSFamily=opensans-OsF].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - (l/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Light.ttf]/OT:script=latn;language
+=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - (l/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-LightItalic.ttf]/OT:script=latn;la
+nguage=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - (lc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Light.ttf]/OT:script=latn
+;language=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - (lc/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-LightItalic.ttf]/OT:scrip
+t=latn;language=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - (sb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBold.ttf]/OT:script=latn;langu
+age=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - (sb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBoldItalic.ttf]/OT:script=latn
+;language=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Bold.ttf]/OT:script=latn;language=
+dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-BoldItalic.ttf]/OT:script=latn;lan
+guage=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - (bc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Bold.ttf]/OT:script=latn;
+language=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - (eb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBold.ttf]/OT:script=latn;lang
+uage=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - (eb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBoldItalic.ttf]/OT:script=lat
+n;language=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Regular.ttf]/OT:script=latn;langua
+ge=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Italic.ttf]/OT:script=latn;languag
+e=dflt;+liga;+pnum;+onum;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-BoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Italic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'fos' created for font 'OpenSans' with
+(fontspec)             options
+(fontspec)             [Extension=.ttf,Ligatures={TeX,Common},Scale=0.95,FontFa
+ce={l}{n}{*-Light},FontFace={l}{it}{*-LightItalic},FontFace={lc}{n}{*Condensed-
+Light},FontFace={lc}{it}{*Condensed-LightItalic},UprightFont={*-Regular},Italic
+Font={*-Italic},FontFace={sb}{n}{*-SemiBold},FontFace={sb}{it}{*-SemiBoldItalic
+},FontFace={b}{n}{*-Bold},FontFace={b}{it}{*-BoldItalic},BoldFont={*-Bold},Bold
+ItalicFont={*-BoldItalic},FontFace={bc}{n}{*Condensed-Bold},FontFace={eb}{n}{*-
+ExtraBold},FontFace={eb}{it}{*-ExtraBoldItalic},Numbers={Monospaced,Lining},NFS
+SFamily=fos].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - (l/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Light.ttf]/OT:script=latn;language
+=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (l/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-LightItalic.ttf]/OT:script=latn;la
+nguage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (lc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Light.ttf]/OT:script=latn
+;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (lc/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-LightItalic.ttf]/OT:scrip
+t=latn;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (sb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBold.ttf]/OT:script=latn;langu
+age=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (sb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBoldItalic.ttf]/OT:script=latn
+;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Bold.ttf]/OT:script=latn;language=
+dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-BoldItalic.ttf]/OT:script=latn;lan
+guage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (bc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Bold.ttf]/OT:script=latn;
+language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (eb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBold.ttf]/OT:script=latn;lang
+uage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (eb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBoldItalic.ttf]/OT:script=lat
+n;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Regular.ttf]/OT:script=latn;langua
+ge=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Italic.ttf]/OT:script=latn;languag
+e=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Light scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-LightItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-SemiBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-BoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSansCondensed-Bold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBold scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-ExtraBoldItalic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Regular scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             OpenSans-Italic scale = 0.95.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'OpenSans(0)' created for font 'OpenSans'
+(fontspec)             with options
+(fontspec)             [Ligatures=TeX,Extension=.ttf,Ligatures={TeX,Common},Sca
+le=0.95,FontFace={l}{n}{*-Light},FontFace={l}{it}{*-LightItalic},FontFace={lc}{
+n}{*Condensed-Light},FontFace={lc}{it}{*Condensed-LightItalic},UprightFont={*-R
+egular},ItalicFont={*-Italic},FontFace={sb}{n}{*-SemiBold},FontFace={sb}{it}{*-
+SemiBoldItalic},FontFace={b}{n}{*-Bold},FontFace={b}{it}{*-BoldItalic},BoldFont
+={*-Bold},BoldItalicFont={*-BoldItalic},FontFace={bc}{n}{*Condensed-Bold},FontF
+ace={eb}{n}{*-ExtraBold},FontFace={eb}{it}{*-ExtraBoldItalic},Numbers={Monospac
+ed,Lining}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - (l/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Light.ttf]/OT:script=latn;language
+=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (l/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-LightItalic.ttf]/OT:script=latn;la
+nguage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (lc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Light.ttf]/OT:script=latn
+;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (lc/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-LightItalic.ttf]/OT:scrip
+t=latn;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (sb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBold.ttf]/OT:script=latn;langu
+age=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (sb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-SemiBoldItalic.ttf]/OT:script=latn
+;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Bold.ttf]/OT:script=latn;language=
+dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-BoldItalic.ttf]/OT:script=latn;lan
+guage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (bc/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSansCondensed-Bold.ttf]/OT:script=latn;
+language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (eb/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBold.ttf]/OT:script=latn;lang
+uage=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - (eb/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-ExtraBoldItalic.ttf]/OT:script=lat
+n;language=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Regular.ttf]/OT:script=latn;langua
+ge=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.95]"[OpenSans-Italic.ttf]/OT:script=latn;languag
+e=dflt;+liga;+tnum;+lnum;mapping=tex-text;"
+
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/m/n' will be
+(Font)              scaled to size 10.40245pt on input line 151.
+Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;+liga;+tnum
+;+lnum;mapping=tex-text;" at 10.40245pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks35
+\t@pgfplots@tokb=\toks36
+\t@pgfplots@tokc=\toks37
+\pgfplots@tmpa=\dimen291
+\c@pgfplots@coordindex=\count314
+\c@pgfplots@scanlineindex=\count315
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
+.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_loader.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
+e.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
+soldpgfsupp_pgfutil-common-lists.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
+.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructure.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+liststructureext.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+array.code.tex
+\c@pgfplotsarray@tmp=\count316
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+matrix.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
+shared.code.tex
+\c@pgfplotstable@counta=\count317
+\t@pgfplotstable@a=\toks41
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
+deque.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
+de.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
+ta.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
+s.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count318
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-xetex.def
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
+.surfshading.pgfsys-dvipdfmx.def
+\c@pgfplotslibrarysurf@streamlen=\count319
+))))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
+code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
+e.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
+ode.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
+ode.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
+r.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
+code.tex)))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
+g.code.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+e.tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
+tex)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
+x)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
+s.code.tex
+\pgfdecoratedcompleteddistance=\dimen292
+\pgfdecoratedremainingdistance=\dimen293
+\pgfdecoratedinputsegmentcompleteddistance=\dimen294
+\pgfdecoratedinputsegmentremainingdistance=\dimen295
+\pgf@decorate@distancetomove=\dimen296
+\pgf@decorate@repeatstate=\count320
+\pgfdecorationsegmentamplitude=\dimen297
+\pgfdecorationsegmentlength=\dimen298
+)
+\tikz@lib@dec@box=\box68
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathmorphing.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibrarydecorations.pathreplacing.code.tex
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
+brarydecorations.pathreplacing.code.tex))
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgfplots/libs/tikzlibrarypgfplo
+ts.contourlua.code.tex)
+\pgfplots@numplots=\count321
+\pgfplots@xmin@reg=\dimen299
+\pgfplots@xmax@reg=\dimen300
+\pgfplots@ymin@reg=\dimen301
+\pgfplots@ymax@reg=\dimen302
+\pgfplots@zmin@reg=\dimen303
+\pgfplots@zmax@reg=\dimen304
+)
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
+s/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
+ks.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))) (./enbel_table3_climate_data_latex.aux)
+\openout1 = `enbel_table3_climate_data_latex.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: xetex
+*geometry* verbose mode - [ preamble ] result:
+* driver: xetex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: landscape 
+* h-part:(L,W,R)=(36.135pt, 772.77686pt, 36.135pt)
+* v-part:(T,H,B)=(36.135pt, 525.23788pt, 36.135pt)
+* \paperwidth=845.04684pt
+* \paperheight=597.50787pt
+* \textwidth=772.77686pt
+* \textheight=525.23788pt
+* \oddsidemargin=-36.135pt
+* \evensidemargin=-36.135pt
+* \topmargin=-73.135pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=144.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 29.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 29.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 29.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 29.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 29.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 29.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 29.
+LaTeX Font Info:    Redeclaring math accent \check on input line 29.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 29.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 29.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 29.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 29.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 29.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/OpenSans(0)/m/n on input line 29.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/OpenSans(0)/m/n on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/OpenSans(0)/m/n --> TU/OpenSans(0)/m/n on input line
+ 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/OpenSans(0)/m/it on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/OpenSans(0)/b/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 29.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/OpenSans(0)/m/n --> TU/OpenSans(0)/b/n on input line
+ 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/OpenSans(0)/b/it on input line 29.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 29.
+\c@mv@tabular=\count322
+\c@mv@boldtabular=\count323
+Package pgfplots notification 'compat/show suggested version=true': you might b
+enefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
+
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/m/n' will be
+(Font)              scaled to size 16.41594pt on input line 32.
+Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;+liga;+tnum
+;+lnum;mapping=tex-text;" at 16.41594pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/b/n' will be
+(Font)              scaled to size 16.41594pt on input line 32.
+Requested font "[OpenSans-Bold.ttf]/OT:script=latn;language=dflt;+liga;+tnum;+l
+num;mapping=tex-text;" at 16.41594pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Bold.ttf
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 33.
+Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;+liga;+tnum
+;+lnum;mapping=tex-text;" at 11.39996pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/m/n' will be
+(Font)              scaled to size 7.59998pt on input line 41.
+Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;+liga;+tnum
+;+lnum;mapping=tex-text;" at 7.59998pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/m/n' will be
+(Font)              scaled to size 5.69998pt on input line 41.
+Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;+liga;+tnum
+;+lnum;mapping=tex-text;" at 5.69998pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+Requested font "cmmi10" at 10.95pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm
+Requested font "cmmi8" at 8.0pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+Requested font "cmmi6" at 6.0pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+Requested font "cmsy10" at 10.95pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+Requested font "cmsy8" at 8.0pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+Requested font "cmsy6" at 6.0pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 41.
+Requested font "cmr10" at 10.95pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr10.tfm
+Requested font "cmr8" at 8.0pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+Requested font "cmr6" at 6.0pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/b/n' will be
+(Font)              scaled to size 10.40245pt on input line 44.
+Requested font "[OpenSans-Bold.ttf]/OT:script=latn;language=dflt;+liga;+tnum;+l
+num;mapping=tex-text;" at 10.40245pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Bold.ttf
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/m/n' will be
+(Font)              scaled to size 9.49997pt on input line 57.
+Requested font "[OpenSans-Regular.ttf]/OT:script=latn;language=dflt;+liga;+tnum
+;+lnum;mapping=tex-text;" at 9.49997pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Regular.ttf
+
+
+[1
+
+]
+LaTeX Font Info:    Font shape `TU/OpenSans(0)/b/n' will be
+(Font)              scaled to size 13.67995pt on input line 120.
+Requested font "[OpenSans-Bold.ttf]/OT:script=latn;language=dflt;+liga;+tnum;+l
+num;mapping=tex-text;" at 13.67995pt
+ -> /usr/local/texlive/2025/texmf-dist/fonts/truetype/ascender/opensans/OpenSan
+s-Bold.ttf
+
+
+[2] (./enbel_table3_climate_data_latex.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 26376 strings out of 473832
+ 722020 string characters out of 5729481
+ 1287820 words of memory out of 5000000
+ 49010 multiletter control sequences out of 15000+600000
+ 561784 words of font info for 71 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 86i,13n,110p,752b,750s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on enbel_table3_climate_data_latex.pdf (2 pages).

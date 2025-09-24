@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00539B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066CC;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cardioGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="metabolicGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="conclusionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00539B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1080" height="1920" fill="#F8FAFC"/>
+  
+  <!-- Header -->
+  <rect width="1080" height="120" fill="url(#headerGradient)"/>
+  <text x="540" y="45" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="white">21-day cardiovascular effects represent novel temporal pattern</text>
+  <circle cx="970" cy="60" r="35" fill="white" opacity="0.2"/>
+  <text x="970" y="68" font-family="Inter" font-size="16" font-weight="600" text-anchor="middle" fill="white">ENBEL</text>
+  
+  <!-- Main Content Container -->
+  <g transform="translate(40, 160)">
+    
+    <!-- Cardiovascular System Section -->
+    <rect width="480" height="520" rx="16" fill="white" filter="url(#dropShadow)"/>
+    <rect width="480" height="60" rx="16" fill="url(#cardioGradient)"/>
+    <text x="240" y="35" font-family="Inter" font-size="18" font-weight="700" text-anchor="middle" fill="white">CARDIOVASCULAR SYSTEM</text>
+    
+    <!-- Novel Extended Temporal Effects -->
+    <text x="20" y="95" font-family="Inter" font-size="16" font-weight="600" fill="#DC2626">Novel Extended Temporal Effects</text>
+    <text x="20" y="120" font-family="Inter" font-size="14" fill="#64748B">Temperature → Systolic BP</text>
+    
+    <!-- Correlation Analysis Box -->
+    <rect x="20" y="140" width="440" height="120" rx="8" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1"/>
+    <text x="30" y="165" font-family="Inter" font-size="14" font-weight="600" fill="#374151">Correlation Analysis:</text>
+    <text x="30" y="190" font-family="Inter" font-size="24" font-weight="700" fill="#DC2626">r = -0.114, p &lt; 10⁻¹⁵, n = 4,957</text>
+    <text x="30" y="215" font-family="Inter" font-size="14" font-weight="600" fill="#374151">DLNM Confirmation:</text>
+    <text x="30" y="240" font-family="Inter" font-size="16" font-weight="700" fill="#DC2626">Lag 21: Significant, R² = 0.056</text>
+    
+    <!-- Validated Badge -->
+    <rect x="360" y="155" width="85" height="30" rx="15" fill="#FF7F00"/>
+    <text x="402" y="175" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle" fill="white">VALIDATED</text>
+    
+    <!-- Novel Finding Alert -->
+    <rect x="20" y="280" width="440" height="40" rx="8" fill="#FEF3CD"/>
+    <text x="30" y="305" font-family="Inter" font-size="14" font-weight="600" fill="#F59E0B">NOVEL: Extended 21-day effects not previously documented in literature</text>
+    
+    <!-- Temporal Pattern Chart -->
+    <text x="20" y="355" font-family="Inter" font-size="14" font-weight="600" fill="#374151">21-Day Temporal Pattern Analysis</text>
+    
+    <!-- Chart background -->
+    <rect x="20" y="375" width="440" height="120" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" rx="4"/>
+    
+    <!-- Chart axes -->
+    <line x1="60" y1="475" x2="440" y2="475" stroke="#94A3B8" stroke-width="1"/>
+    <line x1="60" y1="475" x2="60" y2="385" stroke="#94A3B8" stroke-width="1"/>
+    
+    <!-- Curve path -->
+    <path d="M 60 460 Q 150 445 240 425 Q 340 405 420 385" stroke="#DC2626" stroke-width="3" fill="none"/>
+    <circle cx="420" cy="385" r="5" fill="#DC2626"/>
+    
+    <!-- Peak annotation -->
+    <text x="420" y="375" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle" fill="#DC2626">Peak: 21 days</text>
+    
+    <!-- Axis labels -->
+    <text x="60" y="490" font-family="Inter" font-size="10" text-anchor="middle" fill="#64748B">0</text>
+    <text x="150" y="490" font-family="Inter" font-size="10" text-anchor="middle" fill="#64748B">7</text>
+    <text x="240" y="490" font-family="Inter" font-size="10" text-anchor="middle" fill="#64748B">14</text>
+    <text x="330" y="490" font-family="Inter" font-size="10" text-anchor="middle" fill="#64748B">21</text>
+    <text x="250" y="510" font-family="Inter" font-size="12" text-anchor="middle" fill="#64748B">Lag Period (days)</text>
+    
+    <!-- Y-axis label -->
+    <text x="25" y="430" font-family="Inter" font-size="10" text-anchor="middle" fill="#64748B" transform="rotate(-90, 25, 430)">Effect Size</text>
+    
+    <!-- Statistical Evidence Box -->
+    <rect x="320" y="385" width="120" height="70" rx="4" fill="white" stroke="#DC2626" stroke-width="1"/>
+    <text x="330" y="400" font-family="Inter" font-size="10" font-weight="600" fill="#374151">Statistical Evidence:</text>
+    <text x="330" y="415" font-family="Inter" font-size="12" font-weight="700" fill="#DC2626">r = -0.114</text>
+    <text x="330" y="430" font-family="Inter" font-size="12" font-weight="700" fill="#DC2626">p &lt; 10⁻¹⁵</text>
+    
+  </g>
+  
+  <!-- Metabolic System Section -->
+  <g transform="translate(560, 160)">
+    <rect width="480" height="520" rx="16" fill="white" filter="url(#dropShadow)"/>
+    <rect width="480" height="60" rx="16" fill="url(#metabolicGradient)"/>
+    <text x="240" y="35" font-family="Inter" font-size="18" font-weight="700" text-anchor="middle" fill="white">METABOLIC SYSTEM</text>
+    
+    <!-- Immediate Response Pattern -->
+    <text x="20" y="95" font-family="Inter" font-size="16" font-weight="600" fill="#2563EB">Immediate Response Pattern</text>
+    <text x="20" y="120" font-family="Inter" font-size="14" fill="#64748B">Temperature → Fasting Glucose</text>
+    
+    <!-- Multiple Lag Results -->
+    <rect x="20" y="140" width="440" height="140" rx="8" fill="#F0F9FF" stroke="#93C5FD" stroke-width="1"/>
+    <text x="30" y="165" font-family="Inter" font-size="14" font-weight="600" fill="#1E40AF">Lag 0: r = 0.118, p &lt; 10⁻¹⁰</text>
+    <text x="30" y="190" font-family="Inter" font-size="14" font-weight="600" fill="#1E40AF">Lag 1: r = 0.125, p &lt; 10⁻¹⁰</text>
+    <text x="30" y="215" font-family="Inter" font-size="14" font-weight="600" fill="#1E40AF">Lag 3: r = 0.131, p &lt; 10⁻¹⁰</text>
+    
+    <!-- Strongest Badge -->
+    <rect x="360" y="155" width="85" height="30" rx="15" fill="#FF7F00"/>
+    <text x="402" y="175" font-family="Inter" font-size="12" font-weight="700" text-anchor="middle" fill="white">STRONGEST</text>
+    
+    <!-- Key Finding Alert -->
+    <rect x="20" y="300" width="440" height="40" rx="8" fill="#FEF3CD"/>
+    <text x="30" y="325" font-family="Inter" font-size="14" font-weight="600" fill="#F59E0B">KEY FINDING: Acute heat-induced metabolic stress response</text>
+    
+    <!-- Glucose Response Chart -->
+    <text x="20" y="375" font-family="Inter" font-size="14" font-weight="600" fill="#374151">Glucose Response Correlation Analysis</text>
+    
+    <!-- Chart background -->
+    <rect x="20" y="395" width="440" height="100" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" rx="4"/>
+    
+    <!-- Chart bars -->
+    <rect x="80" y="440" width="60" height="40" fill="#3B82F6" opacity="0.8"/>
+    <rect x="160" y="435" width="60" height="45" fill="#2563EB" opacity="0.8"/>
+    <rect x="240" y="430" width="60" height="50" fill="#1D4ED8" opacity="0.8"/>
+    <rect x="320" y="425" width="60" height="55" fill="#1E40AF" opacity="0.8"/>
+    
+    <!-- Values on bars -->
+    <text x="110" y="430" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" fill="white">0.118</text>
+    <text x="190" y="425" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" fill="white">0.125</text>
+    <text x="270" y="420" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" fill="white">0.120</text>
+    <text x="350" y="415" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" fill="white">0.131</text>
+    
+    <!-- Peak indicator -->
+    <polygon points="350,405 355,395 345,395" fill="#FF7F00"/>
+    <text x="350" y="390" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" fill="#FF7F00">PEAK</text>
+    
+    <!-- X-axis labels -->
+    <text x="110" y="510" font-family="Inter" font-size="12" text-anchor="middle" fill="#64748B">0</text>
+    <text x="190" y="510" font-family="Inter" font-size="12" text-anchor="middle" fill="#64748B">1</text>
+    <text x="270" y="510" font-family="Inter" font-size="12" text-anchor="middle" fill="#64748B">2</text>
+    <text x="350" y="510" font-family="Inter" font-size="12" text-anchor="middle" fill="#64748B">3</text>
+    <text x="230" y="525" font-family="Inter" font-size="12" text-anchor="middle" fill="#64748B">Lag Days</text>
+    
+    <!-- Significance note -->
+    <rect x="320" y="350" width="140" height="40" rx="4" fill="#F0F9FF" stroke="#3B82F6" stroke-width="1"/>
+    <text x="325" y="365" font-family="Inter" font-size="10" font-weight="600" fill="#1E40AF">All correlations significant:</text>
+    <text x="325" y="380" font-family="Inter" font-size="10" font-weight="600" fill="#1E40AF">p &lt; 10⁻¹⁰ for all lags</text>
+    <text x="390" y="365" font-family="Inter" font-size="10" font-weight="600" fill="#1E40AF">n = 2,731 participants</text>
+    
+  </g>
+  
+  <!-- Conclusion Section -->
+  <rect x="40" y="720" width="1000" height="120" rx="16" fill="url(#conclusionGradient)" filter="url(#dropShadow)"/>
+  <text x="540" y="760" font-family="Inter" font-size="20" font-weight="700" text-anchor="middle" fill="white">Two Breakthrough Discoveries: Extended cardiovascular adaptation • Immediate metabolic stress</text>
+  <text x="540" y="790" font-family="Inter" font-size="14" text-anchor="middle" fill="white" opacity="0.9">Novel temporal patterns challenge acute-only paradigms • Clinically significant effect sizes • Population health implications</text>
+  
+  <!-- Bottom Decorative Elements -->
+  <rect x="0" y="1880" width="1080" height="40" fill="#E2E8F0"/>
+  <text x="1040" y="1905" font-family="Inter" font-size="14" font-weight="600" fill="#64748B">4/11</text>
+  
+</svg>
