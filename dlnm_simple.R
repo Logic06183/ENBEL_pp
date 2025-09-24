@@ -52,7 +52,7 @@ pred_bp <- crosspred(
 cat("Creating BP 3D plot...\n")
 
 # 3D Plot for Blood Pressure
-png("enbel_dlnm_bp_3d.png", width = 10, height = 8, units = "in", res = 300)
+svg("enbel_dlnm_bp_3d.svg", width = 10, height = 8)
 par(mar = c(5, 5, 4, 2))
 
 plot(pred_bp,
@@ -73,7 +73,7 @@ dev.off()
 cat("Creating BP overall effect plot...\n")
 
 # Overall Effect Plot
-png("enbel_dlnm_bp_overall.png", width = 10, height = 8, units = "in", res = 300)
+svg("enbel_dlnm_bp_overall.svg", width = 10, height = 8)
 par(mar = c(5, 5, 4, 2))
 
 plot(pred_bp, "overall",
@@ -94,7 +94,7 @@ dev.off()
 cat("Creating BP slice plot...\n")
 
 # Slice Plot at specific lags
-png("enbel_dlnm_bp_slices.png", width = 10, height = 8, units = "in", res = 300)
+svg("enbel_dlnm_bp_slices.svg", width = 10, height = 8)
 par(mar = c(5, 5, 4, 2))
 
 plot(pred_bp, "slices",
@@ -150,7 +150,7 @@ pred_glucose <- crosspred(
 cat("Creating Glucose 3D plot...\n")
 
 # Glucose 3D Plot
-png("enbel_dlnm_glucose_3d.png", width = 10, height = 8, units = "in", res = 300)
+svg("enbel_dlnm_glucose_3d.svg", width = 10, height = 8)
 par(mar = c(5, 5, 4, 2))
 
 plot(pred_glucose,
@@ -171,7 +171,7 @@ dev.off()
 cat("Creating Glucose overall effect plot...\n")
 
 # Glucose Overall Effect
-png("enbel_dlnm_glucose_overall.png", width = 10, height = 8, units = "in", res = 300)
+svg("enbel_dlnm_glucose_overall.svg", width = 10, height = 8)
 par(mar = c(5, 5, 4, 2))
 
 plot(pred_glucose, "overall",
@@ -192,7 +192,7 @@ dev.off()
 cat("Creating Glucose slice plot...\n")
 
 # Glucose Slices
-png("enbel_dlnm_glucose_slices.png", width = 10, height = 8, units = "in", res = 300)
+svg("enbel_dlnm_glucose_slices.svg", width = 10, height = 8)
 par(mar = c(5, 5, 4, 2))
 
 plot(pred_glucose, "slices",
@@ -225,11 +225,11 @@ max_glucose <- max(pred_glucose$allRRfit, na.rm = TRUE)
 cat(sprintf("Glucose Maximum RR: %.3f\n", max_glucose))
 
 cat("\nGenerated DLNM plots:\n")
-cat("- enbel_dlnm_bp_3d.png\n")
-cat("- enbel_dlnm_bp_overall.png\n")
-cat("- enbel_dlnm_bp_slices.png\n")
-cat("- enbel_dlnm_glucose_3d.png\n")
-cat("- enbel_dlnm_glucose_overall.png\n")
-cat("- enbel_dlnm_glucose_slices.png\n")
+cat("- enbel_dlnm_bp_3d.svg\n")
+cat("- enbel_dlnm_bp_overall.svg\n")
+cat("- enbel_dlnm_bp_slices.svg\n")
+cat("- enbel_dlnm_glucose_3d.svg\n")
+cat("- enbel_dlnm_glucose_overall.svg\n")
+cat("- enbel_dlnm_glucose_slices.svg\n")
 
 cat("\n=== Analysis Complete ===\n")
