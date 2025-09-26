@@ -1,0 +1,51 @@
+# ENBEL Climate-Health Analysis - Complete Dependencies
+# Core Data Science
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.11.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+optuna>=3.4.0
+joblib>=1.3.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Explainable AI
+shap>=0.42.0
+
+# Geospatial Analysis
+geopandas>=0.13.0
+
+# Statistical Analysis
+statsmodels>=0.14.0
+
+# R Integration (for DLNM)
+rpy2>=3.5.0
+
+# Development and Testing
+pytest>=7.0.0
+pytest-cov>=4.0.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Documentation
+sphinx>=6.0.0
+sphinx-rtd-theme>=1.2.0
+
+# Environment and Path Management
+python-dotenv>=1.0.0
+pathlib2>=2.3.0
+
+# Progress Tracking
+tqdm>=4.65.0
+
+# Configuration
+pyyaml>=6.0
+
+# Quality Assurance
+mypy>=1.0.0

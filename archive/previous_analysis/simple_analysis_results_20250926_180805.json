@@ -1,0 +1,2962 @@
+{
+  "systolic blood pressure": {
+    "best_model": "random_forest",
+    "best_r2": -0.0007778604272412837,
+    "n_samples": 4957,
+    "n_features": 146,
+    "feature_importance": [
+      {
+        "feature": "wind_speed",
+        "importance": 0.0524445561123069
+      },
+      {
+        "feature": "Sex",
+        "importance": 0.03554340574166972
+      },
+      {
+        "feature": "temperature_range",
+        "importance": 0.03416158368190789
+      },
+      {
+        "feature": "heat_index",
+        "importance": 0.034124244991242385
+      },
+      {
+        "feature": "wind_gust",
+        "importance": 0.03389766980413249
+      },
+      {
+        "feature": "temperature",
+        "importance": 0.03157956583038248
+      },
+      {
+        "feature": "humidity",
+        "importance": 0.03077274483611116
+      },
+      {
+        "feature": "temperature_max",
+        "importance": 0.027200044871857815
+      },
+      {
+        "feature": "humidity_max",
+        "importance": 0.025592266791073893
+      },
+      {
+        "feature": "heat_index_max",
+        "importance": 0.0240357369638117
+      },
+      {
+        "feature": "temperature_min",
+        "importance": 0.02387309324651849
+      },
+      {
+        "feature": "humidity_min",
+        "importance": 0.02055773970191368
+      },
+      {
+        "feature": "wind_ws_lag7",
+        "importance": 0.02007968257580669
+      },
+      {
+        "feature": "wind_ws_lag0",
+        "importance": 0.019357777300567355
+      },
+      {
+        "feature": "wind_ws_lag5",
+        "importance": 0.018893572621200748
+      },
+      {
+        "feature": "heat_index_min",
+        "importance": 0.01829591028739068
+      },
+      {
+        "feature": "apparent_temp",
+        "importance": 0.017793479987852606
+      },
+      {
+        "feature": "temp_acceleration_14d",
+        "importance": 0.01726942526778311
+      },
+      {
+        "feature": "wet_bulb_temp",
+        "importance": 0.01701795385887136
+      },
+      {
+        "feature": "temp_acceleration_3d",
+        "importance": 0.013925171621949556
+      },
+      {
+        "feature": "temp_change_3d",
+        "importance": 0.013534044813152995
+      },
+      {
+        "feature": "temp_change_1d",
+        "importance": 0.013277047047799534
+      },
+      {
+        "feature": "apparent_temp_lag10",
+        "importance": 0.012915302999634502
+      },
+      {
+        "feature": "apparent_temp_lag7",
+        "importance": 0.012914393742341775
+      },
+      {
+        "feature": "land_temp_tas_lag14",
+        "importance": 0.01249525687763794
+      },
+      {
+        "feature": "heat_index_lag21",
+        "importance": 0.012391851413931983
+      },
+      {
+        "feature": "wind_ws_lag2",
+        "importance": 0.012024000630692833
+      },
+      {
+        "feature": "apparent_temp_lag21",
+        "importance": 0.011552438934820544
+      },
+      {
+        "feature": "temperature_tas_lag21",
+        "importance": 0.011415952233958264
+      },
+      {
+        "feature": "temp_min_14d",
+        "importance": 0.01107150309690951
+      },
+      {
+        "feature": "temp_min_5d",
+        "importance": 0.010570618799588012
+      },
+      {
+        "feature": "land_temp_tas_lag21",
+        "importance": 0.010486018525282218
+      },
+      {
+        "feature": "wind_ws_lag10",
+        "importance": 0.010483562090160959
+      },
+      {
+        "feature": "wind_ws_lag3",
+        "importance": 0.010224870010933262
+      },
+      {
+        "feature": "temp_acceleration_7d",
+        "importance": 0.010218301451425939
+      },
+      {
+        "feature": "wind_ws_lag14",
+        "importance": 0.010027110475655248
+      },
+      {
+        "feature": "temp_acceleration_1d",
+        "importance": 0.010023814633173174
+      },
+      {
+        "feature": "apparent_temp_lag14",
+        "importance": 0.010012626105418814
+      },
+      {
+        "feature": "temp_change_14d",
+        "importance": 0.009815440989248792
+      },
+      {
+        "feature": "temp_range_5d",
+        "importance": 0.009375364688670342
+      },
+      {
+        "feature": "wind_ws_lag21",
+        "importance": 0.009013844194789816
+      },
+      {
+        "feature": "land_temp_tas_lag5",
+        "importance": 0.008792635736478255
+      },
+      {
+        "feature": "wind_ws_lag1",
+        "importance": 0.008701108633122304
+      },
+      {
+        "feature": "temp_range_14d",
+        "importance": 0.008216665612329971
+      },
+      {
+        "feature": "apparent_temp_lag0",
+        "importance": 0.008029735174394911
+      },
+      {
+        "feature": "apparent_temp_lag3",
+        "importance": 0.0076490281842620435
+      },
+      {
+        "feature": "land_temp_tas_lag3",
+        "importance": 0.007601252098338688
+      },
+      {
+        "feature": "temp_variability_14d",
+        "importance": 0.007461996300584385
+      },
+      {
+        "feature": "land_temp_tas_lag10",
+        "importance": 0.007305226872639487
+      },
+      {
+        "feature": "land_temp_tas_lag0",
+        "importance": 0.007235896664602893
+      },
+      {
+        "feature": "temp_variability_3d",
+        "importance": 0.007196205409747688
+      },
+      {
+        "feature": "apparent_temp_lag1",
+        "importance": 0.007123350666148092
+      },
+      {
+        "feature": "temp_range_3d",
+        "importance": 0.006852589054524919
+      },
+      {
+        "feature": "apparent_temp_lag5",
+        "importance": 0.006659023185547405
+      },
+      {
+        "feature": "apparent_temp_lag2",
+        "importance": 0.00629040493640774
+      },
+      {
+        "feature": "land_temp_tas_lag1",
+        "importance": 0.006218270953321416
+      },
+      {
+        "feature": "temp_variability_5d",
+        "importance": 0.006125862976128274
+      },
+      {
+        "feature": "temp_min_7d",
+        "importance": 0.005741346362640406
+      },
+      {
+        "feature": "temp_range_7d",
+        "importance": 0.005576023510647684
+      },
+      {
+        "feature": "land_temp_tas_lag2",
+        "importance": 0.005299624206818783
+      },
+      {
+        "feature": "temp_min_3d",
+        "importance": 0.0052843256239494115
+      },
+      {
+        "feature": "heat_index_lag10",
+        "importance": 0.005282734451297519
+      },
+      {
+        "feature": "temp_variability_7d",
+        "importance": 0.005195080428473803
+      },
+      {
+        "feature": "temperature_tas_lag14",
+        "importance": 0.004912976243321627
+      },
+      {
+        "feature": "land_temp_tas_lag7",
+        "importance": 0.00471230245319728
+      },
+      {
+        "feature": "heat_index_lag7",
+        "importance": 0.0047102145781911615
+      },
+      {
+        "feature": "temp_change_7d",
+        "importance": 0.004298392053077889
+      },
+      {
+        "feature": "heating_degree_days_14d",
+        "importance": 0.004190129656917099
+      },
+      {
+        "feature": "temperature_tas_lag2",
+        "importance": 0.004031051731342206
+      },
+      {
+        "feature": "temp_max_5d",
+        "importance": 0.0037325536785470853
+      },
+      {
+        "feature": "Race",
+        "importance": 0.003586938056127835
+      },
+      {
+        "feature": "temperature_tas_lag0",
+        "importance": 0.0035121750241474976
+      },
+      {
+        "feature": "heat_index_max_5d",
+        "importance": 0.003500699586495187
+      },
+      {
+        "feature": "heat_index_lag1",
+        "importance": 0.0033944741253263723
+      },
+      {
+        "feature": "temperature_tas_lag10",
+        "importance": 0.0033245060222422563
+      },
+      {
+        "feature": "temp_mean_14d",
+        "importance": 0.003042781433986336
+      },
+      {
+        "feature": "heat_index_lag14",
+        "importance": 0.003035589701991639
+      },
+      {
+        "feature": "heat_index_lag2",
+        "importance": 0.002999236484071095
+      },
+      {
+        "feature": "temperature_tas_lag3",
+        "importance": 0.0029205294809417494
+      },
+      {
+        "feature": "heating_degree_days_7d",
+        "importance": 0.002849686269979176
+      },
+      {
+        "feature": "temp_mean_5d",
+        "importance": 0.0027026917711774766
+      },
+      {
+        "feature": "temperature_tas_lag7",
+        "importance": 0.0026538303012841073
+      },
+      {
+        "feature": "heat_index_lag5",
+        "importance": 0.0026040185431654315
+      },
+      {
+        "feature": "heat_index_mean_5d",
+        "importance": 0.0024519747055907577
+      },
+      {
+        "feature": "temperature_tas_lag5",
+        "importance": 0.002419403315071055
+      },
+      {
+        "feature": "heat_index_mean_14d",
+        "importance": 0.0023075444873460697
+      },
+      {
+        "feature": "heat_index_max_14d",
+        "importance": 0.002118147507445969
+      },
+      {
+        "feature": "temp_max_7d",
+        "importance": 0.001918485393472425
+      },
+      {
+        "feature": "heating_degree_days_5d",
+        "importance": 0.0018145565754309075
+      },
+      {
+        "feature": "heat_index_mean_7d",
+        "importance": 0.0018144584938930724
+      },
+      {
+        "feature": "heat_index_max_7d",
+        "importance": 0.0016742176501327519
+      },
+      {
+        "feature": "heating_degree_days_3d",
+        "importance": 0.0015733771460567391
+      },
+      {
+        "feature": "temp_max_3d",
+        "importance": 0.0015643854906385066
+      },
+      {
+        "feature": "heat_index_lag3",
+        "importance": 0.001561561630428899
+      },
+      {
+        "feature": "heat_index_max_3d",
+        "importance": 0.0015130876259102843
+      },
+      {
+        "feature": "heat_index_lag0",
+        "importance": 0.0014090716507857226
+      },
+      {
+        "feature": "temp_max_14d",
+        "importance": 0.0014014717186564126
+      },
+      {
+        "feature": "temp_mean_3d",
+        "importance": 0.0011478075828530677
+      },
+      {
+        "feature": "temperature_tas_lag1",
+        "importance": 0.001125825005814842
+      },
+      {
+        "feature": "heat_index_mean_3d",
+        "importance": 0.0011131885417094574
+      },
+      {
+        "feature": "temp_mean_7d",
+        "importance": 0.0002592813912493359
+      },
+      {
+        "feature": "moderate_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_vulnerability_index",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag1",
+        "importance": 0.0
+      }
+    ]
+  },
+  "FASTING GLUCOSE": {
+    "best_model": "random_forest",
+    "best_r2": 0.25575572499234644,
+    "n_samples": 2731,
+    "n_features": 146,
+    "feature_importance": [
+      {
+        "feature": "Race",
+        "importance": 0.29919910235875596
+      },
+      {
+        "feature": "temp_min_7d",
+        "importance": 0.028568181254935446
+      },
+      {
+        "feature": "wind_ws_lag3",
+        "importance": 0.019540061278436566
+      },
+      {
+        "feature": "wind_ws_lag5",
+        "importance": 0.01953478052779202
+      },
+      {
+        "feature": "land_temp_tas_lag3",
+        "importance": 0.017431928822380635
+      },
+      {
+        "feature": "temp_min_14d",
+        "importance": 0.01743092015399337
+      },
+      {
+        "feature": "temperature_range",
+        "importance": 0.017374050052460833
+      },
+      {
+        "feature": "wind_ws_lag14",
+        "importance": 0.01599953598111638
+      },
+      {
+        "feature": "wind_speed",
+        "importance": 0.015407621842302656
+      },
+      {
+        "feature": "temperature_max",
+        "importance": 0.014553310383466123
+      },
+      {
+        "feature": "apparent_temp_lag1",
+        "importance": 0.013940707780243205
+      },
+      {
+        "feature": "temperature",
+        "importance": 0.013296125126024703
+      },
+      {
+        "feature": "temp_change_1d",
+        "importance": 0.013291763481557915
+      },
+      {
+        "feature": "wind_ws_lag2",
+        "importance": 0.012660402936681055
+      },
+      {
+        "feature": "wind_gust",
+        "importance": 0.01245913126398664
+      },
+      {
+        "feature": "temp_acceleration_14d",
+        "importance": 0.01207057611001365
+      },
+      {
+        "feature": "apparent_temp_lag10",
+        "importance": 0.012007440031873979
+      },
+      {
+        "feature": "temperature_min",
+        "importance": 0.011905635568185453
+      },
+      {
+        "feature": "temp_min_3d",
+        "importance": 0.011291916784440758
+      },
+      {
+        "feature": "land_temp_tas_lag14",
+        "importance": 0.011175044005848738
+      },
+      {
+        "feature": "wind_ws_lag0",
+        "importance": 0.010915332108371414
+      },
+      {
+        "feature": "temp_acceleration_3d",
+        "importance": 0.010751984280154695
+      },
+      {
+        "feature": "temp_change_3d",
+        "importance": 0.010543439576452185
+      },
+      {
+        "feature": "wind_ws_lag21",
+        "importance": 0.010391630070292458
+      },
+      {
+        "feature": "heat_index_max_14d",
+        "importance": 0.010298306938973916
+      },
+      {
+        "feature": "humidity_max",
+        "importance": 0.010090353794871353
+      },
+      {
+        "feature": "humidity_min",
+        "importance": 0.010068385268666926
+      },
+      {
+        "feature": "temp_variability_14d",
+        "importance": 0.009965922901053383
+      },
+      {
+        "feature": "wind_ws_lag7",
+        "importance": 0.009720880353601549
+      },
+      {
+        "feature": "temp_acceleration_7d",
+        "importance": 0.00950224119792571
+      },
+      {
+        "feature": "land_temp_tas_lag21",
+        "importance": 0.009402315635938841
+      },
+      {
+        "feature": "heat_index_max",
+        "importance": 0.00913441177904727
+      },
+      {
+        "feature": "wind_ws_lag1",
+        "importance": 0.009042755789017013
+      },
+      {
+        "feature": "temp_range_14d",
+        "importance": 0.008711417581920042
+      },
+      {
+        "feature": "apparent_temp",
+        "importance": 0.00830160769121518
+      },
+      {
+        "feature": "temperature_tas_lag10",
+        "importance": 0.007754868254777038
+      },
+      {
+        "feature": "temp_variability_3d",
+        "importance": 0.007453923216472622
+      },
+      {
+        "feature": "heat_index_lag10",
+        "importance": 0.007339504326152459
+      },
+      {
+        "feature": "land_temp_tas_lag0",
+        "importance": 0.007079730936682951
+      },
+      {
+        "feature": "temp_max_14d",
+        "importance": 0.006922815234178963
+      },
+      {
+        "feature": "apparent_temp_lag21",
+        "importance": 0.00687400445064241
+      },
+      {
+        "feature": "humidity",
+        "importance": 0.006860896762027501
+      },
+      {
+        "feature": "temp_range_3d",
+        "importance": 0.006577798364417146
+      },
+      {
+        "feature": "temperature_tas_lag2",
+        "importance": 0.006409560749543369
+      },
+      {
+        "feature": "heat_index_min",
+        "importance": 0.006364782593313264
+      },
+      {
+        "feature": "land_temp_tas_lag5",
+        "importance": 0.006219660077903555
+      },
+      {
+        "feature": "wind_ws_lag10",
+        "importance": 0.006143225254202521
+      },
+      {
+        "feature": "temp_acceleration_1d",
+        "importance": 0.0060613889711053515
+      },
+      {
+        "feature": "temp_range_7d",
+        "importance": 0.006047102791811152
+      },
+      {
+        "feature": "land_temp_tas_lag2",
+        "importance": 0.006026739362377183
+      },
+      {
+        "feature": "land_temp_tas_lag10",
+        "importance": 0.00594612555863776
+      },
+      {
+        "feature": "apparent_temp_lag0",
+        "importance": 0.005899597985177343
+      },
+      {
+        "feature": "temperature_tas_lag1",
+        "importance": 0.005815511920407305
+      },
+      {
+        "feature": "temp_min_5d",
+        "importance": 0.005724870502448317
+      },
+      {
+        "feature": "wet_bulb_temp",
+        "importance": 0.005379274280076832
+      },
+      {
+        "feature": "apparent_temp_lag7",
+        "importance": 0.005344182592261044
+      },
+      {
+        "feature": "apparent_temp_lag2",
+        "importance": 0.00528101023514968
+      },
+      {
+        "feature": "temp_max_5d",
+        "importance": 0.005198920753646305
+      },
+      {
+        "feature": "land_temp_tas_lag7",
+        "importance": 0.005074312286863974
+      },
+      {
+        "feature": "heat_index_lag2",
+        "importance": 0.005019663953574339
+      },
+      {
+        "feature": "apparent_temp_lag5",
+        "importance": 0.004956039706479573
+      },
+      {
+        "feature": "temperature_tas_lag5",
+        "importance": 0.004864596276348773
+      },
+      {
+        "feature": "heating_degree_days_14d",
+        "importance": 0.004638665576171789
+      },
+      {
+        "feature": "temp_change_14d",
+        "importance": 0.004615959545127174
+      },
+      {
+        "feature": "apparent_temp_lag3",
+        "importance": 0.004509637499513421
+      },
+      {
+        "feature": "temp_change_7d",
+        "importance": 0.00445935216399854
+      },
+      {
+        "feature": "temperature_tas_lag21",
+        "importance": 0.004391730511173831
+      },
+      {
+        "feature": "temp_variability_7d",
+        "importance": 0.004387626883230738
+      },
+      {
+        "feature": "heat_index",
+        "importance": 0.004354544340621091
+      },
+      {
+        "feature": "heat_index_max_5d",
+        "importance": 0.004344758870426488
+      },
+      {
+        "feature": "land_temp_tas_lag1",
+        "importance": 0.004340782940932276
+      },
+      {
+        "feature": "temp_range_5d",
+        "importance": 0.004309234026471477
+      },
+      {
+        "feature": "heat_index_lag3",
+        "importance": 0.004086925794953025
+      },
+      {
+        "feature": "temp_variability_5d",
+        "importance": 0.0037469295783064994
+      },
+      {
+        "feature": "temperature_tas_lag14",
+        "importance": 0.003719726247494559
+      },
+      {
+        "feature": "heat_index_lag14",
+        "importance": 0.0035598076249938244
+      },
+      {
+        "feature": "temp_max_7d",
+        "importance": 0.003343201536603417
+      },
+      {
+        "feature": "apparent_temp_lag14",
+        "importance": 0.0030271136182470977
+      },
+      {
+        "feature": "heat_index_max_7d",
+        "importance": 0.0029472499966474047
+      },
+      {
+        "feature": "heat_index_lag21",
+        "importance": 0.0029447712081526415
+      },
+      {
+        "feature": "temperature_tas_lag3",
+        "importance": 0.002787656664480198
+      },
+      {
+        "feature": "heat_index_lag5",
+        "importance": 0.0025432353444445614
+      },
+      {
+        "feature": "heat_index_lag1",
+        "importance": 0.002330026863591575
+      },
+      {
+        "feature": "heat_index_lag0",
+        "importance": 0.0019131085207907774
+      },
+      {
+        "feature": "heating_degree_days_7d",
+        "importance": 0.0019074662571372453
+      },
+      {
+        "feature": "heat_index_lag7",
+        "importance": 0.0018529775646355382
+      },
+      {
+        "feature": "temperature_tas_lag0",
+        "importance": 0.0018119680785464195
+      },
+      {
+        "feature": "heating_degree_days_3d",
+        "importance": 0.0016241133543606406
+      },
+      {
+        "feature": "temp_mean_14d",
+        "importance": 0.0015308672569677806
+      },
+      {
+        "feature": "heat_index_mean_14d",
+        "importance": 0.0015001632474335802
+      },
+      {
+        "feature": "Sex",
+        "importance": 0.0011281102886061946
+      },
+      {
+        "feature": "temp_max_3d",
+        "importance": 0.0010589079639327737
+      },
+      {
+        "feature": "temp_mean_7d",
+        "importance": 0.0010221914195259938
+      },
+      {
+        "feature": "heat_index_max_3d",
+        "importance": 0.0009575623397855996
+      },
+      {
+        "feature": "temp_mean_5d",
+        "importance": 0.0008612035209598481
+      },
+      {
+        "feature": "heating_degree_days_5d",
+        "importance": 0.000853784680553448
+      },
+      {
+        "feature": "heat_index_mean_3d",
+        "importance": 0.000687331328265587
+      },
+      {
+        "feature": "heat_index_mean_7d",
+        "importance": 0.00062903439367819
+      },
+      {
+        "feature": "temp_mean_3d",
+        "importance": 0.0002475596937728592
+      },
+      {
+        "feature": "temperature_tas_lag7",
+        "importance": 0.0002420189263208971
+      },
+      {
+        "feature": "heat_index_mean_5d",
+        "importance": 0.00016336622046830124
+      },
+      {
+        "feature": "extreme_heat_event_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_vulnerability_index",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag2",
+        "importance": 0.0
+      }
+    ]
+  },
+  "CD4 cell count (cells/\u00b5L)": {
+    "best_model": "xgboost",
+    "best_r2": 0.1958776519924495,
+    "n_samples": 1283,
+    "n_features": 146,
+    "feature_importance": [
+      {
+        "feature": "heating_degree_days_5d",
+        "importance": 0.1175912618637085
+      },
+      {
+        "feature": "heating_degree_days_7d",
+        "importance": 0.08698755502700806
+      },
+      {
+        "feature": "temp_mean_7d",
+        "importance": 0.07996836304664612
+      },
+      {
+        "feature": "temp_mean_14d",
+        "importance": 0.056380122900009155
+      },
+      {
+        "feature": "temp_min_7d",
+        "importance": 0.04081932082772255
+      },
+      {
+        "feature": "temp_min_5d",
+        "importance": 0.03118329495191574
+      },
+      {
+        "feature": "apparent_temp_lag14",
+        "importance": 0.03094167821109295
+      },
+      {
+        "feature": "apparent_temp_lag3",
+        "importance": 0.022356145083904266
+      },
+      {
+        "feature": "temp_max_3d",
+        "importance": 0.0221329964697361
+      },
+      {
+        "feature": "temp_min_14d",
+        "importance": 0.020356381312012672
+      },
+      {
+        "feature": "land_temp_tas_lag0",
+        "importance": 0.01888037845492363
+      },
+      {
+        "feature": "temp_mean_5d",
+        "importance": 0.018695250153541565
+      },
+      {
+        "feature": "wind_ws_lag2",
+        "importance": 0.01675446145236492
+      },
+      {
+        "feature": "land_temp_tas_lag1",
+        "importance": 0.016166280955076218
+      },
+      {
+        "feature": "apparent_temp_lag21",
+        "importance": 0.015475381165742874
+      },
+      {
+        "feature": "apparent_temp_lag0",
+        "importance": 0.015386858955025673
+      },
+      {
+        "feature": "temperature_tas_lag21",
+        "importance": 0.013440815731883049
+      },
+      {
+        "feature": "temp_max_14d",
+        "importance": 0.012574665248394012
+      },
+      {
+        "feature": "land_temp_tas_lag2",
+        "importance": 0.012165120802819729
+      },
+      {
+        "feature": "wind_ws_lag0",
+        "importance": 0.011648863554000854
+      },
+      {
+        "feature": "temp_range_3d",
+        "importance": 0.011365382932126522
+      },
+      {
+        "feature": "apparent_temp_lag7",
+        "importance": 0.01133822277188301
+      },
+      {
+        "feature": "apparent_temp_lag1",
+        "importance": 0.01111973449587822
+      },
+      {
+        "feature": "temp_variability_7d",
+        "importance": 0.011077851057052612
+      },
+      {
+        "feature": "land_temp_tas_lag10",
+        "importance": 0.011058170348405838
+      },
+      {
+        "feature": "apparent_temp_lag2",
+        "importance": 0.01089685782790184
+      },
+      {
+        "feature": "temp_max_5d",
+        "importance": 0.010068637318909168
+      },
+      {
+        "feature": "temperature_tas_lag3",
+        "importance": 0.009581778198480606
+      },
+      {
+        "feature": "apparent_temp_lag10",
+        "importance": 0.009411589242517948
+      },
+      {
+        "feature": "temp_mean_3d",
+        "importance": 0.00933843944221735
+      },
+      {
+        "feature": "temp_variability_5d",
+        "importance": 0.00873527117073536
+      },
+      {
+        "feature": "temperature_tas_lag2",
+        "importance": 0.008473708294332027
+      },
+      {
+        "feature": "temp_acceleration_14d",
+        "importance": 0.008326811715960503
+      },
+      {
+        "feature": "temp_acceleration_1d",
+        "importance": 0.008175174705684185
+      },
+      {
+        "feature": "wind_ws_lag5",
+        "importance": 0.00783534999936819
+      },
+      {
+        "feature": "temperature_tas_lag1",
+        "importance": 0.007442975416779518
+      },
+      {
+        "feature": "temp_change_1d",
+        "importance": 0.007397665176540613
+      },
+      {
+        "feature": "wind_ws_lag7",
+        "importance": 0.007354749366641045
+      },
+      {
+        "feature": "wind_ws_lag3",
+        "importance": 0.006896798498928547
+      },
+      {
+        "feature": "wind_ws_lag10",
+        "importance": 0.006756959017366171
+      },
+      {
+        "feature": "temp_variability_14d",
+        "importance": 0.0066465577110648155
+      },
+      {
+        "feature": "temperature_tas_lag5",
+        "importance": 0.00641919020563364
+      },
+      {
+        "feature": "temp_min_3d",
+        "importance": 0.005550225730985403
+      },
+      {
+        "feature": "temp_change_14d",
+        "importance": 0.005529935006052256
+      },
+      {
+        "feature": "temperature_tas_lag14",
+        "importance": 0.0054987696930766106
+      },
+      {
+        "feature": "temp_acceleration_7d",
+        "importance": 0.005426840856671333
+      },
+      {
+        "feature": "temp_range_5d",
+        "importance": 0.005307264160364866
+      },
+      {
+        "feature": "wind_ws_lag14",
+        "importance": 0.005207464564591646
+      },
+      {
+        "feature": "land_temp_tas_lag21",
+        "importance": 0.005201556719839573
+      },
+      {
+        "feature": "land_temp_tas_lag7",
+        "importance": 0.005042227916419506
+      },
+      {
+        "feature": "temp_change_7d",
+        "importance": 0.004950998350977898
+      },
+      {
+        "feature": "Sex",
+        "importance": 0.0048586237244307995
+      },
+      {
+        "feature": "land_temp_tas_lag14",
+        "importance": 0.00479771988466382
+      },
+      {
+        "feature": "temp_max_7d",
+        "importance": 0.00460041593760252
+      },
+      {
+        "feature": "temp_range_14d",
+        "importance": 0.004314874764531851
+      },
+      {
+        "feature": "temperature_tas_lag10",
+        "importance": 0.004296666011214256
+      },
+      {
+        "feature": "apparent_temp",
+        "importance": 0.004145361483097076
+      },
+      {
+        "feature": "land_temp_tas_lag5",
+        "importance": 0.004069753922522068
+      },
+      {
+        "feature": "wind_ws_lag1",
+        "importance": 0.004055126570165157
+      },
+      {
+        "feature": "temp_variability_3d",
+        "importance": 0.00376298651099205
+      },
+      {
+        "feature": "heat_index_max",
+        "importance": 0.003425607457756996
+      },
+      {
+        "feature": "apparent_temp_lag5",
+        "importance": 0.00323334988206625
+      },
+      {
+        "feature": "temp_range_7d",
+        "importance": 0.0032075487542897463
+      },
+      {
+        "feature": "temperature_max",
+        "importance": 0.0030514285899698734
+      },
+      {
+        "feature": "wind_ws_lag21",
+        "importance": 0.003005099715664983
+      },
+      {
+        "feature": "temp_acceleration_3d",
+        "importance": 0.002998409792780876
+      },
+      {
+        "feature": "temperature_range",
+        "importance": 0.0029664975591003895
+      },
+      {
+        "feature": "wet_bulb_temp",
+        "importance": 0.0028861192986369133
+      },
+      {
+        "feature": "wind_gust",
+        "importance": 0.002765013137832284
+      },
+      {
+        "feature": "humidity_min",
+        "importance": 0.002739341463893652
+      },
+      {
+        "feature": "temp_change_3d",
+        "importance": 0.002701240126043558
+      },
+      {
+        "feature": "temperature_min",
+        "importance": 0.0026259070727974176
+      },
+      {
+        "feature": "temperature_tas_lag7",
+        "importance": 0.002590858144685626
+      },
+      {
+        "feature": "humidity_max",
+        "importance": 0.002554255537688732
+      },
+      {
+        "feature": "wind_speed",
+        "importance": 0.002518228255212307
+      },
+      {
+        "feature": "temperature_tas_lag0",
+        "importance": 0.00248057977296412
+      },
+      {
+        "feature": "heat_index",
+        "importance": 0.0023034086916595697
+      },
+      {
+        "feature": "land_temp_tas_lag3",
+        "importance": 0.002260036300867796
+      },
+      {
+        "feature": "Race",
+        "importance": 0.0021452384535223246
+      },
+      {
+        "feature": "heat_index_min",
+        "importance": 0.0020304445642977953
+      },
+      {
+        "feature": "humidity",
+        "importance": 0.0019924372900277376
+      },
+      {
+        "feature": "temperature",
+        "importance": 0.0012790056644007564
+      },
+      {
+        "feature": "heat_index_max_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_mean_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_max_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "heating_degree_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_mean_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_max_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_vulnerability_index",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_mean_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "heating_degree_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_mean_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_max_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_index_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_5d",
+        "importance": 0.0
+      }
+    ]
+  },
+  "FASTING LDL": {
+    "best_model": "random_forest",
+    "best_r2": 0.11730080181714993,
+    "n_samples": 2500,
+    "n_features": 146,
+    "feature_importance": [
+      {
+        "feature": "Sex",
+        "importance": 0.11299988301074664
+      },
+      {
+        "feature": "temperature_max",
+        "importance": 0.04822568937778338
+      },
+      {
+        "feature": "wind_speed",
+        "importance": 0.04706458318573953
+      },
+      {
+        "feature": "wind_ws_lag14",
+        "importance": 0.03225261151066386
+      },
+      {
+        "feature": "apparent_temp",
+        "importance": 0.03146044512716224
+      },
+      {
+        "feature": "temperature",
+        "importance": 0.026806600756616103
+      },
+      {
+        "feature": "wind_ws_lag21",
+        "importance": 0.02677773650630626
+      },
+      {
+        "feature": "wind_ws_lag7",
+        "importance": 0.026439747640225816
+      },
+      {
+        "feature": "wind_ws_lag5",
+        "importance": 0.025501878734741877
+      },
+      {
+        "feature": "temp_change_7d",
+        "importance": 0.02142430718251405
+      },
+      {
+        "feature": "wind_ws_lag2",
+        "importance": 0.020158975792130142
+      },
+      {
+        "feature": "wind_gust",
+        "importance": 0.01820970682397368
+      },
+      {
+        "feature": "temperature_range",
+        "importance": 0.018034466663368595
+      },
+      {
+        "feature": "wind_ws_lag10",
+        "importance": 0.017308071829909923
+      },
+      {
+        "feature": "temp_change_1d",
+        "importance": 0.01689271428353655
+      },
+      {
+        "feature": "temperature_min",
+        "importance": 0.01518815740406036
+      },
+      {
+        "feature": "temp_acceleration_14d",
+        "importance": 0.014648123454129868
+      },
+      {
+        "feature": "temp_acceleration_7d",
+        "importance": 0.013961397726541347
+      },
+      {
+        "feature": "wind_ws_lag3",
+        "importance": 0.01392896058491079
+      },
+      {
+        "feature": "humidity_min",
+        "importance": 0.01323851208450972
+      },
+      {
+        "feature": "temp_range_14d",
+        "importance": 0.013158694169616337
+      },
+      {
+        "feature": "wind_ws_lag1",
+        "importance": 0.012810476411182443
+      },
+      {
+        "feature": "wind_ws_lag0",
+        "importance": 0.012635447774971817
+      },
+      {
+        "feature": "wet_bulb_temp",
+        "importance": 0.012452191635030647
+      },
+      {
+        "feature": "apparent_temp_lag21",
+        "importance": 0.01143047313151966
+      },
+      {
+        "feature": "heat_index",
+        "importance": 0.011290707623293874
+      },
+      {
+        "feature": "humidity_max",
+        "importance": 0.011007184289302292
+      },
+      {
+        "feature": "temp_acceleration_3d",
+        "importance": 0.010959851749163238
+      },
+      {
+        "feature": "temp_change_14d",
+        "importance": 0.010615003897917316
+      },
+      {
+        "feature": "apparent_temp_lag10",
+        "importance": 0.010592920574389954
+      },
+      {
+        "feature": "heat_index_min",
+        "importance": 0.010120262930049964
+      },
+      {
+        "feature": "temp_acceleration_1d",
+        "importance": 0.009863390358824104
+      },
+      {
+        "feature": "temp_range_7d",
+        "importance": 0.009858910953027145
+      },
+      {
+        "feature": "heat_index_max",
+        "importance": 0.00917239312780167
+      },
+      {
+        "feature": "land_temp_tas_lag0",
+        "importance": 0.00916621313027131
+      },
+      {
+        "feature": "land_temp_tas_lag7",
+        "importance": 0.00897299714204147
+      },
+      {
+        "feature": "temp_min_3d",
+        "importance": 0.0088362239846749
+      },
+      {
+        "feature": "land_temp_tas_lag21",
+        "importance": 0.008603673800210418
+      },
+      {
+        "feature": "temp_change_3d",
+        "importance": 0.008545011463386014
+      },
+      {
+        "feature": "land_temp_tas_lag10",
+        "importance": 0.008382186718681352
+      },
+      {
+        "feature": "humidity",
+        "importance": 0.00835310673267032
+      },
+      {
+        "feature": "temp_range_5d",
+        "importance": 0.007232409386290694
+      },
+      {
+        "feature": "temp_variability_7d",
+        "importance": 0.007226494957216165
+      },
+      {
+        "feature": "temp_variability_14d",
+        "importance": 0.0071281105114228294
+      },
+      {
+        "feature": "temp_max_14d",
+        "importance": 0.007007898114502248
+      },
+      {
+        "feature": "temp_variability_5d",
+        "importance": 0.006855142578632425
+      },
+      {
+        "feature": "apparent_temp_lag0",
+        "importance": 0.006612893641077092
+      },
+      {
+        "feature": "apparent_temp_lag5",
+        "importance": 0.006580747277943201
+      },
+      {
+        "feature": "land_temp_tas_lag5",
+        "importance": 0.006575927823517738
+      },
+      {
+        "feature": "apparent_temp_lag1",
+        "importance": 0.006140002268907851
+      },
+      {
+        "feature": "temp_range_3d",
+        "importance": 0.00605056980113499
+      },
+      {
+        "feature": "temp_min_14d",
+        "importance": 0.00591586813341944
+      },
+      {
+        "feature": "apparent_temp_lag14",
+        "importance": 0.005705059512394302
+      },
+      {
+        "feature": "land_temp_tas_lag3",
+        "importance": 0.005653316518824587
+      },
+      {
+        "feature": "land_temp_tas_lag1",
+        "importance": 0.00564502003775668
+      },
+      {
+        "feature": "apparent_temp_lag3",
+        "importance": 0.005425025588915612
+      },
+      {
+        "feature": "temp_variability_3d",
+        "importance": 0.005362346927265747
+      },
+      {
+        "feature": "heat_index_max_14d",
+        "importance": 0.00513270958203791
+      },
+      {
+        "feature": "temperature_tas_lag7",
+        "importance": 0.004807878559383626
+      },
+      {
+        "feature": "apparent_temp_lag2",
+        "importance": 0.00458837522350605
+      },
+      {
+        "feature": "temp_max_5d",
+        "importance": 0.004509207861279992
+      },
+      {
+        "feature": "heat_index_lag5",
+        "importance": 0.0044770904125445285
+      },
+      {
+        "feature": "heat_index_max_7d",
+        "importance": 0.004412214938731669
+      },
+      {
+        "feature": "heat_index_lag7",
+        "importance": 0.004397947839474479
+      },
+      {
+        "feature": "land_temp_tas_lag14",
+        "importance": 0.004373161580343725
+      },
+      {
+        "feature": "apparent_temp_lag7",
+        "importance": 0.004187582495816466
+      },
+      {
+        "feature": "land_temp_tas_lag2",
+        "importance": 0.004073769862721436
+      },
+      {
+        "feature": "heat_index_lag10",
+        "importance": 0.004007172656680421
+      },
+      {
+        "feature": "heating_degree_days_3d",
+        "importance": 0.003718697005660539
+      },
+      {
+        "feature": "temperature_tas_lag5",
+        "importance": 0.003558497675558178
+      },
+      {
+        "feature": "temp_min_7d",
+        "importance": 0.003502535574519062
+      },
+      {
+        "feature": "heat_index_mean_3d",
+        "importance": 0.003470331966677622
+      },
+      {
+        "feature": "temp_min_5d",
+        "importance": 0.0034071885279581492
+      },
+      {
+        "feature": "heat_index_max_5d",
+        "importance": 0.0033321681720730693
+      },
+      {
+        "feature": "heat_index_max_3d",
+        "importance": 0.003329070920998287
+      },
+      {
+        "feature": "temp_mean_3d",
+        "importance": 0.003306454244751521
+      },
+      {
+        "feature": "temperature_tas_lag10",
+        "importance": 0.003200406098925414
+      },
+      {
+        "feature": "heat_index_lag0",
+        "importance": 0.0029494377773963496
+      },
+      {
+        "feature": "temperature_tas_lag3",
+        "importance": 0.0029392487132125066
+      },
+      {
+        "feature": "temperature_tas_lag2",
+        "importance": 0.0028305382229386155
+      },
+      {
+        "feature": "heat_index_lag3",
+        "importance": 0.002798640540820181
+      },
+      {
+        "feature": "heat_index_lag21",
+        "importance": 0.002764120874422745
+      },
+      {
+        "feature": "temperature_tas_lag21",
+        "importance": 0.00258458948150011
+      },
+      {
+        "feature": "heat_index_lag14",
+        "importance": 0.002460362876120114
+      },
+      {
+        "feature": "temperature_tas_lag0",
+        "importance": 0.002401716013227977
+      },
+      {
+        "feature": "temp_max_7d",
+        "importance": 0.0022969572474542273
+      },
+      {
+        "feature": "temp_max_3d",
+        "importance": 0.002013525365056819
+      },
+      {
+        "feature": "heat_index_lag2",
+        "importance": 0.0020090828588387355
+      },
+      {
+        "feature": "heating_degree_days_14d",
+        "importance": 0.001894319816415536
+      },
+      {
+        "feature": "heating_degree_days_7d",
+        "importance": 0.0018511945524079792
+      },
+      {
+        "feature": "temperature_tas_lag14",
+        "importance": 0.001715925473070751
+      },
+      {
+        "feature": "heat_index_mean_14d",
+        "importance": 0.0015332478937385788
+      },
+      {
+        "feature": "temperature_tas_lag1",
+        "importance": 0.0013809666606733556
+      },
+      {
+        "feature": "temp_mean_14d",
+        "importance": 0.0012213679236145537
+      },
+      {
+        "feature": "heat_index_lag1",
+        "importance": 0.0011988463409972072
+      },
+      {
+        "feature": "heat_index_mean_7d",
+        "importance": 0.0008285628085666402
+      },
+      {
+        "feature": "heating_degree_days_5d",
+        "importance": 0.0007643908668693779
+      },
+      {
+        "feature": "temp_mean_5d",
+        "importance": 0.000597066469195602
+      },
+      {
+        "feature": "heat_index_mean_5d",
+        "importance": 0.0005959832207063081
+      },
+      {
+        "feature": "temp_mean_7d",
+        "importance": 0.00011072244629503031
+      },
+      {
+        "feature": "heat_exposure_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_vulnerability_index",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "Race",
+        "importance": 0.0
+      }
+    ]
+  },
+  "Hemoglobin (g/dL)": {
+    "best_model": "random_forest",
+    "best_r2": 0.15475216348513662,
+    "n_samples": 1282,
+    "n_features": 146,
+    "feature_importance": [
+      {
+        "feature": "Sex",
+        "importance": 0.2925962213439968
+      },
+      {
+        "feature": "Race",
+        "importance": 0.044357742379263015
+      },
+      {
+        "feature": "land_temp_tas_lag14",
+        "importance": 0.02744060182524399
+      },
+      {
+        "feature": "wind_speed",
+        "importance": 0.024207473816325528
+      },
+      {
+        "feature": "wind_ws_lag5",
+        "importance": 0.02025184492789997
+      },
+      {
+        "feature": "temperature_range",
+        "importance": 0.019243113034916312
+      },
+      {
+        "feature": "wind_ws_lag7",
+        "importance": 0.018863634224010255
+      },
+      {
+        "feature": "humidity",
+        "importance": 0.01822144741255736
+      },
+      {
+        "feature": "temp_acceleration_14d",
+        "importance": 0.018032256418649417
+      },
+      {
+        "feature": "humidity_min",
+        "importance": 0.01772346921292123
+      },
+      {
+        "feature": "temperature",
+        "importance": 0.01624335443784593
+      },
+      {
+        "feature": "temperature_max",
+        "importance": 0.015422796121812885
+      },
+      {
+        "feature": "wind_ws_lag2",
+        "importance": 0.015236840229597653
+      },
+      {
+        "feature": "heat_index",
+        "importance": 0.014997858796541893
+      },
+      {
+        "feature": "land_temp_tas_lag21",
+        "importance": 0.01498156968626093
+      },
+      {
+        "feature": "apparent_temp",
+        "importance": 0.014526950623464173
+      },
+      {
+        "feature": "wind_ws_lag1",
+        "importance": 0.014521340974880613
+      },
+      {
+        "feature": "wind_ws_lag0",
+        "importance": 0.014291441339687381
+      },
+      {
+        "feature": "temp_change_14d",
+        "importance": 0.01393402152197804
+      },
+      {
+        "feature": "temp_acceleration_7d",
+        "importance": 0.013350863887616717
+      },
+      {
+        "feature": "humidity_max",
+        "importance": 0.01305014784485437
+      },
+      {
+        "feature": "heat_index_min",
+        "importance": 0.012809316977270753
+      },
+      {
+        "feature": "land_temp_tas_lag10",
+        "importance": 0.012170762352027586
+      },
+      {
+        "feature": "wind_ws_lag3",
+        "importance": 0.011638555326039225
+      },
+      {
+        "feature": "wind_gust",
+        "importance": 0.011582351301430356
+      },
+      {
+        "feature": "heat_index_max",
+        "importance": 0.010944556155433278
+      },
+      {
+        "feature": "temp_change_3d",
+        "importance": 0.01023598385195688
+      },
+      {
+        "feature": "wet_bulb_temp",
+        "importance": 0.01013179525919667
+      },
+      {
+        "feature": "temperature_min",
+        "importance": 0.01006719221444618
+      },
+      {
+        "feature": "wind_ws_lag14",
+        "importance": 0.009451232138062116
+      },
+      {
+        "feature": "wind_ws_lag21",
+        "importance": 0.009367637513246855
+      },
+      {
+        "feature": "temp_acceleration_1d",
+        "importance": 0.008997088803879607
+      },
+      {
+        "feature": "land_temp_tas_lag2",
+        "importance": 0.008642701277369276
+      },
+      {
+        "feature": "apparent_temp_lag7",
+        "importance": 0.008631114532904265
+      },
+      {
+        "feature": "wind_ws_lag10",
+        "importance": 0.007826193776423159
+      },
+      {
+        "feature": "temp_variability_14d",
+        "importance": 0.0076599784483530305
+      },
+      {
+        "feature": "temp_change_1d",
+        "importance": 0.007514637016097027
+      },
+      {
+        "feature": "temp_acceleration_3d",
+        "importance": 0.007372175477458736
+      },
+      {
+        "feature": "land_temp_tas_lag7",
+        "importance": 0.007250279661379157
+      },
+      {
+        "feature": "apparent_temp_lag21",
+        "importance": 0.007210451298924524
+      },
+      {
+        "feature": "temp_variability_7d",
+        "importance": 0.006740578258022714
+      },
+      {
+        "feature": "land_temp_tas_lag1",
+        "importance": 0.005890128356645569
+      },
+      {
+        "feature": "apparent_temp_lag14",
+        "importance": 0.005792139735214367
+      },
+      {
+        "feature": "apparent_temp_lag0",
+        "importance": 0.005697042743300434
+      },
+      {
+        "feature": "temp_range_14d",
+        "importance": 0.005601883811951441
+      },
+      {
+        "feature": "temp_change_7d",
+        "importance": 0.005590630856685771
+      },
+      {
+        "feature": "apparent_temp_lag1",
+        "importance": 0.005573025397924041
+      },
+      {
+        "feature": "land_temp_tas_lag5",
+        "importance": 0.005407683906662406
+      },
+      {
+        "feature": "temp_range_7d",
+        "importance": 0.00535512913879215
+      },
+      {
+        "feature": "heat_index_lag10",
+        "importance": 0.005198270954192124
+      },
+      {
+        "feature": "land_temp_tas_lag0",
+        "importance": 0.005008432101711972
+      },
+      {
+        "feature": "temperature_tas_lag21",
+        "importance": 0.004090957095871675
+      },
+      {
+        "feature": "apparent_temp_lag10",
+        "importance": 0.003933807674701098
+      },
+      {
+        "feature": "apparent_temp_lag2",
+        "importance": 0.003815324106445011
+      },
+      {
+        "feature": "land_temp_tas_lag3",
+        "importance": 0.0036126264504126745
+      },
+      {
+        "feature": "temp_min_3d",
+        "importance": 0.0036114955167152202
+      },
+      {
+        "feature": "temperature_tas_lag1",
+        "importance": 0.0035071494742304563
+      },
+      {
+        "feature": "temperature_tas_lag7",
+        "importance": 0.0033439458130201574
+      },
+      {
+        "feature": "heat_index_lag0",
+        "importance": 0.003338641195174088
+      },
+      {
+        "feature": "temperature_tas_lag10",
+        "importance": 0.0033193896750425738
+      },
+      {
+        "feature": "temp_range_5d",
+        "importance": 0.0030962549774370056
+      },
+      {
+        "feature": "heat_index_lag14",
+        "importance": 0.003074780480470758
+      },
+      {
+        "feature": "apparent_temp_lag5",
+        "importance": 0.003050834468662191
+      },
+      {
+        "feature": "temperature_tas_lag14",
+        "importance": 0.0029306949507793144
+      },
+      {
+        "feature": "temp_variability_3d",
+        "importance": 0.0029197832450390433
+      },
+      {
+        "feature": "temp_range_3d",
+        "importance": 0.002850749703904297
+      },
+      {
+        "feature": "heat_index_lag21",
+        "importance": 0.002614658548871363
+      },
+      {
+        "feature": "heat_index_max_3d",
+        "importance": 0.002342176083929052
+      },
+      {
+        "feature": "apparent_temp_lag3",
+        "importance": 0.0023210571631731352
+      },
+      {
+        "feature": "temp_variability_5d",
+        "importance": 0.0023172749738072846
+      },
+      {
+        "feature": "temp_min_14d",
+        "importance": 0.00228280626076684
+      },
+      {
+        "feature": "temp_min_5d",
+        "importance": 0.0021045312694937157
+      },
+      {
+        "feature": "heat_index_max_7d",
+        "importance": 0.002063235558741835
+      },
+      {
+        "feature": "heat_index_lag7",
+        "importance": 0.0020241146417543368
+      },
+      {
+        "feature": "heat_index_max_5d",
+        "importance": 0.0018793215687224086
+      },
+      {
+        "feature": "temperature_tas_lag0",
+        "importance": 0.0018376406975414408
+      },
+      {
+        "feature": "temp_max_7d",
+        "importance": 0.0017566014764928725
+      },
+      {
+        "feature": "temp_max_5d",
+        "importance": 0.0016902870981084048
+      },
+      {
+        "feature": "heating_degree_days_7d",
+        "importance": 0.0016830370322037202
+      },
+      {
+        "feature": "heat_index_lag1",
+        "importance": 0.0015184329554560486
+      },
+      {
+        "feature": "heat_index_lag5",
+        "importance": 0.001356398901116332
+      },
+      {
+        "feature": "temp_min_7d",
+        "importance": 0.0013403934567340835
+      },
+      {
+        "feature": "heat_index_mean_5d",
+        "importance": 0.0013012535667931183
+      },
+      {
+        "feature": "heat_index_lag2",
+        "importance": 0.0013007979760962303
+      },
+      {
+        "feature": "temperature_tas_lag2",
+        "importance": 0.0012789141268379233
+      },
+      {
+        "feature": "temp_max_14d",
+        "importance": 0.0012717051963399178
+      },
+      {
+        "feature": "heat_index_max_14d",
+        "importance": 0.0011910614683287482
+      },
+      {
+        "feature": "temperature_tas_lag5",
+        "importance": 0.001152000619913258
+      },
+      {
+        "feature": "heating_degree_days_14d",
+        "importance": 0.0010383203422095653
+      },
+      {
+        "feature": "temp_mean_3d",
+        "importance": 0.0009558793687929234
+      },
+      {
+        "feature": "temp_max_3d",
+        "importance": 0.000923277737453674
+      },
+      {
+        "feature": "temperature_tas_lag3",
+        "importance": 0.0008864828667680437
+      },
+      {
+        "feature": "heating_degree_days_3d",
+        "importance": 0.0007569144904151653
+      },
+      {
+        "feature": "heating_degree_days_5d",
+        "importance": 0.0007029200092902088
+      },
+      {
+        "feature": "heat_index_mean_7d",
+        "importance": 0.0006785882204104876
+      },
+      {
+        "feature": "heat_index_lag3",
+        "importance": 0.0006580674181574589
+      },
+      {
+        "feature": "heat_index_mean_14d",
+        "importance": 0.0006168302063866856
+      },
+      {
+        "feature": "temp_mean_14d",
+        "importance": 0.0004199492535843971
+      },
+      {
+        "feature": "heat_index_mean_3d",
+        "importance": 0.0002327886948204403
+      },
+      {
+        "feature": "temp_mean_5d",
+        "importance": 0.0001519072192571974
+      },
+      {
+        "feature": "strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_14d",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag7",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag1",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_vulnerability_index",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag10",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_3d",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag5",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag21",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag2",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_event_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "heat_exposure_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "extreme_heat_days_5d",
+        "importance": 0.0
+      },
+      {
+        "feature": "very_strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "temp_mean_7d",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag14",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag3",
+        "importance": 0.0
+      },
+      {
+        "feature": "strong_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag0",
+        "importance": 0.0
+      },
+      {
+        "feature": "moderate_heat_stress_lag1",
+        "importance": 0.0
+      }
+    ]
+  }
+}
