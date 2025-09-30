@@ -1,0 +1,80 @@
+{
+  "package_info": {
+    "name": "HEAT Research Projects - Climate-Health Analysis Datasets",
+    "version": "v1.0_export_ready",
+    "creation_date": "2025-09-30T15:57:02.186514",
+    "description": "Comprehensive climate-health datasets for Johannesburg, South Africa",
+    "total_files": 0,
+    "total_size_mb": 0,
+    "geographic_scope": "Johannesburg Metropolitan Area, South Africa",
+    "temporal_coverage": "2002-2021"
+  },
+  "datasets": {
+    "clinical_dataset": {
+      "filename": "CLINICAL_DATASET_COMPLETE_CLIMATE.csv",
+      "records": 11398,
+      "columns": 114,
+      "description": "Clinical trial data with climate integration",
+      "climate_coverage": "99.5%",
+      "key_biomarkers": [
+        "fasting_glucose_mmol_L",
+        "CD4 cell count (cells/\u00b5L)",
+        "creatinine_umol_L",
+        "hemoglobin_g_dL",
+        "total_cholesterol_mg_dL"
+      ],
+      "studies_included": 15,
+      "temporal_range": "2002-2021"
+    },
+    "gcro_dataset": {
+      "filename": "GCRO_SOCIOECONOMIC_CLIMATE_ENHANCED_LABELED.csv",
+      "records": 58616,
+      "columns": 90,
+      "description": "Socioeconomic data with heat vulnerability indicators",
+      "survey_waves": 4,
+      "dwelling_type_coverage": "25.6%",
+      "heat_vulnerability_index": "Composite vulnerability score (1-5 scale)",
+      "temporal_range": "2011-2021"
+    }
+  },
+  "documentation": {
+    "package_readme": "EXPORT_PACKAGE_README.md",
+    "clinical_metadata": "CLIMATE_FIX_SUMMARY.md",
+    "gcro_metadata": "GCRO_METADATA_COMPREHENSIVE.json",
+    "data_dictionary": "GCRO_DATA_DICTIONARY.md",
+    "package_summary": "EXPORT_PACKAGE_SUMMARY.json"
+  },
+  "climate_variables": [
+    "climate_daily_mean_temp",
+    "climate_daily_max_temp",
+    "climate_daily_min_temp",
+    "climate_7d_mean_temp",
+    "climate_14d_mean_temp",
+    "climate_30d_mean_temp",
+    "climate_heat_stress_index",
+    "climate_temp_anomaly",
+    "climate_season"
+  ],
+  "research_applications": [
+    "Heat-health impact modeling",
+    "Social vulnerability analysis",
+    "Urban heat island studies",
+    "Machine learning with explainable AI",
+    "Temporal trend analysis",
+    "Geographic heat vulnerability mapping"
+  ],
+  "quality_assurance": {
+    "clinical_data": {
+      "climate_coverage": "99.5%",
+      "biomarker_standards": "South African medical standards",
+      "duplicate_columns": "All resolved",
+      "data_source": "Real ERA5 climate data"
+    },
+    "gcro_data": {
+      "geographic_coverage": "100% geocoded",
+      "categorical_labels": "All variables labeled",
+      "heat_indicators": "Comprehensive vulnerability framework",
+      "temporal_consistency": "Validated across survey waves"
+    }
+  }
+}
