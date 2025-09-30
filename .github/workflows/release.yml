@@ -1,0 +1,285 @@
+name: Release Pipeline
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+        default: 'v1.0.0'
+
+env:
+  PYTHONPATH: ${{ github.workspace }}/src
+
+jobs:
+  validate-release:
+    name: Validate Release
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest-cov
+
+    - name: Run full test suite
+      run: |
+        pytest tests/ -v --cov=src/enbel_pp --cov-report=xml
+
+    - name: Validate configuration
+      run: |
+        python -c "from enbel_pp import get_config; print('Configuration valid')"
+
+    - name: Check version consistency
+      run: |
+        python scripts/validate_version.py
+
+  build-package:
+    name: Build Package
+    runs-on: ubuntu-latest
+    needs: validate-release
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Install build dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build twine wheel setuptools
+
+    - name: Build package
+      run: |
+        python -m build
+
+    - name: Check package
+      run: |
+        twine check dist/*
+
+    - name: Upload package artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: python-package
+        path: dist/
+
+  build-docker:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    needs: validate-release
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Login to DockerHub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Extract metadata
+      id: meta
+      uses: docker/metadata-action@v4
+      with:
+        images: enbel/climate-health-analysis
+        tags: |
+          type=ref,event=branch
+          type=ref,event=pr
+          type=semver,pattern={{version}}
+          type=semver,pattern={{major}}.{{minor}}
+
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        push: true
+        tags: ${{ steps.meta.outputs.tags }}
+        labels: ${{ steps.meta.outputs.labels }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+  generate-documentation:
+    name: Generate and Deploy Documentation
+    runs-on: ubuntu-latest
+    needs: validate-release
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install sphinx sphinx-rtd-theme sphinx-autodoc-typehints
+
+    - name: Build documentation
+      run: |
+        cd docs/
+        make html
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/_build/html
+
+  create-release-notes:
+    name: Create Release Notes
+    runs-on: ubuntu-latest
+    needs: [build-package, build-docker, generate-documentation]
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Generate changelog
+      id: changelog
+      run: |
+        python scripts/generate_changelog.py > CHANGELOG.md
+
+    - name: Create release notes
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          const changelog = fs.readFileSync('CHANGELOG.md', 'utf8');
+          
+          github.rest.repos.updateRelease({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            release_id: context.payload.release.id,
+            body: changelog
+          });
+
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    needs: [build-package, build-docker]
+    environment: staging
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Deploy to staging environment
+      run: |
+        echo "Deploying to staging environment..."
+        # Add staging deployment commands here
+        
+    - name: Run smoke tests
+      run: |
+        echo "Running smoke tests in staging..."
+        # Add smoke test commands here
+
+    - name: Notify deployment
+      uses: 8398a7/action-slack@v3
+      with:
+        status: success
+        text: 'ENBEL v${{ github.event.release.tag_name }} deployed to staging! 🚀'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  deploy-production:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: deploy-staging
+    environment: production
+    if: github.event.release.prerelease == false
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Deploy to production environment
+      run: |
+        echo "Deploying to production environment..."
+        # Add production deployment commands here
+
+    - name: Run health checks
+      run: |
+        echo "Running production health checks..."
+        # Add health check commands here
+
+    - name: Notify deployment
+      uses: 8398a7/action-slack@v3
+      with:
+        status: success
+        text: 'ENBEL v${{ github.event.release.tag_name }} deployed to production! 🎉'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+  publish-package:
+    name: Publish to PyPI
+    runs-on: ubuntu-latest
+    needs: [deploy-staging]
+    environment: pypi
+    if: github.event.release.prerelease == false
+
+    steps:
+    - name: Download package artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: python-package
+        path: dist/
+
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
+
+  post-release:
+    name: Post-Release Tasks
+    runs-on: ubuntu-latest
+    needs: [deploy-production, publish-package]
+    if: always()
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Update version badge
+      run: |
+        python scripts/update_badges.py
+
+    - name: Create GitHub release
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const fs = require('fs');
+          
+          github.rest.repos.createRelease({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            tag_name: '${{ github.event.inputs.version || github.event.release.tag_name }}',
+            name: 'ENBEL Climate-Health Analysis ${{ github.event.inputs.version || github.event.release.tag_name }}',
+            body: 'Release notes for ${{ github.event.inputs.version || github.event.release.tag_name }}',
+            draft: false,
+            prerelease: false
+          });
+
+    - name: Send notification
+      uses: 8398a7/action-slack@v3
+      with:
+        status: success
+        text: 'ENBEL v${{ github.event.release.tag_name }} release completed successfully! 🎊'
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

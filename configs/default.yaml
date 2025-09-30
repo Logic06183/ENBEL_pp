@@ -1,0 +1,290 @@
+# ENBEL Climate-Health Analysis Configuration
+# ==========================================
+# Default configuration for climate-health analysis pipeline
+
+# Random seed for reproducibility
+random_state: 42
+
+# Project paths (relative to project root)
+paths:
+  data_dir: "."
+  results_dir: "results"
+  models_dir: "models"
+  figures_dir: "figures"
+  logs_dir: "logs"
+  cache_dir: "cache"
+
+# Data files configuration
+data_files:
+  # Primary datasets
+  full_dataset: "FULL_DATASET_WITH_REAL_CLIMATE_LAGS.csv"
+  clinical_imputed: "CLINICAL_WITH_FIXED_IMPUTED_SOCIOECONOMIC.csv"
+  clinical_original: "CLINICAL_WITH_IMPUTED_SOCIOECONOMIC.csv"
+  deidentified: "DEIDENTIFIED_CLIMATE_HEALTH_DATASET.csv"
+  
+  # Metadata files
+  clinical_metadata: "CLINICAL_METADATA.md"
+  gcro_metadata: "GCRO_METADATA.json"
+  data_dictionary: "GCRO_DATA_DICTIONARY.md"
+
+# Target biomarkers for analysis
+biomarkers:
+  - "CD4 cell count (cells/µL)"
+  - "FASTING GLUCOSE"
+  - "FASTING LDL"
+  - "FASTING TOTAL CHOLESTEROL"
+  - "FASTING HDL"
+  - "FASTING TRIGLYCERIDES"
+  - "Creatinine (mg/dL)"
+  - "ALT (U/L)"
+  - "AST (U/L)"
+  - "Hemoglobin (g/dL)"
+  - "Hematocrit (%)"
+  - "systolic blood pressure"
+  - "diastolic blood pressure"
+
+# Machine learning settings
+ml_settings:
+  # Cross-validation settings
+  cv_folds: 5
+  cv_repeats: 3
+  test_size: 0.2
+  validation_size: 0.2
+  
+  # Feature selection
+  max_features: 100
+  feature_selection_method: "mutual_info"  # Options: mutual_info, f_regression, recursive
+  feature_importance_threshold: 0.001
+  
+  # Statistical testing
+  alpha_level: 0.05
+  multiple_testing_correction: "bonferroni"  # Options: bonferroni, fdr_bh, none
+  
+  # Model evaluation
+  scoring_metrics: ["r2", "neg_mean_absolute_error", "neg_mean_squared_error"]
+  primary_metric: "r2"
+
+# Random Forest configuration
+random_forest:
+  n_estimators: 250
+  max_depth: 15
+  min_samples_split: 10
+  min_samples_leaf: 5
+  max_features: "sqrt"
+  bootstrap: true
+  n_jobs: -1
+  oob_score: true
+
+# XGBoost configuration
+xgboost:
+  learning_rate: 0.05
+  max_depth: 8
+  n_estimators: 200
+  subsample: 0.8
+  colsample_bytree: 0.8
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+  n_jobs: -1
+  verbosity: 0
+
+# LightGBM configuration
+lightgbm:
+  learning_rate: 0.05
+  max_depth: 8
+  n_estimators: 200
+  subsample: 0.8
+  colsample_bytree: 0.8
+  reg_alpha: 0.1
+  reg_lambda: 1.0
+  n_jobs: -1
+  verbosity: -1
+
+# Hyperparameter optimization
+hyperparameter_optimization:
+  enabled: true
+  method: "optuna"  # Options: optuna, grid_search, random_search
+  n_trials: 100
+  timeout_seconds: 3600  # 1 hour
+  pruning: true
+  
+  # Search spaces for different models
+  random_forest_search_space:
+    n_estimators: [100, 200, 300, 500]
+    max_depth: [10, 15, 20, 25, null]
+    min_samples_split: [5, 10, 20]
+    min_samples_leaf: [2, 5, 10]
+    max_features: ["sqrt", "log2", 0.5, 0.8]
+  
+  xgboost_search_space:
+    learning_rate: [0.01, 0.05, 0.1, 0.2]
+    max_depth: [3, 6, 8, 10]
+    n_estimators: [100, 200, 300, 500]
+    subsample: [0.6, 0.8, 1.0]
+    colsample_bytree: [0.6, 0.8, 1.0]
+    reg_alpha: [0, 0.1, 1.0]
+    reg_lambda: [0, 1.0, 10.0]
+
+# Explainable AI configuration
+explainable_ai:
+  enabled: true
+  methods: ["shap", "permutation_importance", "feature_importance"]
+  
+  # SHAP configuration
+  shap:
+    max_samples: 1000  # Maximum samples for SHAP calculation
+    plot_types: ["waterfall", "beeswarm", "summary", "dependence"]
+    save_plots: true
+    
+  # Permutation importance
+  permutation_importance:
+    n_repeats: 10
+    random_state: 42
+
+# Data preprocessing
+preprocessing:
+  # Missing value handling
+  missing_value_strategy: "iterative"  # Options: iterative, knn, median, drop
+  missing_value_threshold: 0.5  # Drop features with >50% missing values
+  
+  # Outlier detection
+  outlier_detection: true
+  outlier_method: "isolation_forest"  # Options: isolation_forest, local_outlier_factor, z_score
+  outlier_contamination: 0.1
+  
+  # Feature scaling
+  feature_scaling: true
+  scaling_method: "standard"  # Options: standard, minmax, robust
+  
+  # Feature engineering
+  feature_engineering:
+    polynomial_features: false
+    interaction_features: false
+    lag_features: true
+    rolling_features: true
+
+# Imputation settings (for socioeconomic data)
+imputation:
+  method: "multidimensional"
+  k_neighbors: 10
+  max_distance_km: 15
+  demographic_weight: 0.6
+  spatial_weight: 0.4
+  min_matches: 3
+  min_similarity_score: 0.3
+  validation_fraction: 0.2
+
+# Visualization settings
+visualization:
+  # Plot settings
+  figure_size: [12, 8]
+  dpi: 300
+  style: "whitegrid"
+  palette: "Set1"
+  
+  # Output formats
+  save_formats: ["png", "svg", "pdf"]
+  
+  # Plot types to generate
+  plot_types:
+    - "correlation_matrix"
+    - "feature_importance"
+    - "model_comparison"
+    - "prediction_vs_actual"
+    - "residual_plots"
+    - "shap_summary"
+    - "temporal_patterns"
+
+# Logging configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_logging: true
+  console_logging: true
+  log_file: "enbel_analysis.log"
+
+# Performance and resource settings
+performance:
+  # Parallel processing
+  n_jobs: -1  # Use all available cores
+  
+  # Memory management
+  chunk_size: 10000
+  low_memory_mode: false
+  
+  # Caching
+  enable_caching: true
+  cache_directory: "cache"
+  cache_size_limit_gb: 10
+
+# Quality assurance settings
+quality_assurance:
+  # Data validation
+  data_validation_enabled: true
+  schema_validation: true
+  data_quality_checks: true
+  
+  # Model validation
+  cross_validation_required: true
+  min_cv_score: 0.1
+  max_feature_correlation: 0.95
+  
+  # Reproducibility checks
+  reproducibility_testing: true
+  seed_validation: true
+
+# Analysis modes
+analysis_modes:
+  simple:
+    feature_selection: false
+    hyperparameter_tuning: false
+    cross_validation_folds: 3
+    shap_analysis: false
+    max_features: 20
+    
+  improved:
+    feature_selection: true
+    hyperparameter_tuning: true
+    cross_validation_folds: 5
+    shap_analysis: false
+    max_features: 50
+    
+  state_of_the_art:
+    feature_selection: true
+    hyperparameter_tuning: true
+    cross_validation_folds: 10
+    shap_analysis: true
+    max_features: 100
+
+# Climate data specific settings
+climate_data:
+  # Temperature variables
+  temperature_vars:
+    - "climate_daily_mean_temp"
+    - "climate_7d_mean_temp"
+    - "climate_heat_stress_index"
+    - "climate_temp_anomaly"
+  
+  # Lag variables
+  lag_periods: [0, 1, 3, 7, 14, 30]
+  rolling_windows: [3, 7, 14, 30]
+  
+  # Seasonal adjustments
+  seasonal_decomposition: true
+  detrending: true
+
+# Output and reporting
+output:
+  # Result file formats
+  result_formats: ["json", "csv", "xlsx"]
+  
+  # Report generation
+  generate_reports: true
+  report_formats: ["html", "pdf", "markdown"]
+  
+  # Model persistence
+  save_models: true
+  model_format: "joblib"  # Options: joblib, pickle, onnx
+  
+  # Versioning
+  version_results: true
+  timestamp_format: "%Y%m%d_%H%M%S"

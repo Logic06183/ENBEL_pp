@@ -1,4 +1,5 @@
-# ENBEL Climate-Health Analysis - Complete Dependencies
+# State-of-the-Art Climate-Health Analysis Pipeline - Complete Dependencies
+
 # Core Data Science
 pandas>=2.0.0
 numpy>=1.24.0
@@ -14,11 +15,12 @@ joblib>=1.3.0
 # Visualization
 matplotlib>=3.7.0
 seaborn>=0.12.0
+plotly>=5.0.0
 
 # Explainable AI
 shap>=0.42.0
 
-# Geospatial Analysis
+# Geospatial Analysis (optional)
 geopandas>=0.13.0
 
 # Statistical Analysis
@@ -30,6 +32,7 @@ rpy2>=3.5.0
 # Development and Testing
 pytest>=7.0.0
 pytest-cov>=4.0.0
+pytest-mock>=3.10.0
 black>=23.0.0
 flake8>=6.0.0
 
@@ -39,7 +42,6 @@ sphinx-rtd-theme>=1.2.0
 
 # Environment and Path Management
 python-dotenv>=1.0.0
-pathlib2>=2.3.0
 
 # Progress Tracking
 tqdm>=4.65.0
@@ -49,3 +51,15 @@ pyyaml>=6.0
 
 # Quality Assurance
 mypy>=1.0.0
+
+# Additional utilities for climate science
+netcdf4>=1.6.0  # For climate data files
+xarray>=2023.1.0  # For multi-dimensional climate data
+cartopy>=0.21.0  # For geospatial plotting (optional)
+
+# Time series analysis
+prophet>=1.1.0  # Facebook's time series forecasting (optional)
+
+# Additional statistical packages
+pingouin>=0.5.0  # Statistical tests
+arch>=5.3.0  # Time series econometrics

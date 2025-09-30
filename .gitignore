@@ -1,0 +1,407 @@
+# ENBEL Climate-Health Analysis .gitignore
+# ========================================
+# Comprehensive gitignore for scientific Python projects
+
+# =============================================================================
+# Python
+# =============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# =============================================================================
+# Scientific Computing & Data Science
+# =============================================================================
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data files (often large and sensitive)
+*.csv
+*.xlsx
+*.xls
+*.h5
+*.hdf5
+*.nc
+*.netcdf
+*.zarr/
+*.parquet
+
+# Model files (can be large)
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.hdf5
+*.pb
+*.onnx
+*.pt
+*.pth
+
+# R files
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+Rplots.pdf
+
+# MATLAB files
+*.m~
+*.mat
+
+# =============================================================================
+# ENBEL Project Specific
+# =============================================================================
+# Analysis results (auto-generated)
+results/
+!results/.gitkeep
+!results/README.md
+
+# Trained models (auto-generated)
+models/
+!models/.gitkeep
+!models/README.md
+
+# Generated figures
+figures/
+!figures/.gitkeep
+!figures/README.md
+
+# Log files
+logs/
+!logs/.gitkeep
+*.log
+
+# Cache directory
+cache/
+!cache/.gitkeep
+
+# Temporary analysis files
+*_analysis_results_*.json
+*_analysis_*.log
+*_progress_*.log
+temp_*.csv
+temp_*.json
+
+# SHAP plots and analysis
+*_shap_*.png
+*_shap_*.svg
+*_waterfall_*.png
+*_beeswarm_*.png
+
+# Climate data downloads (can be large)
+climate_data/
+era5_data/
+cmip6_data/
+
+# Interim data processing
+interim/
+processed/
+external/
+
+# =============================================================================
+# Development Tools
+# =============================================================================
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Pre-commit
+.pre-commit-config.yaml.bak
+
+# Security scanning reports
+bandit-report.json
+safety-report.json
+.secrets.baseline
+
+# Profiling data
+*.prof
+profile_output*
+
+# Benchmarking results
+benchmark_results/
+.benchmarks/
+
+# =============================================================================
+# Operating System Files
+# =============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.tmp
+*.temp
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# Docker
+# =============================================================================
+# Docker build context exclusions are typically handled in .dockerignore
+
+# =============================================================================
+# Git
+# =============================================================================
+*.orig
+*.rej
+
+# =============================================================================
+# Documentation
+# =============================================================================
+# Sphinx
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# =============================================================================
+# Configuration and Secrets
+# =============================================================================
+# Local configuration overrides
+configs/local.yaml
+configs/personal.yaml
+configs/secret.yaml
+
+# API keys and credentials
+.env.local
+.env.*.local
+credentials.json
+service-account.json
+*.pem
+*.key
+
+# Database URLs and connection strings
+database.url
+connection_string.txt
+
+# =============================================================================
+# Specific File Patterns
+# =============================================================================
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Archive extracts
+*.tar
+*.tar.gz
+*.rar
+*.zip
+
+# Large data files that shouldn't be in git
+*.gz
+*.bz2
+*.7z
+
+# =============================================================================
+# CI/CD
+# =============================================================================
+# GitHub Actions artifacts
+.github/artifacts/
+
+# =============================================================================
+# Package Management
+# =============================================================================
+# npm (if using any JavaScript tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =============================================================================
+# Custom Exceptions
+# =============================================================================
+# Keep certain files that would normally be ignored
+!configs/default.yaml
+!configs/development.yaml
+!configs/production.yaml
+!scripts/*.py
+!tests/data/sample_*.csv
+
+# Keep documentation assets
+!docs/images/*.png
+!docs/images/*.svg
+!docs/figures/*.png
+!docs/figures/*.svg
+
+# Keep example notebooks
+!notebooks/examples/*.ipynb
+
+# =============================================================================
+# Archive (legacy code kept for reference)
+# =============================================================================
+# Include all archive content in git but mark as archive
+# archive/ folder is intentionally tracked for historical reference

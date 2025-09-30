@@ -1,0 +1,72 @@
+# ENBEL Production Configuration
+# ===============================
+# Configuration for production analysis runs
+
+# Inherit from default configuration
+extends: "default.yaml"
+
+# Production logging
+logging:
+  level: "INFO"
+  console_logging: false
+  file_logging: true
+
+# Enhanced ML settings for production
+ml_settings:
+  cv_folds: 10
+  cv_repeats: 5
+  max_features: 150
+
+# Production model configurations
+random_forest:
+  n_estimators: 500
+  max_depth: 20
+  min_samples_split: 5
+  min_samples_leaf: 2
+
+xgboost:
+  n_estimators: 500
+  max_depth: 10
+  learning_rate: 0.01
+
+# Full hyperparameter optimization
+hyperparameter_optimization:
+  enabled: true
+  n_trials: 500
+  timeout_seconds: 7200  # 2 hours
+
+# Full SHAP analysis
+explainable_ai:
+  enabled: true
+  shap:
+    max_samples: 5000
+
+# Production paths
+paths:
+  results_dir: "results/production"
+  models_dir: "models/production"
+  figures_dir: "figures/production"
+  logs_dir: "logs/production"
+
+# Enhanced quality assurance
+quality_assurance:
+  data_validation_enabled: true
+  schema_validation: true
+  data_quality_checks: true
+  cross_validation_required: true
+  min_cv_score: 0.05
+  reproducibility_testing: true
+
+# Production performance settings
+performance:
+  n_jobs: -1
+  low_memory_mode: false
+  enable_caching: true
+  cache_size_limit_gb: 50
+
+# Comprehensive output
+output:
+  generate_reports: true
+  report_formats: ["html", "pdf", "markdown"]
+  save_models: true
+  version_results: true

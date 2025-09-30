@@ -1,0 +1,163 @@
+# ENBEL Climate-Health Analysis Docker Compose
+# =============================================
+# Multi-service setup for development and production
+
+version: '3.8'
+
+services:
+  # Main analysis service
+  enbel-analysis:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      target: production
+    image: enbel/climate-health-analysis:latest
+    container_name: enbel-analysis
+    environment:
+      - CONFIG_FILE=configs/default.yaml
+      - ANALYSIS_MODE=improved
+      - LOG_LEVEL=INFO
+    volumes:
+      - ../data:/app/data:ro
+      - ../results:/app/results
+      - ../models:/app/models
+      - ../figures:/app/figures
+      - ../logs:/app/logs
+      - ../cache:/app/cache
+    networks:
+      - enbel-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import enbel_pp; print('healthy')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Jupyter notebook service for interactive analysis
+  enbel-jupyter:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      target: production
+    image: enbel/climate-health-analysis:latest
+    container_name: enbel-jupyter
+    command: ["jupyter"]
+    ports:
+      - "8888:8888"
+    environment:
+      - CONFIG_FILE=configs/development.yaml
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - ../data:/app/data:ro
+      - ../notebooks:/app/notebooks
+      - ../results:/app/results
+      - ../models:/app/models
+      - ../figures:/app/figures
+      - ../configs:/app/configs
+    networks:
+      - enbel-network
+    restart: unless-stopped
+    profiles:
+      - jupyter
+
+  # Development service with hot reload
+  enbel-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.dev
+    image: enbel/climate-health-analysis:dev
+    container_name: enbel-dev
+    command: ["shell"]
+    ports:
+      - "8888:8888"
+    environment:
+      - CONFIG_FILE=configs/development.yaml
+      - LOG_LEVEL=DEBUG
+      - PYTHONDONTWRITEBYTECODE=1
+    volumes:
+      - ../src:/app/src
+      - ../tests:/app/tests
+      - ../configs:/app/configs
+      - ../scripts:/app/scripts
+      - ../data:/app/data:ro
+      - ../results:/app/results
+      - ../models:/app/models
+      - ../figures:/app/figures
+      - ../logs:/app/logs
+    networks:
+      - enbel-network
+    tty: true
+    stdin_open: true
+    profiles:
+      - development
+
+  # Testing service
+  enbel-test:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+      target: production
+    image: enbel/climate-health-analysis:latest
+    container_name: enbel-test
+    command: ["test"]
+    environment:
+      - CONFIG_FILE=configs/development.yaml
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - ../src:/app/src:ro
+      - ../tests:/app/tests:ro
+      - ../configs:/app/configs:ro
+      - test-results:/app/test-results
+    networks:
+      - enbel-network
+    profiles:
+      - testing
+
+  # Documentation service
+  enbel-docs:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.docs
+    image: enbel/climate-health-docs:latest
+    container_name: enbel-docs
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../docs:/app/docs
+      - ../src:/app/src:ro
+    networks:
+      - enbel-network
+    profiles:
+      - docs
+
+  # Monitoring service (optional)
+  enbel-monitor:
+    image: prom/prometheus:latest
+    container_name: enbel-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--web.enable-lifecycle'
+    networks:
+      - enbel-network
+    profiles:
+      - monitoring
+
+networks:
+  enbel-network:
+    driver: bridge
+    name: enbel-network
+
+volumes:
+  prometheus-data:
+    driver: local
+  test-results:
+    driver: local

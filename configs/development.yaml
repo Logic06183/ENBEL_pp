@@ -1,0 +1,66 @@
+# ENBEL Development Configuration
+# ===============================
+# Configuration for development and testing environments
+
+# Inherit from default configuration
+extends: "default.yaml"
+
+# Override settings for development
+logging:
+  level: "DEBUG"
+  console_logging: true
+  file_logging: true
+
+# Reduced settings for faster development cycles
+ml_settings:
+  cv_folds: 3
+  cv_repeats: 1
+  max_features: 20
+
+# Faster model configurations
+random_forest:
+  n_estimators: 50
+  max_depth: 10
+
+xgboost:
+  n_estimators: 50
+  max_depth: 6
+
+# Minimal hyperparameter optimization
+hyperparameter_optimization:
+  enabled: false
+  n_trials: 10
+  timeout_seconds: 300
+
+# Reduced SHAP computation
+explainable_ai:
+  shap:
+    max_samples: 100
+
+# Development-specific paths
+paths:
+  results_dir: "results/dev"
+  models_dir: "models/dev"
+  figures_dir: "figures/dev"
+  logs_dir: "logs/dev"
+
+# Fast analysis mode defaults
+analysis_modes:
+  simple:
+    cross_validation_folds: 2
+    max_features: 10
+    
+  improved:
+    cross_validation_folds: 3
+    max_features: 20
+    
+  state_of_the_art:
+    cross_validation_folds: 3
+    max_features: 30
+    shap_analysis: false  # Disable for speed
+
+# Smaller biomarker subset for testing
+biomarkers:
+  - "systolic blood pressure"
+  - "FASTING GLUCOSE"
+  - "CD4 cell count (cells/µL)"

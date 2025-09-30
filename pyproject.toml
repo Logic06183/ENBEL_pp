@@ -1,0 +1,234 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "enbel-pp"
+version = "1.0.0"
+description = "ENBEL Climate-Health Analysis Pipeline for scientific reproducible research"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [
+    {name = "ENBEL Project Team", email = "enbel@example.com"}
+]
+maintainers = [
+    {name = "ENBEL Project Team", email = "enbel@example.com"}
+]
+keywords = [
+    "climate",
+    "health",
+    "machine-learning",
+    "explainable-ai",
+    "biomarkers",
+    "epidemiology",
+    "reproducible-research"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.11.0",
+    "scikit-learn>=1.3.0",
+    "xgboost>=2.0.0",
+    "lightgbm>=4.0.0",
+    "optuna>=3.4.0",
+    "shap>=0.42.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.0.0",
+    "PyYAML>=6.0",
+    "joblib>=1.3.0",
+    "tqdm>=4.65.0",
+    "statsmodels>=0.14.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pytest-mock>=3.10.0",
+    "pytest-xdist>=3.0.0",
+    "pytest-benchmark>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.0.0",
+    "bandit>=1.7.0",
+    "safety>=2.0.0",
+    "pre-commit>=3.0.0",
+]
+docs = [
+    "sphinx>=6.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+    "sphinx-autodoc-typehints>=1.19.0",
+    "myst-parser>=1.0.0",
+    "sphinxcontrib-mermaid>=0.8.0",
+]
+geospatial = [
+    "geopandas>=0.13.0",
+    "cartopy>=0.21.0",
+    "netcdf4>=1.6.0",
+    "xarray>=2023.1.0",
+]
+r-integration = [
+    "rpy2>=3.5.0",
+]
+timeseries = [
+    "prophet>=1.1.0",
+    "arch>=5.3.0",
+    "pingouin>=0.5.0",
+]
+all = [
+    "enbel-pp[dev,docs,geospatial,r-integration,timeseries]"
+]
+
+[project.urls]
+Homepage = "https://github.com/enbel/climate-health-analysis"
+Documentation = "https://enbel.github.io/climate-health-analysis"
+Repository = "https://github.com/enbel/climate-health-analysis"
+"Bug Tracker" = "https://github.com/enbel/climate-health-analysis/issues"
+Changelog = "https://github.com/enbel/climate-health-analysis/blob/main/CHANGELOG.md"
+
+[project.scripts]
+enbel-pipeline = "enbel_pp.cli:main"
+enbel-config = "enbel_pp.config:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["enbel_pp*"]
+
+[tool.setuptools.package-data]
+enbel_pp = ["configs/*.yaml", "data/schemas/*.json"]
+
+# Black configuration
+[tool.black]
+line-length = 88
+target-version = ['py39', 'py310', 'py311']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | archive
+)/
+'''
+
+# isort configuration
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+extend_skip_glob = ["archive/*", "docs/_build/*"]
+
+# mypy configuration
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+disallow_untyped_decorators = false
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_errors = true
+
+# pytest configuration
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--cov=src/enbel_pp",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+    "--cov-fail-under=80",
+]
+testpaths = ["tests"]
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "slow: Slow running tests",
+    "gpu: Tests requiring GPU",
+    "network: Tests requiring network access",
+]
+filterwarnings = [
+    "ignore::UserWarning",
+    "ignore::FutureWarning",
+    "ignore::DeprecationWarning",
+]
+
+# Coverage configuration
+[tool.coverage.run]
+source = ["src/enbel_pp"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/conftest.py",
+    "*/__init__.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+
+# Bandit configuration
+[tool.bandit]
+exclude_dirs = ["tests", "archive", "docs/_build"]
+skips = ["B101", "B601"]
+
+# Flake8 configuration (in setup.cfg as flake8 doesn't support pyproject.toml yet)
+# This is documented here for reference
+# [flake8]
+# max-line-length = 88
+# extend-ignore = E203, W503, E501
+# exclude = archive/, docs/_build/, .git, __pycache__, .tox, .eggs, *.egg
+
+# Additional tool configurations can be added here
