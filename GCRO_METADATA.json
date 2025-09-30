@@ -1,0 +1,212 @@
+{
+  "dataset_info": {
+    "name": "GCRO Socioeconomic Data - Climate Enhanced",
+    "description": "Johannesburg socioeconomic data from GCRO Quality of Life Surveys, enhanced for climate/heat vulnerability analysis",
+    "version": "v2.0_climate_enhanced_with_labels",
+    "total_records": 58616,
+    "total_columns": 89,
+    "geographic_coverage": "Johannesburg Metropolitan Area, South Africa",
+    "temporal_coverage": "2011-2021 (GCRO QoL Survey waves)",
+    "data_source": "Gauteng City-Region Observatory (GCRO) Quality of Life Surveys",
+    "enhancement_date": "2025-09-30T15:53:14.868472",
+    "climate_analysis_ready": true
+  },
+  "key_climate_variables": {
+    "dwelling_type_enhanced": {
+      "description": "Primary heat vulnerability indicator based on housing type",
+      "heat_relevance": "Formal dwellings provide better insulation and cooling options; informal settlements have highest heat exposure",
+      "categories": {
+        "1.0": "Formal dwelling (house/flat)",
+        "2.0": "Semi-formal dwelling (backyard room)",
+        "3.0": "Informal dwelling (shack/squatter)"
+      },
+      "coverage": "15,000 records"
+    },
+    "heat_vulnerability_index": {
+      "description": "Composite index (1-5) combining dwelling type, age, income, and education",
+      "calculation": "40% dwelling + 20% age + 25% income + 15% education vulnerability",
+      "interpretation": "Higher scores indicate greater vulnerability to heat exposure",
+      "categories": {
+        "1-2": "Low vulnerability",
+        "2-3": "Moderate vulnerability",
+        "3-4": "High vulnerability",
+        "4-5": "Very high vulnerability"
+      }
+    },
+    "economic_vulnerability_indicator": {
+      "description": "Income-based indicator of economic capacity to adapt to heat",
+      "heat_relevance": "Lower income households have less access to cooling, quality housing, and healthcare"
+    },
+    "age_vulnerability_indicator": {
+      "description": "Age-based indicator of physiological heat vulnerability",
+      "heat_relevance": "Elderly (65+) and young adults in poor conditions most vulnerable to heat stress"
+    }
+  },
+  "categorical_mappings": {
+    "Sex": {
+      "1.0": "Male",
+      "2.0": "Female"
+    },
+    "Race": {
+      "1.0": "African/Black",
+      "2.0": "Coloured",
+      "3.0": "Indian/Asian",
+      "4.0": "White",
+      "5.0": "Other"
+    },
+    "DwellingType": {
+      "1.0": "Formal dwelling (house/flat)",
+      "2.0": "Semi-formal dwelling (backyard room)",
+      "3.0": "Informal dwelling (shack/squatter)"
+    },
+    "dwelling_type_enhanced": {
+      "1.0": "Formal dwelling (house/flat)",
+      "2.0": "Semi-formal dwelling (backyard room)",
+      "3.0": "Informal dwelling (shack/squatter)"
+    },
+    "A3_dwelling_recode": {
+      "Formal": "Formal dwelling (brick/concrete house or flat)",
+      "Informal": "Informal dwelling (shack in backyard or settlement)",
+      "Other": "Other dwelling type (hostel, traditional, etc.)"
+    },
+    "a3_dwelling_type_recode": {
+      "Formal": "Formal dwelling (brick/concrete house or flat)",
+      "Informal": "Informal dwelling (shack in backyard or settlement)",
+      "Other": "Other dwelling type (hostel, traditional, etc.)"
+    },
+    "Education": {
+      "0.0": "No formal education",
+      "1.0": "Primary education (Grades 1-7)",
+      "2.0": "Secondary education (Grades 8-12)",
+      "3.0": "Matric/Grade 12 completed",
+      "4.0": "Post-secondary education (tertiary)",
+      "5.0": "University degree or higher"
+    },
+    "std_education": {
+      "0.0": "No formal education",
+      "1.0": "Primary education (Grades 1-7)",
+      "2.0": "Secondary education (Grades 8-12)",
+      "3.0": "Matric/Grade 12 completed",
+      "4.0": "Post-secondary education (tertiary)",
+      "5.0": "University degree or higher"
+    },
+    "EmploymentStatus": {
+      "1.0": "Employed full-time",
+      "2.0": "Employed part-time",
+      "3.0": "Unemployed seeking work",
+      "4.0": "Unemployed not seeking work",
+      "5.0": "Student",
+      "6.0": "Retired",
+      "7.0": "Unable to work (disabled/ill)"
+    },
+    "employment_status": {
+      "1.0": "Employed full-time",
+      "2.0": "Employed part-time",
+      "3.0": "Unemployed seeking work",
+      "4.0": "Unemployed not seeking work",
+      "5.0": "Student",
+      "6.0": "Retired",
+      "7.0": "Unable to work (disabled/ill)"
+    },
+    "Q2_01_dwelling": {
+      "Very satisfied": "Very satisfied with dwelling",
+      "Satisfied": "Satisfied with dwelling",
+      "Neither satisfied nor dissatisfied": "Neutral about dwelling",
+      "Dissatisfied": "Dissatisfied with dwelling",
+      "Very dissatisfied": "Very dissatisfied with dwelling"
+    },
+    "q2_1_dwelling": {
+      "Very satisfied": "Very satisfied with dwelling",
+      "Satisfied": "Satisfied with dwelling",
+      "Neither satisfied nor dissatisfied": "Neutral about dwelling",
+      "Dissatisfied": "Dissatisfied with dwelling",
+      "Very dissatisfied": "Very dissatisfied with dwelling"
+    },
+    "Q2_14_Drainage": {
+      "1.0": "Excellent drainage",
+      "2.0": "Good drainage",
+      "3.0": "Fair drainage",
+      "4.0": "Poor drainage",
+      "5.0": "No drainage system"
+    },
+    "Q15_02_age_recode": {
+      "1.0": "18-24 years (young adult)",
+      "2.0": "25-34 years (young adult)",
+      "3.0": "35-44 years (middle-aged)",
+      "4.0": "45-54 years (middle-aged)",
+      "5.0": "55-64 years (older adult)",
+      "6.0": "65+ years (elderly - high heat vulnerability)"
+    },
+    "Q15_20_income": {
+      "1.0": "No income",
+      "2.0": "R1-R800 per month (very low income)",
+      "3.0": "R801-R1600 per month (low income)",
+      "4.0": "R1601-R3200 per month (lower-middle income)",
+      "5.0": "R3201-R6400 per month (middle income)",
+      "6.0": "R6401-R12800 per month (upper-middle income)",
+      "7.0": "R12801-R25600 per month (high income)",
+      "8.0": "R25601+ per month (very high income)"
+    },
+    "survey_wave": {
+      "Wave_2011": "2011 Quality of Life Survey",
+      "Wave_2013": "2013 Quality of Life Survey",
+      "Wave_2015": "2015 Quality of Life Survey",
+      "Wave_2017": "2017 Quality of Life Survey",
+      "Wave_2019": "2019 Quality of Life Survey",
+      "Wave_2021": "2021 Quality of Life Survey"
+    }
+  },
+  "survey_methodology": {
+    "survey_design": "Stratified random sampling of Johannesburg metropolitan area",
+    "waves": {
+      "2011": "Post-apartheid urban development assessment",
+      "2013": "Economic resilience and inequality focus",
+      "2015": "Service delivery and governance focus",
+      "2017": "Migration and urbanization focus",
+      "2019": "Economic opportunity and spatial equity",
+      "2021": "COVID-19 impacts and urban resilience"
+    },
+    "sample_size_per_wave": "~15,000 households per wave",
+    "geographic_units": "Ward-level (sub-municipal) representation"
+  },
+  "heat_vulnerability_framework": {
+    "conceptual_model": "Vulnerability = Exposure \u00d7 Sensitivity \u00d7 Adaptive Capacity",
+    "exposure_proxies": [
+      "dwelling_type",
+      "drainage_quality",
+      "informal_settlement_location"
+    ],
+    "sensitivity_proxies": [
+      "age_groups",
+      "health_status",
+      "household_composition"
+    ],
+    "adaptive_capacity_proxies": [
+      "income_level",
+      "education_level",
+      "employment_status",
+      "access_to_services"
+    ],
+    "composite_indicators": [
+      "heat_vulnerability_index",
+      "economic_vulnerability",
+      "housing_quality"
+    ]
+  },
+  "data_quality": {
+    "completeness": {
+      "dwelling_type": "25.6%",
+      "demographics": "25.6%",
+      "economic_indicators": "25.6%",
+      "education": "24.7%"
+    },
+    "geographic_coverage": "100% geocoded to Johannesburg wards",
+    "temporal_consistency": "Consistent survey methodology across waves"
+  },
+  "usage_recommendations": {
+    "climate_analysis": "Use heat_vulnerability_index as primary outcome for climate impact modeling",
+    "dwelling_analysis": "dwelling_type_enhanced provides direct housing quality assessment for heat exposure",
+    "socioeconomic_stratification": "Combine income, education, and employment for vulnerability subgroup analysis",
+    "temporal_analysis": "Survey waves enable longitudinal analysis of urban heat vulnerability trends"
+  }
+}

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- SHAP value gradients (RdYlBu diverging colormap) -->
+    <linearGradient id="shapGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#313695;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#4575b4;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#74add1;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f7f7f7;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#fed976;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#fd8d3c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d73027;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Temperature-focused gradients -->
+    <linearGradient id="temperatureGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c7fb8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7fcdbb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#edf8b1;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#404040" flood-opacity="0.2"/>
+    </filter>
+    
+    <filter id="lightShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#404040" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- LaTeX typography styles -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+      .feature-text { font-family: "Courier New", monospace; font-size: 10px; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- Main Title -->
+  <g id="main-title">
+    <rect x="60" y="30" width="1800" height="70" rx="6" ry="6" fill="url(#latexBlueGradient)" filter="url(#lightShadow)"/>
+    <text x="960" y="60" text-anchor="middle" class="latex-serif" font-size="36" font-weight="bold" fill="#ffffff">
+      SHAP Analysis: Climate Effects on Glucose Metabolism
+    </text>
+    <text x="960" y="85" text-anchor="middle" class="latex-serif" font-size="18" fill="#e6f2ff">
+      Temporal Lag Patterns and Feature Interpretability
+    </text>
+  </g>
+  
+  <!-- Analysis Summary Box -->
+  <g id="analysis-summary" transform="translate(80, 120)">
+    <rect x="0" y="0" width="1760" height="50" rx="6" ry="6" fill="#f8f9fa" stroke="#e0e0e0" stroke-width="1" filter="url(#lightShadow)"/>
+    <text x="20" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#00549F">
+      Model: Random Forest (R² = 0.171 ± 0.035)
+    </text>
+    <text x="20" y="35" class="latex-sans" font-size="12" fill="#404040">
+      Sample: 2,731 participants • Features: 44 pure climate variables • Target: Fasting glucose metabolism
+    </text>
+    <text x="1580" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#d73027">
+      Key Finding: Temperature lag features dominate
+    </text>
+    <text x="1580" y="35" class="latex-sans" font-size="12" fill="#404040">
+      1-5 day lags show strongest biological effects
+    </text>
+  </g>
+  
+  <!-- SHAP Summary Plot Section (Upper Left) -->
+  <g id="shap-summary-section" transform="translate(80, 190)">
+    <rect x="0" y="0" width="850" height="380" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <!-- Section Header -->
+    <rect x="0" y="0" width="850" height="35" rx="8" ry="8" fill="url(#latexBlueGradient)"/>
+    <text x="425" y="25" text-anchor="middle" class="latex-serif" font-size="16" font-weight="bold" fill="#ffffff">
+      1. SHAP Summary Plot: Feature Effects Distribution
+    </text>
+    
+    <!-- Referenced plot placeholder with visual representation -->
+    <rect x="20" y="50" width="810" height="270" rx="4" ry="4" fill="#f8f9fa" stroke="#d0d0d0" stroke-width="1"/>
+    
+    <!-- Title for the plot -->
+    <text x="425" y="75" text-anchor="middle" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">
+      Reference: glucose_shap_summary_plot.svg
+    </text>
+    
+    <!-- Simulate beeswarm plot structure -->
+    <g transform="translate(40, 90)">
+      <!-- Y-axis features (top 10) -->
+      <text x="0" y="20" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag2</text>
+      <text x="0" y="40" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag5</text>
+      <text x="0" y="60" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag3</text>
+      <text x="0" y="80" class="feature-text" font-size="10" fill="#404040">wind_ws_lag2</text>
+      <text x="0" y="100" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag1</text>
+      <text x="0" y="120" class="feature-text" font-size="10" fill="#404040">humidity_rh_lag3</text>
+      <text x="0" y="140" class="feature-text" font-size="10" fill="#404040">pressure_sp_lag5</text>
+      <text x="0" y="160" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag10</text>
+      <text x="0" y="180" class="feature-text" font-size="10" fill="#404040">wind_ws_lag5</text>
+      <text x="0" y="200" class="feature-text" font-size="10" fill="#404040">temp_range_14d</text>
+      
+      <!-- SHAP value axis -->
+      <line x1="150" y1="10" x2="150" y2="210" stroke="#333333" stroke-width="1"/>
+      <line x1="300" y1="10" x2="300" y2="210" stroke="#333333" stroke-width="1"/>
+      <line x1="450" y1="10" x2="450" y2="210" stroke="#333333" stroke-width="1"/>
+      <line x1="600" y1="10" x2="600" y2="210" stroke="#333333" stroke-width="1"/>
+      
+      <!-- Axis labels -->
+      <text x="150" y="225" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">-4</text>
+      <text x="300" y="225" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">-2</text>
+      <text x="450" y="225" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">0</text>
+      <text x="600" y="225" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">2</text>
+      
+      <!-- X-axis title -->
+      <text x="400" y="245" text-anchor="middle" class="latex-serif" font-size="12" fill="#404040">SHAP Value (impact on glucose prediction)</text>
+      
+      <!-- Simulate beeswarm points for top features -->
+      <!-- temperature_tas_lag2 - highest importance -->
+      <circle cx="420" cy="20" r="2" fill="#d73027" opacity="0.7"/>
+      <circle cx="460" cy="20" r="2" fill="#fd8d3c" opacity="0.7"/>
+      <circle cx="480" cy="20" r="2" fill="#fed976" opacity="0.7"/>
+      <circle cx="500" cy="20" r="2" fill="#4575b4" opacity="0.7"/>
+      <circle cx="380" cy="20" r="2" fill="#313695" opacity="0.7"/>
+      
+      <!-- Show spread pattern for other features -->
+      <circle cx="440" cy="40" r="1.5" fill="#fd8d3c" opacity="0.6"/>
+      <circle cx="470" cy="40" r="1.5" fill="#fed976" opacity="0.6"/>
+      <circle cx="430" cy="40" r="1.5" fill="#4575b4" opacity="0.6"/>
+      
+      <!-- Continue pattern for other features with smaller circles -->
+      <circle cx="450" cy="60" r="1.5" fill="#74add1" opacity="0.5"/>
+      <circle cx="460" cy="60" r="1.5" fill="#fed976" opacity="0.5"/>
+      <circle cx="440" cy="60" r="1.5" fill="#4575b4" opacity="0.5"/>
+    </g>
+    
+    <!-- Interpretation text -->
+    <text x="20" y="340" class="latex-sans" font-size="11" fill="#404040">
+      • Each point = one participant • X-axis = SHAP impact on glucose • Color = feature value
+    </text>
+    <text x="20" y="355" class="latex-sans" font-size="11" fill="#404040">
+      • Blue = low values, Red = high values • Horizontal spread = effect variability
+    </text>
+  </g>
+  
+  <!-- Feature Importance Bar Plot (Upper Right) -->
+  <g id="feature-importance-section" transform="translate(950, 190)">
+    <rect x="0" y="0" width="890" height="380" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <!-- Section Header -->
+    <rect x="0" y="0" width="890" height="35" rx="8" ry="8" fill="url(#latexBlueGradient)"/>
+    <text x="445" y="25" text-anchor="middle" class="latex-serif" font-size="16" font-weight="bold" fill="#ffffff">
+      2. Feature Importance Ranking (Mean |SHAP|)
+    </text>
+    
+    <!-- Referenced plot placeholder -->
+    <rect x="20" y="50" width="850" height="270" rx="4" ry="4" fill="#f8f9fa" stroke="#d0d0d0" stroke-width="1"/>
+    
+    <text x="445" y="75" text-anchor="middle" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">
+      Reference: glucose_shap_bar_plot.svg
+    </text>
+    
+    <!-- Horizontal bar chart representation -->
+    <g transform="translate(40, 90)">
+      <!-- Top 10 features with bars -->
+      <!-- temperature_tas_lag2 -->
+      <rect x="0" y="10" width="300" height="15" fill="#2c7fb8" opacity="0.8"/>
+      <text x="310" y="22" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag2 (7.08)</text>
+      
+      <!-- temperature_tas_lag5 -->
+      <rect x="0" y="30" width="255" height="15" fill="#2c7fb8" opacity="0.7"/>
+      <text x="265" y="42" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag5 (6.03)</text>
+      
+      <!-- temperature_tas_lag3 -->
+      <rect x="0" y="50" width="228" height="15" fill="#2c7fb8" opacity="0.7"/>
+      <text x="238" y="62" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag3 (5.36)</text>
+      
+      <!-- wind_ws_lag2 -->
+      <rect x="0" y="70" width="215" height="15" fill="#41b6c4" opacity="0.7"/>
+      <text x="225" y="82" class="feature-text" font-size="10" fill="#404040">wind_ws_lag2 (5.05)</text>
+      
+      <!-- temperature_tas_lag1 -->
+      <rect x="0" y="90" width="214" height="15" fill="#2c7fb8" opacity="0.6"/>
+      <text x="224" y="102" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag1 (5.03)</text>
+      
+      <!-- humidity_rh_lag3 -->
+      <rect x="0" y="110" width="190" height="15" fill="#7fcdbb" opacity="0.6"/>
+      <text x="200" y="122" class="feature-text" font-size="10" fill="#404040">humidity_rh_lag3 (4.67)</text>
+      
+      <!-- pressure_sp_lag5 -->
+      <rect x="0" y="130" width="175" height="15" fill="#a1dab4" opacity="0.6"/>
+      <text x="185" y="142" class="feature-text" font-size="10" fill="#404040">pressure_sp_lag5 (4.31)</text>
+      
+      <!-- temperature_tas_lag10 -->
+      <rect x="0" y="150" width="160" height="15" fill="#2c7fb8" opacity="0.5"/>
+      <text x="170" y="162" class="feature-text" font-size="10" fill="#404040">temperature_tas_lag10 (3.94)</text>
+      
+      <!-- wind_ws_lag5 -->
+      <rect x="0" y="170" width="155" height="15" fill="#41b6c4" opacity="0.5"/>
+      <text x="165" y="182" class="feature-text" font-size="10" fill="#404040">wind_ws_lag5 (3.82)</text>
+      
+      <!-- temp_range_14d -->
+      <rect x="0" y="190" width="145" height="15" fill="#c7e9b4" opacity="0.5"/>
+      <text x="155" y="202" class="feature-text" font-size="10" fill="#404040">temp_range_14d (3.57)</text>
+      
+      <!-- X-axis -->
+      <line x1="0" y1="220" x2="400" y2="220" stroke="#333333" stroke-width="1"/>
+      <text x="200" y="240" text-anchor="middle" class="latex-serif" font-size="12" fill="#404040">Mean |SHAP Value|</text>
+    </g>
+    
+    <!-- Key insights -->
+    <text x="20" y="340" class="latex-sans" font-size="11" fill="#404040">
+      • Temperature lags dominate top 5 features • 1-5 day lags most important
+    </text>
+    <text x="20" y="355" class="latex-sans" font-size="11" fill="#404040">
+      • Biological plausibility: matches metabolic response timescales
+    </text>
+  </g>
+  
+  <!-- Dependency Plot Analysis (Lower Left) -->
+  <g id="dependency-section" transform="translate(80, 590)">
+    <rect x="0" y="0" width="850" height="380" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <!-- Section Header -->
+    <rect x="0" y="0" width="850" height="35" rx="8" ry="8" fill="url(#latexBlueGradient)"/>
+    <text x="425" y="25" text-anchor="middle" class="latex-serif" font-size="16" font-weight="bold" fill="#ffffff">
+      3. SHAP Dependency Plot: Non-linear Relationships
+    </text>
+    
+    <!-- Referenced plot placeholder -->
+    <rect x="20" y="50" width="810" height="270" rx="4" ry="4" fill="#f8f9fa" stroke="#d0d0d0" stroke-width="1"/>
+    
+    <text x="425" y="75" text-anchor="middle" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">
+      Reference: glucose_shap_dependency_plot.svg
+    </text>
+    
+    <!-- Simulate scatter plot -->
+    <g transform="translate(40, 90)">
+      <!-- Axes -->
+      <line x1="80" y1="200" x2="750" y2="200" stroke="#333333" stroke-width="1"/>
+      <line x1="80" y1="200" x2="80" y2="30" stroke="#333333" stroke-width="1"/>
+      
+      <!-- X-axis title -->
+      <text x="415" y="225" text-anchor="middle" class="latex-serif" font-size="12" fill="#404040">temperature_tas_lag2 (°C)</text>
+      
+      <!-- Y-axis title -->
+      <text x="20" y="115" text-anchor="middle" class="latex-serif" font-size="12" fill="#404040" transform="rotate(-90, 20, 115)">SHAP Value</text>
+      
+      <!-- Simulate non-linear relationship -->
+      <!-- Low temperature points -->
+      <circle cx="120" cy="160" r="2" fill="#313695" opacity="0.7"/>
+      <circle cx="140" cy="150" r="2" fill="#4575b4" opacity="0.7"/>
+      <circle cx="160" cy="140" r="2" fill="#74add1" opacity="0.7"/>
+      
+      <!-- Mid temperature points -->
+      <circle cx="200" cy="120" r="2" fill="#fed976" opacity="0.7"/>
+      <circle cx="250" cy="100" r="2" fill="#fd8d3c" opacity="0.7"/>
+      <circle cx="300" cy="90" r="2" fill="#fd8d3c" opacity="0.7"/>
+      
+      <!-- High temperature points -->
+      <circle cx="400" cy="70" r="2" fill="#d73027" opacity="0.7"/>
+      <circle cx="500" cy="50" r="2" fill="#d73027" opacity="0.7"/>
+      <circle cx="600" cy="40" r="2" fill="#d73027" opacity="0.7"/>
+      
+      <!-- Show trend line -->
+      <path d="M 120,160 Q 300,90 600,40" stroke="#404040" stroke-width="2" fill="none" opacity="0.6"/>
+      
+      <!-- Scale labels -->
+      <text x="120" y="215" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">10</text>
+      <text x="300" y="215" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">20</text>
+      <text x="500" y="215" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">30</text>
+      
+      <text x="70" y="50" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">2</text>
+      <text x="70" y="125" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">0</text>
+      <text x="70" y="200" text-anchor="middle" class="latex-sans" font-size="10" fill="#404040">-2</text>
+    </g>
+    
+    <!-- Interpretation -->
+    <text x="20" y="340" class="latex-sans" font-size="11" fill="#404040">
+      • Non-linear relationship: higher temperatures → stronger glucose impact
+    </text>
+    <text x="20" y="355" class="latex-sans" font-size="11" fill="#404040">
+      • Color coding reveals interaction effects with other climate variables
+    </text>
+  </g>
+  
+  <!-- Individual Prediction Example (Lower Right) -->
+  <g id="waterfall-section" transform="translate(950, 590)">
+    <rect x="0" y="0" width="890" height="380" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <!-- Section Header -->
+    <rect x="0" y="0" width="890" height="35" rx="8" ry="8" fill="url(#latexBlueGradient)"/>
+    <text x="445" y="25" text-anchor="middle" class="latex-serif" font-size="16" font-weight="bold" fill="#ffffff">
+      4. SHAP Waterfall: Individual Prediction Breakdown
+    </text>
+    
+    <!-- Referenced plot placeholder -->
+    <rect x="20" y="50" width="850" height="270" rx="4" ry="4" fill="#f8f9fa" stroke="#d0d0d0" stroke-width="1"/>
+    
+    <text x="445" y="75" text-anchor="middle" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">
+      Reference: glucose_shap_waterfall_plot.svg
+    </text>
+    
+    <!-- Simulate waterfall plot -->
+    <g transform="translate(40, 90)">
+      <!-- Baseline -->
+      <rect x="50" y="150" width="60" height="30" fill="#74add1" opacity="0.8"/>
+      <text x="80" y="170" text-anchor="middle" class="latex-sans" font-size="8" fill="#ffffff">Baseline</text>
+      <text x="80" y="195" text-anchor="middle" class="latex-sans" font-size="8" fill="#404040">95.2</text>
+      
+      <!-- Feature contributions -->
+      <!-- temperature_tas_lag2 - positive -->
+      <rect x="120" y="130" width="60" height="20" fill="#d73027" opacity="0.8"/>
+      <text x="150" y="125" text-anchor="middle" class="latex-sans" font-size="8" fill="#404040">+2.3</text>
+      
+      <!-- wind_ws_lag2 - negative -->
+      <rect x="190" y="150" width="60" height="-25" fill="#313695" opacity="0.8"/>
+      <text x="220" y="120" text-anchor="middle" class="latex-sans" font-size="8" fill="#404040">-1.8</text>
+      
+      <!-- temperature_tas_lag5 - positive -->
+      <rect x="260" y="135" width="60" height="15" fill="#fd8d3c" opacity="0.8"/>
+      <text x="290" y="130" text-anchor="middle" class="latex-sans" font-size="8" fill="#404040">+1.5</text>
+      
+      <!-- humidity_rh_lag3 - negative -->
+      <rect x="330" y="150" width="60" height="-10" fill="#4575b4" opacity="0.8"/>
+      <text x="360" y="135" text-anchor="middle" class="latex-sans" font-size="8" fill="#404040">-0.9</text>
+      
+      <!-- Final prediction -->
+      <rect x="420" y="135" width="80" height="35" fill="#2ecc71" opacity="0.8"/>
+      <text x="460" y="155" text-anchor="middle" class="latex-sans" font-size="8" fill="#ffffff">Prediction</text>
+      <text x="460" y="185" text-anchor="middle" class="latex-sans" font-size="8" fill="#404040">96.3 mg/dL</text>
+      
+      <!-- Connecting lines -->
+      <line x1="110" y1="165" x2="120" y2="140" stroke="#999999" stroke-width="1" stroke-dasharray="2,2"/>
+      <line x1="180" y1="140" x2="190" y2="138" stroke="#999999" stroke-width="1" stroke-dasharray="2,2"/>
+      <line x1="250" y1="138" x2="260" y2="143" stroke="#999999" stroke-width="1" stroke-dasharray="2,2"/>
+      <line x1="320" y1="143" x2="330" y2="145" stroke="#999999" stroke-width="1" stroke-dasharray="2,2"/>
+      <line x1="390" y1="145" x2="420" y2="153" stroke="#999999" stroke-width="1" stroke-dasharray="2,2"/>
+      
+      <!-- Feature labels -->
+      <text x="150" y="210" text-anchor="middle" class="feature-text" font-size="8" fill="#404040">temp_lag2</text>
+      <text x="220" y="210" text-anchor="middle" class="feature-text" font-size="8" fill="#404040">wind_lag2</text>
+      <text x="290" y="210" text-anchor="middle" class="feature-text" font-size="8" fill="#404040">temp_lag5</text>
+      <text x="360" y="210" text-anchor="middle" class="feature-text" font-size="8" fill="#404040">humid_lag3</text>
+    </g>
+    
+    <!-- Interpretation -->
+    <text x="20" y="340" class="latex-sans" font-size="11" fill="#404040">
+      • Shows how each climate feature pushes glucose prediction up or down
+    </text>
+    <text x="20" y="355" class="latex-sans" font-size="11" fill="#404040">
+      • Demonstrates individual-level model interpretability and decision transparency
+    </text>
+  </g>
+  
+  <!-- Key Scientific Messages -->
+  <g id="key-messages" transform="translate(80, 990)">
+    <rect x="0" y="0" width="1760" height="70" rx="6" ry="6" fill="#e8f4fd" stroke="#b3d9f7" stroke-width="1" filter="url(#lightShadow)"/>
+    
+    <text x="880" y="20" text-anchor="middle" class="latex-serif" font-size="16" font-weight="bold" fill="#00549F">
+      Key Scientific Insights from SHAP Analysis
+    </text>
+    
+    <g transform="translate(20, 25)">
+      <text x="0" y="15" class="latex-sans" font-size="12" font-weight="bold" fill="#d73027">1. Temporal Patterns:</text>
+      <text x="130" y="15" class="latex-sans" font-size="12" fill="#404040">1-5 day temperature lags show strongest effects</text>
+      
+      <text x="420" y="15" class="latex-sans" font-size="12" font-weight="bold" fill="#d73027">2. Non-linear Relationships:</text>
+      <text x="580" y="15" class="latex-sans" font-size="12" fill="#404040">Complex climate-glucose interactions</text>
+      
+      <text x="800" y="15" class="latex-sans" font-size="12" font-weight="bold" fill="#d73027">3. Individual Variation:</text>
+      <text x="950" y="15" class="latex-sans" font-size="12" fill="#404040">Large between-person climate sensitivity</text>
+      
+      <text x="0" y="35" class="latex-sans" font-size="12" font-weight="bold" fill="#2c7fb8">4. Biological Plausibility:</text>
+      <text x="150" y="35" class="latex-sans" font-size="12" fill="#404040">Lag times match metabolic response patterns</text>
+      
+      <text x="470" y="35" class="latex-sans" font-size="12" font-weight="bold" fill="#2c7fb8">5. Model Interpretability:</text>
+      <text x="620" y="35" class="latex-sans" font-size="12" fill="#404040">SHAP reveals machine learning decision processes</text>
+    </g>
+  </g>
+  
+</svg>

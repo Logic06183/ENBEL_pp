@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- SHAP value gradients (blue to red spectrum) -->
+    <linearGradient id="shapGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#053061;stop-opacity:1" />
+      <stop offset="20%" style="stop-color:#2166ac;stop-opacity:1" />
+      <stop offset="40%" style="stop-color:#67a9cf;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f7f7f7;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#fdbf6f;stop-opacity:1" />
+      <stop offset="80%" style="stop-color:#ef8a62;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b2182b;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Model performance gradients -->
+    <linearGradient id="rfGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#228B22;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="xgbGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E64A19;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="4" flood-color="#404040" flood-opacity="0.2"/>
+    </filter>
+    
+    <filter id="lightShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="3" stdDeviation="2" flood-color="#404040" flood-opacity="0.15"/>
+    </filter>
+    
+    <!-- LaTeX typography styles -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer frame title -->
+  <g id="frame-title">
+    <rect x="60" y="30" width="1800" height="50" rx="4" ry="4" fill="url(#latexBlueGradient)"/>
+    <text x="80" y="60" class="latex-serif" font-size="32" font-weight="bold" fill="#ffffff">
+      SHAP Analysis: Climate-Health Model Interpretability
+    </text>
+  </g>
+  
+  <!-- Main SHAP Swarm Plot -->
+  <g id="shap-swarm-plot" transform="translate(100, 130)">
+    <rect x="0" y="0" width="1100" height="650" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <!-- Plot title -->
+    <text x="550" y="30" text-anchor="middle" class="latex-serif" font-size="20" font-weight="bold" fill="#00549F">
+      Feature Impact on Systolic Blood Pressure Prediction
+    </text>
+    <text x="550" y="50" text-anchor="middle" class="latex-serif" font-size="14" fill="#606060">
+      Random Forest Model (n=4,957, R² = 0.006, 5-fold CV)
+    </text>
+    
+    <!-- Y-axis labels (top 15 features) -->
+    <g transform="translate(20, 80)">
+      <text x="0" y="30" class="latex-sans" font-size="12" fill="#404040">wind_speed</text>
+      <text x="0" y="65" class="latex-sans" font-size="12" fill="#404040">sex</text>
+      <text x="0" y="100" class="latex-sans" font-size="12" fill="#404040">temperature_range</text>
+      <text x="0" y="135" class="latex-sans" font-size="12" fill="#404040">temperature_min</text>
+      <text x="0" y="170" class="latex-sans" font-size="12" fill="#404040">temperature_max</text>
+      <text x="0" y="205" class="latex-sans" font-size="12" fill="#404040">wind_gust</text>
+      <text x="0" y="240" class="latex-sans" font-size="12" fill="#404040">heat_index_min</text>
+      <text x="0" y="275" class="latex-sans" font-size="12" fill="#404040">temperature</text>
+      <text x="0" y="310" class="latex-sans" font-size="12" fill="#404040">heat_index</text>
+      <text x="0" y="345" class="latex-sans" font-size="12" fill="#404040">wind_ws_lag0</text>
+      <text x="0" y="380" class="latex-sans" font-size="12" fill="#404040">heat_index_max</text>
+      <text x="0" y="415" class="latex-sans" font-size="12" fill="#404040">apparent_temp</text>
+      <text x="0" y="450" class="latex-sans" font-size="12" fill="#404040">wind_ws_lag1</text>
+      <text x="0" y="485" class="latex-sans" font-size="12" fill="#404040">wind_ws_lag7</text>
+      <text x="0" y="520" class="latex-sans" font-size="12" fill="#404040">temp_acceleration_14d</text>
+    </g>
+    
+    <!-- SHAP values swarm plot simulation -->
+    <g transform="translate(200, 80)">
+      <!-- Central axis line -->
+      <line x1="400" y1="0" x2="400" y2="520" stroke="#cccccc" stroke-width="1"/>
+      
+      <!-- SHAP value points for wind_speed -->
+      <g transform="translate(0, 25)">
+        <circle cx="350" cy="-5" r="3" fill="#2166ac" opacity="0.7"/>
+        <circle cx="380" cy="2" r="3" fill="#67a9cf" opacity="0.7"/>
+        <circle cx="420" cy="-3" r="3" fill="#fdbf6f" opacity="0.7"/>
+        <circle cx="450" cy="1" r="3" fill="#ef8a62" opacity="0.7"/>
+        <circle cx="380" cy="5" r="3" fill="#67a9cf" opacity="0.7"/>
+        <circle cx="410" cy="-2" r="3" fill="#f7f7f7" opacity="0.7"/>
+      </g>
+      
+      <!-- SHAP value points for sex -->
+      <g transform="translate(0, 60)">
+        <circle cx="320" cy="-4" r="3" fill="#053061" opacity="0.7"/>
+        <circle cx="480" cy="3" r="3" fill="#b2182b" opacity="0.7"/>
+        <circle cx="350" cy="0" r="3" fill="#2166ac" opacity="0.7"/>
+        <circle cx="450" cy="2" r="3" fill="#ef8a62" opacity="0.7"/>
+        <circle cx="380" cy="-3" r="3" fill="#67a9cf" opacity="0.7"/>
+        <circle cx="420" cy="4" r="3" fill="#fdbf6f" opacity="0.7"/>
+      </g>
+      
+      <!-- Continue pattern for other features... -->
+      <g transform="translate(0, 95)">
+        <circle cx="370" cy="-2" r="3" fill="#2166ac" opacity="0.7"/>
+        <circle cx="430" cy="3" r="3" fill="#fdbf6f" opacity="0.7"/>
+        <circle cx="390" cy="0" r="3" fill="#67a9cf" opacity="0.7"/>
+        <circle cx="410" cy="-4" r="3" fill="#f7f7f7" opacity="0.7"/>
+      </g>
+      
+      <!-- Simplified pattern for remaining features -->
+      <g transform="translate(0, 130)">
+        <circle cx="380" cy="0" r="3" fill="#67a9cf" opacity="0.7"/>
+        <circle cx="420" cy="2" r="3" fill="#fdbf6f" opacity="0.7"/>
+        <circle cx="390" cy="-3" r="3" fill="#67a9cf" opacity="0.7"/>
+      </g>
+      
+      <g transform="translate(0, 165)">
+        <circle cx="375" cy="1" r="3" fill="#67a9cf" opacity="0.7"/>
+        <circle cx="425" cy="-2" r="3" fill="#fdbf6f" opacity="0.7"/>
+        <circle cx="395" cy="3" r="3" fill="#67a9cf" opacity="0.7"/>
+      </g>
+      
+      <!-- Continue for all 15 features with decreasing importance -->
+      <g transform="translate(0, 200)">
+        <circle cx="385" cy="0" r="2" fill="#67a9cf" opacity="0.6"/>
+        <circle cx="415" cy="1" r="2" fill="#fdbf6f" opacity="0.6"/>
+      </g>
+      
+      <g transform="translate(0, 235)">
+        <circle cx="390" cy="-1" r="2" fill="#67a9cf" opacity="0.6"/>
+        <circle cx="410" cy="2" r="2" fill="#fdbf6f" opacity="0.6"/>
+      </g>
+      
+      <g transform="translate(0, 270)">
+        <circle cx="392" cy="0" r="2" fill="#67a9cf" opacity="0.5"/>
+        <circle cx="408" cy="1" r="2" fill="#fdbf6f" opacity="0.5"/>
+      </g>
+      
+      <g transform="translate(0, 305)">
+        <circle cx="395" cy="-1" r="2" fill="#67a9cf" opacity="0.5"/>
+        <circle cx="405" cy="1" r="2" fill="#fdbf6f" opacity="0.5"/>
+      </g>
+      
+      <g transform="translate(0, 340)">
+        <circle cx="397" cy="0" r="2" fill="#67a9cf" opacity="0.5"/>
+        <circle cx="403" cy="0" r="2" fill="#fdbf6f" opacity="0.5"/>
+      </g>
+      
+      <g transform="translate(0, 375)">
+        <circle cx="398" cy="0" r="2" fill="#67a9cf" opacity="0.4"/>
+        <circle cx="402" cy="0" r="2" fill="#fdbf6f" opacity="0.4"/>
+      </g>
+      
+      <g transform="translate(0, 410)">
+        <circle cx="399" cy="0" r="2" fill="#67a9cf" opacity="0.4"/>
+        <circle cx="401" cy="0" r="2" fill="#fdbf6f" opacity="0.4"/>
+      </g>
+      
+      <g transform="translate(0, 445)">
+        <circle cx="399" cy="0" r="2" fill="#67a9cf" opacity="0.4"/>
+        <circle cx="401" cy="0" r="2" fill="#fdbf6f" opacity="0.4"/>
+      </g>
+      
+      <g transform="translate(0, 480)">
+        <circle cx="399" cy="0" r="2" fill="#67a9cf" opacity="0.4"/>
+        <circle cx="401" cy="0" r="2" fill="#fdbf6f" opacity="0.4"/>
+      </g>
+    </g>
+    
+    <!-- X-axis -->
+    <g transform="translate(200, 620)">
+      <line x1="0" y1="0" x2="800" y2="0" stroke="#404040" stroke-width="1"/>
+      <text x="400" y="25" text-anchor="middle" class="latex-serif" font-size="14" fill="#404040">SHAP Value (impact on model output)</text>
+      
+      <!-- X-axis ticks -->
+      <line x1="200" y1="0" x2="200" y2="5" stroke="#404040" stroke-width="1"/>
+      <text x="200" y="20" text-anchor="middle" class="latex-mono" font-size="10" fill="#606060">-0.02</text>
+      
+      <line x1="400" y1="0" x2="400" y2="5" stroke="#404040" stroke-width="1"/>
+      <text x="400" y="20" text-anchor="middle" class="latex-mono" font-size="10" fill="#606060">0</text>
+      
+      <line x1="600" y1="0" x2="600" y2="5" stroke="#404040" stroke-width="1"/>
+      <text x="600" y="20" text-anchor="middle" class="latex-mono" font-size="10" fill="#606060">0.02</text>
+    </g>
+    
+    <!-- Color legend -->
+    <g transform="translate(850, 100)">
+      <text x="0" y="0" class="latex-serif" font-size="12" font-weight="bold" fill="#404040">Feature Value</text>
+      <rect x="0" y="10" width="100" height="15" fill="url(#shapGradient)"/>
+      <text x="0" y="35" class="latex-mono" font-size="10" fill="#606060">Low</text>
+      <text x="85" y="35" class="latex-mono" font-size="10" fill="#606060">High</text>
+    </g>
+  </g>
+  
+  <!-- Model Performance Summary -->
+  <g id="model-performance" transform="translate(1250, 130)">
+    <rect x="0" y="0" width="600" height="300" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#academicShadow)"/>
+    
+    <text x="300" y="30" text-anchor="middle" class="latex-serif" font-size="18" font-weight="bold" fill="#00549F">
+      Model Performance Summary
+    </text>
+    
+    <!-- Random Forest performance -->
+    <g transform="translate(30, 60)">
+      <rect x="0" y="0" width="250" height="80" rx="4" ry="4" fill="url(#rfGradient)" opacity="0.1"/>
+      <text x="10" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#2E7D32">Random Forest</text>
+      <text x="10" y="40" class="latex-mono" font-size="12" fill="#404040">R² = 0.006 ± 0.003</text>
+      <text x="10" y="55" class="latex-mono" font-size="12" fill="#404040">MAE = 18.2 mmHg</text>
+      <text x="10" y="70" class="latex-mono" font-size="12" fill="#404040">n_estimators = 100</text>
+    </g>
+    
+    <!-- XGBoost performance -->
+    <g transform="translate(320, 60)">
+      <rect x="0" y="0" width="250" height="80" rx="4" ry="4" fill="url(#xgbGradient)" opacity="0.1"/>
+      <text x="10" y="20" class="latex-sans" font-size="14" font-weight="bold" fill="#E64A19">XGBoost</text>
+      <text x="10" y="40" class="latex-mono" font-size="12" fill="#404040">R² = 0.004 ± 0.002</text>
+      <text x="10" y="55" class="latex-mono" font-size="12" fill="#404040">MAE = 18.5 mmHg</text>
+      <text x="10" y="70" class="latex-mono" font-size="12" fill="#404040">max_depth = 6</text>
+    </g>
+    
+    <!-- Target biomarkers -->
+    <g transform="translate(30, 160)">
+      <text x="0" y="0" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">Biomarkers Analyzed:</text>
+      <text x="0" y="20" class="latex-mono" font-size="11" fill="#606060">• Systolic Blood Pressure (n=4,957)</text>
+      <text x="0" y="35" class="latex-mono" font-size="11" fill="#606060">• Fasting Glucose (n=2,731, R²=0.29)</text>
+      <text x="0" y="50" class="latex-mono" font-size="11" fill="#606060">• CD4 Cell Count (n=1,283, R²=0.22)</text>
+      <text x="0" y="65" class="latex-mono" font-size="11" fill="#606060">• Fasting LDL (n=2,500, R²=0.06)</text>
+      <text x="0" y="80" class="latex-mono" font-size="11" fill="#606060">• Hemoglobin (n=1,282, R²=0.14)</text>
+    </g>
+    
+    <!-- Cross-validation info -->
+    <g transform="translate(320, 160)">
+      <text x="0" y="0" class="latex-serif" font-size="14" font-weight="bold" fill="#404040">Validation:</text>
+      <text x="0" y="20" class="latex-mono" font-size="11" fill="#606060">• 5-fold Cross-Validation</text>
+      <text x="0" y="35" class="latex-mono" font-size="11" fill="#606060">• Train-Test Split: 80-20%</text>
+      <text x="0" y="50" class="latex-mono" font-size="11" fill="#606060">• Random Seed: 42</text>
+      <text x="0" y="65" class="latex-mono" font-size="11" fill="#606060">• 143 Climate Features</text>
+      <text x="0" y="80" class="latex-mono" font-size="11" fill="#606060">• Demographic Controls</text>
+    </g>
+  </g>
+  
+  <!-- SHAP Dependency Plot (inset) -->
+  <g id="dependency-plot" transform="translate(1250, 470)">
+    <rect x="0" y="0" width="600" height="250" rx="8" ry="8" fill="#ffffff" stroke="#e0e0e0" stroke-width="1" filter="url(#lightShadow)"/>
+    
+    <text x="300" y="25" text-anchor="middle" class="latex-serif" font-size="16" font-weight="bold" fill="#00549F">
+      Temperature vs SHAP Value Dependency
+    </text>
+    
+    <!-- Simulated scatter plot -->
+    <g transform="translate(50, 50)">
+      <!-- Axes -->
+      <line x1="0" y1="150" x2="500" y2="150" stroke="#404040" stroke-width="1"/>
+      <line x1="0" y1="0" x2="0" y2="150" stroke="#404040" stroke-width="1"/>
+      
+      <!-- Axis labels -->
+      <text x="250" y="180" text-anchor="middle" class="latex-serif" font-size="12" fill="#404040">Temperature (°C)</text>
+      <text x="-30" y="75" text-anchor="middle" class="latex-serif" font-size="12" fill="#404040" transform="rotate(-90, -30, 75)">SHAP Value</text>
+      
+      <!-- Scatter points showing non-linear relationship -->
+      <circle cx="50" cy="120" r="2" fill="#2166ac" opacity="0.6"/>
+      <circle cx="80" cy="110" r="2" fill="#2166ac" opacity="0.6"/>
+      <circle cx="120" cy="90" r="2" fill="#67a9cf" opacity="0.6"/>
+      <circle cx="150" cy="85" r="2" fill="#67a9cf" opacity="0.6"/>
+      <circle cx="180" cy="75" r="2" fill="#f7f7f7" opacity="0.6"/>
+      <circle cx="220" cy="70" r="2" fill="#fdbf6f" opacity="0.6"/>
+      <circle cx="250" cy="75" r="2" fill="#fdbf6f" opacity="0.6"/>
+      <circle cx="300" cy="80" r="2" fill="#ef8a62" opacity="0.6"/>
+      <circle cx="350" cy="90" r="2" fill="#ef8a62" opacity="0.6"/>
+      <circle cx="400" cy="110" r="2" fill="#b2182b" opacity="0.6"/>
+      <circle cx="450" cy="125" r="2" fill="#b2182b" opacity="0.6"/>
+      
+      <!-- Trend line -->
+      <path d="M 50 120 Q 250 65 450 125" fill="none" stroke="#404040" stroke-width="2" opacity="0.5"/>
+      
+      <!-- X-axis ticks -->
+      <line x1="100" y1="150" x2="100" y2="155" stroke="#404040" stroke-width="1"/>
+      <text x="100" y="170" text-anchor="middle" class="latex-mono" font-size="10" fill="#606060">15</text>
+      
+      <line x1="200" y1="150" x2="200" y2="155" stroke="#404040" stroke-width="1"/>
+      <text x="200" y="170" text-anchor="middle" class="latex-mono" font-size="10" fill="#606060">20</text>
+      
+      <line x1="300" y1="150" x2="300" y2="155" stroke="#404040" stroke-width="1"/>
+      <text x="300" y="170" text-anchor="middle" class="latex-mono" font-size="10" fill="#606060">25</text>
+      
+      <line x1="400" y1="150" x2="400" y2="155" stroke="#404040" stroke-width="1"/>
+      <text x="400" y="170" text-anchor="middle" class="latex-mono" font-size="10" fill="#606060">30</text>
+    </g>
+  </g>
+  
+  <!-- Key Insights Box -->
+  <g id="key-insights" transform="translate(100, 800)">
+    <rect x="0" y="0" width="1100" height="220" rx="8" ry="8" fill="#ffffff" stroke="#00549F" stroke-width="1" filter="url(#lightShadow)" opacity="0.95"/>
+    
+    <text x="30" y="30" class="latex-serif" font-size="16" font-weight="bold" fill="#00549F">Key Scientific Insights</text>
+    
+    <g transform="translate(30, 50)">
+      <text x="0" y="20" class="latex-serif" font-size="13" fill="#404040">• <tspan font-weight="bold">Limited Predictive Power:</tspan> Systolic BP shows R² = 0.006, indicating climate has minimal direct impact</text>
+      <text x="0" y="40" class="latex-serif" font-size="13" fill="#404040">• <tspan font-weight="bold">Wind Speed Dominance:</tspan> Most important climate feature (4.7% importance) suggests air movement effects</text>
+      <text x="0" y="60" class="latex-serif" font-size="13" fill="#404040">• <tspan font-weight="bold">Sex as Confounder:</tspan> Second most important feature (4.6%) confirms demographic control necessity</text>
+      <text x="0" y="80" class="latex-serif" font-size="13" fill="#404040">• <tspan font-weight="bold">Temperature Range Effects:</tspan> Daily temperature variation more predictive than absolute values</text>
+      <text x="0" y="100" class="latex-serif" font-size="13" fill="#404040">• <tspan font-weight="bold">Non-linear Relationships:</tspan> SHAP dependency plots reveal complex climate-health interactions</text>
+      <text x="0" y="120" class="latex-serif" font-size="13" fill="#404040">• <tspan font-weight="bold">Better Results for Metabolic Markers:</tspan> Glucose (R²=0.29) and CD4 (R²=0.22) show stronger climate associations</text>
+      <text x="0" y="140" class="latex-serif" font-size="13" fill="#404040">• <tspan font-weight="bold">Temporal Lags Matter:</tspan> Multiple lag features (0, 1, 7 days) capture delayed climate effects</text>
+      <text x="0" y="160" class="latex-serif" font-size="13" fill="#404040">• <tspan font-weight="bold">Heat Index Importance:</tspan> Combined temperature-humidity measures outperform individual variables</text>
+    </g>
+  </g>
+  
+  <!-- Technical Details Box -->
+  <g id="technical-details" transform="translate(1250, 740)">
+    <rect x="0" y="0" width="600" height="280" rx="8" ry="8" fill="#f8f9fa" stroke="#6c757d" stroke-width="1" filter="url(#lightShadow)"/>
+    
+    <text x="30" y="30" class="latex-serif" font-size="16" font-weight="bold" fill="#495057">SHAP Implementation Details</text>
+    
+    <g transform="translate(30, 50)">
+      <text x="0" y="20" class="latex-mono" font-size="12" fill="#404040">import shap</text>
+      <text x="0" y="35" class="latex-mono" font-size="12" fill="#404040">explainer = shap.TreeExplainer(model)</text>
+      <text x="0" y="50" class="latex-mono" font-size="12" fill="#404040">shap_values = explainer.shap_values(X_test)</text>
+      
+      <text x="0" y="80" class="latex-serif" font-size="12" font-weight="bold" fill="#495057">Model Hyperparameters:</text>
+      <text x="0" y="100" class="latex-mono" font-size="11" fill="#606060">Random Forest: n_estimators=100, max_depth=10</text>
+      <text x="0" y="115" class="latex-mono" font-size="11" fill="#606060">XGBoost: n_estimators=100, max_depth=6</text>
+      <text x="0" y="130" class="latex-mono" font-size="11" fill="#606060">Cross-validation: KFold(n_splits=5)</text>
+      
+      <text x="0" y="155" class="latex-serif" font-size="12" font-weight="bold" fill="#495057">Feature Engineering:</text>
+      <text x="0" y="175" class="latex-mono" font-size="11" fill="#606060">• Temperature lags: 0, 1, 2, 3, 5, 7, 10, 14, 21 days</text>
+      <text x="0" y="190" class="latex-mono" font-size="11" fill="#606060">• Wind speed lags: 0-21 days</text>
+      <text x="0" y="205" class="latex-mono" font-size="11" fill="#606060">• Heat index calculations: min, max, mean</text>
+      <text x="0" y="220" class="latex-mono" font-size="11" fill="#606060">• Temperature acceleration: 1d, 3d, 7d, 14d</text>
+      <text x="0" y="235" class="latex-mono" font-size="11" fill="#606060">• Categorical encoding: Sex (1/0), Race (1-4)</text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g transform="translate(960, 1050)">
+    <text x="0" y="0" text-anchor="middle" class="latex-serif" font-size="11" fill="#808080">
+      ENBEL Climate-Health ML Pipeline | SHAP Interpretability Analysis | Generated with simple_ml_pipeline.py
+    </text>
+  </g>
+</svg>

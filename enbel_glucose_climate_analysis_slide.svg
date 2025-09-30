@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" style="background: #ffffff;">
+  <defs>
+    <!-- LaTeX academic color scheme -->
+    <linearGradient id="latexBlueGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="latexTealGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#008080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#006666;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="warmGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D73027;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E31A1C;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="coolGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4575B4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#313695;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX Beamer header bar -->
+    <linearGradient id="beamerHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00549F;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#003f7f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#002856;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- LaTeX-style subtle pattern -->
+    <pattern id="latexPattern" patternUnits="userSpaceOnUse" width="60" height="60">
+      <rect width="60" height="60" fill="#fafafa"/>
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f0f0f0" stroke-width="0.3"/>
+    </pattern>
+    
+    <!-- Academic block shadow -->
+    <filter id="academicShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#404040" flood-opacity="0.15"/>
+    </filter>
+    
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Math notation styling -->
+    <style>
+      .latex-serif { font-family: "Times New Roman", "Computer Modern", serif; }
+      .latex-sans { font-family: "Helvetica", "Computer Modern Sans", sans-serif; }
+      .latex-mono { font-family: "Courier New", "Computer Modern Typewriter", monospace; }
+      .math-notation { font-family: "Times New Roman", "Computer Modern", serif; font-style: italic; }
+      .scientific-label { font-family: "Helvetica", sans-serif; font-size: 14px; }
+      .data-value { font-family: "Courier New", monospace; font-weight: bold; }
+    </style>
+  </defs>
+  
+  <!-- LaTeX-style background -->
+  <rect width="1920" height="1080" fill="url(#latexPattern)"/>
+  
+  <!-- LaTeX Beamer header bar -->
+  <rect x="0" y="0" width="1920" height="12" fill="url(#beamerHeader)"/>
+  
+  <!-- LaTeX Beamer institutional header -->
+  <g id="institutional-header">
+    <rect x="60" y="30" width="1800" height="45" rx="3" ry="3" fill="#00549F" opacity="0.95"/>
+    <text x="80" y="57" class="latex-sans" fill="white" font-size="24" font-weight="bold">
+      Climate-Glucose Metabolism: XGBoost Model Analysis and Temporal Patterns
+    </text>
+  </g>
+  
+  <!-- Main Title -->
+  <g id="main-title">
+    <text x="960" y="140" class="latex-serif" fill="#00549F" font-size="42" font-weight="bold" text-anchor="middle">
+      Machine Learning Analysis of Climate-Glucose Relationships
+    </text>
+    <text x="960" y="180" class="latex-serif" fill="#666666" font-size="28" text-anchor="middle">
+      XGBoost Model Performance and Feature Importance Analysis
+    </text>
+  </g>
+  
+  <!-- Performance Summary Box (Top Left) -->
+  <g id="performance-summary">
+    <rect x="80" y="220" width="420" height="280" rx="8" ry="8" 
+          fill="white" stroke="#00549F" stroke-width="2" filter="url(#academicShadow)"/>
+    
+    <text x="290" y="250" class="latex-serif" fill="#00549F" font-size="24" font-weight="bold" text-anchor="middle">
+      Model Performance Summary
+    </text>
+    
+    <!-- Key metrics -->
+    <g class="performance-metrics">
+      <text x="100" y="290" class="latex-sans" fill="#333" font-size="18" font-weight="bold">Target:</text>
+      <text x="180" y="290" class="data-value" fill="#D73027" font-size="18">Fasting Glucose (mg/dL)</text>
+      
+      <text x="100" y="320" class="latex-sans" fill="#333" font-size="18" font-weight="bold">Sample Size:</text>
+      <text x="240" y="320" class="data-value" fill="#00549F" font-size="18">n = 2,731 participants</text>
+      
+      <text x="100" y="350" class="latex-sans" fill="#333" font-size="18" font-weight="bold">Best Model:</text>
+      <text x="220" y="350" class="data-value" fill="#008080" font-size="18">XGBoost</text>
+      
+      <text x="100" y="380" class="latex-sans" fill="#333" font-size="18" font-weight="bold">R² Performance:</text>
+      <text x="240" y="380" class="data-value" fill="#E31A1C" font-size="20">0.289 ± 0.025</text>
+      
+      <text x="100" y="410" class="latex-sans" fill="#333" font-size="18" font-weight="bold">Variance Explained:</text>
+      <text x="300" y="410" class="data-value" fill="#E31A1C" font-size="18">28.9%</text>
+      
+      <text x="100" y="440" class="latex-sans" fill="#333" font-size="18" font-weight="bold">Features Used:</text>
+      <text x="240" y="440" class="data-value" fill="#666" font-size="18">143 (climate + demographics)</text>
+      
+      <!-- Performance assessment -->
+      <rect x="100" y="455" width="380" height="35" rx="4" fill="#E8F4F8" stroke="#4575B4"/>
+      <text x="290" y="477" class="latex-sans" fill="#4575B4" font-size="16" font-weight="bold" text-anchor="middle">
+        MODERATE-TO-STRONG PREDICTIVE POWER
+      </text>
+    </g>
+  </g>
+  
+  <!-- Feature Importance Analysis (Center) -->
+  <g id="feature-importance">
+    <rect x="540" y="220" width="500" height="280" rx="8" ry="8" 
+          fill="white" stroke="#008080" stroke-width="2" filter="url(#academicShadow)"/>
+    
+    <text x="790" y="250" class="latex-serif" fill="#008080" font-size="24" font-weight="bold" text-anchor="middle">
+      Top Feature Importance (XGBoost)
+    </text>
+    
+    <!-- Feature importance bars -->
+    <g class="feature-bars">
+      <!-- Race - Top feature -->
+      <rect x="560" y="270" width="142" height="25" fill="#D73027" opacity="0.8"/>
+      <text x="565" y="287" class="scientific-label" fill="white" font-weight="bold">Race</text>
+      <text x="920" y="287" class="data-value" fill="#D73027" font-size="14">14.22%</text>
+      
+      <!-- Temperature 7-day minimum -->
+      <rect x="560" y="300" width="54" height="25" fill="#E31A1C" opacity="0.7"/>
+      <text x="565" y="317" class="scientific-label" fill="white" font-weight="bold">temp_min_7d</text>
+      <text x="920" y="317" class="data-value" fill="#E31A1C" font-size="14">5.45%</text>
+      
+      <!-- Temperature 14-day maximum -->
+      <rect x="560" y="330" width="31" height="25" fill="#FC8D59" opacity="0.8"/>
+      <text x="565" y="347" class="scientific-label" fill="white" font-weight="bold">temp_max_14d</text>
+      <text x="920" y="347" class="data-value" fill="#FC8D59" font-size="14">3.11%</text>
+      
+      <!-- Temperature 5-day minimum -->
+      <rect x="560" y="360" width="27" height="25" fill="#FDCC8A" opacity="0.8"/>
+      <text x="565" y="377" class="scientific-label" fill="#333" font-weight="bold">temp_min_5d</text>
+      <text x="920" y="377" class="data-value" fill="#F16913" font-size="14">2.69%</text>
+      
+      <!-- Heat index 14-day maximum -->
+      <rect x="560" y="390" width="24" height="25" fill="#FED976" opacity="0.8"/>
+      <text x="565" y="407" class="scientific-label" fill="#333" font-weight="bold">heat_index_max_14d</text>
+      <text x="920" y="407" class="data-value" fill="#CC4C02" font-size="14">2.38%</text>
+      
+      <!-- Temperature 7-day maximum -->
+      <rect x="560" y="420" width="18" height="25" fill="#FFFFCC" opacity="0.8"/>
+      <text x="565" y="437" class="scientific-label" fill="#333" font-weight="bold">temp_max_7d</text>
+      <text x="920" y="437" class="data-value" fill="#993404" font-size="14">1.81%</text>
+      
+      <!-- Heating degree days -->
+      <rect x="560" y="450" width="18" height="25" fill="#C7E9B4" opacity="0.8"/>
+      <text x="565" y="467" class="scientific-label" fill="#333" font-weight="bold">heating_degree_days_3d</text>
+      <text x="920" y="467" class="data-value" fill="#41AB5D" font-size="14">1.79%</text>
+    </g>
+    
+    <!-- Feature type legend -->
+    <g class="feature-legend">
+      <rect x="750" y="270" width="15" height="15" fill="#D73027"/>
+      <text x="775" y="282" class="scientific-label" fill="#333" font-size="12">Demographics</text>
+      
+      <rect x="750" y="290" width="15" height="15" fill="#FC8D59"/>
+      <text x="775" y="302" class="scientific-label" fill="#333" font-size="12">Temperature</text>
+      
+      <rect x="750" y="310" width="15" height="15" fill="#C7E9B4"/>
+      <text x="775" y="322" class="scientific-label" fill="#333" font-size="12">Heat Index</text>
+    </g>
+  </g>
+  
+  <!-- Biological Mechanisms (Top Right) -->
+  <g id="biological-mechanisms">
+    <rect x="1080" y="220" width="740" height="280" rx="8" ry="8" 
+          fill="white" stroke="#E31A1C" stroke-width="2" filter="url(#academicShadow)"/>
+    
+    <text x="1450" y="250" class="latex-serif" fill="#E31A1C" font-size="24" font-weight="bold" text-anchor="middle">
+      Biological Mechanisms: Climate → Glucose
+    </text>
+    
+    <!-- Mechanism pathways -->
+    <g class="mechanism-pathways">
+      <!-- Heat stress pathway -->
+      <g class="heat-stress-pathway">
+        <circle cx="1120" cy="290" r="12" fill="#D73027"/>
+        <text x="1140" y="295" class="latex-sans" fill="#333" font-size="16" font-weight="bold">Heat Stress</text>
+        <path d="M 1220 290 Q 1240 290 1240 310" stroke="#D73027" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+        <text x="1250" y="315" class="scientific-label" fill="#333" font-size="14">Cortisol ↑ → Gluconeogenesis ↑</text>
+      </g>
+      
+      <!-- Dehydration pathway -->
+      <g class="dehydration-pathway">
+        <circle cx="1120" cy="330" r="12" fill="#FC8D59"/>
+        <text x="1140" y="335" class="latex-sans" fill="#333" font-size="16" font-weight="bold">Dehydration</text>
+        <path d="M 1230 330 Q 1250 330 1250 350" stroke="#FC8D59" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+        <text x="1260" y="355" class="scientific-label" fill="#333" font-size="14">Blood volume ↓ → Glucose concentration ↑</text>
+      </g>
+      
+      <!-- Circadian disruption -->
+      <g class="circadian-pathway">
+        <circle cx="1120" cy="370" r="12" fill="#FDCC8A"/>
+        <text x="1140" y="375" class="latex-sans" fill="#333" font-size="16" font-weight="bold">Circadian Disruption</text>
+        <path d="M 1280 370 Q 1300 370 1300 390" stroke="#FDCC8A" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+        <text x="1310" y="395" class="scientific-label" fill="#333" font-size="14">Temperature rhythm → Metabolic rhythm</text>
+      </g>
+      
+      <!-- Sympathetic activation -->
+      <g class="sympathetic-pathway">
+        <circle cx="1120" cy="410" r="12" fill="#FED976"/>
+        <text x="1140" y="415" class="latex-sans" fill="#333" font-size="16" font-weight="bold">Sympathetic Activation</text>
+        <path d="M 1310 410 Q 1330 410 1330 430" stroke="#FED976" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+        <text x="1340" y="435" class="scientific-label" fill="#333" font-size="14">Catecholamines ↑ → Insulin resistance</text>
+      </g>
+      
+      <!-- Inflammatory response -->
+      <g class="inflammation-pathway">
+        <circle cx="1120" cy="450" r="12" fill="#FFFFCC"/>
+        <text x="1140" y="455" class="latex-sans" fill="#333" font-size="16" font-weight="bold">Inflammatory Response</text>
+        <path d="M 1300 450 Q 1320 450 1320 470" stroke="#FFFFCC" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+        <text x="1330" y="475" class="scientific-label" fill="#333" font-size="14">Cytokines ↑ → β-cell dysfunction</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Temporal Analysis Section (Bottom) -->
+  <g id="temporal-analysis">
+    <rect x="80" y="540" width="1740" height="480" rx="8" ry="8" 
+          fill="white" stroke="#4575B4" stroke-width="2" filter="url(#academicShadow)"/>
+    
+    <text x="960" y="575" class="latex-serif" fill="#4575B4" font-size="28" font-weight="bold" text-anchor="middle">
+      Temporal Pattern Analysis: Multi-day Climate Effects
+    </text>
+    
+    <!-- Lag effect visualization -->
+    <g class="lag-effects">
+      <!-- Timeline -->
+      <line x1="150" y1="640" x2="1750" y2="640" stroke="#333" stroke-width="2"/>
+      
+      <!-- Day markers -->
+      <g class="day-markers">
+        <text x="150" y="665" class="scientific-label" fill="#333" font-size="14" text-anchor="middle">Day 0</text>
+        <text x="400" y="665" class="scientific-label" fill="#333" font-size="14" text-anchor="middle">3-day</text>
+        <text x="650" y="665" class="scientific-label" fill="#333" font-size="14" text-anchor="middle">5-day</text>
+        <text x="900" y="665" class="scientific-label" fill="#333" font-size="14" text-anchor="middle">7-day</text>
+        <text x="1150" y="665" class="scientific-label" fill="#333" font-size="14" text-anchor="middle">10-day</text>
+        <text x="1400" y="665" class="scientific-label" fill="#333" font-size="14" text-anchor="middle">14-day</text>
+        <text x="1650" y="665" class="scientific-label" fill="#333" font-size="14" text-anchor="middle">21-day</text>
+        
+        <!-- Vertical lines -->
+        <line x1="150" y1="635" x2="150" y2="645" stroke="#333" stroke-width="2"/>
+        <line x1="400" y1="635" x2="400" y2="645" stroke="#333" stroke-width="2"/>
+        <line x1="650" y1="635" x2="650" y2="645" stroke="#333" stroke-width="2"/>
+        <line x1="900" y1="635" x2="900" y2="645" stroke="#333" stroke-width="2"/>
+        <line x1="1150" y1="635" x2="1150" y2="645" stroke="#333" stroke-width="2"/>
+        <line x1="1400" y1="635" x2="1400" y2="645" stroke="#333" stroke-width="2"/>
+        <line x1="1650" y1="635" x2="1650" y2="645" stroke="#333" stroke-width="2"/>
+      </g>
+      
+      <!-- Effect magnitude bars -->
+      <g class="magnitude-bars">
+        <!-- 7-day minimum temperature - highest climate importance -->
+        <rect x="875" y="590" width="50" height="45" fill="#D73027" opacity="0.8"/>
+        <text x="900" y="580" class="scientific-label" fill="#D73027" font-size="12" text-anchor="middle" font-weight="bold">5.45%</text>
+        <text x="900" y="685" class="scientific-label" fill="#333" font-size="12" text-anchor="middle">temp_min_7d</text>
+        
+        <!-- 14-day maximum temperature -->
+        <rect x="1375" y="605" width="50" height="30" fill="#FC8D59" opacity="0.8"/>
+        <text x="1400" y="595" class="scientific-label" fill="#FC8D59" font-size="12" text-anchor="middle" font-weight="bold">3.11%</text>
+        <text x="1400" y="685" class="scientific-label" fill="#333" font-size="12" text-anchor="middle">temp_max_14d</text>
+        
+        <!-- 5-day minimum temperature -->
+        <rect x="625" y="610" width="50" height="25" fill="#FDCC8A" opacity="0.8"/>
+        <text x="650" y="600" class="scientific-label" fill="#F16913" font-size="12" text-anchor="middle" font-weight="bold">2.69%</text>
+        <text x="650" y="685" class="scientific-label" fill="#333" font-size="12" text-anchor="middle">temp_min_5d</text>
+        
+        <!-- 14-day heat index maximum -->
+        <rect x="1375" y="615" width="50" height="20" fill="#FED976" opacity="0.8"/>
+        <text x="1400" y="605" class="scientific-label" fill="#CC4C02" font-size="11" text-anchor="middle" font-weight="bold">2.38%</text>
+        <text x="1400" y="695" class="scientific-label" fill="#333" font-size="11" text-anchor="middle">heat_index_max_14d</text>
+        
+        <!-- 3-day heating degree days -->
+        <rect x="375" y="615" width="50" height="20" fill="#C7E9B4" opacity="0.8"/>
+        <text x="400" y="605" class="scientific-label" fill="#41AB5D" font-size="12" text-anchor="middle" font-weight="bold">1.79%</text>
+        <text x="400" y="695" class="scientific-label" fill="#333" font-size="11" text-anchor="middle">heating_degree_3d</text>
+      </g>
+      
+      <!-- Key findings text -->
+      <g class="key-findings">
+        <text x="200" y="750" class="latex-serif" fill="#4575B4" font-size="20" font-weight="bold">Key Temporal Findings:</text>
+        
+        <text x="220" y="780" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#D73027" font-weight="bold">7-day temperature minimum</tspan> shows strongest climate signal (5.45% importance)
+        </text>
+        
+        <text x="220" y="805" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#FC8D59" font-weight="bold">Multi-week temperature extremes</tspan> (14-day max/min) show substantial effects
+        </text>
+        
+        <text x="220" y="830" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#FDCC8A" font-weight="bold">Short-term patterns</tspan> (3-5 days) capture acute physiological responses
+        </text>
+        
+        <text x="220" y="855" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#C7E9B4" font-weight="bold">Heating degree days</tspan> suggest cold stress also affects glucose metabolism
+        </text>
+        
+        <text x="220" y="880" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#666" font-weight="bold">Demographic factors</tspan> (Race) dominate model predictions (14.22%)
+        </text>
+      </g>
+      
+      <!-- Physiological timeline -->
+      <g class="physiology-timeline">
+        <text x="1200" y="750" class="latex-serif" fill="#E31A1C" font-size="20" font-weight="bold">Physiological Response Timeline:</text>
+        
+        <text x="1220" y="780" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#D73027" font-weight="bold">Hours 0-24:</tspan> Acute stress response, cortisol elevation
+        </text>
+        
+        <text x="1220" y="805" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#FC8D59" font-weight="bold">Days 1-3:</tspan> Dehydration effects, blood glucose concentration
+        </text>
+        
+        <text x="1220" y="830" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#FDCC8A" font-weight="bold">Days 3-7:</tspan> Circadian disruption, metabolic adaptation
+        </text>
+        
+        <text x="1220" y="855" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#FED976" font-weight="bold">Days 7-14:</tspan> Chronic stress, insulin resistance development
+        </text>
+        
+        <text x="1220" y="880" class="latex-sans" fill="#333" font-size="16">
+          • <tspan fill="#C7E9B4" font-weight="bold">Weeks 2-3:</tspan> Metabolic memory, sustained dysregulation
+        </text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Scientific Assessment Box -->
+  <g id="scientific-assessment">
+    <rect x="80" y="1040" width="1740" height="35" rx="6" ry="6" 
+          fill="#E8F4F8" stroke="#4575B4" stroke-width="2"/>
+    <text x="950" y="1062" class="latex-sans" fill="#4575B4" font-size="18" font-weight="bold" text-anchor="middle">
+      SCIENTIFIC ASSESSMENT: XGBoost model explains 28.9% of glucose variance (moderate-strong effect) • Demographics dominate climate signals • 
+      Multi-day temperature patterns show biologically plausible lag effects • Results support climate-metabolic health hypotheses
+    </text>
+  </g>
+  
+  <!-- Arrow markers for pathways -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+     refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#666" />
+    </marker>
+  </defs>
+  
+</svg>
