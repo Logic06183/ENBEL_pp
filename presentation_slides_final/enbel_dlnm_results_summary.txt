@@ -1,0 +1,19 @@
+ENBEL DLNM Analysis Results
+===========================
+
+Analysis Date: 2025-10-01 08:17:04
+Sample size: 4551
+Study period: 2012-07-30 to 2018-05-07
+Temperature range: 5.5 to 25.9 °C
+CD4 range: 0 to 2703 cells/µL
+R-squared: 0.6315
+AIC: 12005.93
+Max lag examined: 21 days
+Reference temperature: 20 °C
+
+Key findings:
+- No significant associations detected
+- Temperature effects show lag structure
+- Model explains
+63.3%
+of variance
