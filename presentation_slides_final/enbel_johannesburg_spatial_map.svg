@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients for professional styling -->
+    <radialGradient id="siteGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.1"/>
+    </radialGradient>
+    
+    <!-- Patterns for GCRO survey waves -->
+    <pattern id="wave2011" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="#E8F4F8" opacity="0.6"/>
+      <line x1="0" y1="0" x2="4" y2="4" stroke="#3498DB" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    
+    <pattern id="wave2014" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="4" height="4" fill="#FFF3E0" opacity="0.6"/>
+      <circle cx="2" cy="2" r="0.5" fill="#FF9800" opacity="0.4"/>
+    </pattern>
+    
+    <pattern id="wave2018" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#F3E5F5" opacity="0.6"/>
+      <rect x="1" y="1" width="4" height="4" fill="none" stroke="#9C27B0" stroke-width="0.3" opacity="0.4"/>
+    </pattern>
+    
+    <pattern id="wave2021" patternUnits="userSpaceOnUse" width="5" height="5">
+      <rect width="5" height="5" fill="#E8F5E8" opacity="0.6"/>
+      <polygon points="2.5,0.5 4.5,4.5 0.5,4.5" fill="#4CAF50" opacity="0.3"/>
+    </pattern>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="rgba(0,0,0,0.3)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1920" height="1080" fill="#FAFAFA"/>
+  
+  <!-- Title Section -->
+  <g id="title-section">
+    <rect x="0" y="0" width="1920" height="120" fill="#2C3E50"/>
+    <text x="960" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="32" font-weight="bold">
+      ENBEL Climate-Health Analysis: Spatial Distribution
+    </text>
+    <text x="960" y="70" text-anchor="middle" fill="#BDC3C7" font-family="Arial, sans-serif" font-size="18">
+      Clinical Trial Sites and GCRO Survey Coverage, Johannesburg Metropolitan Area
+    </text>
+    <text x="960" y="95" text-anchor="middle" fill="#95A5A6" font-family="Arial, sans-serif" font-size="14">
+      17 Studies • 10,202 Patients • 58,616 GCRO Households • 508 Wards
+    </text>
+  </g>
+  
+  <!-- Main Map Area -->
+  <g id="map-container" transform="translate(120, 140)">
+    
+    <!-- Map bounds: Lat -26.28 to -25.70, Lon 27.82 to 28.27 -->
+    <!-- Scale: ~1280x700 map area -->
+    
+    <!-- Base map background -->
+    <rect x="0" y="0" width="1280" height="700" fill="#F8F9FA" stroke="#DEE2E6" stroke-width="2"/>
+    
+    <!-- Coordinate grid -->
+    <g id="coordinate-grid" stroke="#E9ECEF" stroke-width="1" opacity="0.7">
+      <!-- Latitude lines -->
+      <line x1="0" y1="0" x2="1280" y2="0"/>
+      <line x1="0" y1="116" x2="1280" y2="116"/>
+      <line x1="0" y1="233" x2="1280" y2="233"/>
+      <line x1="0" y1="350" x2="1280" y2="350"/>
+      <line x1="0" y1="466" x2="1280" y2="466"/>
+      <line x1="0" y1="583" x2="1280" y2="583"/>
+      <line x1="0" y1="700" x2="1280" y2="700"/>
+      
+      <!-- Longitude lines -->
+      <line x1="0" y1="0" x2="0" y2="700"/>
+      <line x1="213" y1="0" x2="213" y2="700"/>
+      <line x1="426" y1="0" x2="426" y2="700"/>
+      <line x1="640" y1="0" x2="640" y2="700"/>
+      <line x1="853" y1="0" x2="853" y2="700"/>
+      <line x1="1066" y1="0" x2="1066" y2="700"/>
+      <line x1="1280" y1="0" x2="1280" y2="700"/>
+    </g>
+    
+    <!-- Coordinate labels -->
+    <g id="coordinate-labels" fill="#6C757D" font-family="Arial, sans-serif" font-size="12">
+      <!-- Latitude labels (left side) -->
+      <text x="-10" y="5" text-anchor="end">-25.70°S</text>
+      <text x="-10" y="121" text-anchor="end">-25.80°S</text>
+      <text x="-10" y="238" text-anchor="end">-25.90°S</text>
+      <text x="-10" y="355" text-anchor="end">-26.00°S</text>
+      <text x="-10" y="471" text-anchor="end">-26.10°S</text>
+      <text x="-10" y="588" text-anchor="end">-26.20°S</text>
+      <text x="-10" y="705" text-anchor="end">-26.28°S</text>
+      
+      <!-- Longitude labels (bottom) -->
+      <text x="5" y="720" text-anchor="start">27.82°E</text>
+      <text x="218" y="720" text-anchor="middle">27.90°E</text>
+      <text x="431" y="720" text-anchor="middle">27.98°E</text>
+      <text x="645" y="720" text-anchor="middle">28.06°E</text>
+      <text x="858" y="720" text-anchor="middle">28.14°E</text>
+      <text x="1071" y="720" text-anchor="middle">28.22°E</text>
+      <text x="1275" y="720" text-anchor="end">28.27°E</text>
+    </g>
+    
+    <!-- Major roads and infrastructure -->
+    <g id="infrastructure" stroke="#ADB5BD" stroke-width="2" fill="none">
+      <!-- Major highways (simplified representation) -->
+      <!-- M1 Highway (north-south) -->
+      <path d="M 550 0 L 580 200 L 600 400 L 620 700" stroke="#6C757D" stroke-width="3"/>
+      <!-- N1 Highway -->
+      <path d="M 0 300 L 200 280 L 400 260 L 600 250 L 800 240 L 1000 230 L 1280 220" stroke="#6C757D" stroke-width="3"/>
+      <!-- R24 -->
+      <path d="M 400 600 L 600 580 L 800 560 L 1000 540" stroke="#868E96" stroke-width="2"/>
+      
+      <!-- Major local roads -->
+      <path d="M 200 100 L 800 150" stroke="#ADB5BD" stroke-width="1.5"/>
+      <path d="M 300 200 L 900 250" stroke="#ADB5BD" stroke-width="1.5"/>
+      <path d="M 100 400 L 700 420" stroke="#ADB5BD" stroke-width="1.5"/>
+      <path d="M 400 500 L 1100 520" stroke="#ADB5BD" stroke-width="1.5"/>
+    </g>
+    
+    <!-- GCRO Survey Areas (Ward Coverage) -->
+    <g id="gcro-coverage">
+      <!-- High density areas -->
+      <g id="gcro-high-density" opacity="0.8">
+        <rect x="200" y="150" width="400" height="200" fill="url(#wave2014)"/>
+        <rect x="500" y="200" width="350" height="250" fill="url(#wave2018)"/>
+        <rect x="300" y="350" width="450" height="180" fill="url(#wave2011)"/>
+        <rect x="650" y="100" width="300" height="150" fill="url(#wave2021)"/>
+      </g>
+      
+      <!-- Medium density areas -->
+      <g id="gcro-medium-density" opacity="0.6">
+        <rect x="100" y="100" width="200" height="300" fill="url(#wave2011)"/>
+        <rect x="800" y="200" width="250" height="200" fill="url(#wave2014)"/>
+        <rect x="400" y="500" width="300" height="150" fill="url(#wave2018)"/>
+        <rect x="850" y="400" width="200" height="200" fill="url(#wave2021)"/>
+      </g>
+      
+      <!-- Sparse coverage areas -->
+      <g id="gcro-sparse" opacity="0.4">
+        <rect x="50" y="450" width="150" height="200" fill="url(#wave2011)"/>
+        <rect x="1000" y="150" width="200" height="250" fill="url(#wave2014)"/>
+        <rect x="750" y="500" width="200" height="150" fill="url(#wave2018)"/>
+        <rect x="1100" y="400" width="150" height="200" fill="url(#wave2021)"/>
+      </g>
+    </g>
+    
+    <!-- Major landmarks and areas -->
+    <g id="landmarks">
+      <!-- Johannesburg CBD -->
+      <rect x="580" y="340" width="80" height="60" fill="#34495E" opacity="0.3" stroke="#2C3E50" stroke-width="2"/>
+      <text x="620" y="375" text-anchor="middle" fill="#2C3E50" font-family="Arial, sans-serif" font-size="12" font-weight="bold">JHB CBD</text>
+      
+      <!-- University of Witwatersrand -->
+      <rect x="540" y="300" width="60" height="30" fill="#27AE60" opacity="0.3"/>
+      <text x="570" y="318" text-anchor="middle" fill="#27AE60" font-family="Arial, sans-serif" font-size="10">Wits</text>
+      
+      <!-- Soweto (approximate) -->
+      <ellipse cx="450" cy="480" rx="80" ry="40" fill="#8E44AD" opacity="0.2"/>
+      <text x="450" y="485" text-anchor="middle" fill="#8E44AD" font-family="Arial, sans-serif" font-size="11">Soweto</text>
+      
+      <!-- Sandton -->
+      <rect x="650" y="200" width="70" height="40" fill="#E67E22" opacity="0.3"/>
+      <text x="685" y="223" text-anchor="middle" fill="#E67E22" font-family="Arial, sans-serif" font-size="10">Sandton</text>
+    </g>
+    
+    <!-- Clinical Trial Sites -->
+    <g id="clinical-sites">
+      
+      <!-- Central Johannesburg Hub (9 studies, 6,964 patients) -->
+      <g id="central-hub" transform="translate(620, 370)">
+        <circle r="45" fill="#3498DB" opacity="0.8" filter="url(#dropShadow)"/>
+        <circle r="35" fill="url(#siteGradient)"/>
+        <text y="-15" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Central Hub</text>
+        <text y="0" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">9 Studies</text>
+        <text y="15" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12">6,964 Patients</text>
+        
+        <!-- Study type indicators -->
+        <g id="study-types" transform="translate(0, 30)">
+          <circle cx="-15" cy="0" r="3" fill="#3498DB" title="HIV Studies"/>
+          <circle cx="-5" cy="0" r="3" fill="#E67E22" title="COVID Studies"/>
+          <circle cx="5" cy="0" r="3" fill="#27AE60" title="Metabolic Studies"/>
+          <circle cx="15" cy="0" r="3" fill="#8E44AD" title="TB/HIV Studies"/>
+        </g>
+      </g>
+      
+      <!-- Western Johannesburg Hub (6 studies, 685 patients) -->
+      <g id="western-hub" transform="translate(480, 380)">
+        <circle r="25" fill="#3498DB" opacity="0.8" filter="url(#dropShadow)"/>
+        <circle r="20" fill="url(#siteGradient)"/>
+        <text y="-5" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Western Hub</text>
+        <text y="8" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">6 Studies, 685 Patients</text>
+      </g>
+      
+      <!-- Northern Site (1 study, 2,551 patients) -->
+      <g id="northern-site" transform="translate(800, 150)">
+        <circle r="30" fill="#8E44AD" opacity="0.8" filter="url(#dropShadow)"/>
+        <circle r="25" fill="url(#siteGradient)"/>
+        <text y="-8" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Northern Site</text>
+        <text y="5" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">JHB_Aurum_009</text>
+        <text y="16" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">2,551 Patients</text>
+      </g>
+      
+      <!-- Southwest Site (1 study, 2 patients) -->
+      <g id="southwest-site" transform="translate(420, 520)">
+        <circle r="8" fill="#E67E22" opacity="0.8"/>
+        <text x="15" y="3" fill="#E67E22" font-family="Arial, sans-serif" font-size="10">SW Site (2 patients)</text>
+      </g>
+      
+      <!-- Study detail callouts -->
+      <g id="study-details" font-family="Arial, sans-serif" font-size="9" fill="#495057">
+        <!-- Central Hub details -->
+        <g transform="translate(700, 300)">
+          <rect x="0" y="0" width="180" height="120" fill="white" stroke="#DEE2E6" stroke-width="1" opacity="0.95"/>
+          <text x="5" y="12" font-weight="bold">Central Hub Studies:</text>
+          <text x="5" y="25">• JHB_VIDA_007 (N=2129, COVID)</text>
+          <text x="5" y="37">• JHB_WRHI_001 (N=1067, HIV)</text>
+          <text x="5" y="49">• JHB_Ezin_002 (N=1053, Metabolic)</text>
+          <text x="5" y="61">• JHB_DPHRU_053 (N=998, HIV/TB)</text>
+          <text x="5" y="73">• JHB_VIDA_008 (N=550, COVID)</text>
+          <text x="5" y="85">• JHB_JHSPH_005 (N=524, TB/HIV)</text>
+          <text x="5" y="97">• JHB_DPHRU_013 (N=247, HIV/TB)</text>
+          <text x="5" y="109">• + 2 additional studies</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Scale bar -->
+    <g id="scale-bar" transform="translate(50, 650)">
+      <rect x="0" y="0" width="100" height="20" fill="white" stroke="#6C757D" stroke-width="1"/>
+      <rect x="0" y="0" width="50" height="20" fill="#6C757D"/>
+      <text x="25" y="14" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10">5 km</text>
+      <text x="75" y="14" text-anchor="middle" fill="#6C757D" font-family="Arial, sans-serif" font-size="10">10 km</text>
+      <text x="50" y="35" text-anchor="middle" fill="#6C757D" font-family="Arial, sans-serif" font-size="10">Scale</text>
+    </g>
+    
+    <!-- North arrow -->
+    <g id="north-arrow" transform="translate(1200, 50)">
+      <polygon points="0,-20 -8,0 8,0" fill="#2C3E50"/>
+      <line x1="0" y1="0" x2="0" y2="15" stroke="#2C3E50" stroke-width="2"/>
+      <text x="0" y="30" text-anchor="middle" fill="#2C3E50" font-family="Arial, sans-serif" font-size="12" font-weight="bold">N</text>
+    </g>
+  </g>
+  
+  <!-- Legend Panel -->
+  <g id="legend-panel" transform="translate(1420, 140)">
+    <rect x="0" y="0" width="480" height="700" fill="white" stroke="#DEE2E6" stroke-width="2"/>
+    
+    <!-- Legend Title -->
+    <text x="240" y="30" text-anchor="middle" fill="#2C3E50" font-family="Arial, sans-serif" font-size="18" font-weight="bold">Legend</text>
+    
+    <!-- Clinical Trial Sites Section -->
+    <g id="legend-clinical" transform="translate(20, 60)">
+      <text x="0" y="0" fill="#2C3E50" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Clinical Trial Sites</text>
+      
+      <!-- Size legend -->
+      <text x="0" y="25" fill="#495057" font-family="Arial, sans-serif" font-size="12">Circle size = Patient count</text>
+      <circle cx="20" cy="45" r="8" fill="#3498DB" opacity="0.8"/>
+      <text x="35" y="50" fill="#495057" font-family="Arial, sans-serif" font-size="11">≤100 patients</text>
+      <circle cx="20" cy="65" r="15" fill="#3498DB" opacity="0.8"/>
+      <text x="40" y="70" fill="#495057" font-family="Arial, sans-serif" font-size="11">100-1000 patients</text>
+      <circle cx="20" cy="90" r="22" fill="#3498DB" opacity="0.8"/>
+      <text x="47" y="95" fill="#495057" font-family="Arial, sans-serif" font-size="11">>1000 patients</text>
+      
+      <!-- Research focus colors -->
+      <text x="0" y="125" fill="#495057" font-family="Arial, sans-serif" font-size="12">Research Focus:</text>
+      <circle cx="20" cy="145" r="6" fill="#3498DB"/>
+      <text x="35" y="150" fill="#495057" font-family="Arial, sans-serif" font-size="11">HIV Research</text>
+      <circle cx="20" cy="165" r="6" fill="#E67E22"/>
+      <text x="35" y="170" fill="#495057" font-family="Arial, sans-serif" font-size="11">COVID Research</text>
+      <circle cx="20" cy="185" r="6" fill="#27AE60"/>
+      <text x="35" y="190" fill="#495057" font-family="Arial, sans-serif" font-size="11">Metabolic Research</text>
+      <circle cx="20" cy="205" r="6" fill="#8E44AD"/>
+      <text x="35" y="210" fill="#495057" font-family="Arial, sans-serif" font-size="11">TB/HIV Research</text>
+    </g>
+    
+    <!-- GCRO Survey Section -->
+    <g id="legend-gcro" transform="translate(20, 300)">
+      <text x="0" y="0" fill="#2C3E50" font-family="Arial, sans-serif" font-size="14" font-weight="bold">GCRO Survey Coverage</text>
+      
+      <rect x="0" y="20" width="20" height="15" fill="url(#wave2011)"/>
+      <text x="25" y="32" fill="#495057" font-family="Arial, sans-serif" font-size="11">Wave 2011 (495 wards, 15K households)</text>
+      
+      <rect x="0" y="45" width="20" height="15" fill="url(#wave2014)"/>
+      <text x="25" y="57" fill="#495057" font-family="Arial, sans-serif" font-size="11">Wave 2014 (508 wards, 15K households)</text>
+      
+      <rect x="0" y="70" width="20" height="15" fill="url(#wave2018)"/>
+      <text x="25" y="82" fill="#495057" font-family="Arial, sans-serif" font-size="11">Wave 2018 (15K households)</text>
+      
+      <rect x="0" y="95" width="20" height="15" fill="url(#wave2021)"/>
+      <text x="25" y="107" fill="#495057" font-family="Arial, sans-serif" font-size="11">Wave 2021 (13.6K households)</text>
+      
+      <text x="0" y="135" fill="#6C757D" font-family="Arial, sans-serif" font-size="10" font-style="italic">Pattern opacity indicates survey density</text>
+    </g>
+    
+    <!-- Infrastructure Section -->
+    <g id="legend-infrastructure" transform="translate(20, 480)">
+      <text x="0" y="0" fill="#2C3E50" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Infrastructure</text>
+      
+      <line x1="0" y1="25" x2="30" y2="25" stroke="#6C757D" stroke-width="3"/>
+      <text x="35" y="29" fill="#495057" font-family="Arial, sans-serif" font-size="11">Major highways</text>
+      
+      <line x1="0" y1="45" x2="30" y2="45" stroke="#ADB5BD" stroke-width="2"/>
+      <text x="35" y="49" fill="#495057" font-family="Arial, sans-serif" font-size="11">Main roads</text>
+      
+      <rect x="0" y="60" width="15" height="10" fill="#34495E" opacity="0.3" stroke="#2C3E50"/>
+      <text x="20" y="69" fill="#495057" font-family="Arial, sans-serif" font-size="11">Business districts</text>
+      
+      <ellipse cx="8" cy="85" rx="12" ry="6" fill="#8E44AD" opacity="0.2"/>
+      <text x="25" y="89" fill="#495057" font-family="Arial, sans-serif" font-size="11">Residential areas</text>
+    </g>
+    
+    <!-- Data Sources -->
+    <g id="data-sources" transform="translate(20, 600)">
+      <text x="0" y="0" fill="#2C3E50" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Data Sources</text>
+      <text x="0" y="20" fill="#6C757D" font-family="Arial, sans-serif" font-size="10">Clinical Data: 17 studies, 10,202 patients (2002-2021)</text>
+      <text x="0" y="35" fill="#6C757D" font-family="Arial, sans-serif" font-size="10">GCRO: 58,616 households across 508 wards</text>
+      <text x="0" y="50" fill="#6C757D" font-family="Arial, sans-serif" font-size="10">Coordinates: WGS84 (EPSG:4326)</text>
+      <text x="0" y="65" fill="#6C757D" font-family="Arial, sans-serif" font-size="10">Base map: OpenStreetMap contributors</text>
+      <text x="0" y="85" fill="#6C757D" font-family="Arial, sans-serif" font-size="9" font-style="italic">Map generated for ENBEL Climate-Health Analysis</text>
+    </g>
+  </g>
+  
+  <!-- Footer -->
+  <g id="footer" transform="translate(0, 1040)">
+    <rect x="0" y="0" width="1920" height="40" fill="#ECF0F1"/>
+    <text x="50" y="25" fill="#7F8C8D" font-family="Arial, sans-serif" font-size="12">
+      © 2024 ENBEL Climate-Health Analysis Pipeline | Generated for scientific publication
+    </text>
+    <text x="1870" y="25" text-anchor="end" fill="#7F8C8D" font-family="Arial, sans-serif" font-size="12">
+      16:9 Format | Optimized for Figma Editing
+    </text>
+  </g>
+</svg>
