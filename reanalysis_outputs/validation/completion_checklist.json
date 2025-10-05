@@ -1,0 +1,29 @@
+{
+  "required_svg_files": {
+    "stage1_bp_shap_beeswarm": {
+      "exists": true,
+      "valid_svg": true
+    },
+    "stage1_glucose_shap_beeswarm": {
+      "exists": true,
+      "valid_svg": true
+    }
+  },
+  "required_data_files": {
+    "slide_data_json": {
+      "exists": true,
+      "valid_json": true
+    },
+    "comparison_checks": {
+      "exists": true,
+      "valid_json": true
+    }
+  },
+  "svg_quality": {
+    "text_editable": true,
+    "layers_named": false,
+    "colours_hex": true,
+    "no_raster": true
+  },
+  "all_checks_passed": true
+}

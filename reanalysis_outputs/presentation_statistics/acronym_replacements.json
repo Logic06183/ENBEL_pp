@@ -1,0 +1,17 @@
+{
+  "BP": "Blood Pressure",
+  "XAI": "Explainable AI",
+  "DLNM": "Distributed Lag Non-Linear Model",
+  "SHAP": "Feature Importance",
+  "WHO": "World Health Organization",
+  "ADA": "American Diabetes Association",
+  "CI": "Confidence Interval",
+  "GCRO": "Gauteng City-Region Observatory",
+  "CD4": "CD4+ T-Cell Count",
+  "HIV": "Human Immunodeficiency Virus",
+  "ERA5": "ECMWF Reanalysis v5",
+  "ML": "Machine Learning",
+  "AI": "Artificial Intelligence",
+  "ANOVA": "Analysis of Variance",
+  "GAM": "Generalized Additive Model"
+}

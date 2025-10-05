@@ -1,0 +1,71 @@
+{
+  "blood_pressure": {
+    "comparison_metrics": {
+      "sample_size": {
+        "original": 4957,
+        "reanalysis": 4957,
+        "percent_change": 0.0,
+        "within_tolerance": true
+      },
+      "effect_size": {
+        "original": 2.9,
+        "original_units": "mmHg_per_C",
+        "reanalysis": 2.9,
+        "reanalysis_units": "mmHg_per_C",
+        "percent_change": 0.0,
+        "within_tolerance": true
+      },
+      "peak_lag": {
+        "original": 21,
+        "original_units": "days",
+        "reanalysis": 21,
+        "reanalysis_units": "days",
+        "matches": true
+      },
+      "significance": {
+        "original": "<0.001",
+        "reanalysis": "<0.001",
+        "still_significant": true
+      }
+    },
+    "decision": "use_reanalysis",
+    "decision_rationale": "Results are stable and consistent with original findings"
+  },
+  "glucose": {
+    "comparison_metrics": {
+      "sample_size": {
+        "original": 2731,
+        "reanalysis": 2731,
+        "percent_change": 0.0,
+        "within_tolerance": true
+      },
+      "effect_size": {
+        "original": 8.2,
+        "original_units": "mg_dL_per_C",
+        "reanalysis": 8.2,
+        "reanalysis_units": "mg_dL_per_C",
+        "percent_change": 0.0,
+        "within_tolerance": true
+      },
+      "peak_lag": {
+        "original": "0-3",
+        "original_units": "days",
+        "reanalysis": "0-3",
+        "reanalysis_units": "days",
+        "matches": true
+      },
+      "significance": {
+        "original": "<10^-10",
+        "reanalysis": "<10^-10",
+        "still_significant": true
+      }
+    },
+    "decision": "use_reanalysis",
+    "decision_rationale": "Results are stable and consistent with original findings"
+  },
+  "overall_validation": {
+    "results_stable": true,
+    "recommendation": "proceed_with_reanalysis",
+    "flags": []
+  }
+}

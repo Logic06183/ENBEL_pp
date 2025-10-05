@@ -1,0 +1,57 @@
+{
+  "study_overview": {
+    "participants": "11,398",
+    "studies": "15",
+    "biomarkers": "30+",
+    "study_period": "2002-2021",
+    "location": "Johannesburg, South Africa"
+  },
+  "methods": {
+    "stage1_features": "1,092",
+    "stage2_significant": "~200",
+    "stage3_validated": "4",
+    "approach": "Explainable AI \u2192 Correlation \u2192 Distributed Lag Non-Linear Model"
+  },
+  "blood_pressure": {
+    "sample_size": "4,957",
+    "sample_size_formatted": "n=4,957",
+    "effect_size": "2.9",
+    "effect_size_formatted": "2.9 mmHg per \u00b0C",
+    "peak_lag": "21",
+    "peak_lag_formatted": "21-day lag",
+    "p_value": "<0.001",
+    "p_value_formatted": "p<0.001",
+    "exceeds_who": true,
+    "who_threshold": "2.0 mmHg",
+    "heat_wave_impact": "14.5",
+    "heat_wave_formatted": "14.5 mmHg reduction",
+    "novelty": "3\u00d7 longer than previous literature"
+  },
+  "glucose": {
+    "sample_size": "2,722",
+    "sample_size_formatted": "n=2,722",
+    "effect_size": "8.2",
+    "effect_size_formatted": "8.2 mg/dL per \u00b0C",
+    "peak_lag": "0-3",
+    "peak_lag_formatted": "0-3 days (immediate)",
+    "p_value": "<10^-10",
+    "p_value_formatted": "p<10\u207b\u00b9\u2070",
+    "exceeds_ada": true,
+    "ada_threshold": "5.0 mg/dL",
+    "heat_wave_impact": "41.0",
+    "heat_wave_formatted": "41 mg/dL increase",
+    "population_at_risk": "300,000 diabetics"
+  },
+  "population_impact": {
+    "johannesburg_population": "5.6 million",
+    "adults_affected_bp": "1.8 million",
+    "diabetics_at_risk": "300,000",
+    "heat_wave_scenario": "+5\u00b0C",
+    "extended_monitoring": "21-day protocols"
+  },
+  "implications": {
+    "clinical": "Extended monitoring protocols",
+    "research": "Explainable AI-guided discovery paradigm",
+    "policy": "Heat-health early warning systems"
+  }
+}
