@@ -170,18 +170,18 @@ colors <- list(
 
 # Create base plot
 p <- ggplot() +
-  # Plot JHB boundary fill
+  # Plot JHB boundary fill FIRST (background)
   geom_sf(data = jhb_boundary,
           fill = colors$fill,
           color = colors$boundary,
           size = 0.8,
-          alpha = 0.3) +
+          alpha = 0.2) +  # More transparent so points show through
 
-  # Plot GCRO survey points FIRST (so they're in background) with HIGHLY DISTINCT colors
+  # Plot GCRO survey points AFTER boundary (so they're VISIBLE) with HIGHLY DISTINCT colors
   geom_sf(data = gcro_points_sf,
           aes(color = factor(year)),
-          size = 2,  # Larger size
-          alpha = 0.8,  # More visible
+          size = 3.5,  # MUCH LARGER size
+          alpha = 0.9,  # Very visible
           show.legend = TRUE) +
 
   # Manually specify HIGHLY DISTINCT colors for each wave
