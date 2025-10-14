@@ -401,6 +401,78 @@ yarn-error.log*
 !notebooks/examples/*.ipynb
 
 # =============================================================================
+# LaTeX / Manuscript Specific
+# =============================================================================
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+*.ist
+*.acn
+*.acr
+*.alg
+
+# LaTeX temporary files
+*.dvi
+*.ps
+*.cb
+*.cb2
+.*.lb
+
+# LaTeX backup files
+*.sav
+
+# BibTeX files
+*.bcf
+*.run.xml
+
+# Line numbering
+*.ent
+
+# Glossary
+*.xdy
+
+# Nomenclature
+*.nlo
+*.nls
+*.nlg
+
+# Revision control
+*.rej
+
+# natbib
+*.nav
+*.snm
+*.vrb
+
+# Beamer
+*.vrb
+*.nav
+*.snm
+
+# Build directories for manuscript
+manuscript/build/
+manuscript/output/
+
+# Keep final PDFs but ignore drafts
+manuscript/*draft*.pdf
+manuscript/*Draft*.pdf
+manuscript/drafts/
+
+# =============================================================================
 # Archive (legacy code kept for reference)
 # =============================================================================
 # Include all archive content in git but mark as archive
