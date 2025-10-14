@@ -42,18 +42,27 @@ def create_johannesburg_boundary() -> List[Tuple[float, float]]:
     ]
     return boundary_points
 
-def generate_gcro_survey_points(n_points: int = 2000) -> List[Tuple[float, float]]:
+def generate_gcro_survey_points(n_points: int = 2000) -> List[Dict]:
     """
     Generate realistic GCRO household survey points across Johannesburg.
     Higher density in townships, lower in suburbs.
+    Returns list of dicts with location and survey wave.
     """
     points = []
-    
+
+    # Survey waves with realistic distribution
+    survey_waves = [
+        {"year": 2011, "proportion": 0.25, "color": "#1E3A8A"},  # Dark blue
+        {"year": 2014, "proportion": 0.30, "color": "#2563EB"},  # Medium blue
+        {"year": 2018, "proportion": 0.25, "color": "#60A5FA"},  # Light blue
+        {"year": 2021, "proportion": 0.20, "color": "#93C5FD"},  # Very light blue
+    ]
+
     # Define residential density zones
     zones = [
         # Soweto (high density)
         {"center": (27.87, -26.27), "radius": 0.08, "density": 0.4, "points": 800},
-        # Alexandra (high density)  
+        # Alexandra (high density)
         {"center": (28.09, -26.10), "radius": 0.03, "density": 0.5, "points": 300},
         # Central/Inner City (medium density)
         {"center": (28.05, -26.20), "radius": 0.05, "density": 0.3, "points": 400},
@@ -62,29 +71,45 @@ def generate_gcro_survey_points(n_points: int = 2000) -> List[Tuple[float, float
         # Eastern areas (medium density)
         {"center": (28.20, -26.25), "radius": 0.08, "density": 0.2, "points": 200},
     ]
-    
+
     for zone in zones:
         center_lon, center_lat = zone["center"]
         radius = zone["radius"]
         n_zone_points = zone["points"]
-        
+
         for _ in range(n_zone_points):
             # Generate point within circular zone with realistic clustering
             angle = random.uniform(0, 2 * math.pi)
             # Use sqrt for uniform distribution within circle
             r = radius * math.sqrt(random.uniform(0, 1))
-            
+
             # Add some clustering by biasing toward center
             if random.random() < zone["density"]:
                 r *= 0.6  # Cluster more toward center
-                
+
             lon = center_lon + r * math.cos(angle)
             lat = center_lat + r * math.sin(angle)
-            
+
             # Ensure point is within Johannesburg bounds
             if 27.82 <= lon <= 28.30 and -26.40 <= lat <= -26.05:
-                points.append((lon, lat))
-    
+                # Randomly assign survey wave
+                rand = random.random()
+                cumulative = 0
+                assigned_wave = survey_waves[-1]  # Default to last wave
+
+                for wave in survey_waves:
+                    cumulative += wave["proportion"]
+                    if rand <= cumulative:
+                        assigned_wave = wave
+                        break
+
+                points.append({
+                    "lon": lon,
+                    "lat": lat,
+                    "year": assigned_wave["year"],
+                    "color": assigned_wave["color"]
+                })
+
     return points[:n_points]  # Return exactly n_points
 
 def get_clinical_trial_sites() -> List[Dict]:
@@ -130,38 +155,49 @@ def get_clinical_trial_sites() -> List[Dict]:
 
 def create_distinct_data_types_map():
     """Create the main map with clear distinction between data types."""
-    
-    # Create figure with proper aspect ratio
-    fig, ax = plt.subplots(1, 1, figsize=(19.2, 10.8), dpi=100)
+
+    # Create figure with 16:9 aspect ratio optimized for Figma
+    # Standard 1920x1080 presentation size
+    fig, ax = plt.subplots(1, 1, figsize=(16, 9), dpi=150)
     fig.patch.set_facecolor('white')
     ax.set_facecolor('white')
-    
+
     # Generate data
     boundary = create_johannesburg_boundary()
     gcro_points = generate_gcro_survey_points(2000)
     clinical_sites = get_clinical_trial_sites()
-    
+
     # Plot Johannesburg boundary (subtle)
     boundary_lons = [p[0] for p in boundary]
     boundary_lats = [p[1] for p in boundary]
-    ax.plot(boundary_lons, boundary_lats, 
+    ax.plot(boundary_lons, boundary_lats,
            color='#34495E', linewidth=2, alpha=0.7, zorder=2)
-    
+
     # Fill boundary with very light background
-    boundary_polygon = Polygon([(lon, lat) for lon, lat in boundary], 
+    boundary_polygon = Polygon([(lon, lat) for lon, lat in boundary],
                               facecolor='#F8F9FA', alpha=0.3, zorder=1)
     ax.add_patch(boundary_polygon)
-    
-    # Plot GCRO survey points (small, scattered, background)
-    gcro_lons = [p[0] for p in gcro_points]
-    gcro_lats = [p[1] for p in gcro_points]
-    ax.scatter(gcro_lons, gcro_lats,
-              s=4,  # Very small dots
-              c='#87CEEB',  # Light blue
-              alpha=0.4,  # Semi-transparent
-              marker='o',
-              zorder=3,
-              label='GCRO Household Surveys (n≈58,616)')
+
+    # Plot GCRO survey points by wave (small, scattered, background)
+    # Group points by survey wave for better color distinction
+    survey_waves = {}
+    for point in gcro_points:
+        year = point["year"]
+        if year not in survey_waves:
+            survey_waves[year] = {"lons": [], "lats": [], "color": point["color"]}
+        survey_waves[year]["lons"].append(point["lon"])
+        survey_waves[year]["lats"].append(point["lat"])
+
+    # Plot each wave separately with distinct colors
+    for year in sorted(survey_waves.keys()):
+        wave_data = survey_waves[year]
+        ax.scatter(wave_data["lons"], wave_data["lats"],
+                  s=5,  # Small dots
+                  c=wave_data["color"],
+                  alpha=0.6,  # More opaque for better visibility
+                  marker='o',
+                  zorder=3,
+                  label=f'GCRO {year}')
     
     # Plot clinical trial sites (large, prominent, foreground)
     for site in clinical_sites:
@@ -226,37 +262,50 @@ def create_distinct_data_types_map():
     
     # Create clear legend with sections
     legend_elements = []
-    
-    # GCRO Survey section
-    legend_elements.append(plt.Line2D([0], [0], marker='o', color='w',
-                                    markerfacecolor='#87CEEB', markersize=6,
-                                    alpha=0.4, label='GCRO Household Surveys'))
-    
+
+    # GCRO Survey section - add each wave with distinct color
+    legend_elements.append(plt.Line2D([0], [0], marker='', color='w',
+                                    label='GCRO Survey Waves:', markersize=0))
+    for year in sorted(survey_waves.keys()):
+        wave_data = survey_waves[year]
+        legend_elements.append(plt.Line2D([0], [0], marker='o', color='w',
+                                        markerfacecolor=wave_data["color"],
+                                        markersize=7,
+                                        alpha=0.6,
+                                        label=f'  {year}'))
+
+    # Add spacer
+    legend_elements.append(plt.Line2D([0], [0], marker='', color='w',
+                                    label='', markersize=0))
+
     # Clinical trial sites section
+    legend_elements.append(plt.Line2D([0], [0], marker='', color='w',
+                                    label='Clinical Research Sites:', markersize=0))
+
     research_types = {}
     for site in clinical_sites:
         if site["research_type"] not in research_types:
             research_types[site["research_type"]] = site["color"]
-    
+
     for research_type, color in research_types.items():
         legend_elements.append(plt.Line2D([0], [0], marker='D', color='w',
                                         markerfacecolor=color, markersize=10,
                                         markeredgecolor='white', markeredgewidth=2,
-                                        label=f'Clinical Sites - {research_type}'))
-    
+                                        label=f'  {research_type}'))
+
     # Position legend
     legend = ax.legend(handles=legend_elements,
-                      loc='upper left',
-                      bbox_to_anchor=(0.02, 0.98),
-                      fontsize=11,
+                      loc='upper right',
+                      bbox_to_anchor=(0.98, 0.98),
+                      fontsize=10,
                       frameon=True,
                       fancybox=True,
                       shadow=True,
                       title='Data Sources',
-                      title_fontsize=12)
-    
+                      title_fontsize=11)
+
     legend.get_frame().set_facecolor('white')
-    legend.get_frame().set_alpha(0.9)
+    legend.get_frame().set_alpha(0.95)
     legend.get_frame().set_edgecolor('#BDC3C7')
     legend.get_title().set_fontweight('bold')
     
@@ -279,9 +328,9 @@ def create_distinct_data_types_map():
            zorder=12)
     
     # Set title
-    ax.set_title('ENBEL Climate-Health Data Sources in Johannesburg\n'
-                'Clear Distinction: Survey Points vs Clinical Trial Sites',
-                fontsize=16, fontweight='bold', pad=20, color='#2C3E50')
+    ax.set_title('Johannesburg Study Distribution\n'
+                'Clinical trial sites and GCRO household survey coverage across metropolitan area',
+                fontsize=18, fontweight='bold', pad=20, color='#2C3E50')
     
     # Format axes (minimal, clean)
     ax.set_xlabel('Longitude (°E)', fontsize=12, color='#34495E')
@@ -305,25 +354,33 @@ def create_distinct_data_types_map():
     ax.tick_params(colors='#34495E', labelsize=10)
     
     plt.tight_layout()
-    
-    # Save as SVG with organized structure
-    output_path = '/Users/craig/Library/Mobile Documents/com~apple~CloudDocs/ENBEL_pp/presentation_slides_final/enbel_distinct_data_types_map.svg'
-    plt.savefig(output_path, 
+
+    # Save as SVG optimized for Figma (16:9 aspect ratio)
+    output_path = '/Users/craig/Library/Mobile Documents/com~apple~CloudDocs/ENBEL_pp/presentation_slides_final/johannesburg_study_distribution_16x9.svg'
+    plt.savefig(output_path,
                format='svg',
-               dpi=300,
+               dpi=150,
                bbox_inches='tight',
                facecolor='white',
                edgecolor='none')
-    
-    print(f"Map saved to: {output_path}")
-    print(f"GCRO survey points generated: {len(gcro_points)}")
-    print(f"Clinical trial sites plotted: {len(clinical_sites)}")
+
+    print(f"✓ Map saved to: {output_path}")
+    print(f"✓ Aspect ratio: 16:9 (optimized for Figma presentations)")
+    print(f"✓ GCRO survey points generated: {len(gcro_points)}")
+    print(f"  - Survey waves: {sorted(survey_waves.keys())}")
+    print(f"  - Distinct colors for each wave")
+    print(f"✓ Clinical trial sites plotted: {len(clinical_sites)}")
+    print("\nColor Scheme:")
+    print("  GCRO 2011: #1E3A8A (Dark blue)")
+    print("  GCRO 2014: #2563EB (Medium blue)")
+    print("  GCRO 2018: #60A5FA (Light blue)")
+    print("  GCRO 2021: #93C5FD (Very light blue)")
     print("\nVisual Hierarchy:")
     print("1. Clinical Trial Sites: Large diamonds with labels")
-    print("2. Johannesburg Boundary: Subtle outline")  
-    print("3. GCRO Survey Points: Small scattered dots")
+    print("2. Johannesburg Boundary: Subtle outline")
+    print("3. GCRO Survey Points: Small scattered dots by wave")
     print("4. Geographic Labels: Minimal key locations")
-    
+
     return fig, ax
 
 if __name__ == "__main__":
