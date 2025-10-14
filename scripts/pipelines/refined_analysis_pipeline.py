@@ -517,7 +517,7 @@ class RefinedClimateHealthPipeline:
             # Analyze each biomarker
             all_results = {}
 
-            for biomarker in tqdm(biomarkers[:5], desc="Analyzing biomarkers"):  # Limit to 5 for efficiency
+            for biomarker in tqdm(biomarkers, desc="Analyzing biomarkers"):  # Analyze ALL biomarkers
                 logger.info(f"\n{'='*60}")
                 logger.info(f"Analyzing: {biomarker}")
                 logger.info(f"{'='*60}")
