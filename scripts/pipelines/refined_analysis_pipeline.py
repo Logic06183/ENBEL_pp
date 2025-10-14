@@ -69,7 +69,22 @@ logger = logging.getLogger(__name__)
 
 # Reproducibility
 RANDOM_SEED = 42
-np.random.seed(RANDOM_SEED)
+
+def set_all_seeds(seed=42):
+    """Set all random seeds for reproducibility."""
+    import random
+    import os
+    random.seed(seed)
+    np.random.seed(seed)
+    try:
+        import torch
+        torch.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+    except ImportError:
+        pass
+    os.environ['PYTHONHASHSEED'] = str(seed)
+
+set_all_seeds(RANDOM_SEED)
 
 class RefinedClimateHealthPipeline:
     """
@@ -230,12 +245,11 @@ class RefinedClimateHealthPipeline:
         X = df_clean[valid_features].copy()
         y = df_clean[biomarker].copy()
 
-        # Handle remaining missing values with median imputation
-        for col in X.columns:
-            if X[col].isnull().any():
-                X[col].fillna(X[col].median(), inplace=True)
+        # NOTE: Missing value imputation will be done AFTER train/test split
+        # to avoid data leakage. Do NOT impute here.
 
-        logger.info(f"Final feature matrix shape: {X.shape}")
+        logger.info(f"Feature matrix shape (before imputation): {X.shape}")
+        logger.info(f"Missing values per feature: {X.isnull().sum().sum()} total")
         logger.info(f"Target distribution: mean={y.mean():.2f}, std={y.std():.2f}")
 
         return X, y
@@ -312,7 +326,7 @@ class RefinedClimateHealthPipeline:
         return study.best_params
 
     def train_and_evaluate(self, X: pd.DataFrame, y: pd.Series,
-                          biomarker: str) -> Dict:
+                          biomarker: str, optimize_hyperparams: bool = False) -> Dict:
         """
         Train models and evaluate performance.
 
@@ -331,10 +345,23 @@ class RefinedClimateHealthPipeline:
             X, y, test_size=0.2, random_state=RANDOM_SEED
         )
 
-        # Scale features
+        # CRITICAL: Impute missing values AFTER split to avoid data leakage
+        # Fit imputation on training data only
+        train_medians = X_train.median()
+        X_train_imputed = X_train.fillna(train_medians)
+        X_test_imputed = X_test.fillna(train_medians)  # Use training medians for test
+
+        logger.info(f"Imputed {X_train.isnull().sum().sum()} training missing values")
+        logger.info(f"Imputed {X_test.isnull().sum().sum()} test missing values")
+
+        # Scale features (tree-based models don't require scaling but good practice)
         scaler = StandardScaler()
-        X_train_scaled = scaler.fit_transform(X_train)
-        X_test_scaled = scaler.transform(X_test)
+        X_train_scaled = scaler.fit_transform(X_train_imputed)
+        X_test_scaled = scaler.transform(X_test_imputed)
+
+        # Convert back to DataFrame for feature names
+        X_train_scaled = pd.DataFrame(X_train_scaled, columns=X_train.columns, index=X_train.index)
+        X_test_scaled = pd.DataFrame(X_test_scaled, columns=X_test.columns, index=X_test.index)
 
         results = {
             'biomarker': biomarker,
@@ -343,24 +370,37 @@ class RefinedClimateHealthPipeline:
             'models': {}
         }
 
+        # Optimize hyperparameters if requested
+        best_params = {}
+        if optimize_hyperparams:
+            logger.info("Hyperparameter optimization enabled")
+            best_params = self.optimize_hyperparameters(X_train_scaled, y_train, 'lightgbm')
+
         # Train multiple models
-        models_to_train = {
-            'LightGBM': lgb.LGBMRegressor(random_state=RANDOM_SEED, n_jobs=-1, verbosity=-1),
-            'XGBoost': xgb.XGBRegressor(random_state=RANDOM_SEED, n_jobs=-1),
-            'RandomForest': RandomForestRegressor(random_state=RANDOM_SEED, n_jobs=-1)
-        }
+        if optimize_hyperparams and best_params:
+            models_to_train = {
+                'LightGBM': lgb.LGBMRegressor(**best_params),
+                'XGBoost': xgb.XGBRegressor(random_state=RANDOM_SEED, n_jobs=-1),
+                'RandomForest': RandomForestRegressor(random_state=RANDOM_SEED, n_jobs=-1)
+            }
+        else:
+            models_to_train = {
+                'LightGBM': lgb.LGBMRegressor(random_state=RANDOM_SEED, n_jobs=-1, verbosity=-1),
+                'XGBoost': xgb.XGBRegressor(random_state=RANDOM_SEED, n_jobs=-1),
+                'RandomForest': RandomForestRegressor(random_state=RANDOM_SEED, n_jobs=-1)
+            }
 
         for model_name, model in models_to_train.items():
             logger.info(f"Training {model_name}...")
 
-            # Train
+            # Train on SCALED data (CRITICAL BUG FIX)
             start_time = time.time()
-            model.fit(X_train, y_train)
+            model.fit(X_train_scaled, y_train)
             train_time = time.time() - start_time
 
-            # Predict
-            y_pred_train = model.predict(X_train)
-            y_pred_test = model.predict(X_test)
+            # Predict on SCALED data
+            y_pred_train = model.predict(X_train_scaled)
+            y_pred_test = model.predict(X_test_scaled)
 
             # Evaluate
             train_r2 = r2_score(y_train, y_pred_train)
