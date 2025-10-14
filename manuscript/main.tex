@@ -55,68 +55,20 @@
 \maketitle
 
 \begin{abstract}
-Climate change poses unprecedented threats to global health, yet the mechanisms linking meteorological factors to physiological biomarkers remain poorly understood. We analyzed 11,398 clinical records from 15 HIV trials in Johannesburg, South Africa (2002-2021), integrated with ERA5 climate reanalysis data to quantify climate-biomarker relationships using advanced machine learning and explainable AI (XAI) techniques. Our analysis of 19 health biomarkers revealed strong climate sensitivity in hematological markers (hematocrit: R² = 0.928) and lipid metabolism (cholesterol: R² = 0.33-0.39), while immune markers (CD4, ALT, AST) showed minimal predictive power in standard regression frameworks. Temperature variations explained 93\% of hematocrit variance, likely through dehydration-driven blood volume changes. These findings demonstrate that climate directly impacts measurable physiological parameters with implications for clinical interpretation, public health preparedness, and climate adaptation strategies in vulnerable populations. We provide open-source analysis pipelines and recommend incorporating meteorological data into clinical decision support systems.
+Climate change poses unprecedented threats to global health, yet the mechanisms linking meteorological factors to physiological biomarkers remain poorly understood. We analyzed 11,398 clinical records from 15 HIV trials in Johannesburg, South Africa (2002-2021), integrated with ERA5 climate reanalysis data and socioeconomic surveys (58,616 households) to quantify climate-biomarker relationships using machine learning and explainable AI techniques.
 
-\textbf{Keywords:} Climate health, biomarkers, machine learning, SHAP analysis, hematocrit, Johannesburg, HIV cohorts, explainable AI
+We harmonized data from 15 clinical trials using standardized protocols, extracted meteorological variables for each clinical visit from ERA5 reanalysis (99.5\% coverage), and developed a spatial-demographic imputation framework to integrate socioeconomic vulnerability indicators. Machine learning models (Random Forest, XGBoost, LightGBM) were trained to predict 19 biomarkers from climate features, with SHAP analysis providing mechanistic interpretation.
+
+Analysis revealed a clear hierarchy of climate-biomarker associations. Hematological markers showed notable climate sensitivity, likely reflecting dehydration-driven blood volume changes. Lipid metabolism demonstrated moderate climate associations (R² = 0.33-0.39 for cholesterol panels). Immune and inflammatory markers (CD4, ALT, AST) showed minimal predictive power in standard regression frameworks, suggesting need for distributed lag non-linear models to capture delayed responses. Sample sizes ranged from 217 to 4,606 observations per biomarker, with LightGBM emerging as the best-performing algorithm overall.
+
+These findings establish biomarkers as quantifiable indicators of climate health effects and provide evidence-based targets for monitoring programs. The rigorous data integration and imputation methodologies developed here enable climate-socioeconomic-health research at scale. We provide open-source analysis pipelines and recommend incorporating meteorological context into clinical interpretation, particularly for hematological and metabolic markers in heat-vulnerable populations.
+
+\textbf{Keywords:} Climate health, biomarkers, machine learning, SHAP analysis, Johannesburg, HIV cohorts, explainable AI, data integration
 \end{abstract}
 
-\section{Introduction}
+\input{sections/introduction}
 
-Climate change is increasingly recognized as a fundamental threat to human health \citep{watts2021lancet}. While substantial research has documented climate impacts on infectious diseases \citep{ryan2019climate}, heat-related mortality \citep{guo2014quantifying}, and cardiovascular events \citep{gasparrini2015mortality}, the direct physiological mechanisms remain incompletely understood. Specifically, how daily meteorological variations translate to measurable changes in clinical biomarkers—the fundamental indicators used for disease diagnosis and management—has received limited attention in the literature.
-
-Understanding climate-biomarker relationships is critical for three reasons: (1) biomarkers are objective, quantifiable indicators of physiological state, enabling precise mechanistic insights; (2) clinical laboratories worldwide generate billions of biomarker measurements annually, representing an untapped resource for climate health research; and (3) climate-driven biomarker variation may confound clinical interpretation if not properly accounted for.
-
-This study addresses these gaps by analyzing 11,398 clinical records from 15 HIV clinical trials conducted in Johannesburg, South Africa, between 2002 and 2021. We focus on South Africa for several reasons...
-
-% TODO: Add introduction sections
-\subsection{Climate Health in the Global South}
-% TODO: Context on climate vulnerability in South Africa
-
-\subsection{The Promise of Machine Learning for Climate-Health Research}
-% TODO: Discuss ML/XAI advantages
-
-\subsection{Study Objectives}
-This study aimed to:
-\begin{enumerate}
-    \item Quantify the strength of associations between meteorological variables and 19 clinical biomarkers
-    \item Identify which biomarkers are most sensitive to climate variation
-    \item Determine temporal lag structures in climate-biomarker relationships
-    \item Develop interpretable machine learning models using SHAP analysis
-    \item Provide actionable recommendations for clinical practice and public health policy
-\end{enumerate}
-
-\section{Methods}
-
-\subsection{Study Setting and Population}
-
-\subsubsection{Clinical Data Source}
-We obtained de-identified clinical trial data from the ENBEL (Evidence for Contraceptive Options and HIV Outcomes) consortium, comprising 15 randomized controlled trials conducted in Johannesburg, South Africa. The dataset included 11,398 clinical records with complete biomarker, temporal, and geolocation information spanning January 2002 to December 2021.
-
-% TODO: Add detailed methods sections
-
-\subsection{Climate Data Integration}
-
-\subsubsection{ERA5 Reanalysis}
-% TODO: Describe climate data source and variables
-
-\subsection{Machine Learning Pipeline}
-
-\subsubsection{Feature Engineering}
-We generated temporal lag features (7, 14, 30 days) for all climate variables to capture delayed physiological responses...
-
-\subsubsection{Model Selection and Training}
-Three gradient boosting algorithms were compared: Random Forest, XGBoost, and LightGBM...
-
-\subsubsection{Explainable AI (SHAP Analysis)}
-% TODO: Describe SHAP methodology
-
-\subsection{Statistical Analysis}
-
-\subsubsection{Performance Metrics}
-Model performance was evaluated using coefficient of determination (R²), mean absolute error (MAE), and root mean squared error (RMSE)...
-
-\subsubsection{Multiple Testing Correction}
-Given 19 biomarkers analyzed, we applied Bonferroni correction (α = 0.05/19 = 0.0026)...
+\input{sections/methods}
 
 \section{Results}
 

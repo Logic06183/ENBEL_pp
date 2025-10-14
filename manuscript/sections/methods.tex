@@ -1,0 +1,356 @@
+\section{Methods}
+
+\subsection{Study Design and Ethics}
+
+This retrospective cohort study analyzed de-identified clinical trial data from 15 HIV clinical trials conducted in Johannesburg, South Africa, between 2002 and 2021. All parent trials received ethical approval from institutional review boards at their respective institutions. The current secondary data analysis was conducted under approved data sharing agreements with the Evidence for Contraceptive Options and HIV Outcomes (ENBEL) consortium. All data were fully anonymized prior to analysis, with geographic coordinates aggregated to ward level and dates coarsened to protect participant privacy.
+
+\subsection{Study Setting and Population}
+
+\subsubsection{Geographic Context}
+
+Johannesburg, South Africa's largest city (population ~5.6 million), is located in Gauteng Province at approximately 26°S, 28°E, with an elevation of 1,753 meters above sea level. The city experiences a subtropical highland climate with distinct wet (October--March) and dry (April--September) seasons. Summer temperatures (December--February) regularly exceed 30°C, with increasing frequency and intensity of heat waves observed over the study period \citep{wright2021climate}. The urban heat island effect is pronounced, with temperature differences of 4--6°C between informal settlements and affluent suburbs \citep{gcro2019heatvuln}.
+
+Johannesburg's population exhibits substantial socioeconomic heterogeneity, with formal housing in affluent areas contrasting sharply with informal settlements lacking adequate infrastructure for heat adaptation. This inequality creates differential vulnerability to climate hazards, making the city an ideal setting for investigating climate-health relationships across diverse populations.
+
+\subsubsection{Clinical Data Source}
+
+We obtained clinical trial data from 15 randomized controlled trials conducted by the ENBEL consortium in Johannesburg between 2002 and 2021. All trials enrolled adult participants living with HIV and included standardized collection of clinical biomarkers, demographic information, and visit dates. The trials were originally designed to evaluate contraceptive safety and HIV treatment outcomes, providing a rich longitudinal dataset of health measurements.
+
+\textbf{Final analytical sample}: 11,398 participants with complete biomarker, temporal, and geolocation data suitable for climate linkage.
+
+\subsubsection{Socioeconomic Data Source}
+
+Socioeconomic data were obtained from the Gauteng City-Region Observatory (GCRO) Quality of Life (QoL) surveys, conducted in six waves between 2011 and 2021. These household surveys included 58,616 participants across the Johannesburg metropolitan area and collected data on dwelling type, income, education, employment, and self-reported heat vulnerability. The GCRO surveys employed stratified random sampling to ensure representative coverage across all geographic wards.
+
+\subsection{Data Harmonization and Integration}
+
+\subsubsection{Clinical Trial Harmonization}
+
+Clinical data from 15 trials were harmonized using the HEAT Master Codebook, which standardized variable names, units, and coding schemes across studies. Key harmonization steps included:
+
+\begin{enumerate}
+    \item \textbf{Biomarker standardization}: All laboratory values converted to South African medical standards (e.g., glucose in mmol/L, creatinine in µmol/L)
+    \item \textbf{Temporal alignment}: Visit dates standardized to ISO 8601 format (YYYY-MM-DD)
+    \item \textbf{Geographic validation}: Coordinates verified to fall within Johannesburg municipal boundaries (26.0°--26.4°S, 27.8°--28.2°E)
+    \item \textbf{Duplicate removal}: Systematic elimination of duplicate biomarker columns resulting from inconsistent naming conventions
+    \item \textbf{Quality assurance}: Range validation for all biomarkers against South African reference intervals
+\end{enumerate}
+
+The harmonization process consolidated 207 original columns into 114 standardized variables, eliminating 93 duplicate or empty columns while preserving all unique data.
+
+\subsubsection{Climate Data Extraction}
+
+Meteorological data were obtained from the European Centre for Medium-Range Weather Forecasts (ECMWF) ERA5 climate reanalysis dataset \citep{hersbach2020era5}, which provides hourly estimates of atmospheric, land, and oceanic variables at 31 km spatial resolution globally from 1950 to present.
+
+\textbf{Extraction procedure}:
+\begin{enumerate}
+    \item For each clinical visit record (date and coordinates), ERA5 2-meter air temperature data were extracted via the Climate Data Store API
+    \item Daily temperature statistics calculated from hourly data (mean, minimum, maximum)
+    \item Multi-day rolling averages computed to capture lagged climate exposure (7-day, 14-day, 30-day means)
+    \item Heat stress indices derived using standard formulae
+    \item Temperature anomalies calculated relative to 1991--2020 baseline climatology
+    \item Seasonal classifications assigned based on meteorological seasons (summer: December--February; autumn: March--May; winter: June--August; spring: September--November)
+\end{enumerate}
+
+\textbf{Climate coverage}: 99.5\% of clinical records successfully matched to ERA5 data (11,337/11,398 records). The 61 unmatched records (0.5\%) were from very early dates (2002--2003) when data quality was limited. No synthetic or imputed climate data were used---all values represent real meteorological observations.
+
+\textbf{Climate variables extracted} (16 features):
+\begin{itemize}
+    \item \texttt{climate\_daily\_mean\_temp}: Daily mean temperature (°C)
+    \item \texttt{climate\_daily\_max\_temp}: Daily maximum temperature (°C)
+    \item \texttt{climate\_daily\_min\_temp}: Daily minimum temperature (°C)
+    \item \texttt{climate\_7d\_mean\_temp}: 7-day rolling mean temperature (°C)
+    \item \texttt{climate\_14d\_mean\_temp}: 14-day rolling mean temperature (°C)
+    \item \texttt{climate\_30d\_mean\_temp}: 30-day rolling mean temperature (°C)
+    \item \texttt{climate\_heat\_stress\_index}: Daily heat stress indicator
+    \item \texttt{climate\_temp\_anomaly}: Temperature anomaly from baseline (°C)
+    \item \texttt{climate\_season}: Categorical season (summer/autumn/winter/spring)
+    \item Additional derived variables for extreme heat events and temporal patterns
+\end{itemize}
+
+\subsubsection{Socioeconomic Variable Imputation}
+
+Clinical trial participants lacked socioeconomic data, while GCRO survey participants lacked clinical biomarkers. To enable integrated analysis of social vulnerability, we developed a rigorous spatial-demographic imputation framework to transfer socioeconomic variables from GCRO donors to clinical trial recipients.
+
+\textbf{Imputation methodology}:
+
+\paragraph{Spatial-demographic matching}
+We implemented a combined K-nearest neighbors (KNN) and ecological stratification approach based on established statistical principles for multiple imputation \citep{rubin1987multiple, little2020statistical}:
+
+\begin{enumerate}
+    \item \textbf{Feature space construction}:
+    \begin{itemize}
+        \item Spatial features: Latitude and longitude (standardized)
+        \item Demographic features: Sex and race (encoded categorically)
+        \item Combined with weights: 40\% spatial, 60\% demographic
+    \end{itemize}
+
+    \item \textbf{KNN matching} ($k=10$ neighbors):
+    \begin{itemize}
+        \item For each clinical participant, identify 10 nearest GCRO participants in feature space
+        \item Calculate distance-weighted average of socioeconomic variables
+        \item Weight neighbors by inverse Euclidean distance: $w_i = 1/(d_i + \epsilon)$
+        \item Maximum spatial matching radius: 15 km
+    \end{itemize}
+
+    \item \textbf{Ecological stratification}:
+    \begin{itemize}
+        \item Divide Johannesburg into 10×10 spatial grid cells
+        \item Calculate stratum-specific means for each socioeconomic variable
+        \item Assign values based on hierarchical matching: spatial stratum → demographic stratum → overall mean
+    \end{itemize}
+
+    \item \textbf{Combined imputation}:
+    \begin{itemize}
+        \item Combine KNN and ecological estimates using confidence weighting
+        \item KNN confidence based on neighbor proximity and agreement
+        \item Ecological confidence based on stratum sample size
+        \item Final value: $\hat{y} = (c_{\text{KNN}} \cdot y_{\text{KNN}} + c_{\text{ECO}} \cdot y_{\text{ECO}}) / (c_{\text{KNN}} + c_{\text{ECO}})$
+    \end{itemize}
+\end{enumerate}
+
+\paragraph{Imputation validation}
+Imputation accuracy was assessed using holdout validation on the GCRO dataset:
+\begin{itemize}
+    \item Randomly withhold 20\% of GCRO observations with complete data
+    \item Apply imputation algorithm using remaining 80\% as donors
+    \item Calculate validation metrics: root mean squared error (RMSE), mean absolute error (MAE), correlation
+    \item Repeat 5 times with different random splits
+\end{itemize}
+
+\textbf{Variables imputed} (key socioeconomic indicators):
+\begin{itemize}
+    \item Dwelling type (formal house, informal settlement, apartment)
+    \item Household income category
+    \item Educational attainment
+    \item Employment status
+    \item Heat vulnerability index (composite score: 1--5)
+    \item Economic vulnerability indicator
+    \item Age vulnerability indicator
+\end{itemize}
+
+\subsection{Biomarker Selection and Measurement}
+
+We analyzed 19 clinical biomarkers representing major physiological systems potentially affected by climate exposure:
+
+\paragraph{Hematology}
+\begin{itemize}
+    \item Hematocrit (\%)
+    \item Hemoglobin (g/dL)
+\end{itemize}
+
+\paragraph{Immune function}
+\begin{itemize}
+    \item CD4 cell count (cells/µL)
+\end{itemize}
+
+\paragraph{Metabolic}
+\begin{itemize}
+    \item Fasting glucose (mmol/L)
+\end{itemize}
+
+\paragraph{Cardiovascular / Lipids}
+\begin{itemize}
+    \item Total cholesterol (mg/dL, fasting and non-fasting)
+    \item LDL cholesterol (mg/dL, fasting and non-fasting)
+    \item HDL cholesterol (mg/dL, fasting and non-fasting)
+    \item Triglycerides (mg/dL, fasting and non-fasting)
+\end{itemize}
+
+\paragraph{Kidney function}
+\begin{itemize}
+    \item Creatinine (µmol/L)
+    \item Creatinine clearance (mL/min)
+\end{itemize}
+
+\paragraph{Liver enzymes}
+\begin{itemize}
+    \item Alanine aminotransferase (ALT, U/L)
+    \item Aspartate aminotransferase (AST, U/L)
+\end{itemize}
+
+\paragraph{Blood pressure}
+\begin{itemize}
+    \item Systolic blood pressure (mmHg)
+    \item Diastolic blood pressure (mmHg)
+\end{itemize}
+
+\paragraph{Anthropometrics}
+\begin{itemize}
+    \item Height (meters)
+    \item Weight (kilograms)
+\end{itemize}
+
+All biomarker measurements followed standardized clinical laboratory protocols. Sample sizes varied by biomarker due to differential availability across trials (range: 217--4,606 observations per biomarker).
+
+\subsection{Machine Learning Pipeline}
+
+\subsubsection{Feature Engineering}
+
+We constructed a comprehensive feature set combining climate, temporal, demographic, and socioeconomic variables:
+
+\textbf{Climate features} (16 variables):
+\begin{itemize}
+    \item Temperature variables (daily mean, max, min)
+    \item Multi-lag temperature averages (7d, 14d, 30d)
+    \item Heat stress indices and anomalies
+\end{itemize}
+
+\textbf{Temporal features}:
+\begin{itemize}
+    \item Month (1--12, to capture seasonality)
+    \item Season (categorical: summer/autumn/winter/spring)
+    \item Year (to capture secular trends)
+\end{itemize}
+
+\textbf{Demographic features}:
+\begin{itemize}
+    \item Age (years)
+    \item Sex (binary: male/female)
+    \item Race (categorical, as recorded in trials)
+\end{itemize}
+
+\textbf{Socioeconomic features} (imputed):
+\begin{itemize}
+    \item Dwelling type
+    \item Income category
+    \item Education level
+    \item Heat vulnerability index
+\end{itemize}
+
+\textbf{Clinical context features}:
+\begin{itemize}
+    \item Study identifier (to control for trial-specific effects)
+    \item Visit number (to account for longitudinal patterns)
+\end{itemize}
+
+\textbf{Feature preprocessing}:
+\begin{enumerate}
+    \item Categorical variables encoded using one-hot encoding
+    \item Continuous variables standardized (mean=0, SD=1) within training sets
+    \item Missing values handled via median imputation for non-target variables
+    \item Highly correlated features ($r > 0.95$) removed to prevent multicollinearity
+\end{enumerate}
+
+\subsubsection{Model Selection and Training}
+
+We evaluated three gradient boosting algorithms known for strong performance on tabular data:
+
+\begin{enumerate}
+    \item \textbf{Random Forest}: Ensemble of decision trees with bootstrap aggregation
+    \item \textbf{XGBoost}: Gradient boosting with advanced regularization
+    \item \textbf{LightGBM}: Gradient boosting optimized for speed and memory efficiency
+\end{enumerate}
+
+\textbf{Training procedure}:
+\begin{enumerate}
+    \item \textbf{Train-test split}: 80\% training, 20\% held-out test set (stratified by study)
+    \item \textbf{Cross-validation}: 5-fold stratified cross-validation on training set
+    \item \textbf{Hyperparameter optimization}: Grid search over key hyperparameters
+    \begin{itemize}
+        \item Number of trees: [100, 200, 500]
+        \item Maximum tree depth: [5, 10, 15]
+        \item Learning rate: [0.01, 0.05, 0.1]
+        \item Minimum samples per leaf: [10, 20, 50]
+    \end{itemize}
+    \item \textbf{Model selection}: Best model chosen by cross-validated R² on validation folds
+    \item \textbf{Final evaluation}: Performance assessed on held-out test set
+\end{enumerate}
+
+\textbf{Reproducibility safeguards}:
+\begin{itemize}
+    \item All random seeds fixed ($seed=42$)
+    \item NumPy, scikit-learn, and model library random states set
+    \item Data splitting performed once and saved for consistency across biomarkers
+    \item Complete pipeline version control via Git
+\end{itemize}
+
+\subsection{Explainable AI Analysis}
+
+To interpret model predictions and identify key climate-biomarker relationships, we employed SHAP (SHapley Additive exPlanations) analysis \citep{lundberg2017unified}, a game-theoretic approach to model interpretation.
+
+\textbf{SHAP methodology}:
+\begin{enumerate}
+    \item For each trained model, calculate SHAP values for all features on the test set
+    \item SHAP values represent each feature's contribution to individual predictions
+    \item Aggregate SHAP values across all samples to determine global feature importance
+    \item Generate visualizations:
+    \begin{itemize}
+        \item \textbf{Summary plots}: Overall feature importance ranking
+        \item \textbf{Waterfall plots}: Feature contributions for individual predictions
+        \item \textbf{Beeswarm plots}: Distribution of feature effects across samples
+        \item \textbf{Dependence plots}: Relationship between feature values and SHAP values
+    \end{itemize}
+\end{enumerate}
+
+SHAP analysis provides model-agnostic explanations consistent with human intuition about feature importance while satisfying desirable properties (local accuracy, missingness, consistency) \citep{lundberg2017unified}.
+
+\subsection{Statistical Analysis}
+
+\subsubsection{Performance Metrics}
+
+Model performance was evaluated using standard regression metrics:
+
+\begin{itemize}
+    \item \textbf{Coefficient of determination (R²)}: Proportion of variance explained
+    \begin{equation}
+        R^2 = 1 - \frac{\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}{\sum_{i=1}^{n}(y_i - \bar{y})^2}
+    \end{equation}
+
+    \item \textbf{Root mean squared error (RMSE)}: Average prediction error magnitude
+    \begin{equation}
+        \text{RMSE} = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2}
+    \end{equation}
+
+    \item \textbf{Mean absolute error (MAE)}: Average absolute prediction error
+    \begin{equation}
+        \text{MAE} = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y}_i|
+    \end{equation}
+\end{itemize}
+
+where $y_i$ represents observed values, $\hat{y}_i$ predicted values, $\bar{y}$ the mean of observed values, and $n$ the number of observations.
+
+\subsubsection{Multiple Testing Correction}
+
+Given analysis of 19 biomarkers, we applied Bonferroni correction to control family-wise error rate:
+
+\begin{equation}
+    \alpha_{\text{corrected}} = \frac{\alpha}{k} = \frac{0.05}{19} = 0.0026
+\end{equation}
+
+where $k=19$ biomarkers and $\alpha=0.05$ is the desired family-wise error rate. Results were considered statistically significant at $p < 0.0026$.
+
+\subsubsection{Performance Tier Classification}
+
+We classified biomarkers into three tiers based on test set R²:
+
+\begin{itemize}
+    \item \textbf{Excellent climate sensitivity}: R² > 0.30
+    \item \textbf{Moderate climate sensitivity}: R² = 0.05--0.30
+    \item \textbf{Poor climate sensitivity}: R² < 0.05
+\end{itemize}
+
+These thresholds were defined a priori based on effect size conventions in climate-health research.
+
+\subsection{Software and Computational Environment}
+
+All analyses were conducted in Python 3.9+ using the following packages:
+\begin{itemize}
+    \item \textbf{Data manipulation}: pandas 1.5+, numpy 1.23+
+    \item \textbf{Machine learning}: scikit-learn 1.2+, xgboost 1.7+, lightgbm 3.3+
+    \item \textbf{Explainable AI}: shap 0.41+
+    \item \textbf{Visualization}: matplotlib 3.6+, seaborn 0.12+
+    \item \textbf{Statistical analysis}: scipy 1.9+, statsmodels 0.14+
+\end{itemize}
+
+Distributed lag non-linear models (DLNM) were implemented in R 4.2+ using the \texttt{dlnm} package \citep{gasparrini2010distributed}.
+
+Climate data were obtained via the Climate Data Store (CDS) API using the \texttt{cdsapi} Python package.
+
+All code is version-controlled using Git and available in a public repository (URL to be provided upon publication). Analyses are fully reproducible using the provided Docker container or \texttt{requirements.txt} file.
+
+\subsection{Data Availability and Ethical Considerations}
+
+De-identified clinical trial data are available through the ENBEL consortium under appropriate data sharing agreements. GCRO Quality of Life survey data are publicly available at \url{https://gcro.ac.za}. ERA5 climate reanalysis data are freely available through the Copernicus Climate Data Store at \url{https://cds.climate.copernicus.eu}.
+
+All analyses were conducted using de-identified data with geographic locations aggregated to ward level to protect participant confidentiality. The study protocol was reviewed and approved by [Institution] Ethics Committee (reference number: [XXX]).

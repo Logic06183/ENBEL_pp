@@ -1,0 +1,63 @@
+\section{Introduction}
+
+Climate change poses unprecedented and escalating threats to human health worldwide \citep{watts2021lancet}. While the direct impacts of extreme heat on mortality are well-documented \citep{guo2014quantifying, gasparrini2015mortality}, the physiological mechanisms linking meteorological variation to measurable health outcomes remain incompletely understood. Specifically, how daily and seasonal climate fluctuations translate into changes in clinical biomarkers---the fundamental laboratory measurements used for disease diagnosis, monitoring, and management---has received limited systematic investigation.
+
+Understanding climate-biomarker relationships is critical for advancing climate health science. First, biomarkers are objective, quantifiable indicators of physiological state, enabling precise mechanistic insights into how climate affects human biology. Second, clinical laboratories worldwide generate billions of biomarker measurements annually, representing a vast but underutilized resource for climate health research. Third, climate-driven biomarker variation may confound clinical interpretation if meteorological context is not considered, with implications for diagnostic thresholds, treatment decisions, and epidemiological surveillance.
+
+The mechanistic pathways linking climate to biomarkers likely span multiple timescales and physiological systems. Acute heat exposure triggers thermoregulatory responses including sweating and vasodilation, with consequent effects on blood volume, electrolyte balance, and cardiovascular function occurring within hours \citep{cheuvront2010mechanisms}. Prolonged or repeated heat exposure may induce cumulative effects on immune function, metabolic regulation, and chronic disease progression over weeks to months \citep{armstrong2014models}. Seasonal temperature patterns correlate with lipid profiles, glucose metabolism, and blood pressure through complex interactions with diet, physical activity, and neuroendocrine stress responses \citep{ockene1990seasonal}. Disentangling these multifaceted relationships requires large-scale longitudinal data, advanced analytical methods, and explicit modeling of temporal lag structures.
+
+\subsection{Climate and Health in Sub-Saharan Africa}
+
+Sub-Saharan Africa faces disproportionate climate health risks due to rapid warming trends, high baseline temperatures, and limited adaptive capacity \citep{wright2021climate}. South Africa specifically experiences temperature increases exceeding global averages, with projections indicating 2--4°C warming by 2050 under moderate emissions scenarios. Urban areas like Johannesburg face compounded challenges from the urban heat island effect, which amplifies temperature extremes in densely populated informal settlements lacking green space and adequate housing infrastructure \citep{gcro2019heatvuln}.
+
+Johannesburg's climate is characterized by hot summers (December--February) with mean temperatures of 20--26°C and occasional extreme heat events exceeding 35°C. Heat waves---defined as three or more consecutive days above the 90th percentile of local temperature distributions---have increased in frequency, intensity, and duration over the past three decades \citep{wright2021climate}. These trends are projected to accelerate, with modeling studies predicting that current extreme heat events (occurring 1--2 times per decade historically) may occur annually by mid-century.
+
+The population of Johannesburg exhibits substantial socioeconomic heterogeneity relevant to climate vulnerability. Approximately 20\% of residents live in informal settlements characterized by corrugated metal housing, high population density, limited ventilation, and inadequate water infrastructure---all factors that amplify heat exposure and constrain thermoregulatory capacity \citep{gcro2019heatvuln}. Conversely, affluent suburbs feature brick housing, air conditioning, and tree cover that mitigate heat exposure. This stark inequality creates differential vulnerability to climate hazards within a single metropolitan area, making Johannesburg an ideal setting for investigating climate-health relationships across socioeconomic gradients.
+
+People living with HIV represent a potentially climate-vulnerable population due to altered thermoregulation, chronic inflammation, and socioeconomic marginalization. South Africa has the world's largest HIV epidemic (approximately 7.5 million people living with HIV), with high prevalence in urban areas including Johannesburg. HIV-associated immune dysfunction and antiretroviral therapy may modify responses to heat stress through multiple pathways: CD4 depletion impairs immune responses to infection and inflammation; chronic viral replication drives persistent immune activation; and certain antiretroviral drugs affect sweating, kidney function, and metabolic regulation. However, the extent to which climate variability affects biomarkers in this population has not been systematically quantified.
+
+\subsection{The Promise of Machine Learning for Climate-Health Research}
+
+Traditional epidemiological approaches to climate-health research rely on pre-specified parametric models (e.g., generalized linear models, distributed lag non-linear models) that require researchers to explicitly define functional forms for climate-health relationships \citep{gasparrini2010distributed}. While these methods excel at testing specific hypotheses and estimating interpretable effect sizes, they may fail to capture complex, nonlinear relationships when the true functional form is unknown. Machine learning (ML) offers complementary strengths: algorithms can discover intricate patterns in high-dimensional data without strong prior assumptions about functional forms \citep{lundberg2017unified}.
+
+Gradient boosting algorithms---including Random Forest, XGBoost, and LightGBM---have demonstrated exceptional performance on structured tabular data characteristic of climate-health datasets. These ensemble methods iteratively build decision trees that partition the feature space into regions with similar outcomes, naturally capturing nonlinear relationships, interactions, and threshold effects. Critically, gradient boosting handles mixed data types (continuous climate variables, categorical demographics), missing values, and correlated predictors without extensive preprocessing.
+
+However, ML models are often criticized as "black boxes" that generate accurate predictions without revealing underlying mechanisms. This opacity poses challenges for scientific inference and clinical translation. Explainable AI (XAI) methods address this limitation by decomposing model predictions into feature-specific contributions. SHAP (SHapley Additive exPlanations) analysis, grounded in cooperative game theory, assigns each feature an importance value representing its contribution to individual predictions \citep{lundberg2017unified}. SHAP satisfies desirable mathematical properties---local accuracy, missingness, and consistency---making it suitable for rigorous scientific interpretation. By combining gradient boosting with SHAP analysis, researchers can achieve both predictive accuracy and mechanistic insight.
+
+\subsection{Knowledge Gaps and Study Objectives}
+
+Despite growing recognition of climate change as a health threat, fundamental questions about climate-biomarker relationships remain unanswered:
+
+\begin{enumerate}
+    \item \textbf{Which biomarkers are most sensitive to climate variation?} Existing studies focus on specific outcomes (e.g., cardiovascular events, infectious diseases) but lack comprehensive assessment across multiple biomarker classes representing diverse physiological systems.
+
+    \item \textbf{What are the temporal dynamics of climate-biomarker associations?} Acute responses (hours to days) likely differ from cumulative or lagged effects (weeks to months), yet few studies systematically compare lag structures across biomarkers.
+
+    \item \textbf{How do socioeconomic factors modify climate-biomarker relationships?} Vulnerability to climate health impacts varies by housing quality, income, and access to adaptive resources, but integrated analysis of clinical and socioeconomic data is rare.
+
+    \item \textbf{Can machine learning improve upon traditional statistical methods?} Comparative evaluations of ML versus parametric models in climate health research are limited, particularly for biomarker outcomes.
+\end{enumerate}
+
+This study addresses these gaps through comprehensive machine learning analysis of climate-biomarker relationships in a large clinical cohort from Johannesburg, South Africa. We leverage 11,398 clinical records from 15 HIV trials spanning 2002--2021, integrated with high-resolution ERA5 climate reanalysis data and socioeconomic information from 58,616 household surveys.
+
+\subsection{Study Objectives}
+
+The primary objectives of this study were to:
+
+\begin{enumerate}
+    \item \textbf{Quantify climate-biomarker associations}: Assess the strength of relationships between meteorological variables and 19 clinical biomarkers representing hematology, immune function, metabolism, cardiovascular health, kidney function, liver enzymes, blood pressure, and anthropometrics.
+
+    \item \textbf{Identify climate-sensitive biomarkers}: Determine which biomarkers show strong, moderate, or minimal associations with climate variation, providing evidence-based targets for climate health monitoring.
+
+    \item \textbf{Characterize temporal patterns}: Evaluate the role of lagged climate exposure (7-day, 14-day, 30-day averages) in predicting biomarker values, revealing timescales of physiological response.
+
+    \item \textbf{Interpret climate effects mechanistically}: Apply SHAP analysis to identify key climate features driving biomarker variation and distinguish direct effects from confounding.
+
+    \item \textbf{Assess socioeconomic modification}: Examine whether housing type, income, and heat vulnerability indices modify climate-biomarker relationships.
+
+    \item \textbf{Compare machine learning algorithms}: Evaluate Random Forest, XGBoost, and LightGBM across biomarkers to determine optimal modeling approaches for climate health research.
+
+    \item \textbf{Provide actionable recommendations}: Translate findings into practical guidance for clinical interpretation, public health surveillance, and climate adaptation planning.
+\end{enumerate}
+
+By combining large-scale clinical data, high-resolution climate reanalysis, socioeconomic surveys, and explainable machine learning, this study represents one of the most comprehensive assessments of climate-biomarker relationships conducted to date. Our findings have implications for understanding climate health mechanisms, refining clinical decision-making under changing climate conditions, and targeting interventions to protect vulnerable populations in urban Africa and globally.
