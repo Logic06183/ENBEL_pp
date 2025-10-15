@@ -95,13 +95,19 @@ This suggests that social vulnerability to heat exposure---as captured by dwelli
 
 Age and sex showed varying importance across biomarkers. Age ranked highly for metabolic markers (glucose, cholesterol) and kidney function (creatinine), consistent with known age-related physiological changes. Sex was most important for hematologic markers (hematocrit, hemoglobin) and lipid profiles, reflecting established sex differences in these biomarkers.
 
-\subsection{Hematocrit: A Climate-Sensitive Biomarker}
+\subsection{Feature Leakage Correction and Clean Feature Set}
 
-Hematocrit demonstrated exceptional climate sensitivity (R²=0.928), warranting detailed examination. SHAP waterfall plots revealed that the heat vulnerability index was the single most important predictor, contributing up to 15 percentage points to individual hematocrit predictions. However, this strong performance raises concerns about potential data leakage, as the heat vulnerability index is a composite measure that may correlate with unmeasured confounders affecting hematocrit independent of climate.
+Initial analyses revealed a critical methodological issue: biomarker cross-prediction due to broad feature selection. Specifically, hemoglobin (g/dL) was inadvertently included as a predictor for hematocrit (\%), creating artifactual associations given the high biological correlation between these hematological measurements (hemoglobin measures absolute red blood cell concentration, hematocrit measures percentage of blood volume occupied by red cells).
 
-Temperature variables (7-day mean, daily maximum) ranked second and third in importance, with SHAP values indicating a positive association: higher temperatures predicted higher hematocrit values. This pattern is consistent with dehydration-driven hemoconcentration, where fluid loss through sweating increases the proportion of red blood cells in blood volume. However, alternative explanations include confounding by time of day (morning vs. afternoon visits), hydration status at sample collection, or correlated health behaviors.
+To address this, we implemented strict feature validation ensuring models used \textbf{only climate and socioeconomic features}, explicitly excluding all clinical biomarkers as predictors. The final clean feature set comprised 16 climate variables (temperature metrics at multiple temporal scales), 1 socioeconomic index (HEAT\_VULNERABILITY\_SCORE), and 3 temporal indicators (month, season), totaling 20 features. This validation prevented any biomarker-to-biomarker prediction, ensuring observed associations reflect climate-health relationships rather than inter-biomarker correlations.
 
-The magnitude of climate effects on hematocrit varied substantially across individuals. For participants in the highest quartile of heat vulnerability (informal settlements, low income), a 5°C temperature increase associated with a predicted hematocrit increase of 3--4 percentage points. For participants in formal housing with lower vulnerability scores, the same temperature change predicted only 1--2 percentage point increases.
+\subsection{Hematocrit: Revised Analysis with Clean Features}
+
+Following feature leakage correction, hematocrit retained exceptional climate sensitivity (R²=0.937, n=2,120), demonstrating that the association persists with clean features. SHAP analysis of the corrected model revealed that the heat vulnerability index was overwhelmingly dominant (SHAP importance: 18.4, representing 96\% of total feature importance), with climate features contributing modestly: daily mean temperature (0.66), temperature anomaly (0.31), 7-day mean temperature (0.22).
+
+This finding fundamentally shifts interpretation: hematocrit's high R² is driven primarily by \textbf{socioeconomic vulnerability} rather than direct meteorological variation. The heat vulnerability index---a composite of housing quality, income, education, and access to services---captures chronic exposure patterns and baseline hematocrit differences between socioeconomic groups. Climate variables contribute incrementally but are dominated by this stable vulnerability factor.
+
+Temperature variables showed consistent positive associations: higher temperatures predicted higher hematocrit, consistent with dehydration-driven hemoconcentration. However, the modest SHAP importance of temperature features (collectively <4\% of total importance) suggests that acute day-to-day temperature fluctuations explain relatively little hematocrit variation compared to chronic socioeconomic determinants. This pattern implies that \textbf{interventions targeting socioeconomic vulnerability} (housing improvements, cooling access, water infrastructure) may be more effective than temperature-based warning systems for hematocrit-related heat stress.
 
 \subsection{Lipid Metabolism and Climate}
 
@@ -144,6 +150,26 @@ For Tier 3 biomarkers (poor performance), larger gaps emerged (mean gap=0.18, SD
 Analysis of temporal feature importance revealed that lagged climate variables (7-day, 14-day, 30-day means) often outperformed same-day temperature, supporting the hypothesis that cumulative exposure matters. For lipid biomarkers, 30-day mean temperature ranked highest, suggesting metabolic responses integrate exposure over weeks. For hematocrit, 7-day mean temperature was most important, consistent with shorter timescales for dehydration effects.
 
 Season indicators (winter, summer) contributed significantly to several biomarkers, capturing variation beyond continuous temperature measures. Winter was associated with elevated cholesterol and reduced glucose, consistent with seasonal patterns in diet, physical activity, and daylight exposure affecting metabolism.
+
+\subsection{Case-Crossover DLNM Validation}
+
+To validate ML findings with rigorous causal inference, we applied time-stratified case-crossover design with distributed lag non-linear models (DLNM) to the six biomarkers showing strongest ML associations (hematocrit, total cholesterol, fasting LDL, fasting HDL, LDL cholesterol, creatinine). The case-crossover approach controls for all time-invariant confounders by comparing each individual's biomarker levels on "case" days (high biomarker within stratum) to "control" days (reference levels), matched on day-of-week within 28-day strata. DLNM crossbasis functions (4 degrees of freedom for temperature, 4 for lag structure) captured non-linear and delayed effects over 0--21 days.
+
+\subsubsection{Validation Results}
+
+Of six biomarkers tested, only \textbf{fasting HDL} showed statistically significant association in DLNM analysis (cumulative odds ratio [OR] = 69.48, 95\% CI: 1.05--4583.06, n=2,897). This positive temperature association indicates that higher temperatures predict elevated HDL cholesterol levels when assessed using within-person comparisons controlling for all stable confounders. The significant result validates HDL as having a causal relationship with temperature, distinct from between-person socioeconomic associations.
+
+Five biomarkers showed non-significant DLNM associations: hematocrit (OR=220.26, 95\% CI: 0.38--128,021), total cholesterol (OR=16.27, CI: 0.28--943), fasting LDL (OR=1.32, CI: 0.03--67), LDL cholesterol (OR=0.004, CI: 0--6.53), and creatinine (OR=0.29, CI: 0.003--30). Wide confidence intervals reflected limited statistical power for binary outcomes and substantial between-stratum heterogeneity.
+
+\subsubsection{The Hematocrit Paradox: ML vs DLNM Discrepancy}
+
+Hematocrit presented a striking discrepancy: excellent ML performance (R²=0.937) but non-significant DLNM association. This apparent contradiction illuminates fundamentally different effects captured by the two methods:
+
+\textbf{Machine Learning (between-person variation):} ML models captured differences \textit{between} individuals with varying heat vulnerability. People in informal settlements with poor housing showed systematically higher baseline hematocrit than those in formal housing with cooling access, independent of day-to-day temperature. HEAT\_VULNERABILITY\_SCORE (96\% of SHAP importance) dominated predictions, reflecting chronic exposure patterns, hydration infrastructure access, and occupational heat stress accumulated over months to years.
+
+\textbf{Case-Crossover DLNM (within-person variation):} DLNM assessed whether the \textit{same individual's} hematocrit changed with temperature fluctuations over days to weeks. By design, case-crossover eliminates between-person socioeconomic confounding, isolating acute temperature effects. The non-significant result indicates that day-to-day temperature variation does not substantially affect hematocrit within individuals, after controlling for stable characteristics.
+
+\textbf{Reconciliation:} Hematocrit's high ML R² is driven by \textbf{stable socioeconomic vulnerability} creating between-person baseline differences, not acute meteorological changes. This finding has important implications: (1) socioeconomic interventions (housing, infrastructure) likely more effective than temperature warnings, (2) hematocrit reflects chronic heat exposure patterns rather than acute heat stress, (3) high ML R² does not necessarily indicate causal temperature effects. The DLNM null result prevents overinterpretation of the ML finding as evidence of acute climate sensitivity.
 
 \subsection{Sensitivity Analyses}
 

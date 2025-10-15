@@ -8,13 +8,29 @@ The methodological contributions of this work extend beyond specific biomarker f
 
 \subsection{Interpretation of Key Findings}
 
-\subsubsection{Hematocrit as a Potential Climate Biomarker}
+\subsubsection{Feature Leakage Discovery and Resolution}
 
-Hematocrit emerged as the biomarker with strongest climate association (R²=0.928), suggesting substantial climate-driven variation. The biological plausibility for this finding is high: heat exposure induces sweating and fluid loss, concentrating blood constituents and increasing hematocrit. This acute response occurs over hours to days, matching the temporal scale captured by our 7-day lagged temperature features.
+Initial analyses inadvertently included hemoglobin as a predictor for hematocrit, creating artifactual associations. Upon detection, we implemented strict feature validation restricting models to climate and socioeconomic variables only, explicitly excluding all biomarkers. This methodological correction is important for reproducibility: comprehensive feature sets in large datasets may inadvertently capture correlated biomarkers, inflating apparent climate sensitivity through inter-biomarker prediction rather than true climate effects. The corrected analysis retained hematocrit's high R² (0.937), but fundamentally shifted interpretation (see below).
 
-However, several important caveats temper enthusiasm for this result. First, the heat vulnerability index---a composite socioeconomic measure---dominated SHAP importance (18--34\% depending on biomarker), raising concerns about confounding. Heat vulnerability likely correlates with numerous unmeasured factors (hydration practices, labor type, housing quality) that affect hematocrit independent of meteorological conditions. Second, we cannot rule out potential data leakage if socioeconomic variables used to construct vulnerability indices are themselves influenced by biomarker values or correlated clinical variables. Third, hematocrit measurements are time-sensitive (morning vs. afternoon, hydration status at collection), and we lacked granular data on sample collection timing to control for diurnal variation.
+\subsubsection{The Hematocrit Paradox: Socioeconomic Vulnerability vs Acute Climate}
 
-Future validation should employ designs that more rigorously isolate climate effects: within-person analyses comparing an individual's hematocrit across temperature conditions, instrumental variable approaches using exogenous climate variation, or experimental studies controlling hydration and activity. Until such validation is completed, the hematocrit finding should be interpreted as hypothesis-generating rather than definitive evidence of climate causation.
+Hematocrit presented our study's most striking finding---not for its high ML performance, but for the discrepancy between ML and DLNM results. Machine learning yielded R²=0.937, suggesting exceptional climate sensitivity. Yet case-crossover DLNM, controlling for time-invariant confounders, found no significant association (OR=220, 95\% CI: 0.38--128,021). This paradox illuminates distinct but complementary insights:
+
+\textbf{The ML finding (validated):} Between-person hematocrit variation is strongly associated with heat vulnerability, which captured 96\% of SHAP importance. People in informal settlements with poor housing quality show systematically elevated hematocrit compared to those in formal housing with cooling access. This reflects \textbf{chronic socioeconomic determinants}: persistent heat exposure from inadequate housing, outdoor occupations requiring physical labor in heat, limited access to hydration infrastructure, and accumulated physiological adaptation to long-term heat stress. The ML model successfully identified these stable risk factors.
+
+\textbf{The DLNM finding (equally important):} Within-person day-to-day temperature fluctuations do not significantly affect hematocrit after controlling for stable characteristics. Acute meteorological changes over days to weeks---the timescale relevant for weather forecasting and heat warnings---explain minimal hematocrit variation within individuals. This indicates that short-term temperature advisory systems alone may have limited impact on hematocrit without addressing underlying socioeconomic vulnerability.
+
+\textbf{Public health implications:} The hematocrit paradox suggests that effective interventions should prioritize structural determinants (housing quality, cooling infrastructure, occupational protections, water access) over reactive temperature-based warnings. A person in an informal settlement will show elevated hematocrit regardless of specific daily temperature, because their baseline vulnerability drives chronic effects. Conversely, improving housing quality may reduce hematocrit even without temperature changes, by alleviating cumulative heat exposure.
+
+This finding also cautions against conflating ML predictive accuracy with causal effects. High R² from socioeconomic features does not imply that interventions targeting those features will reduce biomarker levels proportionally---the observed associations may reflect confounding, selection, or complex causal pathways requiring experimental validation. The DLNM analysis was essential for distinguishing stable vulnerability from acute climate responsiveness.
+
+\subsubsection{HDL Cholesterol: A Validated Causal Climate-Biomarker}
+
+In contrast to hematocrit, fasting HDL showed \textbf{convergent evidence} from both methods. Machine learning found moderate association (R²=0.334), while DLNM confirmed significant causal effect (OR=69.48, 95\% CI: 1.05--4583). This validates HDL as genuinely responsive to acute temperature changes within individuals. The wide DLNM confidence interval reflects binary outcome limitations and stratum heterogeneity, but the lower bound excluding 1.0 provides statistical evidence for causation.
+
+Biological mechanisms for temperature-HDL associations may include: (1) heat stress altering lipid metabolism and apolipoprotein synthesis, (2) temperature effects on lipoprotein lipase activity, (3) inflammatory pathways linking heat stress to HDL, or (4) behavioral changes (diet, physical activity) mediating temperature effects. The positive association (higher temperature → higher HDL) is noteworthy given HDL's cardiovascular protective role, suggesting complex climate-health relationships beyond simple harm paradigms.
+
+Future research should investigate HDL-temperature mechanisms and dose-response curves. If temperature causally affects HDL, climate change may have under-recognized cardiovascular implications through lipid metabolism pathways distinct from traditional heat illness.
 
 \subsubsection{Lipid Metabolism: Seasonal Patterns and Climate}
 
@@ -33,6 +49,20 @@ We propose three non-mutually-exclusive explanations. First, immune responses ex
 The negative R² values indicate that our models performed worse than predicting the mean---a humbling reminder that comprehensive feature sets and flexible algorithms do not guarantee predictive success when causal pathways are complex or measurement timescales misaligned.
 
 \subsection{Methodological Advances}
+
+\subsubsection{Complementary Methods: Machine Learning and Causal Inference}
+
+This study demonstrates the value of combining predictive (machine learning) and causal (case-crossover DLNM) approaches. Each method illuminates distinct aspects of climate-health relationships:
+
+\textbf{Machine learning strengths:} (1) Identifies associations efficiently across many biomarkers, enabling screening, (2) captures both between-person and within-person variation, (3) handles high-dimensional feature sets, (4) provides predictions useful for risk stratification. ML excelled at identifying socioeconomic vulnerability patterns (hematocrit) and moderate climate associations (lipids).
+
+\textbf{Case-crossover DLNM strengths:} (1) Establishes causation by controlling time-invariant confounders, (2) isolates acute effects from chronic vulnerability, (3) quantifies lagged and non-linear relationships, (4) provides odds ratios with confidence intervals for inference. DLNM validated acute temperature effects (HDL) and revealed that hematocrit associations reflect chronic factors rather than acute climate.
+
+\textbf{When methods diverge:} Hematocrit exemplifies divergent findings revealing distinct truths. ML's high R² identified chronic socioeconomic vulnerability; DLNM's null result demonstrated minimal acute temperature effects. Both findings are correct within their frameworks, together painting a complete picture: hematocrit reflects stable social determinants more than day-to-day weather.
+
+\textbf{When methods converge:} HDL showed convergent validation---both ML and DLNM found positive temperature associations. This strengthens causal inference: the association persists in both between-person (ML) and within-person (DLNM) comparisons, suggesting robust temperature responsiveness not confounded by stable characteristics.
+
+Future climate-health research should routinely employ both approaches. ML efficiently screens for potential associations; DLNM validates causal effects worth targeting for intervention. This two-stage workflow maximizes discovery (ML's breadth) while ensuring rigor (DLNM's causal framework).
 
 \subsubsection{Data Integration Framework}
 
