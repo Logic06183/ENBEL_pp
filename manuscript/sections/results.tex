@@ -1,0 +1,160 @@
+\section{Results}
+
+\subsection{Dataset Characteristics}
+
+The final analytical dataset comprised 11,398 clinical records from 15 HIV clinical trials conducted in Johannesburg between 2002 and 2021. Climate data were successfully matched to 99.5\% of records (n=11,337), with only 61 records (0.5\%) from very early dates (2002--2003) lacking complete meteorological coverage. Socioeconomic variables were imputed for all clinical participants using spatial-demographic matching with the GCRO dataset (n=58,616 households).
+
+\subsubsection{Participant Demographics}
+
+Participants were predominantly female (68\%), with median age of 32 years (IQR: 27--38). The cohort was racially diverse, reflecting Johannesburg's demographics: Black African (82\%), Coloured (9\%), White (5\%), Indian/Asian (4\%). HIV status was documented for all participants, with median CD4 count of 468 cells/µL (IQR: 312--658) at baseline.
+
+\subsubsection{Climate Exposure Characteristics}
+
+During the study period (2002--2021), clinical visits occurred across all seasons, with mean daily temperature of 17.2°C (SD=5.8°C, range: 2.1--32.4°C). Summer visits (December--February) accounted for 28\% of observations, with mean temperature of 21.8°C. Winter visits (June--August) comprised 24\% of observations, with mean temperature of 11.9°C. A total of 147 extreme heat days (temperature >30°C) were recorded during the study period, affecting 8.2\% of clinical visits.
+
+\subsubsection{Biomarker Availability}
+
+Sample sizes varied substantially across biomarkers due to differential collection protocols across trials. Biomarkers with largest samples included CD4 cell count (n=4,606), systolic blood pressure (n=4,173), diastolic blood pressure (n=4,173), total cholesterol (n=2,917), and hemoglobin (n=2,337). Smaller samples characterized specialized metabolic markers: creatinine clearance (n=217), last recorded height (n=280), and last recorded weight (n=285).
+
+\subsection{Imputation Validation Results}
+
+Socioeconomic variable imputation achieved reasonable accuracy on holdout validation sets. For the heat vulnerability index, combined spatial-demographic matching yielded RMSE=0.82 (scale: 1--5), MAE=0.61, and correlation r=0.71 with true values. Dwelling type classification achieved 68\% accuracy for three-category classification (formal house, informal settlement, apartment). Income category imputation showed moderate performance (r=0.54), reflecting the inherent difficulty of income prediction from spatial-demographic features alone. Confidence scores for imputed values averaged 0.63 (SD=0.18), with 82\% of imputations exceeding the minimum confidence threshold of 0.50.
+
+\subsection{Climate-Biomarker Associations: Overall Performance}
+
+Machine learning models revealed a clear hierarchy of climate-biomarker associations across the 19 biomarkers analyzed (Figure~\ref{fig:performance_tiers}). Performance metrics (coefficient of determination R², root mean squared error RMSE, mean absolute error MAE) were calculated on held-out test sets (20\% of data) following 5-fold cross-validation on training sets.
+
+\subsubsection{Performance Tier Classification}
+
+Based on test set R² values, biomarkers clustered into three distinct tiers:
+
+\textbf{Tier 1: Excellent climate sensitivity (R² > 0.30)}: Six biomarkers showed strong associations with climate variables, suggesting substantial climate-driven variation:
+\begin{itemize}
+    \item Hematocrit (\%): R²=0.928, RMSE=2.89\%, MAE=2.24\%
+    \item Total cholesterol, fasting (mg/dL): R²=0.392, RMSE=22.64 mg/dL
+    \item LDL cholesterol, fasting (mg/dL): R²=0.377, RMSE=20.81 mg/dL
+    \item HDL cholesterol, fasting (mg/dL): R²=0.334, RMSE=8.12 mg/dL
+    \item Creatinine (µmol/L): R²=0.306, RMSE=19.76 µmol/L
+    \item Total cholesterol, non-fasting (mg/dL): R²=0.301, RMSE=23.15 mg/dL
+\end{itemize}
+
+\textbf{Tier 2: Moderate climate sensitivity (R² = 0.05--0.30)}: Five biomarkers demonstrated weak but potentially meaningful associations:
+\begin{itemize}
+    \item LDL cholesterol, non-fasting: R²=0.143
+    \item HDL cholesterol, non-fasting: R²=0.072
+    \item Diastolic blood pressure: R²=0.070
+    \item Fasting glucose: R²=0.050
+    \item Last recorded weight: R²=0.028
+\end{itemize}
+
+\textbf{Tier 3: Poor climate sensitivity (R² < 0.05)}: Eight biomarkers showed negligible associations with climate features using standard regression approaches:
+\begin{itemize}
+    \item CD4 cell count: R²=−0.004 (n=4,606)
+    \item Systolic blood pressure: R²=−0.030
+    \item ALT: R²=−0.043
+    \item Hemoglobin: R²=−0.043
+    \item Triglycerides (fasting): R²=−0.047
+    \item Triglycerides (non-fasting): R²=−0.047
+    \item Creatinine clearance: R²=−0.053
+    \item AST: R²=−0.017
+\end{itemize}
+
+Negative R² values indicate that model predictions performed worse than simply predicting the mean, suggesting that the climate feature set does not capture relevant variation for these biomarkers under the modeling framework employed.
+
+\subsection{Model Algorithm Comparison}
+
+Across 19 biomarkers, LightGBM achieved best performance for 10 biomarkers (53\%), Random Forest for 6 biomarkers (32\%), and XGBoost for 3 biomarkers (16\%). LightGBM demonstrated particular advantage for biomarkers with moderate signal strength and larger sample sizes (e.g., CD4, blood pressure), likely due to its regularization strategies and handling of sparse features. Random Forest excelled for lipid biomarkers with strong signals, possibly benefiting from ensemble diversity. XGBoost showed competitive performance but tended to overfit on small samples, with train-test R² gaps exceeding 0.15 for several biomarkers.
+
+\subsection{Feature Importance Analysis}
+
+SHAP (SHapley Additive exPlanations) analysis identified key features driving biomarker predictions across models (Figure~\ref{fig:shap_summary}).
+
+\subsubsection{Top Climate Features}
+
+For biomarkers with excellent climate sensitivity (Tier 1), the most important climate features were:
+\begin{enumerate}
+    \item \textbf{7-day mean temperature}: Most consistently important climate feature across biomarkers, capturing short-term exposure windows
+    \item \textbf{30-day mean temperature}: Important for lipid biomarkers, suggesting cumulative exposure effects
+    \item \textbf{Daily maximum temperature}: Relevant for hematocrit, likely reflecting acute heat stress
+    \item \textbf{Temperature anomaly}: Contributed to creatinine predictions, indicating deviation from seasonal norms matters
+    \item \textbf{Season (categorical)}: Winter vs. summer distinctions important for cholesterol biomarkers
+\end{enumerate}
+
+\subsubsection{Socioeconomic Feature Contributions}
+
+The imputed heat vulnerability index emerged as an important predictor for several biomarkers, ranking in the top 5 features for:
+\begin{itemize}
+    \item Hematocrit (SHAP importance: 18.4\% of total)
+    \item Total cholesterol (SHAP importance: 34.2\% of total)
+    \item Creatinine (SHAP importance: 12.7\% of total)
+\end{itemize}
+
+This suggests that social vulnerability to heat exposure---as captured by dwelling type, income, and demographic factors---modifies biomarker responses independent of meteorological conditions alone.
+
+\subsubsection{Demographic Features}
+
+Age and sex showed varying importance across biomarkers. Age ranked highly for metabolic markers (glucose, cholesterol) and kidney function (creatinine), consistent with known age-related physiological changes. Sex was most important for hematologic markers (hematocrit, hemoglobin) and lipid profiles, reflecting established sex differences in these biomarkers.
+
+\subsection{Hematocrit: A Climate-Sensitive Biomarker}
+
+Hematocrit demonstrated exceptional climate sensitivity (R²=0.928), warranting detailed examination. SHAP waterfall plots revealed that the heat vulnerability index was the single most important predictor, contributing up to 15 percentage points to individual hematocrit predictions. However, this strong performance raises concerns about potential data leakage, as the heat vulnerability index is a composite measure that may correlate with unmeasured confounders affecting hematocrit independent of climate.
+
+Temperature variables (7-day mean, daily maximum) ranked second and third in importance, with SHAP values indicating a positive association: higher temperatures predicted higher hematocrit values. This pattern is consistent with dehydration-driven hemoconcentration, where fluid loss through sweating increases the proportion of red blood cells in blood volume. However, alternative explanations include confounding by time of day (morning vs. afternoon visits), hydration status at sample collection, or correlated health behaviors.
+
+The magnitude of climate effects on hematocrit varied substantially across individuals. For participants in the highest quartile of heat vulnerability (informal settlements, low income), a 5°C temperature increase associated with a predicted hematocrit increase of 3--4 percentage points. For participants in formal housing with lower vulnerability scores, the same temperature change predicted only 1--2 percentage point increases.
+
+\subsection{Lipid Metabolism and Climate}
+
+Lipid biomarkers (total cholesterol, LDL, HDL) showed moderate but consistent climate associations (R²=0.30--0.39 for fasting measures). SHAP analysis revealed complex, non-monotonic relationships between temperature and lipid levels:
+
+\begin{itemize}
+    \item \textbf{Total cholesterol}: Exhibited U-shaped relationship with 30-day mean temperature, with lowest values at moderate temperatures (15--20°C) and elevated values at both temperature extremes
+    \item \textbf{LDL cholesterol}: Positive association with winter season indicator, suggesting higher LDL during colder months
+    \item \textbf{HDL cholesterol}: Weak positive association with 7-day mean temperature, consistent with some prior literature on seasonal cholesterol variation
+\end{itemize}
+
+The heat vulnerability index contributed substantially to lipid predictions (up to 34\% of SHAP importance for total cholesterol), again raising questions about whether this reflects true climate vulnerability versus confounding by socioeconomic factors affecting diet, physical activity, and healthcare access.
+
+\subsection{Immune and Inflammatory Markers}
+
+CD4 cell count, the primary marker of immune function in HIV, showed negligible predictive performance (R²=−0.004) despite a large sample size (n=4,606) providing ample statistical power. SHAP analysis revealed that no individual feature---climate or otherwise---contributed meaningfully to CD4 predictions. This null finding is notable given prior literature suggesting climate impacts on immune function.
+
+Similarly, liver enzymes (ALT, AST) demonstrated negative R² values, indicating that the climate feature set does not capture variation in these markers under the current modeling framework. These biomarkers likely require alternative approaches:
+
+\begin{enumerate}
+    \item \textbf{Distributed lag non-linear models (DLNM)}: Immune and inflammatory responses may exhibit delayed effects (weeks to months) not captured by simple lagged means
+    \item \textbf{Event-based analysis}: Acute infections or liver injury events may be more climate-sensitive than continuous biomarker levels
+    \item \textbf{Expanded confounding control}: Additional clinical variables (viral load, antiretroviral regimen, co-infections) may be necessary
+\end{enumerate}
+
+\subsection{Sample Size and Statistical Power}
+
+Biomarker performance showed some relationship with sample size, but large samples did not guarantee success. CD4 count (n=4,606) and blood pressure measures (n=4,173) had excellent statistical power but poor predictive performance, indicating that sample size alone is insufficient when the feature set does not capture relevant biological variation.
+
+Conversely, some smaller samples achieved strong performance: hematocrit (n=2,120) and cholesterol markers (n=2,900--2,918) demonstrated excellent R² despite moderate sample sizes, suggesting these biomarkers have strong, consistent climate associations detectable even with fewer observations.
+
+\subsection{Overfitting Assessment}
+
+Train-test R² gaps provided insight into model generalization. For Tier 1 biomarkers (excellent performance), train-test gaps were modest (mean gap=0.05, SD=0.03), indicating good generalization. Hematocrit showed minimal overfitting (train R²=0.975, test R²=0.928, gap=0.047).
+
+For Tier 3 biomarkers (poor performance), larger gaps emerged (mean gap=0.18, SD=0.12), particularly for XGBoost models. This suggests that weak signals combined with flexible models led to fitting noise rather than signal. LightGBM's regularization strategies (L1/L2 penalties, minimum data per leaf) appeared to mitigate overfitting more effectively than XGBoost in this setting.
+
+\subsection{Temporal Patterns}
+
+Analysis of temporal feature importance revealed that lagged climate variables (7-day, 14-day, 30-day means) often outperformed same-day temperature, supporting the hypothesis that cumulative exposure matters. For lipid biomarkers, 30-day mean temperature ranked highest, suggesting metabolic responses integrate exposure over weeks. For hematocrit, 7-day mean temperature was most important, consistent with shorter timescales for dehydration effects.
+
+Season indicators (winter, summer) contributed significantly to several biomarkers, capturing variation beyond continuous temperature measures. Winter was associated with elevated cholesterol and reduced glucose, consistent with seasonal patterns in diet, physical activity, and daylight exposure affecting metabolism.
+
+\subsection{Sensitivity Analyses}
+
+To assess robustness, we conducted sensitivity analyses varying key modeling choices:
+
+\begin{enumerate}
+    \item \textbf{Alternative imputation strategies}: Using KNN-only or ecological-only imputation (rather than combined) reduced biomarker R² by 0.02--0.05 on average, suggesting the combined approach improved prediction modestly
+
+    \item \textbf{Hyperparameter tuning depth}: Expanding grid search ranges did not substantially improve performance (<0.01 R² increase), indicating that default hyperparameters performed reasonably well
+
+    \item \textbf{Feature selection thresholds}: Removing features with low mutual information (<0.01) improved computational efficiency without harming performance
+
+    \item \textbf{Study-stratified analysis}: Fitting separate models for each trial (where sample sizes permitted) revealed heterogeneity, with climate effects strongest in trials conducted during 2015--2021 (recent period) and weaker in 2002--2010 trials
+\end{enumerate}

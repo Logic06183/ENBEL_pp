@@ -1,0 +1,139 @@
+\section{Discussion}
+
+\subsection{Principal Findings}
+
+This study represents one of the most comprehensive assessments of climate-biomarker relationships conducted to date, integrating 11,398 clinical records with high-resolution climate data and socioeconomic surveys to quantify associations across 19 biomarkers spanning multiple physiological systems. Our analysis revealed a clear hierarchy of climate sensitivity, with hematological and lipid biomarkers showing strong to moderate associations, while immune and inflammatory markers demonstrated minimal predictive power using standard machine learning approaches.
+
+The methodological contributions of this work extend beyond specific biomarker findings. We developed and validated a rigorous spatial-demographic imputation framework enabling integration of clinical and socioeconomic data at scale---a persistent challenge in climate health research. Our climate data extraction achieved 99.5\% coverage through systematic ERA5 linkage, demonstrating that historical meteorological context can be recovered for virtually all clinical encounters. The machine learning pipeline with explainable AI analysis provides a template for future studies seeking to balance predictive accuracy with mechanistic interpretability.
+
+\subsection{Interpretation of Key Findings}
+
+\subsubsection{Hematocrit as a Potential Climate Biomarker}
+
+Hematocrit emerged as the biomarker with strongest climate association (R²=0.928), suggesting substantial climate-driven variation. The biological plausibility for this finding is high: heat exposure induces sweating and fluid loss, concentrating blood constituents and increasing hematocrit. This acute response occurs over hours to days, matching the temporal scale captured by our 7-day lagged temperature features.
+
+However, several important caveats temper enthusiasm for this result. First, the heat vulnerability index---a composite socioeconomic measure---dominated SHAP importance (18--34\% depending on biomarker), raising concerns about confounding. Heat vulnerability likely correlates with numerous unmeasured factors (hydration practices, labor type, housing quality) that affect hematocrit independent of meteorological conditions. Second, we cannot rule out potential data leakage if socioeconomic variables used to construct vulnerability indices are themselves influenced by biomarker values or correlated clinical variables. Third, hematocrit measurements are time-sensitive (morning vs. afternoon, hydration status at collection), and we lacked granular data on sample collection timing to control for diurnal variation.
+
+Future validation should employ designs that more rigorously isolate climate effects: within-person analyses comparing an individual's hematocrit across temperature conditions, instrumental variable approaches using exogenous climate variation, or experimental studies controlling hydration and activity. Until such validation is completed, the hematocrit finding should be interpreted as hypothesis-generating rather than definitive evidence of climate causation.
+
+\subsubsection{Lipid Metabolism: Seasonal Patterns and Climate}
+
+The moderate climate associations observed for lipid biomarkers (R²=0.30--0.39) align with a substantial literature documenting seasonal cholesterol variation \citep{ockene1990seasonal}. Proposed mechanisms include: (1) temperature effects on lipid biosynthesis and catabolism, (2) seasonal changes in diet composition and caloric intake, (3) variation in physical activity with weather conditions, and (4) daylight-driven effects on metabolism through circadian and mood pathways.
+
+Our SHAP analysis revealed non-monotonic (U-shaped) relationships for total cholesterol, with elevated levels at temperature extremes. This pattern suggests that both cold stress (winter) and heat stress (summer) may elevate cholesterol through distinct mechanisms: cold increases metabolic demands and alters dietary preferences, while heat may induce stress responses and reduce physical activity. The 30-day lagged temperature proved most important for lipids, consistent with metabolic processes integrating exposure over weeks rather than responding acutely.
+
+Importantly, lipid associations persisted after controlling for season, month, and multiple confounders, suggesting that continuous temperature variation within seasons matters beyond categorical seasonal effects. This has implications for climate change impacts: as temperature distributions shift, cholesterol patterns may change even within seasons, potentially affecting cardiovascular disease risk.
+
+\subsubsection{Null Findings for Immune Markers}
+
+The absence of climate associations for CD4 cell count, despite large sample size (n=4,606) and biological plausibility, warrants careful consideration. HIV-associated immune dysfunction theoretically increases climate vulnerability through impaired thermoregulation, chronic inflammation, and medication effects. Yet our standard machine learning models found no predictive power.
+
+We propose three non-mutually-exclusive explanations. First, immune responses exhibit delayed effects (weeks to months) requiring distributed lag non-linear models (DLNM) rather than simple lagged means. CD4 counts integrate cumulative immune stress over long periods, and our feature engineering may not have captured relevant exposure windows. Second, climate effects on immune function may manifest as increased event rates (infections, hospitalizations) rather than continuous CD4 changes, suggesting case-crossover or time-series designs would be more appropriate. Third, the HIV population may exhibit complex, non-linear vulnerability patterns requiring stratified analyses by viral load suppression status, antiretroviral regimen, and co-morbidities.
+
+The negative R² values indicate that our models performed worse than predicting the mean---a humbling reminder that comprehensive feature sets and flexible algorithms do not guarantee predictive success when causal pathways are complex or measurement timescales misaligned.
+
+\subsection{Methodological Advances}
+
+\subsubsection{Data Integration Framework}
+
+This study demonstrates the feasibility and value of integrating diverse data sources for climate health research. Clinical trials provide biomarker measurements with high internal validity but lack socioeconomic context. Household surveys capture socioeconomic vulnerability but lack clinical outcomes. Climate reanalysis datasets offer complete meteorological coverage but require careful spatial-temporal matching. By combining these sources through rigorous harmonization and imputation, we enabled analyses impossible with any single dataset.
+
+Our spatial-demographic imputation framework achieved reasonable accuracy (r=0.54--0.71 depending on variable) while explicitly quantifying uncertainty through confidence scores. Importantly, we validated imputation performance using holdout data, providing transparent assessment of imputation quality rather than assuming validity. This approach can be adapted to other settings where clinical and socioeconomic data exist in separate cohorts.
+
+\subsubsection{Explainable AI in Climate Health}
+
+SHAP analysis proved invaluable for interpreting black-box machine learning models, revealing which features drove predictions and how effects varied across individuals. This transparency is essential for scientific inference: knowing that 30-day lagged temperature matters more than same-day temperature for lipids provides mechanistic insight, while observing U-shaped dose-response curves prompts investigation of distinct mechanisms at temperature extremes.
+
+However, SHAP analysis also revealed potential pitfalls. The dominance of the heat vulnerability index in SHAP importance plots---while initially appearing to validate socioeconomic modification of climate effects---ultimately raised concerns about confounding and leakage. This highlights that explainable AI illuminates model behavior but does not resolve causal inference challenges. Strong associations in SHAP analysis may reflect confounding rather than causation, requiring domain expertise and sensitivity analyses to interpret correctly.
+
+\subsection{Implications for Clinical Practice}
+
+\subsubsection{Biomarker Interpretation in Changing Climate}
+
+Our findings suggest that meteorological context may warrant consideration when interpreting certain biomarkers, particularly hematocrit and lipid panels. A hematocrit value of 42\% during a heat wave may reflect transient hemoconcentration rather than chronic anemia improvement, while elevated cholesterol in winter may partly reflect seasonal metabolic shifts.
+
+However, we emphasize caution before implementing climate-adjusted reference intervals. The magnitude of climate effects observed (2--4 percentage points for hematocrit, 15--25 mg/dL for cholesterol) is modest relative to normal biological variation and measurement error. Moreover, climate effects may correlate with health behaviors (hydration, diet, activity) that are themselves clinically relevant. Adjusting for climate could therefore mask clinically important variation rather than removing nuisance.
+
+We recommend that clinicians maintain awareness of potential climate influences on biomarkers but continue using standard reference ranges. In cases of unexpected biomarker changes, particularly for hematological and metabolic markers, considering recent weather extremes alongside other clinical information may aid interpretation.
+
+\subsubsection{Monitoring Climate-Sensitive Populations}
+
+Populations with high heat vulnerability---informal settlements, outdoor workers, elderly individuals---may benefit from targeted biomarker monitoring during heat waves. Our findings suggest that hematocrit and kidney function markers (creatinine) show sensitivity to temperature, making them candidate indicators for heat stress surveillance programs. However, feasibility and cost-effectiveness of such monitoring require evaluation.
+
+\subsection{Public Health Recommendations}
+
+\subsubsection{Heat Vulnerability Assessment}
+
+The importance of socioeconomic factors in our models underscores the need for integrated climate adaptation strategies addressing social determinants of health. Heat vulnerability indices should incorporate housing quality, income, access to cooling, and water infrastructure alongside meteorological projections. Our imputation framework demonstrates that vulnerability can be estimated using spatial-demographic features when individual-level socioeconomic data are unavailable.
+
+\subsubsection{Early Warning Systems}
+
+Climate-biomarker relationships suggest potential for biomarker-based early warning of population heat stress. Monitoring hematocrit, creatinine, or lipid markers in sentinel populations during heat waves could complement traditional surveillance (emergency department visits, mortality). However, the logistical challenges and lead time required for laboratory biomarkers limit practical utility relative to faster indicators (emergency medical services calls, real-time syndromic surveillance).
+
+\subsection{Limitations}
+
+Several important limitations qualify our findings:
+
+\subsubsection{Potential Data Leakage and Confounding}
+
+The heat vulnerability index's strong predictive performance raises concerns about potential data leakage. This composite measure incorporates dwelling type, income, education, and geographic location---factors that may correlate with unmeasured confounders affecting biomarkers through non-climate pathways. While we attempted to construct the vulnerability index using variables temporally prior to biomarker measurements, residual confounding remains possible. Future analyses should employ causal inference frameworks (e.g., propensity score matching, instrumental variables) to more rigorously isolate climate effects.
+
+\subsubsection{Cross-Sectional Design Limitations}
+
+Our analysis treats repeated measures as independent observations, which may overestimate statistical significance and underestimate standard errors. While we stratified train-test splits by study to partially account for clustering, more sophisticated mixed-effects models or clustered standard errors would better account for within-person and within-study correlation. The cross-sectional design also precludes within-person comparisons that would strengthen causal inference.
+
+\subsubsection{Temporal Mismatch of Data Sources}
+
+Clinical trials spanned 2002--2021, while GCRO socioeconomic surveys occurred 2011--2021. Imputing 2011+ socioeconomic values to 2002--2010 clinical records assumes temporal stability of vulnerability patterns, which may not hold given Johannesburg's rapid urbanization and socioeconomic changes. This temporal mismatch likely introduces measurement error in imputed vulnerability indices for earlier trial years.
+
+\subsubsection{Generalizability}
+
+Our cohort comprised people living with HIV in Johannesburg, limiting generalizability to HIV-negative populations, rural areas, or other geographic regions. HIV-associated immune dysfunction may modify climate-biomarker relationships, while Johannesburg's specific climate (subtropical highland, moderate temperatures) and socioeconomic context (high inequality, informal settlements) differ from other settings. Replication in diverse populations and climates is needed.
+
+\subsubsection{Feature Engineering Limitations}
+
+Despite comprehensive climate feature engineering (16 variables, multiple lag structures), we cannot rule out that alternative formulations would perform better. Nonlinear transformations, interaction terms, or threshold-based features (e.g., heat wave days) were not exhaustively explored. The null findings for immune markers may partly reflect inadequate feature engineering rather than true absence of associations.
+
+\subsubsection{Outcome Measurement}
+
+Biomarker measurements from clinical trials follow standardized protocols, but we lacked data on fasting status (for some lipid measures), time of day, hydration instructions, or laboratory assay variations. These sources of measurement error likely attenuate climate-biomarker associations, meaning true effects may be stronger than observed. However, measurement error could also bias estimates if it correlates with temperature (e.g., more afternoon samples on hot days).
+
+\subsection{Future Research Directions}
+
+\subsubsection{Distributed Lag Non-Linear Models (DLNM)}
+
+The null findings for immune and inflammatory markers motivate DLNM analyses explicitly modeling delayed effects and nonlinear exposure-response relationships. DLNM can accommodate cumulative exposures over weeks to months and identify critical exposure windows. We recommend prioritizing CD4, ALT, and AST for DLNM analysis given their biological plausibility and large sample sizes despite poor machine learning performance.
+
+\subsubsection{Within-Person Analyses}
+
+Longitudinal analyses comparing each individual's biomarkers across temperature conditions would strengthen causal inference by controlling all time-invariant confounders (genetics, chronic behaviors, unmeasured socioeconomic factors). Case-crossover designs are particularly well-suited for this purpose, matching each observation to control periods with similar temporal characteristics but different weather.
+
+\subsubsection{Experimental Validation}
+
+Controlled heat exposure studies in laboratory settings could validate the hematocrit finding by directly manipulating temperature and measuring biomarker responses. Such experiments would isolate the causal effect of heat from confounding by hydration practices, activity, diet, and other factors correlated with ambient temperature.
+
+\subsubsection{Climate Projections and Health Impact Modeling}
+
+Applying trained models to climate projections (e.g., CMIP6 scenarios) could estimate future biomarker changes under warming scenarios. However, substantial caution is warranted given potential non-stationarity (climate effects may change as populations adapt), confounding concerns, and out-of-distribution prediction challenges (projecting to temperatures exceeding the training range).
+
+\subsubsection{Expanded Geographic and Population Scope}
+
+Replication across diverse settings---rural Africa, temperate climates, HIV-negative populations, children and elderly---would assess generalizability and identify population-specific vulnerabilities. Multi-site collaborations leveraging electronic health records with standardized climate linkage could rapidly scale this research.
+
+\subsubsection{Intervention Studies}
+
+Evaluating interventions to mitigate climate effects on biomarkers would provide actionable evidence. Potential interventions include: hydration programs during heat waves (targeting hematocrit), cooling centers for vulnerable populations (broad biomarker effects), or education on heat-protective behaviors (behavioral pathways).
+
+\subsection{Strengths}
+
+Despite limitations, this study has notable strengths:
+
+\begin{itemize}
+    \item \textbf{Large sample size}: 11,398 clinical records provided substantial statistical power
+    \item \textbf{High climate coverage}: 99.5\% of records successfully matched to ERA5 data
+    \item \textbf{Comprehensive biomarker panel}: 19 biomarkers spanning diverse physiological systems
+    \item \textbf{Rigorous data integration}: Validated imputation framework with uncertainty quantification
+    \item \textbf{Explainable AI}: SHAP analysis provided mechanistic insights beyond prediction
+    \item \textbf{Open-source pipeline}: Fully reproducible analysis facilitating replication
+    \item \textbf{Appropriate caution}: Transparent discussion of limitations, confounding, and leakage concerns
+\end{itemize}
