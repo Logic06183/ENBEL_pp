@@ -183,26 +183,52 @@ class RefinedClimateHealthPipeline:
         """
         Identify climate-related features in the dataset.
 
+        STRICT WHITELIST: Only climate and socioeconomic features allowed.
+        NO biomarkers allowed to prevent feature leakage.
+
         Args:
             clinical_df: Clinical dataframe
 
         Returns:
             List of climate feature column names
         """
-        climate_keywords = [
-            'climate', 'temp', 'temperature', 'humidity', 'precipitation',
-            'heat', 'wind', 'pressure', 'solar', 'lag'
+        # STRICT WHITELIST: Only these prefixes are allowed
+        allowed_prefixes = [
+            'climate_',           # All climate features
+            'HEAT_VULNERABILITY'  # Socioeconomic vulnerability
+        ]
+
+        # BIOMARKER BLACKLIST: Never allow these as features
+        biomarker_blacklist = [
+            'CD4', 'glucose', 'cholesterol', 'LDL', 'HDL', 'triglyceride',
+            'creatinine', 'ALT', 'AST', 'hemoglobin', 'hematocrit',
+            'blood pressure', 'systolic', 'diastolic', 'BMI', 'weight', 'height',
+            'viral load', 'platelet', 'lymphocyte', 'neutrophil', 'monocyte',
+            'eosinophil', 'basophil', 'albumin', 'bilirubin', 'protein',
+            'potassium', 'sodium', 'erythrocyte', 'respiration', 'oxygen',
+            'body_temperature', 'waist', 'MCV', 'RDW', 'alkaline'
         ]
 
         climate_features = []
         for col in clinical_df.columns:
-            if any(keyword.lower() in col.lower() for keyword in climate_keywords):
-                if pd.api.types.is_numeric_dtype(clinical_df[col]):
-                    if clinical_df[col].notna().sum() > 1000:
-                        climate_features.append(col)
+            # Check if column starts with allowed prefix
+            if any(col.startswith(prefix) for prefix in allowed_prefixes):
+                # Double-check it's not a biomarker (safety)
+                is_biomarker = any(keyword.lower() in col.lower() for keyword in biomarker_blacklist)
+                if not is_biomarker:
+                    if pd.api.types.is_numeric_dtype(clinical_df[col]):
+                        if clinical_df[col].notna().sum() > 1000:
+                            climate_features.append(col)
 
-        logger.info(f"Identified {len(climate_features)} climate features")
-        logger.info(f"Sample features: {climate_features[:5]}")
+        logger.info(f"Identified {len(climate_features)} CLEAN climate/socioeconomic features")
+        logger.info(f"Features: {climate_features}")
+
+        # VALIDATION: Ensure no biomarkers leaked through
+        for col in climate_features:
+            for keyword in biomarker_blacklist:
+                if keyword.lower() in col.lower():
+                    raise ValueError(f"BIOMARKER LEAKAGE DETECTED: {col} contains '{keyword}'")
+
         return climate_features
 
     def prepare_features(self, df: pd.DataFrame, biomarker: str,
