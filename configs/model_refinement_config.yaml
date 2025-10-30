@@ -1,0 +1,493 @@
+# Model Refinement Configuration
+# ================================
+# Enhanced configuration for system-specific biomarker modeling
+# with expanded features and leakage prevention
+
+# Random seed for reproducibility
+random_state: 42
+
+# Project paths (relative to project root)
+paths:
+  data_dir: "data/raw"
+  results_dir: "results/model_refinement"
+  models_dir: "models/refined"
+  figures_dir: "figures/model_refinement"
+  logs_dir: "logs/model_refinement"
+  cache_dir: "cache/model_refinement"
+
+# Data files configuration
+data_files:
+  clinical: "CLINICAL_DATASET_COMPLETE_CLIMATE.csv"
+  gcro: "GCRO_SOCIOECONOMIC_CLIMATE_ENHANCED_LABELED.csv"
+
+# Physiological System Definitions
+physiological_systems:
+  immune:
+    name: "Immune/Inflammatory System"
+    biomarkers:
+      - "CD4 cell count (cells/µL)"
+      - "HIV viral load (copies/mL)"
+    primary_metric: "r2"
+    secondary_metrics: ["rmse", "spearman_correlation"]
+    clinical_thresholds:
+      cd4_low: 200
+      cd4_moderate: 500
+
+  hematological:
+    name: "Hematological System"
+    biomarkers:
+      - "Hematocrit (%)"
+      - "hemoglobin_g_dL"
+      - "Red blood cell count (×10⁶/µL)"
+      - "MCV (MEAN CELL VOLUME)"
+      - "Platelet count (×10³/µL)"
+    primary_metric: "r2"
+    secondary_metrics: ["mae", "rmse"]
+    clinical_thresholds:
+      anemia_female_hb: 12.0
+      anemia_male_hb: 13.0
+
+  hepatic:
+    name: "Hepatic/Liver Function System"
+    biomarkers:
+      - "ALT (U/L)"
+      - "AST (U/L)"
+      - "Albumin (g/dL)"
+      - "Alkaline phosphatase (U/L)"
+      - "Total bilirubin (mg/dL)"
+      - "Total protein (g/dL)"
+    primary_metric: "r2"
+    secondary_metrics: ["mae", "log_mae"]
+    clinical_thresholds:
+      alt_elevated: 40
+      ast_elevated: 40
+
+  lipid_cardiovascular:
+    name: "Lipid/Cardiovascular System"
+    biomarkers:
+      - "FASTING HDL"
+      - "FASTING LDL"
+      - "FASTING TRIGLYCERIDES"
+      - "total_cholesterol_mg_dL"
+      - "hdl_cholesterol_mg_dL"
+      - "ldl_cholesterol_mg_dL"
+    primary_metric: "r2"
+    secondary_metrics: ["mae", "auc"]
+    clinical_thresholds:
+      high_cholesterol: 200
+      high_ldl: 130
+      low_hdl: 40
+
+  renal:
+    name: "Renal System"
+    biomarkers:
+      - "creatinine_umol_L"
+      - "creatinine clearance"
+      - "Potassium (mEq/L)"
+      - "Sodium (mEq/L)"
+    primary_metric: "r2"
+    secondary_metrics: ["mae", "egfr_accuracy"]
+    clinical_thresholds:
+      creatinine_elevated_male: 115
+      creatinine_elevated_female: 90
+
+  cardiovascular_vitals:
+    name: "Cardiovascular/Vital Signs System"
+    biomarkers:
+      - "systolic_bp_mmHg"
+      - "diastolic_bp_mmHg"
+      - "heart_rate_bpm"
+      - "body_temperature_celsius"
+    primary_metric: "mae"
+    secondary_metrics: ["r2", "auc"]
+    clinical_thresholds:
+      hypertension_systolic: 140
+      hypertension_diastolic: 90
+
+  metabolic:
+    name: "Metabolic System"
+    biomarkers:
+      - "fasting_glucose_mmol_L"
+      - "BMI (kg/m²)"
+      - "Last weight recorded (kg)"
+    primary_metric: "r2"
+    secondary_metrics: ["mae", "auc"]
+    clinical_thresholds:
+      diabetes_fasting: 7.0
+      obesity_bmi: 30.0
+
+# Feature Categories
+features:
+  # Climate features (16 total)
+  climate:
+    - "climate_daily_mean_temp"
+    - "climate_daily_max_temp"
+    - "climate_daily_min_temp"
+    - "climate_7d_mean_temp"
+    - "climate_7d_max_temp"
+    - "climate_14d_mean_temp"
+    - "climate_30d_mean_temp"
+    - "climate_temp_anomaly"
+    - "climate_standardized_anomaly"
+    - "climate_heat_day_p90"
+    - "climate_heat_day_p95"
+    - "climate_heat_stress_index"
+    - "climate_p90_threshold"
+    - "climate_p95_threshold"
+    - "climate_p99_threshold"
+    - "climate_season"
+
+  # Socioeconomic features (15 total - EXPANDED from 1)
+  socioeconomic:
+    - "HEAT_VULNERABILITY_SCORE"  # Composite index (original)
+    - "heat_vulnerability_index"
+    - "economic_vulnerability_indicator"
+    - "employment_vulnerability_indicator"
+    - "education_adaptive_capacity"
+    - "age_vulnerability_indicator"
+    - "dwelling_type_enhanced"  # Housing quality
+    - "std_education"  # Education level
+    - "employment_status"  # Employment security
+    - "q15_3_income_recode"  # Income level
+    - "Q1_03_households"  # Household size
+    - "Q2_02_dwelling_dissatisfaction"  # Living conditions
+    - "Q2_14_Drainage"  # Infrastructure quality
+    - "dwelling_count"  # Ward-level density
+    - "std_race"  # Health equity marker
+
+  # Temporal features (3 total)
+  temporal:
+    - "month"
+    - "season"
+    - "year_period"  # Binned: 2002-2010, 2011-2015, 2016-2021
+
+  # Demographic/health context features (5 total)
+  demographic:
+    - "Age (at enrolment)"
+    - "Sex"
+    - "BMI (kg/m²)"  # Only for non-metabolic biomarkers
+    - "Antiretroviral Therapy Status"
+    - "study_source"  # Study heterogeneity
+
+# Feature Engineering
+feature_engineering:
+  enabled: true
+
+  # Interaction features
+  interactions:
+    enabled: true
+    max_interactions: 5
+    pairs:
+      - ["climate_daily_mean_temp", "HEAT_VULNERABILITY_SCORE"]
+      - ["climate_heat_stress_index", "dwelling_type_enhanced"]
+      - ["Age (at enrolment)", "climate_temp_anomaly"]
+
+  # Polynomial features
+  polynomial:
+    enabled: false  # Keep model interpretable
+    degree: 2
+
+  # Binning for categorical analysis
+  binning:
+    age_groups: [18, 30, 40, 50, 65, 100]
+    temperature_quartiles: true
+
+# Machine Learning Models
+models:
+  # Existing models
+  random_forest:
+    enabled: true
+    params:
+      n_estimators: 300
+      max_depth: 20
+      min_samples_split: 10
+      min_samples_leaf: 5
+      max_features: "sqrt"
+      bootstrap: true
+      n_jobs: -1
+      oob_score: true
+
+  xgboost:
+    enabled: true
+    params:
+      learning_rate: 0.05
+      max_depth: 8
+      n_estimators: 300
+      subsample: 0.8
+      colsample_bytree: 0.8
+      reg_alpha: 0.1
+      reg_lambda: 1.0
+      n_jobs: -1
+      verbosity: 0
+
+  lightgbm:
+    enabled: true
+    params:
+      learning_rate: 0.05
+      max_depth: 8
+      n_estimators: 300
+      subsample: 0.8
+      colsample_bytree: 0.8
+      reg_alpha: 0.1
+      reg_lambda: 1.0
+      n_jobs: -1
+      verbosity: -1
+
+  # NEW models
+  catboost:
+    enabled: true
+    params:
+      iterations: 300
+      learning_rate: 0.05
+      depth: 8
+      l2_leaf_reg: 3.0
+      border_count: 128
+      thread_count: -1
+      verbose: false
+      allow_writing_files: false
+
+  elastic_net:
+    enabled: true
+    params:
+      alpha: 1.0
+      l1_ratio: 0.5
+      max_iter: 10000
+      tol: 0.0001
+      random_state: 42
+
+  extra_trees:
+    enabled: true
+    params:
+      n_estimators: 300
+      max_depth: 20
+      min_samples_split: 10
+      min_samples_leaf: 5
+      max_features: "sqrt"
+      bootstrap: false
+      n_jobs: -1
+      random_state: 42
+
+  gradient_boosting:
+    enabled: true
+    params:
+      n_estimators: 300
+      learning_rate: 0.05
+      max_depth: 8
+      min_samples_split: 10
+      min_samples_leaf: 5
+      subsample: 0.8
+      max_features: "sqrt"
+      n_jobs: -1
+      random_state: 42
+
+# Hyperparameter Optimization
+hyperparameter_optimization:
+  enabled: true
+  method: "optuna"
+  n_trials: 100
+  timeout_seconds: 3600
+  pruning: true
+
+  # Search spaces per model
+  search_spaces:
+    random_forest:
+      n_estimators: [200, 300, 500]
+      max_depth: [15, 20, 25, 30]
+      min_samples_split: [5, 10, 20]
+      min_samples_leaf: [2, 5, 10]
+      max_features: ["sqrt", "log2", 0.5, 0.8]
+
+    xgboost:
+      learning_rate: [0.01, 0.05, 0.1]
+      max_depth: [6, 8, 10]
+      n_estimators: [200, 300, 500]
+      subsample: [0.6, 0.8, 1.0]
+      colsample_bytree: [0.6, 0.8, 1.0]
+      reg_alpha: [0, 0.1, 1.0]
+      reg_lambda: [1.0, 5.0, 10.0]
+
+    lightgbm:
+      learning_rate: [0.01, 0.05, 0.1]
+      max_depth: [6, 8, 10]
+      n_estimators: [200, 300, 500]
+      subsample: [0.6, 0.8, 1.0]
+      colsample_bytree: [0.6, 0.8, 1.0]
+      reg_alpha: [0, 0.1, 1.0]
+      reg_lambda: [1.0, 5.0, 10.0]
+
+    catboost:
+      learning_rate: [0.01, 0.05, 0.1]
+      depth: [6, 8, 10]
+      iterations: [200, 300, 500]
+      l2_leaf_reg: [1.0, 3.0, 5.0, 10.0]
+
+    elastic_net:
+      alpha: [0.1, 0.5, 1.0, 5.0, 10.0]
+      l1_ratio: [0.1, 0.3, 0.5, 0.7, 0.9]
+
+# Cross-Validation Strategy
+cross_validation:
+  method: "stratified_kfold"
+  n_folds: 5
+  shuffle: true
+  stratify_by:
+    - "study_source"
+    - "year_period"
+
+  # Temporal validation
+  temporal_validation:
+    enabled: true
+    train_period: "2002-2015"
+    test_period: "2016-2021"
+
+  # Spatial validation
+  spatial_validation:
+    enabled: true
+    method: "leave_one_ward_out"
+
+# Evaluation Metrics
+evaluation_metrics:
+  regression:
+    - "r2"
+    - "mae"
+    - "rmse"
+    - "mape"
+    - "median_absolute_error"
+    - "max_error"
+
+  classification:
+    - "auc_roc"
+    - "auc_pr"
+    - "sensitivity"
+    - "specificity"
+    - "f1_score"
+    - "accuracy"
+    - "cohen_kappa"
+
+# Explainable AI
+explainable_ai:
+  enabled: true
+  methods:
+    - "shap"
+    - "permutation_importance"
+    - "feature_importance"
+
+  shap:
+    max_samples: 1000
+    plot_types:
+      - "waterfall"
+      - "beeswarm"
+      - "summary"
+      - "dependence"
+    save_plots: true
+    output_format: ["png", "svg"]
+
+# Data Preprocessing
+preprocessing:
+  missing_values:
+    strategy: "iterative"
+    threshold: 0.5
+
+  outlier_detection:
+    enabled: true
+    method: "isolation_forest"
+    contamination: 0.05
+
+  feature_scaling:
+    enabled: true
+    method: "standard"  # For Elastic Net
+    apply_to_tree_models: false  # Trees don't need scaling
+
+  categorical_encoding:
+    method: "target"  # Target encoding for high cardinality
+    min_samples_leaf: 10
+
+# Leakage Prevention
+leakage_prevention:
+  enabled: true
+  correlation_threshold: 0.95
+  auto_exclude_biomarkers: true
+
+  # System-specific exclusions
+  exclusions:
+    hematological:
+      - "hemoglobin_g_dL"  # If predicting hematocrit
+      - "Hematocrit (%)"  # If predicting hemoglobin
+    cardiovascular_vitals:
+      - "systolic_bp_mmHg"  # If predicting diastolic
+      - "diastolic_bp_mmHg"  # If predicting systolic
+    metabolic:
+      - "BMI (kg/m²)"  # If predicting weight
+      - "Last weight recorded (kg)"  # If predicting BMI
+
+# Performance Targets
+performance_targets:
+  excellent:
+    r2_min: 0.30
+    mae_percentile: 25  # Top 25% of MAE
+
+  moderate:
+    r2_min: 0.10
+    r2_max: 0.30
+
+  improvement_threshold:
+    r2_delta_min: 0.05  # Minimum improvement to be significant
+    statistical_test: "paired_t_test"
+    alpha: 0.05
+
+# Visualization
+visualization:
+  figure_size: [14, 10]
+  dpi: 300
+  style: "whitegrid"
+  palette: "Set2"
+
+  save_formats: ["png", "svg", "pdf"]
+
+  plot_types:
+    - "model_comparison_barplot"
+    - "feature_importance_heatmap"
+    - "shap_summary_per_system"
+    - "performance_improvement_scatter"
+    - "temporal_validation_curves"
+    - "clinical_threshold_confusion_matrix"
+
+# Reporting
+reporting:
+  generate_html_report: true
+  generate_pdf_report: true
+  generate_markdown_summary: true
+
+  sections:
+    - "executive_summary"
+    - "data_overview"
+    - "feature_expansion_analysis"
+    - "model_performance_comparison"
+    - "system_specific_results"
+    - "feature_importance_analysis"
+    - "clinical_implications"
+    - "before_after_comparison"
+    - "statistical_significance_tests"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file_logging: true
+  console_logging: true
+  log_file: "model_refinement.log"
+
+# Resource Management
+performance:
+  n_jobs: -1  # Use all cores
+  chunk_size: 10000
+  low_memory_mode: false
+  enable_caching: true
+  cache_size_limit_gb: 20
+
+# Version Control
+versioning:
+  dataset_version: "v2.0_expanded_features"
+  pipeline_version: "v2.0_system_specific"
+  config_version: "2.0"
+  timestamp_format: "%Y%m%d_%H%M%S"
