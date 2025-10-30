@@ -1,0 +1,460 @@
+Loading required package: nlme
+This is mgcv 1.9-1. For overview type 'help("mgcv-package")'.
+This is dlnm 2.4.10. For details: help(dlnm) and vignette('dlnmOverview').
+Loading required package: Matrix
+
+Attaching package: ‘lme4’
+
+The following object is masked from ‘package:nlme’:
+
+    lmList
+
+
+Attaching package: ‘lmerTest’
+
+The following object is masked from ‘package:lme4’:
+
+    lmer
+
+The following object is masked from ‘package:stats’:
+
+    step
+
+################################################################################
+# PATIENT-LEVEL INTERACTION ANALYSIS
+################################################################################
+
+Biomarkers selected for patient-level interaction analysis:
+  - Total Cholesterol: PARADOX (high vuln → weak effect)
+  - Glucose: PARADOX (high vuln → weak effect)
+  - Body Temperature: PARADOX (r=-0.996 at study level)
+  - CD4 Count: EXPECTED (high vuln → strong effect)
+  - BMI: UNKNOWN (7 studies available)
+  - Hemoglobin: UNKNOWN (4 studies available)
+
+
+=== Running Patient-Level Interaction Analyses ===
+
+================================================================================
+BIOMARKER: Total Cholesterol
+================================================================================
+
+Total patients: 2917
+Studies: 4
+Mean biomarker: 25.85 mg/dL (SD=52.94)
+Temperature range: 8.6 - 22.6°C
+Vulnerability range: 0.0 - 100.0
+
+--- Model Progression ---
+
+Model 1: Temperature only
+  R² = 0.0115, AIC = 30338.8, Temp p = 0.0000
+
+Model 2: + Vulnerability (main effect)
+  R² = 0.0305, AIC = 30334.3, Vuln p = 0.3507
+  ΔR² = 0.0191, ΔAIC = -4.6
+
+Model 3: + Season
+  R² = 0.0340, AIC = 30271.3
+  ΔR² = 0.0035, ΔAIC = -63.0
+
+Model 4: + Temperature × Vulnerability INTERACTION *** KEY TEST ***
+  R² = 0.0469, AIC = 30240.2
+  ΔR² = 0.0129, ΔAIC = -31.1
+
+  INTERACTION TERM (Temp × Vulnerability):
+    Coefficient = 5.001223 (SE = 0.888440)
+    t = 5.629, p = 0.0000
+    ✓✓✓ HIGHLY SIGNIFICANT (p < 0.001)
+
+  DIRECTION:
+    Positive interaction: Higher vulnerability → STRONGER temperature effects
+    → EXPECTED pattern confirmed at patient level
+
+  LIKELIHOOD RATIO TEST:
+refitting model(s) with ML (instead of REML)
+    χ² = 31.652, df = 1, p = 0.0000
+    ✓ Model with interaction significantly better (p < 0.05)
+
+  EXPECTED PATTERN: PARADOX (high vuln → weak effect)
+  ✗ CONTRADICTION: Expected paradox, found opposite
+
+  EFFECT SIZE:
+    Temp effect at LOW vulnerability (-1 SD): -0.8805
+    Temp effect at HIGH vulnerability (+1 SD): 9.1220
+    Ratio (High/Low): -10.36
+
+--- Creating Visualization ---
+  Saved: total_cholesterol_interaction_plot.pdf/png
+
+================================================================================
+BIOMARKER: Glucose
+================================================================================
+
+Total patients: 2722
+Studies: 3
+Mean biomarker: 4.92 mmol/L (SD=1.42)
+Temperature range: 8.6 - 21.7°C
+Vulnerability range: 0.0 - 100.0
+
+--- Model Progression ---
+
+Model 1: Temperature only
+  R² = 0.0012, AIC = 9430.0, Temp p = 0.0620
+
+Model 2: + Vulnerability (main effect)
+  R² = 0.0022, AIC = 9433.4, Vuln p = 0.8240
+  ΔR² = 0.0011, ΔAIC = 3.4
+
+Model 3: + Season
+  R² = 0.0104, AIC = 9428.7
+  ΔR² = 0.0082, ΔAIC = -4.7
+
+Model 4: + Temperature × Vulnerability INTERACTION *** KEY TEST ***
+  R² = 0.0103, AIC = 9435.7
+  ΔR² = -0.0001, ΔAIC = 7.0
+
+  INTERACTION TERM (Temp × Vulnerability):
+    Coefficient = 0.013901 (SE = 0.028509)
+    t = 0.488, p = 0.6259
+    → Not significant (p ≥ 0.10)
+
+  DIRECTION:
+    Positive interaction: Higher vulnerability → STRONGER temperature effects
+    → EXPECTED pattern confirmed at patient level
+
+  LIKELIHOOD RATIO TEST:
+refitting model(s) with ML (instead of REML)
+    χ² = 0.236, df = 1, p = 0.6275
+    → Model with interaction not significantly better
+
+  EXPECTED PATTERN: PARADOX (high vuln → weak effect)
+  ✗ CONTRADICTION: Expected paradox, found opposite
+
+  EFFECT SIZE:
+    Temp effect at LOW vulnerability (-1 SD): -0.0026
+    Temp effect at HIGH vulnerability (+1 SD): 0.0252
+    Ratio (High/Low): -9.81
+
+--- Creating Visualization ---
+  Saved: glucose_interaction_plot.pdf/png
+
+================================================================================
+BIOMARKER: Body Temperature
+================================================================================
+
+Total patients: 4288
+Studies: 4
+Mean biomarker: 36.39 °C (SD=0.48)
+Temperature range: 7.1 - 21.7°C
+Vulnerability range: 0.1 - 100.0
+
+--- Model Progression ---
+
+Model 1: Temperature only
+  R² = 0.0162, AIC = 5495.0, Temp p = 0.0000
+
+Model 2: + Vulnerability (main effect)
+  R² = 0.0172, AIC = 5499.6, Vuln p = 0.0677
+  ΔR² = 0.0010, ΔAIC = 4.6
+
+Model 3: + Season
+  R² = 0.0167, AIC = 5518.3
+  ΔR² = -0.0005, ΔAIC = 18.7
+
+Model 4: + Temperature × Vulnerability INTERACTION *** KEY TEST ***
+  R² = 0.0172, AIC = 5527.5
+  ΔR² = 0.0004, ΔAIC = 9.2
+
+  INTERACTION TERM (Temp × Vulnerability):
+    Coefficient = -0.006244 (SE = 0.008063)
+    t = -0.774, p = 0.4388
+    → Not significant (p ≥ 0.10)
+
+  DIRECTION:
+    Negative interaction: Higher vulnerability → WEAKER temperature effects
+    → PARADOX pattern confirmed at patient level
+
+  LIKELIHOOD RATIO TEST:
+refitting model(s) with ML (instead of REML)
+    χ² = 0.628, df = 1, p = 0.4282
+    → Model with interaction not significantly better
+
+  EXPECTED PATTERN: PARADOX (r=-0.996 at study level)
+  ⚠️  Direction consistent but not significant
+
+  EFFECT SIZE:
+    Temp effect at LOW vulnerability (-1 SD): 0.0705
+    Temp effect at HIGH vulnerability (+1 SD): 0.0580
+    Ratio (High/Low): 0.82
+
+--- Creating Visualization ---
+  Saved: body_temperature_interaction_plot.pdf/png
+
+================================================================================
+BIOMARKER: CD4 Count
+================================================================================
+
+Total patients: 2333
+Studies: 3
+Mean biomarker: 161.47 cells/µL (SD=213.16)
+Temperature range: 9.2 - 22.6°C
+Vulnerability range: 0.2 - 100.0
+
+--- Model Progression ---
+
+Model 1: Temperature only
+  R² = 0.0001, AIC = 28521.8, Temp p = 0.0705
+
+Model 2: + Vulnerability (main effect)
+  R² = 0.0002, AIC = 28518.0, Vuln p = 0.7479
+  ΔR² = 0.0001, ΔAIC = -3.9
+
+Model 3: + Season
+  R² = 0.0004, AIC = 28502.0
+  ΔR² = 0.0003, ΔAIC = -16.0
+
+Model 4: + Temperature × Vulnerability INTERACTION *** KEY TEST ***
+  R² = 0.0005, AIC = 28499.3
+  ΔR² = 0.0000, ΔAIC = -2.7
+
+  INTERACTION TERM (Temp × Vulnerability):
+    Coefficient = 2.523466 (SE = 2.398306)
+    t = 1.052, p = 0.2928
+    → Not significant (p ≥ 0.10)
+
+  DIRECTION:
+    Positive interaction: Higher vulnerability → STRONGER temperature effects
+    → EXPECTED pattern confirmed at patient level
+
+  LIKELIHOOD RATIO TEST:
+refitting model(s) with ML (instead of REML)
+    χ² = 1.109, df = 1, p = 0.2924
+    → Model with interaction not significantly better
+
+  EXPECTED PATTERN: EXPECTED (high vuln → strong effect)
+  ⚠️  Direction consistent but not significant
+
+  EFFECT SIZE:
+    Temp effect at LOW vulnerability (-1 SD): 2.9919
+    Temp effect at HIGH vulnerability (+1 SD): 8.0389
+    Ratio (High/Low): 2.69
+
+--- Creating Visualization ---
+  Saved: cd4_count_interaction_plot.pdf/png
+
+================================================================================
+BIOMARKER: BMI
+================================================================================
+
+Total patients: 6599
+Studies: 7
+Mean biomarker: 154.93 kg/m² (SD=10463.25)
+Temperature range: 6.9 - 21.7°C
+Vulnerability range: 0.0 - 100.0
+
+--- Model Progression ---
+
+Model 1: Temperature only
+  R² = 0.0000, AIC = 140865.9, Temp p = 0.7948
+
+Model 2: + Vulnerability (main effect)
+  R² = 0.0001, AIC = 140855.1, Vuln p = 0.6237
+  ΔR² = 0.0001, ΔAIC = -10.7
+
+Model 3: + Season
+  R² = 0.0013, AIC = 140813.2
+  ΔR² = 0.0012, ΔAIC = -41.9
+
+Model 4: + Temperature × Vulnerability INTERACTION *** KEY TEST ***
+  R² = 0.0013, AIC = 140803.4
+  ΔR² = 0.0000, ΔAIC = -9.8
+
+  INTERACTION TERM (Temp × Vulnerability):
+    Coefficient = -49.148276 (SE = 137.040580)
+    t = -0.359, p = 0.7199
+    → Not significant (p ≥ 0.10)
+
+  DIRECTION:
+    Negative interaction: Higher vulnerability → WEAKER temperature effects
+    → PARADOX pattern confirmed at patient level
+
+  LIKELIHOOD RATIO TEST:
+refitting model(s) with ML (instead of REML)
+    χ² = 0.070, df = 1, p = 0.7920
+    → Model with interaction not significantly better
+
+  EXPECTED PATTERN: UNKNOWN (7 studies available)
+
+  EFFECT SIZE:
+    Temp effect at LOW vulnerability (-1 SD): 558.4045
+    Temp effect at HIGH vulnerability (+1 SD): 460.1080
+    Ratio (High/Low): 0.82
+
+--- Creating Visualization ---
+  Saved: bmi_interaction_plot.pdf/png
+
+================================================================================
+BIOMARKER: Hemoglobin
+================================================================================
+
+Total patients: 2337
+Studies: 4
+Mean biomarker: 13.10 g/dL (SD=1.88)
+Temperature range: 9.2 - 23.5°C
+Vulnerability range: 0.2 - 100.0
+
+--- Model Progression ---
+
+Model 1: Temperature only
+  R² = 0.0006, AIC = 9543.2, Temp p = 0.2101
+
+Model 2: + Vulnerability (main effect)
+  R² = 0.0158, AIC = 9543.4, Vuln p = 0.0422
+  ΔR² = 0.0151, ΔAIC = 0.2
+
+Model 3: + Season
+  R² = 0.0129, AIC = 9553.4
+  ΔR² = -0.0029, ΔAIC = 9.9
+
+Model 4: + Temperature × Vulnerability INTERACTION *** KEY TEST ***
+  R² = 0.0131, AIC = 9559.2
+  ΔR² = 0.0002, ΔAIC = 5.8
+
+  INTERACTION TERM (Temp × Vulnerability):
+    Coefficient = -0.034942 (SE = 0.040770)
+    t = -0.857, p = 0.3915
+    → Not significant (p ≥ 0.10)
+
+  DIRECTION:
+    Negative interaction: Higher vulnerability → WEAKER temperature effects
+    → PARADOX pattern confirmed at patient level
+
+  LIKELIHOOD RATIO TEST:
+refitting model(s) with ML (instead of REML)
+    χ² = 0.760, df = 1, p = 0.3834
+    → Model with interaction not significantly better
+
+  EXPECTED PATTERN: UNKNOWN (4 studies available)
+
+  EFFECT SIZE:
+    Temp effect at LOW vulnerability (-1 SD): -0.0264
+    Temp effect at HIGH vulnerability (+1 SD): -0.0963
+    Ratio (High/Low): 3.64
+
+--- Creating Visualization ---
+  Saved: hemoglobin_interaction_plot.pdf/png
+Warning messages:
+1: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead. 
+2: In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  for '← Positive interaction (EXPECTED)' in 'mbcsToSbcs': <- substituted for ← (U+2190)
+3: In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  for '← Positive interaction (EXPECTED)' in 'mbcsToSbcs': <- substituted for ← (U+2190)
+4: In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  for '← Negative interaction (PARADOX)' in 'mbcsToSbcs': <- substituted for ← (U+2190)
+5: In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  for '← Positive interaction (EXPECTED)' in 'mbcsToSbcs': <- substituted for ← (U+2190)
+6: In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  for '← Negative interaction (PARADOX)' in 'mbcsToSbcs': <- substituted for ← (U+2190)
+7: In grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y,  :
+  for '← Negative interaction (PARADOX)' in 'mbcsToSbcs': <- substituted for ← (U+2190)
+
+================================================================================
+# SUMMARY: PATIENT-LEVEL INTERACTION ANALYSIS
+================================================================================
+
+SAMPLE SIZES:
+           biomarker     n k_studies
+              <char> <int>     <int>
+1: Total Cholesterol  2917         4
+2:           Glucose  2722         3
+3:  Body Temperature  4288         4
+4:         CD4 Count  2333         3
+5:               BMI  6599         7
+6:        Hemoglobin  2337         4
+
+
+MODEL PERFORMANCE:
+           biomarker  r2_baseline r2_with_interaction delta_r2_interaction
+              <char>        <num>               <num>                <num>
+1: Total Cholesterol 1.146847e-02        0.0468824174         1.286429e-02
+2:           Glucose 1.162910e-03        0.0103093453        -1.158849e-04
+3:  Body Temperature 1.624038e-02        0.0171562869         4.312604e-04
+4:         CD4 Count 1.344459e-04        0.0004867384         4.147643e-05
+5:               BMI 1.208454e-05        0.0013434744         9.412154e-06
+6:        Hemoglobin 6.452536e-04        0.0131351876         2.301758e-04
+
+
+INTERACTION TERMS (Temperature × Vulnerability):
+           biomarker interaction_coef interaction_se interaction_p
+              <char>            <num>          <num>         <num>
+1: Total Cholesterol      5.001223281   8.884398e-01  1.982827e-08
+2:           Glucose      0.013901300   2.850925e-02  6.258678e-01
+3:  Body Temperature     -0.006243595   8.062995e-03  4.387657e-01
+4:         CD4 Count      2.523465621   2.398306e+00  2.928232e-01
+5:               BMI    -49.148276122   1.370406e+02  7.198905e-01
+6:        Hemoglobin     -0.034941835   4.076965e-02  3.915026e-01
+   interaction_sig
+            <char>
+1:             ***
+2:              ns
+3:              ns
+4:              ns
+5:              ns
+6:              ns
+
+
+SIGNIFICANT INTERACTIONS (p < 0.05):
+           biomarker     n interaction_coef interaction_p temp_effect_low_vuln
+              <char> <int>            <num>         <num>                <num>
+1: Total Cholesterol  2917         5.001223  1.982827e-08           -0.8804515
+   temp_effect_high_vuln
+                   <num>
+1:              9.121995
+
+  ✓✓ SIGNIFICANT patient-level interactions detected!
+
+  INTERPRETATION:
+  - Total Cholesterol (p=0.0000): Expected pattern - high vulnerability → stronger effects
+    Expected: PARADOX (high vuln → weak effect)
+
+
+MARGINAL INTERACTIONS (p < 0.10):
+  → No marginal interactions
+
+
+DIRECTIONAL CONSISTENCY:
+  Paradox biomarkers: 1/3 show negative interactions (33%)
+  Expected pattern biomarkers: 1/1 show positive interactions (100%)
+
+
+COMPARISON WITH STUDY-LEVEL META-REGRESSION:
+  Study-level approach:
+    - Sample size: k=3-7 studies
+    - Power: INSUFFICIENT (need k≥7 for r=0.80)
+    - Results: Strong correlations but NOT significant
+
+  Patient-level approach:
+    - Sample size: n=thousands of patients
+    - Power: ADEQUATE for moderate-to-large effects
+    - Results: See above
+
+
+VALIDATION OF SHAP FINDINGS:
+  SHAP analysis shows vulnerability as important feature
+  Patient-level interactions test if vulnerability MODIFIES climate effects
+
+  If significant interactions found:
+    ✓ SHAP findings validated - vulnerability truly modifies climate effects
+  If no significant interactions:
+    → SHAP may detect main effects, not interactions
+    → Or interactions too small for statistical detection
+    → Or SHAP detecting other vulnerability-related patterns
+
+
+=== Analysis Complete ===
+Results saved to: reanalysis_outputs/patient_level_interactions
+Files generated:
+  - patient_level_interaction_results.csv
+  - [biomarker]_interaction_plot.pdf/png (for each biomarker)
