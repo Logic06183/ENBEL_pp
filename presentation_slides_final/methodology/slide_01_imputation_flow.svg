@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080"
+     width="1920"
+     height="1080">
+
+  <defs>
+    <linearGradient id="wits-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5cda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bec5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="wits-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00bec5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#20a3fc;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#ffffff"/>
+  </g>
+
+  <!-- Title Section -->
+  <g id="title-section">
+    <!-- Title -->
+    <text x="960" y="90"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a"
+          letter-spacing="-1.28">
+      Socioeconomic Imputation Methodology
+    </text>
+
+    <!-- Subtitle -->
+    <text x="960" y="140"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="400"
+          fill="#424242"
+          letter-spacing="-0.32">
+      Combining KNN and Ecological Stratification for Robust Inference
+    </text>
+  </g>
+
+  <!-- Flow Diagram -->
+  <g id="flow-diagram">
+
+    <!-- Step 1: Data Sources -->
+    <g id="step-1" transform="translate(180, 220)">
+      <!-- Number Badge -->
+      <circle cx="30" cy="30" r="30" fill="url(#wits-gradient-1)"/>
+      <text x="30" y="40"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="32"
+            font-weight="700"
+            fill="#ffffff">
+        1
+      </text>
+
+      <!-- Step Box -->
+      <rect x="80" y="0" width="400" height="280" rx="12" fill="#f4f4f4" stroke="#2c5cda" stroke-width="3"/>
+
+      <!-- Step Title -->
+      <text x="280" y="40"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="36"
+            font-weight="700"
+            fill="#2c5cda"
+            letter-spacing="-0.72">
+        Data Sources
+      </text>
+
+      <!-- Clinical Data Box -->
+      <rect x="100" y="70" width="360" height="80" rx="8" fill="#ffffff" stroke="#2c5cda" stroke-width="2"/>
+      <text x="280" y="100"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="600"
+            fill="#2c5cda">
+        Clinical Cohort
+      </text>
+      <text x="280" y="130"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        n=11,398 participants
+      </text>
+
+      <!-- GCRO Data Box -->
+      <rect x="100" y="165" width="360" height="80" rx="8" fill="#ffffff" stroke="#00bec5" stroke-width="2"/>
+      <text x="280" y="195"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="600"
+            fill="#00bec5">
+        GCRO Surveys
+      </text>
+      <text x="280" y="225"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        n=58,616 households
+      </text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <g id="arrow-1">
+      <line x1="660" y1="360" x2="780" y2="360" stroke="#2c5cda" stroke-width="4"/>
+      <polygon points="780,360 765,352 765,368" fill="#2c5cda"/>
+    </g>
+
+    <!-- Step 2: KNN Matching -->
+    <g id="step-2" transform="translate(800, 220)">
+      <!-- Number Badge -->
+      <circle cx="30" cy="30" r="30" fill="url(#wits-gradient-1)"/>
+      <text x="30" y="40"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="32"
+            font-weight="700"
+            fill="#ffffff">
+        2
+      </text>
+
+      <!-- Step Box -->
+      <rect x="80" y="0" width="400" height="280" rx="12" fill="#f4f4f4" stroke="#00bec5" stroke-width="3"/>
+
+      <!-- Step Title -->
+      <text x="280" y="40"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="36"
+            font-weight="700"
+            fill="#00bec5"
+            letter-spacing="-0.72">
+        KNN Matching
+      </text>
+
+      <!-- Parameters -->
+      <text x="280" y="85"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="26"
+            font-weight="600"
+            fill="#1a1a1a">
+        Spatial-Demographic
+      </text>
+
+      <text x="110" y="125"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • k = 10 neighbors
+      </text>
+      <text x="110" y="160"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Spatial weight: 40%
+      </text>
+      <text x="110" y="195"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Demographic: 60%
+      </text>
+      <text x="110" y="230"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Max distance: 15 km
+      </text>
+    </g>
+
+    <!-- Arrow 2 (down) -->
+    <g id="arrow-2">
+      <line x1="1000" y1="520" x2="1000" y2="600" stroke="#00bec5" stroke-width="4"/>
+      <polygon points="1000,600 992,585 1008,585" fill="#00bec5"/>
+    </g>
+
+    <!-- Step 3: Ecological Backup -->
+    <g id="step-3" transform="translate(800, 620)">
+      <!-- Number Badge -->
+      <circle cx="30" cy="30" r="30" fill="url(#wits-gradient-2)"/>
+      <text x="30" y="40"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="32"
+            font-weight="700"
+            fill="#ffffff">
+        3
+      </text>
+
+      <!-- Step Box -->
+      <rect x="80" y="0" width="400" height="280" rx="12" fill="#f4f4f4" stroke="#20a3fc" stroke-width="3"/>
+
+      <!-- Step Title -->
+      <text x="280" y="40"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="36"
+            font-weight="700"
+            fill="#20a3fc"
+            letter-spacing="-0.72">
+        Ecological Backup
+      </text>
+
+      <!-- Description -->
+      <text x="280" y="85"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="26"
+            font-weight="600"
+            fill="#1a1a1a">
+        Geographic Stratification
+      </text>
+
+      <text x="110" y="125"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • 10×10 spatial grid
+      </text>
+      <text x="110" y="160"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Ward-level aggregation
+      </text>
+      <text x="110" y="195"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Mean imputation
+      </text>
+      <text x="110" y="230"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Used when KNN fails
+      </text>
+    </g>
+
+    <!-- Arrow 3 (left) -->
+    <g id="arrow-3">
+      <line x1="780" y1="760" x2="660" y2="760" stroke="#20a3fc" stroke-width="4"/>
+      <polygon points="660,760 675,752 675,768" fill="#20a3fc"/>
+    </g>
+
+    <!-- Step 4: Validation -->
+    <g id="step-4" transform="translate(180, 620)">
+      <!-- Number Badge -->
+      <circle cx="30" cy="30" r="30" fill="#cc1a1b"/>
+      <text x="30" y="40"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="32"
+            font-weight="700"
+            fill="#ffffff">
+        4
+      </text>
+
+      <!-- Step Box -->
+      <rect x="80" y="0" width="400" height="280" rx="12" fill="#fff5f5" stroke="#cc1a1b" stroke-width="3"/>
+
+      <!-- Step Title -->
+      <text x="280" y="40"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="36"
+            font-weight="700"
+            fill="#cc1a1b"
+            letter-spacing="-0.72">
+        Validation
+      </text>
+
+      <!-- Metrics -->
+      <text x="280" y="85"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="26"
+            font-weight="600"
+            fill="#1a1a1a">
+        Statistical Validation
+      </text>
+
+      <text x="110" y="125"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • 20% holdout testing
+      </text>
+      <text x="110" y="160"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • 5-fold cross-validation
+      </text>
+      <text x="110" y="195"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • RMSE, MAE, correlation
+      </text>
+      <text x="110" y="230"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Uncertainty quantification
+      </text>
+    </g>
+
+  </g>
+
+  <!-- Key Insight Box -->
+  <g id="insight-box">
+    <rect x="1420" y="300" width="380" height="450" rx="12" fill="#f0f9ff" stroke="#2c5cda" stroke-width="2"/>
+
+    <text x="1610" y="340"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="700"
+          fill="#2c5cda"
+          letter-spacing="-0.64">
+      💡 Key Innovation
+    </text>
+
+    <text x="1440" y="395"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="600"
+          fill="#1a1a1a">
+      Combined Approach
+    </text>
+
+    <text x="1440" y="440"
+          font-family="Inter, Arial, sans-serif"
+          font-size="20"
+          font-weight="400"
+          fill="#424242">
+      <tspan x="1440" dy="0">Integrates strengths of</tspan>
+      <tspan x="1440" dy="30">both methods:</tspan>
+    </text>
+
+    <rect x="1440" y="490" width="340" height="100" rx="8" fill="#ffffff" stroke="#2c5cda" stroke-width="1.5"/>
+    <text x="1610" y="525"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="20"
+          font-weight="600"
+          fill="#2c5cda">
+      KNN (Primary)
+    </text>
+    <text x="1610" y="555"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#424242">
+      Individual-level precision
+    </text>
+
+    <rect x="1440" y="610" width="340" height="100" rx="8" fill="#ffffff" stroke="#20a3fc" stroke-width="1.5"/>
+    <text x="1610" y="645"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="20"
+          font-weight="600"
+          fill="#20a3fc">
+      Ecological (Fallback)
+    </text>
+    <text x="1610" y="675"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#424242">
+      Robust with sparse data
+    </text>
+  </g>
+
+  <!-- Branding -->
+  <g id="branding">
+    <text x="1740" y="1040"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#666666"
+          text-anchor="end">
+      Wits Planetary Health Research
+    </text>
+  </g>
+
+</svg>

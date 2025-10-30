@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080"
+     width="1920"
+     height="1080">
+
+  <defs>
+    <linearGradient id="wits-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5cda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bec5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#ffffff"/>
+  </g>
+
+  <!-- Title Section -->
+  <g id="title-section">
+    <text x="960" y="90"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a"
+          letter-spacing="-1.28">
+      Imputation Validation Results
+    </text>
+
+    <text x="960" y="140"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="400"
+          fill="#424242"
+          letter-spacing="-0.32">
+      20% Holdout Testing with 5-Fold Cross-Validation
+    </text>
+  </g>
+
+  <!-- Performance Metrics Table -->
+  <g id="metrics-table">
+    <!-- Table Header -->
+    <rect x="150" y="220" width="1620" height="70" fill="url(#wits-gradient)"/>
+
+    <text x="300" y="265"
+          font-family="Inter, Arial, sans-serif"
+          font-size="30"
+          font-weight="700"
+          fill="#ffffff">
+      Variable
+    </text>
+    <text x="700" y="265"
+          font-family="Inter, Arial, sans-serif"
+          font-size="30"
+          font-weight="700"
+          fill="#ffffff">
+      RMSE
+    </text>
+    <text x="950" y="265"
+          font-family="Inter, Arial, sans-serif"
+          font-size="30"
+          font-weight="700"
+          fill="#ffffff">
+      MAE
+    </text>
+    <text x="1200" y="265"
+          font-family="Inter, Arial, sans-serif"
+          font-size="30"
+          font-weight="700"
+          fill="#ffffff">
+      Correlation (r)
+    </text>
+    <text x="1600" y="265"
+          font-family="Inter, Arial, sans-serif"
+          font-size="30"
+          font-weight="700"
+          fill="#ffffff">
+      Method
+    </text>
+
+    <!-- Row 1: Heat Vulnerability -->
+    <rect x="150" y="290" width="1620" height="80" fill="#f4f4f4"/>
+    <text x="180" y="340"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="600"
+          fill="#1a1a1a">
+      HEAT_VULNERABILITY_SCORE
+    </text>
+    <text x="700" y="340"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.142
+    </text>
+    <text x="950" y="340"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.108
+    </text>
+    <text x="1200" y="340"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="700"
+          fill="#00bec5">
+      0.842
+    </text>
+    <text x="1600" y="340"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#2c5cda">
+      KNN
+    </text>
+
+    <!-- Row 2: Housing Vulnerability -->
+    <rect x="150" y="370" width="1620" height="80" fill="#ffffff"/>
+    <text x="180" y="420"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="600"
+          fill="#1a1a1a">
+      vuln_Housing
+    </text>
+    <text x="700" y="420"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.185
+    </text>
+    <text x="950" y="420"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.136
+    </text>
+    <text x="1200" y="420"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="700"
+          fill="#00bec5">
+      0.756
+    </text>
+    <text x="1600" y="420"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#2c5cda">
+      KNN
+    </text>
+
+    <!-- Row 3: Employment Vulnerability -->
+    <rect x="150" y="450" width="1620" height="80" fill="#f4f4f4"/>
+    <text x="180" y="500"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="600"
+          fill="#1a1a1a">
+      vuln_employment_status
+    </text>
+    <text x="700" y="500"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.203
+    </text>
+    <text x="950" y="500"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.158
+    </text>
+    <text x="1200" y="500"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="700"
+          fill="#00bec5">
+      0.698
+    </text>
+    <text x="1600" y="500"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#2c5cda">
+      KNN
+    </text>
+
+    <!-- Row 4: Economic Vulnerability -->
+    <rect x="150" y="530" width="1620" height="80" fill="#ffffff"/>
+    <text x="180" y="580"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="600"
+          fill="#1a1a1a">
+      economic_vulnerability
+    </text>
+    <text x="700" y="580"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.227
+    </text>
+    <text x="950" y="580"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.172
+    </text>
+    <text x="1200" y="580"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="700"
+          fill="#20a3fc">
+      0.631
+    </text>
+    <text x="1600" y="580"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#20a3fc">
+      Combined
+    </text>
+
+    <!-- Row 5: Education -->
+    <rect x="150" y="610" width="1620" height="80" fill="#f4f4f4"/>
+    <text x="180" y="660"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="600"
+          fill="#1a1a1a">
+      Education
+    </text>
+    <text x="700" y="660"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.298
+    </text>
+    <text x="950" y="660"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="400"
+          fill="#424242">
+      0.215
+    </text>
+    <text x="1200" y="660"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="700"
+          fill="#20a3fc">
+      0.542
+    </text>
+    <text x="1600" y="660"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#20a3fc">
+      Combined
+    </text>
+  </g>
+
+  <!-- Summary Statistics -->
+  <g id="summary-boxes">
+    <!-- Coverage Box -->
+    <rect x="150" y="740" width="480" height="180" rx="12" fill="#f0f9ff" stroke="#2c5cda" stroke-width="3"/>
+    <text x="390" y="790"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="700"
+          fill="#2c5cda">
+      Coverage
+    </text>
+    <text x="390" y="850"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="72"
+          font-weight="700"
+          fill="#1a1a1a">
+      98.7%
+    </text>
+    <text x="390" y="895"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#424242">
+      successful matches
+    </text>
+
+    <!-- Mean Correlation Box -->
+    <rect x="670" y="740" width="480" height="180" rx="12" fill="#f0f9ff" stroke="#00bec5" stroke-width="3"/>
+    <text x="910" y="790"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="700"
+          fill="#00bec5">
+      Mean Correlation
+    </text>
+    <text x="910" y="850"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="72"
+          font-weight="700"
+          fill="#1a1a1a">
+      0.694
+    </text>
+    <text x="910" y="895"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#424242">
+      across 5 variables
+    </text>
+
+    <!-- Cross-Validation Box -->
+    <rect x="1190" y="740" width="580" height="180" rx="12" fill="#fff5f5" stroke="#cc1a1b" stroke-width="3"/>
+    <text x="1480" y="790"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="700"
+          fill="#cc1a1b">
+      Cross-Validation
+    </text>
+    <text x="1480" y="850"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a">
+      5-Fold CV
+    </text>
+    <text x="1480" y="895"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#424242">
+      Stable across folds (SD < 0.05)
+    </text>
+  </g>
+
+  <!-- Key Insights Box -->
+  <g id="insights">
+    <text x="150" y="980"
+          font-family="Inter, Arial, sans-serif"
+          font-size="28"
+          font-weight="700"
+          fill="#2c5cda">
+      ✓ Key Insights:
+    </text>
+    <text x="180" y="1020"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#424242">
+      Heat vulnerability index shows strongest predictive accuracy (r=0.842) using KNN matching
+    </text>
+  </g>
+
+  <!-- Branding -->
+  <g id="branding">
+    <text x="1740" y="1040"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#666666"
+          text-anchor="end">
+      Wits Planetary Health Research
+    </text>
+  </g>
+
+</svg>

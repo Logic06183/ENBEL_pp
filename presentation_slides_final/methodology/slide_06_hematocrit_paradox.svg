@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080"
+     width="1920"
+     height="1080">
+
+  <defs>
+    <linearGradient id="wits-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5cda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bec5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#ffffff"/>
+  </g>
+
+  <!-- Title Section -->
+  <g id="title-section">
+    <text x="960" y="90"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a"
+          letter-spacing="-1.28">
+      The Hematocrit Paradox
+    </text>
+
+    <text x="960" y="140"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="400"
+          fill="#424242"
+          letter-spacing="-0.32">
+      Why Excellent ML Performance Doesn't Always Mean Causal Temperature Effects
+    </text>
+  </g>
+
+  <!-- The Paradox Box -->
+  <g id="paradox-statement">
+    <rect x="100" y="200" width="1720" height="120" rx="12" fill="#fff5f5" stroke="#cc1a1b" stroke-width="3"/>
+
+    <text x="960" y="250"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#cc1a1b">
+      🔬 The Paradox
+    </text>
+
+    <text x="960" y="295"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="28"
+          font-weight="400"
+          fill="#424242">
+      Hematocrit: ML R² = 0.937 (Excellent!) but DLNM OR = 220 (CI: 0.38-128,020) (Not Significant)
+    </text>
+  </g>
+
+  <!-- ML Findings (Top Left) -->
+  <g id="ml-findings">
+    <rect x="100" y="360" width="820" height="270" rx="12" fill="#f0f9ff" stroke="#2c5cda" stroke-width="3"/>
+
+    <text x="510" y="410"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#2c5cda">
+      Machine Learning Found
+    </text>
+
+    <g transform="translate(130, 450)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        R² = 0.937 (n=2,120)
+      </text>
+
+      <text x="0" y="45"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#424242">
+        Top Features (SHAP Importance):
+      </text>
+
+      <rect x="0" y="60" width="640" height="50" rx="6" fill="#ffffff" stroke="#2c5cda" stroke-width="2"/>
+      <text x="15" y="93"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="700"
+            fill="#2c5cda">
+        1. HEAT_VULNERABILITY_SCORE: 18.4 (96%)
+      </text>
+
+      <text x="15" y="145"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        2. climate_daily_mean_temp: 0.66 (3%)
+      </text>
+      <text x="15" y="175"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        3. climate_temp_anomaly: 0.31 (<1%)
+      </text>
+    </g>
+  </g>
+
+  <!-- DLNM Findings (Top Right) -->
+  <g id="dlnm-findings">
+    <rect x="1000" y="360" width="820" height="270" rx="12" fill="#fff5f5" stroke="#cc1a1b" stroke-width="3"/>
+
+    <text x="1410" y="410"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#cc1a1b">
+      DLNM Validation Found
+    </text>
+
+    <g transform="translate(1030, 450)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        OR = 220 (n=2,099)
+      </text>
+
+      <text x="0" y="45"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#424242">
+        95% CI: 0.38 - 128,020
+      </text>
+
+      <rect x="0" y="70" width="740" height="110" rx="6" fill="#ffffff" stroke="#cc1a1b" stroke-width="2"/>
+
+      <text x="370" y="105"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="700"
+            fill="#cc1a1b">
+        ❌ NOT SIGNIFICANT
+      </text>
+
+      <text x="370" y="140"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        (Confidence interval includes 1.0)
+      </text>
+
+      <text x="370" y="170"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="18"
+            font-weight="400"
+            fill="#666666">
+        Wide CI indicates high uncertainty
+      </text>
+    </g>
+  </g>
+
+  <!-- Explanation (Bottom) -->
+  <g id="explanation">
+    <rect x="100" y="670" width="1720" height="350" rx="12" fill="#f0f9ff" stroke="#00bec5" stroke-width="3"/>
+
+    <text x="960" y="720"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#00bec5">
+      💡 Explanation: Two Different Truths
+    </text>
+
+    <!-- Between-Person -->
+    <g transform="translate(130, 760)">
+      <circle cx="25" cy="20" r="20" fill="#2c5cda"/>
+      <text x="25" y="28"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="700"
+            fill="#ffffff">
+        ML
+      </text>
+
+      <text x="70" y="15"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Between-Person Effects
+      </text>
+
+      <text x="70" y="55"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Compares different people with different vulnerabilities
+      </text>
+      <text x="70" y="90"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • HEAT_VULNERABILITY_SCORE captures stable socioeconomic factors
+      </text>
+      <text x="70" y="125"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Vulnerable populations have lower hematocrit (chronic stress, nutrition, housing)
+      </text>
+      <text x="70" y="160"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="700"
+            fill="#2c5cda">
+        → High R² driven by structural vulnerability, NOT acute temperature
+      </text>
+    </g>
+
+    <!-- Within-Person -->
+    <g transform="translate(1030, 760)">
+      <circle cx="25" cy="20" r="20" fill="#cc1a1b"/>
+      <text x="25" y="28"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="700"
+            fill="#ffffff">
+        DLNM
+      </text>
+
+      <text x="70" y="15"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Within-Person Effects
+      </text>
+
+      <text x="70" y="55"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Compares same person on different days
+      </text>
+      <text x="70" y="90"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Controls ALL time-invariant factors (SES fixed)
+      </text>
+      <text x="70" y="125"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Tests only acute day-to-day temperature changes
+      </text>
+      <text x="70" y="160"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="700"
+            fill="#cc1a1b">
+        → No significant acute temperature effect on hematocrit
+      </text>
+    </g>
+  </g>
+
+  <!-- Branding -->
+  <g id="branding">
+    <text x="1740" y="1040"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#666666"
+          text-anchor="end">
+      Wits Planetary Health Research
+    </text>
+  </g>
+
+</svg>

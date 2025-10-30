@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080"
+     width="1920"
+     height="1080">
+
+  <defs>
+    <linearGradient id="ml-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5cda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#20a3fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="causal-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#cc1a1b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e67e22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#ffffff"/>
+  </g>
+
+  <!-- Title Section -->
+  <g id="title-section">
+    <text x="960" y="90"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a"
+          letter-spacing="-1.28">
+      Machine Learning vs Causal Inference
+    </text>
+
+    <text x="960" y="140"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="400"
+          fill="#424242"
+          letter-spacing="-0.32">
+      Complementary Approaches to Climate-Health Research
+    </text>
+  </g>
+
+  <!-- ML Panel (Left) -->
+  <g id="ml-panel">
+    <rect x="100" y="200" width="820" height="700" rx="12" fill="#f0f9ff" stroke="#2c5cda" stroke-width="3"/>
+
+    <!-- Header -->
+    <rect x="100" y="200" width="820" height="80" rx="12" fill="url(#ml-gradient)"/>
+    <text x="510" y="255"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="42"
+          font-weight="700"
+          fill="#ffffff">
+      Machine Learning
+    </text>
+
+    <!-- Purpose -->
+    <g transform="translate(130, 320)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="30"
+            font-weight="700"
+            fill="#2c5cda">
+        Purpose: Association & Prediction
+      </text>
+
+      <text x="0" y="45"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        Identify patterns, screen variables, predict outcomes
+      </text>
+    </g>
+
+    <!-- Strengths -->
+    <g transform="translate(130, 420)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        ✅ Strengths
+      </text>
+
+      <text x="30" y="40"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • High-dimensional feature spaces
+      </text>
+      <text x="30" y="75"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Captures complex interactions
+      </text>
+      <text x="30" y="110"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Non-linear relationships
+      </text>
+      <text x="30" y="145"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Fast screening of biomarkers
+      </text>
+      <text x="30" y="180"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Explainable AI (SHAP values)
+      </text>
+    </g>
+
+    <!-- Limitations -->
+    <g transform="translate(130, 650)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        ⚠️  Limitations
+      </text>
+
+      <text x="30" y="40"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Association ≠ causation
+      </text>
+      <text x="30" y="75"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Confounding not controlled
+      </text>
+      <text x="30" y="110"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Cross-sectional limitations
+      </text>
+      <text x="30" y="145"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Between-person effects dominate
+      </text>
+    </g>
+  </g>
+
+  <!-- Causal Inference Panel (Right) -->
+  <g id="causal-panel">
+    <rect x="1000" y="200" width="820" height="700" rx="12" fill="#fff5f5" stroke="#cc1a1b" stroke-width="3"/>
+
+    <!-- Header -->
+    <rect x="1000" y="200" width="820" height="80" rx="12" fill="url(#causal-gradient)"/>
+    <text x="1410" y="255"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="42"
+          font-weight="700"
+          fill="#ffffff">
+      Causal Inference (DLNM)
+    </text>
+
+    <!-- Purpose -->
+    <g transform="translate(1030, 320)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="30"
+            font-weight="700"
+            fill="#cc1a1b">
+        Purpose: Causation & Validation
+      </text>
+
+      <text x="0" y="45"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        Establish causal effects, control confounding
+      </text>
+    </g>
+
+    <!-- Strengths -->
+    <g transform="translate(1030, 420)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        ✅ Strengths
+      </text>
+
+      <text x="30" y="40"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Controls time-invariant confounding
+      </text>
+      <text x="30" y="75"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Within-person comparisons
+      </text>
+      <text x="30" y="110"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Captures lagged effects (0-21 days)
+      </text>
+      <text x="30" y="145"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Causal interpretation valid
+      </text>
+      <text x="30" y="180"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Gold standard for environmental epi
+      </text>
+    </g>
+
+    <!-- Limitations -->
+    <g transform="translate(1030, 650)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        ⚠️  Limitations
+      </text>
+
+      <text x="30" y="40"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Computationally intensive
+      </text>
+      <text x="30" y="75"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Requires repeated measures
+      </text>
+      <text x="30" y="110"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Limited feature set
+      </text>
+      <text x="30" y="145"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Binary outcomes lose power
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom: Complementary Relationship -->
+  <g id="complementary-box">
+    <rect x="100" y="940" width="1720" height="110" rx="8" fill="#f0fff4" stroke="#00bec5" stroke-width="3"/>
+
+    <text x="960" y="985"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="700"
+          fill="#00bec5">
+      💡 Complementary Approaches: Two Truths
+    </text>
+
+    <text x="960" y="1025"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="400"
+          fill="#424242">
+      ML identifies associations (e.g., socioeconomic vulnerability) • DLNM validates acute causal effects (e.g., temperature)
+    </text>
+  </g>
+
+  <!-- Branding -->
+  <g id="branding">
+    <text x="1740" y="910"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#666666"
+          text-anchor="end">
+      Wits Planetary Health Research
+    </text>
+  </g>
+
+</svg>

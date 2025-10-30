@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080"
+     width="1920"
+     height="1080">
+
+  <defs>
+    <linearGradient id="wits-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5cda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bec5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#ffffff"/>
+  </g>
+
+  <!-- Title Section -->
+  <g id="title-section">
+    <text x="960" y="90"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a"
+          letter-spacing="-1.28">
+      Distributed Lag Non-Linear Models (DLNM)
+    </text>
+
+    <text x="960" y="140"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="400"
+          fill="#424242"
+          letter-spacing="-0.32">
+      Capturing Delayed, Non-Linear Climate-Health Relationships
+    </text>
+  </g>
+
+  <!-- Main Concept -->
+  <g id="main-concept">
+    <!-- Conceptual Framework Box -->
+    <rect x="100" y="220" width="840" height="700" rx="12" fill="#f4f4f4"/>
+
+    <text x="520" y="270"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#2c5cda">
+      Why DLNM?
+    </text>
+
+    <!-- Problem 1 -->
+    <g id="problem-1" transform="translate(130, 310)">
+      <circle cx="25" cy="25" r="25" fill="#cc1a1b"/>
+      <text x="25" y="35"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#ffffff">
+        1
+      </text>
+
+      <text x="70" y="20"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Non-Linear Effects
+      </text>
+
+      <text x="70" y="55"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        Temperature effects are not linear:
+      </text>
+
+      <text x="90" y="90"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        • J-shaped or U-shaped relationships
+      </text>
+      <text x="90" y="120"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        • Threshold effects (e.g., >30°C)
+      </text>
+      <text x="90" y="150"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        • Optimal temperature ranges
+      </text>
+    </g>
+
+    <!-- Problem 2 -->
+    <g id="problem-2" transform="translate(130, 500)">
+      <circle cx="25" cy="25" r="25" fill="#2c5cda"/>
+      <text x="25" y="35"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#ffffff">
+        2
+      </text>
+
+      <text x="70" y="20"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Lagged Effects
+      </text>
+
+      <text x="70" y="55"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        Health impacts occur with delays:
+      </text>
+
+      <text x="90" y="90"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        • Biomarkers respond 0-21 days later
+      </text>
+      <text x="90" y="120"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        • Cumulative exposure matters
+      </text>
+      <text x="90" y="150"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        • Effects build over time
+      </text>
+    </g>
+
+    <!-- Problem 3 -->
+    <g id="problem-3" transform="translate(130, 690)">
+      <circle cx="25" cy="25" r="25" fill="#00bec5"/>
+      <text x="25" y="35"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#ffffff">
+        3
+      </text>
+
+      <text x="70" y="20"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Complex Interactions
+      </text>
+
+      <text x="70" y="55"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        Temperature × Time interactions:
+      </text>
+
+      <text x="90" y="90"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        • Effect varies by lag period
+      </text>
+      <text x="90" y="120"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        • Hot day today ≠ hot day 2 weeks ago
+      </text>
+    </g>
+  </g>
+
+  <!-- DLNM Solution -->
+  <g id="dlnm-solution">
+    <rect x="980" y="220" width="840" height="700" rx="12" fill="#fff5f5"/>
+
+    <text x="1400" y="270"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#cc1a1b">
+      DLNM Solution
+    </text>
+
+    <!-- Crossbasis Function -->
+    <g id="crossbasis" transform="translate(1010, 310)">
+      <rect x="0" y="0" width="780" height="140" rx="8" fill="#f0f9ff" stroke="#2c5cda" stroke-width="2"/>
+
+      <text x="390" y="35"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#2c5cda">
+        Crossbasis Function
+      </text>
+
+      <text x="390" y="75"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#1a1a1a">
+        Temperature × Lag Interaction Surface
+      </text>
+
+      <text x="40" y="115"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Natural splines for temperature (4 df)
+      </text>
+    </g>
+
+    <!-- 3D Surface Concept -->
+    <g id="surface-concept" transform="translate(1010, 480)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        3D Response Surface
+      </text>
+
+      <!-- Simplified 3D grid representation -->
+      <g transform="translate(50, 30)">
+        <!-- Grid lines showing 3D perspective -->
+        <!-- X-axis (temperature) -->
+        <line x1="0" y1="250" x2="600" y2="250" stroke="#cccccc" stroke-width="2"/>
+        <line x1="0" y1="200" x2="600" y2="200" stroke="#cccccc" stroke-width="1.5" opacity="0.7"/>
+        <line x1="0" y1="150" x2="600" y2="150" stroke="#cccccc" stroke-width="1.5" opacity="0.5"/>
+        <line x1="0" y1="100" x2="600" y2="100" stroke="#cccccc" stroke-width="1.5" opacity="0.3"/>
+
+        <!-- Y-axis (lag) -->
+        <line x1="0" y1="250" x2="100" y2="50" stroke="#cccccc" stroke-width="2"/>
+        <line x1="150" y1="250" x2="250" y2="50" stroke="#cccccc" stroke-width="1.5" opacity="0.7"/>
+        <line x1="300" y1="250" x2="400" y2="50" stroke="#cccccc" stroke-width="1.5" opacity="0.5"/>
+        <line x1="450" y1="250" x2="550" y2="50" stroke="#cccccc" stroke-width="1.5" opacity="0.3"/>
+
+        <!-- Surface patches (colored by effect) -->
+        <path d="M 150,200 L 300,200 L 350,100 L 200,100 Z" fill="#2c5cda" opacity="0.3"/>
+        <path d="M 300,200 L 450,200 L 500,120 L 350,120 Z" fill="#cc1a1b" opacity="0.4"/>
+        <path d="M 150,150 L 300,150 L 350,80 L 200,80 Z" fill="#00bec5" opacity="0.3"/>
+
+        <!-- Axis labels -->
+        <text x="550" y="270"
+              font-family="Inter, Arial, sans-serif"
+              font-size="20"
+              font-weight="600"
+              fill="#1a1a1a">
+          Temperature (°C)
+        </text>
+
+        <text x="80" y="30"
+              font-family="Inter, Arial, sans-serif"
+              font-size="20"
+              font-weight="600"
+              fill="#1a1a1a">
+          Lag (days)
+        </text>
+
+        <text x="-50" y="150"
+              font-family="Inter, Arial, sans-serif"
+              font-size="20"
+              font-weight="600"
+              fill="#1a1a1a"
+              transform="rotate(-90 -50 150)">
+          Effect (OR)
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Key Parameters Box -->
+  <g id="parameters-box">
+    <rect x="100" y="950" width="1720" height="100" rx="8" fill="#f0f9ff" stroke="#2c5cda" stroke-width="2"/>
+
+    <text x="960" y="990"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="26"
+          font-weight="700"
+          fill="#2c5cda">
+      ENBEL Study Parameters:
+    </text>
+
+    <text x="200" y="1025"
+          font-family="Inter, Arial, sans-serif"
+          font-size="22"
+          font-weight="400"
+          fill="#424242">
+      Lag window: 0-21 days
+    </text>
+    <text x="500" y="1025"
+          font-family="Inter, Arial, sans-serif"
+          font-size="22"
+          font-weight="400"
+          fill="#424242">
+      Temperature df: 4
+    </text>
+    <text x="800" y="1025"
+          font-family="Inter, Arial, sans-serif"
+          font-size="22"
+          font-weight="400"
+          fill="#424242">
+      Lag df: 4
+    </text>
+    <text x="1050" y="1025"
+          font-family="Inter, Arial, sans-serif"
+          font-size="22"
+          font-weight="400"
+          fill="#424242">
+      Model: Conditional logistic
+    </text>
+    <text x="1500" y="1025"
+          font-family="Inter, Arial, sans-serif"
+          font-size="22"
+          font-weight="400"
+          fill="#424242">
+      Design: Case-crossover
+    </text>
+  </g>
+
+  <!-- Branding -->
+  <g id="branding">
+    <text x="1740" y="1040"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#666666"
+          text-anchor="end">
+      Wits Planetary Health Research
+    </text>
+  </g>
+
+</svg>
