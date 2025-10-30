@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080"
+     width="1920"
+     height="1080">
+
+  <defs>
+    <linearGradient id="wits-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5cda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bec5;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Distance circle markers -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c5cda"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#ffffff"/>
+  </g>
+
+  <!-- Title Section -->
+  <g id="title-section">
+    <text x="960" y="90"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a"
+          letter-spacing="-1.28">
+      Spatial-Demographic KNN Matching
+    </text>
+
+    <text x="960" y="140"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="400"
+          fill="#424242"
+          letter-spacing="-0.32">
+      Combining Geographic Proximity with Demographic Similarity
+    </text>
+  </g>
+
+  <!-- Left Panel: Visual Matching -->
+  <g id="left-panel">
+    <!-- Panel Background -->
+    <rect x="100" y="200" width="750" height="750" rx="12" fill="#f4f4f4"/>
+
+    <!-- Panel Title -->
+    <text x="475" y="250"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#2c5cda">
+      Matching Visualization
+    </text>
+
+    <!-- Geographic Area Representation -->
+    <g id="geographic-map" transform="translate(200, 300)">
+      <!-- Base map (Johannesburg outline suggestion) -->
+      <rect x="0" y="0" width="550" height="500" rx="8" fill="#ffffff" stroke="#cccccc" stroke-width="2" stroke-dasharray="5,5"/>
+
+      <!-- Distance circles -->
+      <circle cx="275" cy="250" r="200" fill="none" stroke="#00bec5" stroke-width="2" opacity="0.3" stroke-dasharray="10,5"/>
+      <circle cx="275" cy="250" r="120" fill="none" stroke="#20a3fc" stroke-width="2" opacity="0.5" stroke-dasharray="10,5"/>
+
+      <!-- Distance labels -->
+      <text x="475" y="255"
+            font-family="Inter, Arial, sans-serif"
+            font-size="18"
+            font-weight="400"
+            fill="#00bec5">
+        15 km
+      </text>
+      <text x="395" y="255"
+            font-family="Inter, Arial, sans-serif"
+            font-size="18"
+            font-weight="400"
+            fill="#20a3fc">
+        10 km
+      </text>
+
+      <!-- Clinical participant (center point) -->
+      <circle cx="275" cy="250" r="16" fill="#cc1a1b"/>
+      <circle cx="275" cy="250" r="20" fill="none" stroke="#cc1a1b" stroke-width="3"/>
+
+      <text x="275" y="295"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="700"
+            fill="#cc1a1b">
+        Clinical Participant
+      </text>
+
+      <!-- GCRO survey points (k=10 neighbors) -->
+      <!-- Closest neighbors -->
+      <circle cx="260" cy="220" r="10" fill="#00bec5"/>
+      <circle cx="305" cy="235" r="10" fill="#00bec5"/>
+      <circle cx="285" cy="280" r="10" fill="#00bec5"/>
+      <circle cx="240" cy="265" r="10" fill="#00bec5"/>
+
+      <!-- Middle distance -->
+      <circle cx="330" cy="200" r="10" fill="#20a3fc"/>
+      <circle cx="210" cy="295" r="10" fill="#20a3fc"/>
+      <circle cx="350" cy="270" r="10" fill="#20a3fc"/>
+
+      <!-- Further out -->
+      <circle cx="190" cy="190" r="10" fill="#2c5cda" opacity="0.7"/>
+      <circle cx="380" cy="310" r="10" fill="#2c5cda" opacity="0.7"/>
+      <circle cx="165" cy="250" r="10" fill="#2c5cda" opacity="0.7"/>
+
+      <!-- Connection lines to nearest neighbors -->
+      <line x1="275" y1="250" x2="260" y2="220" stroke="#00bec5" stroke-width="2" opacity="0.5" marker-end="url(#arrow)"/>
+      <line x1="275" y1="250" x2="305" y2="235" stroke="#00bec5" stroke-width="2" opacity="0.5" marker-end="url(#arrow)"/>
+      <line x1="275" y1="250" x2="285" y2="280" stroke="#00bec5" stroke-width="2" opacity="0.5" marker-end="url(#arrow)"/>
+
+      <!-- Legend -->
+      <g transform="translate(20, 420)">
+        <circle cx="10" cy="0" r="8" fill="#cc1a1b"/>
+        <text x="25" y="5"
+              font-family="Inter, Arial, sans-serif"
+              font-size="18"
+              font-weight="400"
+              fill="#424242">
+          Clinical participant
+        </text>
+
+        <circle cx="10" cy="30" r="8" fill="#00bec5"/>
+        <text x="25" y="35"
+              font-family="Inter, Arial, sans-serif"
+              font-size="18"
+              font-weight="400"
+              fill="#424242">
+          GCRO survey (close)
+        </text>
+
+        <circle cx="10" cy="60" r="8" fill="#2c5cda" opacity="0.7"/>
+        <text x="25" y="65"
+              font-family="Inter, Arial, sans-serif"
+              font-size="18"
+              font-weight="400"
+              fill="#424242">
+          GCRO survey (far)
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Right Panel: Mathematical Foundation -->
+  <g id="right-panel">
+    <!-- Panel Background -->
+    <rect x="920" y="200" width="880" height="750" rx="12" fill="#fff5f5"/>
+
+    <!-- Panel Title -->
+    <text x="1360" y="250"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#2c5cda">
+      Distance Metric
+    </text>
+
+    <!-- Combined Distance Formula -->
+    <g id="formula-section" transform="translate(970, 300)">
+      <!-- Formula box -->
+      <rect x="0" y="0" width="780" height="150" rx="8" fill="#ffffff" stroke="#2c5cda" stroke-width="2"/>
+
+      <text x="390" y="50"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="32"
+            font-weight="600"
+            fill="#1a1a1a">
+        d(i,j) = α · d_spatial(i,j) + (1-α) · d_demographic(i,j)
+      </text>
+
+      <text x="390" y="95"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#424242">
+        α = 0.40 (spatial weight)
+      </text>
+
+      <text x="390" y="130"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#424242">
+        1 - α = 0.60 (demographic weight)
+      </text>
+    </g>
+
+    <!-- Spatial Component -->
+    <g id="spatial-component" transform="translate(970, 480)">
+      <rect x="0" y="0" width="780" height="140" rx="8" fill="#f0f9ff" stroke="#00bec5" stroke-width="2"/>
+
+      <text x="20" y="35"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#00bec5">
+        Spatial Distance (40%)
+      </text>
+
+      <text x="40" y="75"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#424242">
+        d_spatial(i,j) = √[(lat_i - lat_j)² + (lon_i - lon_j)²]
+      </text>
+
+      <text x="40" y="110"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        Euclidean distance in UTM Zone 35S coordinates
+      </text>
+    </g>
+
+    <!-- Demographic Component -->
+    <g id="demographic-component" transform="translate(970, 650)">
+      <rect x="0" y="0" width="780" height="140" rx="8" fill="#f0f9ff" stroke="#2c5cda" stroke-width="2"/>
+
+      <text x="20" y="35"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#2c5cda">
+        Demographic Distance (60%)
+      </text>
+
+      <text x="40" y="75"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#424242">
+        Features: Sex, Race, Age (encoded + scaled)
+      </text>
+
+      <text x="40" y="110"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        Gower distance for mixed categorical/numerical
+      </text>
+    </g>
+
+    <!-- Selection Criteria Box -->
+    <g id="selection-criteria" transform="translate(970, 820)">
+      <rect x="0" y="0" width="780" height="100" rx="8" fill="#ffffff" stroke="#cc1a1b" stroke-width="2"/>
+
+      <text x="390" y="35"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="26"
+            font-weight="700"
+            fill="#cc1a1b">
+        Selection Criteria
+      </text>
+
+      <text x="390" y="70"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        Select k=10 nearest neighbors with d_max ≤ 15 km
+      </text>
+    </g>
+  </g>
+
+  <!-- Branding -->
+  <g id="branding">
+    <text x="1740" y="1040"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#666666"
+          text-anchor="end">
+      Wits Planetary Health Research
+    </text>
+  </g>
+
+</svg>
