@@ -141,6 +141,16 @@ def prepare_features(df, target_biomarker):
     # One-hot encode categorical features
     X_encoded = pd.get_dummies(X, columns=CATEGORICAL_FEATURES, drop_first=False)
 
+    # Ensure all columns are numeric (convert bool to int, then all to float64)
+    for col in X_encoded.columns:
+        if X_encoded[col].dtype == 'object':
+            X_encoded[col] = pd.Categorical(X_encoded[col]).codes
+        elif X_encoded[col].dtype == 'bool':
+            X_encoded[col] = X_encoded[col].astype(int)
+
+    # Convert all columns to float64 for SHAP compatibility
+    X_encoded = X_encoded.astype(np.float64)
+
     feature_names = X_encoded.columns.tolist()
 
     return X_encoded, y, feature_names, len(df_subset)
