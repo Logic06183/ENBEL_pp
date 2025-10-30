@@ -531,3 +531,374 @@ git merge exp/dlnm-continuous-outcomes
 - Package versions documented
 - Results stable across runs
 - Methods clearly described
+
+## Publication-Quality Visualizations in R
+
+### Overview
+
+Climate-health research requires publication-quality visualizations that clearly communicate effect sizes, uncertainty, and study heterogeneity. Essential plot types include forest plots, box plots, and effect-response curves.
+
+### Required R Packages
+
+```r
+library(ggplot2)      # Core plotting
+library(forestplot)   # Forest plots
+library(gridExtra)    # Multi-panel layouts
+library(scales)       # Axis formatting
+library(viridis)      # Color palettes
+library(ggpubr)       # Publication themes
+library(cowplot)      # Publication-ready layouts
+```
+
+### Forest Plots (Effect Sizes with CIs)
+
+Forest plots are the gold standard for displaying effect sizes across multiple outcomes/studies with confidence intervals.
+
+#### Basic Forest Plot
+
+```r
+library(forestplot)
+library(dplyr)
+
+# Prepare data
+results <- data.frame(
+  biomarker = c("Total Cholesterol", "Creatinine", "Glucose", "Hematocrit"),
+  effect = c(0.345, 0.130, 0.090, 0.030),
+  lower_ci = c(0.310, 0.095, 0.060, 0.010),
+  upper_ci = c(0.380, 0.165, 0.120, 0.050),
+  n = c(2917, 1247, 2722, 2120)
+)
+
+# Sort by effect size
+results <- results %>% arrange(desc(effect))
+
+# Create forest plot
+forestplot(
+  labeltext = cbind(
+    c("Biomarker", results$biomarker),
+    c("N", results$n),
+    c("R²", sprintf("%.3f", results$effect))
+  ),
+  mean = c(NA, results$effect),
+  lower = c(NA, results$lower_ci),
+  upper = c(NA, results$upper_ci),
+  title = "Climate-Biomarker Associations (Mixed Effects DLNM)",
+  xlab = "R² (Variance Explained)",
+  txt_gp = fpTxtGp(
+    label = gpar(cex = 1.1),
+    ticks = gpar(cex = 0.9),
+    xlab = gpar(cex = 1.1)
+  ),
+  col = fpColors(box = "royalblue", line = "darkblue", summary = "red"),
+  zero = 0,
+  cex = 0.9,
+  lineheight = "auto",
+  boxsize = 0.25,
+  graphwidth = unit(3, "inches")
+)
+```
+
+#### Advanced Forest Plot with ggplot2
+
+```r
+library(ggplot2)
+
+# Create forest plot with ggplot2 (more customizable)
+ggplot(results, aes(x = effect, y = reorder(biomarker, effect))) +
+  geom_vline(xintercept = 0, linetype = "dashed", color = "gray50") +
+  geom_errorbarh(aes(xmin = lower_ci, xmax = upper_ci), 
+                 height = 0.2, color = "darkblue", size = 1) +
+  geom_point(aes(size = n), color = "royalblue", shape = 18) +
+  geom_text(aes(label = sprintf("%.3f", effect), x = upper_ci + 0.02),
+            hjust = 0, size = 3.5) +
+  scale_size_continuous(range = c(3, 8), name = "Sample Size") +
+  labs(
+    title = "Climate-Biomarker Associations",
+    subtitle = "Mixed Effects DLNM Results (Corrected)",
+    x = "R² (Variance Explained by Climate)",
+    y = "Biomarker"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(
+    plot.title = element_text(face = "bold", size = 16),
+    panel.grid.minor = element_blank(),
+    legend.position = "bottom"
+  )
+```
+
+### Box Plots (Distribution by Study)
+
+Box plots show data distribution across studies and identify potential outliers/heterogeneity.
+
+#### Multi-Panel Box Plot
+
+```r
+library(ggplot2)
+library(dplyr)
+
+# Prepare data with study information
+df <- data.frame(
+  biomarker_value = c(...),
+  study_id = c(...),
+  biomarker_name = c(...)
+)
+
+# Create box plot
+ggplot(df, aes(x = study_id, y = biomarker_value, fill = study_id)) +
+  geom_boxplot(alpha = 0.7, outlier.color = "red", outlier.size = 2) +
+  geom_jitter(width = 0.2, alpha = 0.3, size = 0.5) +
+  facet_wrap(~ biomarker_name, scales = "free_y", ncol = 2) +
+  scale_fill_viridis_d(option = "plasma") +
+  labs(
+    title = "Biomarker Distributions by Study",
+    x = "Study",
+    y = "Biomarker Value",
+    fill = "Study"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(
+    strip.text = element_text(face = "bold", size = 11),
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "none"
+  )
+```
+
+#### Violin Plot Alternative
+
+```r
+# Violin plot (shows distribution shape)
+ggplot(df, aes(x = study_id, y = biomarker_value, fill = study_id)) +
+  geom_violin(trim = FALSE, alpha = 0.6) +
+  geom_boxplot(width = 0.1, fill = "white", alpha = 0.8) +
+  scale_fill_viridis_d(option = "viridis") +
+  labs(title = "Biomarker Distribution by Study (Violin Plot)") +
+  theme_minimal()
+```
+
+### Effect-Response Curves (DLNM Results)
+
+Show non-linear temperature-biomarker relationships with confidence bands.
+
+#### DLNM Exposure-Response Curve
+
+```r
+library(dlnm)
+library(ggplot2)
+
+# After fitting DLNM model
+pred <- crosspred(cb_temp, model, at = seq(10, 30, 0.5), cen = 18)
+
+# Extract predictions
+df_pred <- data.frame(
+  temperature = pred$predvar,
+  effect = pred$allfit,
+  lower_ci = pred$alllow,
+  upper_ci = pred$allhigh
+)
+
+# Plot
+ggplot(df_pred, aes(x = temperature, y = effect)) +
+  geom_ribbon(aes(ymin = lower_ci, ymax = upper_ci),
+              fill = "skyblue", alpha = 0.4) +
+  geom_line(color = "darkblue", size = 1.2) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  geom_vline(xintercept = 18, linetype = "dotted", color = "gray40") +
+  annotate("text", x = 18, y = max(df_pred$effect) * 0.9,
+           label = "Reference (18°C)", hjust = -0.1, size = 3.5) +
+  labs(
+    title = "Temperature-Biomarker Association",
+    subtitle = "Cumulative Effect (0-14 day lag)",
+    x = "Temperature (°C)",
+    y = "Effect on Biomarker (relative to 18°C)",
+    caption = "Shaded area: 95% confidence interval"
+  ) +
+  theme_minimal(base_size = 14) +
+  theme(plot.title = element_text(face = "bold"))
+```
+
+### Multi-Panel Publication Figure
+
+Combine multiple plots into a single publication-ready figure.
+
+```r
+library(cowplot)
+library(gridExtra)
+
+# Create individual plots
+p1 <- forest_plot  # Forest plot
+p2 <- box_plot     # Box plot
+p3 <- effect_curve # DLNM curve
+p4 <- heatmap      # Temperature-lag surface
+
+# Combine with labels
+figure <- plot_grid(
+  p1, p2, p3, p4,
+  labels = c("A", "B", "C", "D"),
+  ncol = 2,
+  rel_widths = c(1, 1),
+  rel_heights = c(1, 1)
+)
+
+# Add title
+title <- ggdraw() +
+  draw_label(
+    "Climate-Biomarker Associations: Mixed Effects DLNM Analysis",
+    fontface = "bold",
+    size = 16,
+    x = 0.5,
+    hjust = 0.5
+  )
+
+# Final figure
+final_figure <- plot_grid(
+  title,
+  figure,
+  ncol = 1,
+  rel_heights = c(0.1, 1)
+)
+
+# Save
+ggsave("publication_figure.pdf", final_figure,
+       width = 12, height = 10, units = "in", dpi = 300)
+```
+
+### Publication-Quality Themes
+
+#### Custom Theme
+
+```r
+theme_publication <- function(base_size = 12) {
+  theme_minimal(base_size = base_size) +
+    theme(
+      # Text
+      plot.title = element_text(face = "bold", size = rel(1.4), hjust = 0),
+      plot.subtitle = element_text(size = rel(1.1), hjust = 0),
+      axis.title = element_text(face = "bold", size = rel(1.1)),
+      axis.text = element_text(size = rel(0.9)),
+      
+      # Grid
+      panel.grid.major = element_line(color = "gray90"),
+      panel.grid.minor = element_blank(),
+      
+      # Legend
+      legend.position = "bottom",
+      legend.title = element_text(face = "bold"),
+      legend.text = element_text(size = rel(0.9)),
+      
+      # Strip (facet labels)
+      strip.text = element_text(face = "bold", size = rel(1.05)),
+      strip.background = element_rect(fill = "gray95", color = NA),
+      
+      # Margins
+      plot.margin = margin(10, 10, 10, 10)
+    )
+}
+
+# Use in plots
+ggplot(...) + theme_publication()
+```
+
+### Color Palettes for Publications
+
+```r
+# Viridis (colorblind-friendly)
+scale_fill_viridis_d(option = "plasma")  # Discrete
+scale_color_viridis_c(option = "viridis") # Continuous
+
+# Brewer (for categories)
+scale_fill_brewer(palette = "Set2")
+
+# Manual (custom)
+scale_fill_manual(values = c(
+  "Significant" = "#00BA38",
+  "Not Significant" = "#F8766D"
+))
+```
+
+### Statistical Annotations
+
+```r
+library(ggpubr)
+
+# Add p-values to plots
+ggplot(df, aes(x = group, y = value)) +
+  geom_boxplot() +
+  stat_compare_means(
+    comparisons = list(c("Control", "Treatment")),
+    method = "t.test",
+    label = "p.signif"
+  ) +
+  stat_compare_means(label.y = 50, label.x = 1.5)
+```
+
+### Saving High-Quality Figures
+
+```r
+# PDF (vector, best for journals)
+ggsave("figure1.pdf", plot, width = 8, height = 6, units = "in", dpi = 300)
+
+# PNG (raster, for presentations)
+ggsave("figure1.png", plot, width = 8, height = 6, units = "in", dpi = 300)
+
+# TIFF (required by some journals)
+ggsave("figure1.tiff", plot, width = 8, height = 6, units = "in", dpi = 300, compression = "lzw")
+```
+
+### Complete Example Workflow
+
+```r
+# 1. Load data and results
+results <- read.csv("mixed_effects_dlnm_results.csv")
+
+# 2. Create forest plot
+p_forest <- create_forest_plot(results)
+
+# 3. Create box plots
+p_boxes <- create_box_plots(data)
+
+# 4. Create DLNM curves
+p_dlnm <- create_dlnm_curves(model_results)
+
+# 5. Combine into figure
+figure <- plot_grid(
+  p_forest, p_boxes, p_dlnm,
+  labels = "AUTO",
+  ncol = 2
+)
+
+# 6. Save
+ggsave("Figure1_ClimateHealth.pdf", figure,
+       width = 12, height = 8, units = "in", dpi = 300)
+```
+
+### Best Practices
+
+1. **Resolution**: Always use dpi = 300 or higher for publications
+2. **Size**: Check journal requirements (usually 8-12 inches wide)
+3. **Colors**: Use colorblind-friendly palettes (viridis)
+4. **Text**: Make sure all text is readable at final size
+5. **Legends**: Clear and positioned appropriately
+6. **Error bars**: Always include confidence intervals
+7. **Reference lines**: Add for clinical thresholds or null effects
+8. **Annotations**: Label important features (p-values, thresholds)
+
+### Common Pitfalls to Avoid
+
+❌ Too many colors (limit to 5-7)
+❌ 3D plots (hard to interpret)
+❌ Pie charts (use bar charts instead)
+❌ Dual y-axes (confusing)
+❌ Default ggplot2 theme (not publication-quality)
+❌ Low resolution (use dpi ≥ 300)
+❌ Missing error bars
+❌ Inconsistent font sizes
+
+✅ Simple, clear designs
+✅ Consistent color schemes
+✅ Clear axis labels with units
+✅ Confidence intervals shown
+✅ Professional themes
+✅ High resolution
+✅ Colorblind-friendly
+✅ Accessible text sizes
+
