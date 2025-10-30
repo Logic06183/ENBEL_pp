@@ -28,11 +28,11 @@ This validates SHAP findings and resolves the vulnerability paradox observed in 
    - **Key outputs**: Significant p<0.001 interaction finding
    - **Status**: Merged to main branch
 
-2. **ENBEL_pp_model_refinement**
+2. **ENBEL_pp_model_refinement** (✅ MERGED TO MAIN)
    - **Branch**: `feat/model-optimization`
    - **Focus**: SHAP analysis, ML model optimization
-   - **Key outputs**: Feature importance, XAI visualizations
-   - **Status**: Active (contains SHAP findings being validated)
+   - **Key outputs**: Feature importance, XAI visualizations, SHAP-statistical cross-reference
+   - **Status**: Merged to main branch (includes SHAP validation crossref)
 
 3. **ENBEL_pp_slide_maker**
    - **Branch**: `feat/presentation-slides`
@@ -76,22 +76,28 @@ This validates SHAP findings and resolves the vulnerability paradox observed in 
 
 ---
 
-### Model Refinement Worktree (SHAP VALIDATED)
+### Model Refinement Worktree (✅ SHAP VALIDATED & MERGED)
 
-**SHAP Analysis** (to be cross-referenced):
+**SHAP Analysis** (NOW IN MAIN):
 - Identified vulnerability as important feature for biomarker prediction
-- Now **VALIDATED** by patient-level statistical analysis
-- Vulnerability **MODIFIES** climate effects (not just correlates)
+- **VALIDATED** by patient-level statistical analysis (p<0.001)
+- Vulnerability **MODIFIES** climate effects (interaction confirmed)
 
-**Correlation with Methodology Findings**:
+**Key Files in Main**:
+- `EXECUTIVE_SUMMARY_SHAP.md` - SHAP findings summary
+- `SHAP_ATTRIBUTION_KEY_FINDINGS.md` - Detailed SHAP results
+- `SHAP_STATISTICAL_VALIDATION_CROSSREF.md` - **Complete cross-reference document**
+
+**Validation Status**:
 - SHAP showed vulnerability importance → ✅ Confirmed by p<0.001 interaction
 - ML predictions showed differential effects → ✅ Confirmed by 10× effect size
 - Feature interactions detected → ✅ Statistical mechanism validated
 
-**Next Steps**:
-- Cross-reference SHAP beeswarm plots with interaction plots
-- Confirm feature importance rankings match patient-level effect sizes
-- Integrate statistical validation into ML workflow documentation
+**Cross-Reference Highlights** (see SHAP_STATISTICAL_VALIDATION_CROSSREF.md):
+- Cholesterol: SHAP R²=0.30-0.40 → Statistical p<0.001*** ✅
+- CD4: SHAP main effect → Statistical main effect consistent ✅
+- Hematocrit: SHAP R²=0.935 → Corrected for leakage, R²=0.030 ✅
+- Methodology synergy: SHAP screens → Statistics validates ✅
 
 ---
 
