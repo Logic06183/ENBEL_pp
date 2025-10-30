@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080"
+     width="1920"
+     height="1080">
+
+  <defs>
+    <linearGradient id="wits-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5cda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bec5;stop-opacity:1" />
+    </linearGradient>
+    <marker id="arrow-stage" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L0,12 L12,6 z" fill="#2c5cda"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#ffffff"/>
+  </g>
+
+  <!-- Title Section -->
+  <g id="title-section">
+    <text x="960" y="90"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a"
+          letter-spacing="-1.28">
+      Two-Stage Analytical Workflow
+    </text>
+
+    <text x="960" y="140"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="400"
+          fill="#424242"
+          letter-spacing="-0.32">
+      Combining ML Screening with Causal Validation for Robust Inference
+    </text>
+  </g>
+
+  <!-- Stage 1: ML Screening -->
+  <g id="stage-1">
+    <rect x="100" y="220" width="780" height="700" rx="12" fill="#f0f9ff" stroke="#2c5cda" stroke-width="4"/>
+
+    <!-- Header -->
+    <rect x="100" y="220" width="780" height="80" rx="12" fill="url(#wits-gradient)"/>
+    <text x="490" y="275"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="42"
+          font-weight="700"
+          fill="#ffffff">
+      Stage 1: ML Screening
+    </text>
+
+    <!-- Purpose -->
+    <g transform="translate(130, 340)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="32"
+            font-weight="700"
+            fill="#2c5cda">
+        Rapid Biomarker Screening
+      </text>
+
+      <text x="0" y="45"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#424242">
+        Hypothesis-generating phase
+      </text>
+    </g>
+
+    <!-- Methods -->
+    <g transform="translate(130, 440)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Methods
+      </text>
+
+      <rect x="0" y="15" width="720" height="50" rx="6" fill="#ffffff" stroke="#2c5cda" stroke-width="1.5"/>
+      <text x="15" y="48"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Random Forest, XGBoost, LightGBM
+      </text>
+
+      <rect x="0" y="75" width="720" height="50" rx="6" fill="#ffffff" stroke="#2c5cda" stroke-width="1.5"/>
+      <text x="15" y="108"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • 5-fold cross-validation
+      </text>
+
+      <rect x="0" y="135" width="720" height="50" rx="6" fill="#ffffff" stroke="#2c5cda" stroke-width="1.5"/>
+      <text x="15" y="168"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • R², RMSE, MAE metrics
+      </text>
+
+      <rect x="0" y="195" width="720" height="50" rx="6" fill="#ffffff" stroke="#2c5cda" stroke-width="1.5"/>
+      <text x="15" y="228"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • SHAP feature importance
+      </text>
+    </g>
+
+    <!-- Results -->
+    <g transform="translate(130, 710)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Output
+      </text>
+
+      <rect x="0" y="15" width="720" height="140" rx="8" fill="#ffffff" stroke="#00bec5" stroke-width="2"/>
+      <text x="360" y="55"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#00bec5">
+        6 Candidate Biomarkers
+      </text>
+      <text x="360" y="90"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        (R² > 0.13)
+      </text>
+      <text x="360" y="125"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        Hematocrit, Total Chol, LDL, HDL,
+      </text>
+      <text x="360" y="150"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#666666">
+        LDL Chol, Creatinine
+      </text>
+    </g>
+  </g>
+
+  <!-- Arrow between stages -->
+  <g id="stage-arrow">
+    <line x1="900" y1="570" x2="1020" y2="570" stroke="#2c5cda" stroke-width="6" marker-end="url(#arrow-stage)"/>
+    <text x="960" y="550"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="24"
+          font-weight="700"
+          fill="#2c5cda">
+      Forward to
+    </text>
+  </g>
+
+  <!-- Stage 2: Causal Validation -->
+  <g id="stage-2">
+    <rect x="1040" y="220" width="780" height="700" rx="12" fill="#fff5f5" stroke="#cc1a1b" stroke-width="4"/>
+
+    <!-- Header -->
+    <rect x="1040" y="220" width="780" height="80" rx="12" fill="#cc1a1b"/>
+    <text x="1430" y="275"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="42"
+          font-weight="700"
+          fill="#ffffff">
+      Stage 2: Causal Validation
+    </text>
+
+    <!-- Purpose -->
+    <g transform="translate(1070, 340)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="32"
+            font-weight="700"
+            fill="#cc1a1b">
+        Confirm Causality
+      </text>
+
+      <text x="0" y="45"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="400"
+            fill="#424242">
+        Hypothesis-testing phase
+      </text>
+    </g>
+
+    <!-- Methods -->
+    <g transform="translate(1070, 440)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Methods
+      </text>
+
+      <rect x="0" y="15" width="720" height="50" rx="6" fill="#ffffff" stroke="#cc1a1b" stroke-width="1.5"/>
+      <text x="15" y="48"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Case-crossover DLNM
+      </text>
+
+      <rect x="0" y="75" width="720" height="50" rx="6" fill="#ffffff" stroke="#cc1a1b" stroke-width="1.5"/>
+      <text x="15" y="108"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Time-stratified matching
+      </text>
+
+      <rect x="0" y="135" width="720" height="50" rx="6" fill="#ffffff" stroke="#cc1a1b" stroke-width="1.5"/>
+      <text x="15" y="168"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • 0-21 day lag window
+      </text>
+
+      <rect x="0" y="195" width="720" height="50" rx="6" fill="#ffffff" stroke="#cc1a1b" stroke-width="1.5"/>
+      <text x="15" y="228"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        • Odds ratios, 95% CI
+      </text>
+    </g>
+
+    <!-- Results -->
+    <g transform="translate(1070, 710)">
+      <text x="0" y="0"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        Output
+      </text>
+
+      <rect x="0" y="15" width="720" height="140" rx="8" fill="#ffffff" stroke="#00bec5" stroke-width="2"/>
+      <text x="360" y="55"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#00bec5">
+        1 Validated Biomarker
+      </text>
+      <text x="360" y="90"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="22"
+            font-weight="400"
+            fill="#424242">
+        (p < 0.05, CI excludes 1.0)
+      </text>
+      <text x="360" y="125"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="700"
+            fill="#00bec5">
+        ✅ FASTING HDL
+      </text>
+      <text x="360" y="150"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="18"
+            font-weight="400"
+            fill="#666666">
+        (OR = 69.48, CI: 1.05-4583)
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom: Key Insight -->
+  <g id="insight-box">
+    <rect x="100" y="950" width="1720" height="100" rx="8" fill="#f0fff4" stroke="#00bec5" stroke-width="3"/>
+
+    <text x="960" y="990"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="28"
+          font-weight="700"
+          fill="#00bec5">
+      💡 Key Insight: Only 1/6 Validated
+    </text>
+
+    <text x="960" y="1025"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="22"
+          font-weight="400"
+          fill="#424242">
+      ML identifies associations (fast, broad) • DLNM confirms causation (slow, rigorous) • Both perspectives needed
+    </text>
+  </g>
+
+  <!-- Branding -->
+  <g id="branding">
+    <text x="1740" y="920"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#666666"
+          text-anchor="end">
+      Wits Planetary Health Research
+    </text>
+  </g>
+
+</svg>

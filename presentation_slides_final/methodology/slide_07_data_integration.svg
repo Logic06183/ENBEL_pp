@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1920 1080"
+     width="1920"
+     height="1080">
+
+  <defs>
+    <linearGradient id="wits-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2c5cda;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00bec5;stop-opacity:1" />
+    </linearGradient>
+
+    <marker id="arrow-integrate" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2c5cda"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <g id="background">
+    <rect width="1920" height="1080" fill="#ffffff"/>
+  </g>
+
+  <!-- Title Section -->
+  <g id="title-section">
+    <text x="960" y="90"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="64"
+          font-weight="700"
+          fill="#1a1a1a"
+          letter-spacing="-1.28">
+      Data Integration Framework
+    </text>
+
+    <text x="960" y="140"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="400"
+          fill="#424242"
+          letter-spacing="-0.32">
+      Harmonizing Clinical, Socioeconomic, and Climate Data
+    </text>
+  </g>
+
+  <!-- Data Source 1: Clinical Trials -->
+  <g id="clinical-source">
+    <rect x="100" y="220" width="480" height="380" rx="12" fill="#fff5f5" stroke="#cc1a1b" stroke-width="3"/>
+
+    <!-- Icon circle -->
+    <circle cx="340" cy="290" r="40" fill="#cc1a1b"/>
+    <text x="340" y="305"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#ffffff">
+      🏥
+    </text>
+
+    <text x="340" y="360"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="700"
+          fill="#cc1a1b">
+      Clinical Trials
+    </text>
+
+    <g transform="translate(130, 390)">
+      <text x="110" y="0"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        n = 11,398
+      </text>
+
+      <text x="0" y="40"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • 15 HIV treatment trials
+      </text>
+      <text x="0" y="70"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Period: 2002-2021
+      </text>
+      <text x="0" y="100"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • 19 biomarkers measured
+      </text>
+      <text x="0" y="130"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Lat/Lon coordinates
+      </text>
+      <text x="0" y="160"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Date of measurement
+      </text>
+    </g>
+  </g>
+
+  <!-- Data Source 2: GCRO Surveys -->
+  <g id="gcro-source">
+    <rect x="720" y="220" width="480" height="380" rx="12" fill="#f0f9ff" stroke="#2c5cda" stroke-width="3"/>
+
+    <!-- Icon circle -->
+    <circle cx="960" cy="290" r="40" fill="#2c5cda"/>
+    <text x="960" y="305"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#ffffff">
+      🏘️
+    </text>
+
+    <text x="960" y="360"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="700"
+          fill="#2c5cda">
+      GCRO Surveys
+    </text>
+
+    <g transform="translate(750, 390)">
+      <text x="110" y="0"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        n = 58,616
+      </text>
+
+      <text x="0" y="40"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Quality of Life surveys
+      </text>
+      <text x="0" y="70"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Period: 2011-2021
+      </text>
+      <text x="0" y="100"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Socioeconomic variables
+      </text>
+      <text x="0" y="130"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Heat vulnerability index
+      </text>
+      <text x="0" y="160"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Ward-level data
+      </text>
+    </g>
+  </g>
+
+  <!-- Data Source 3: ERA5 Climate -->
+  <g id="era5-source">
+    <rect x="1340" y="220" width="480" height="380" rx="12" fill="#fff5ff" stroke="#00bec5" stroke-width="3"/>
+
+    <!-- Icon circle -->
+    <circle cx="1580" cy="290" r="40" fill="#00bec5"/>
+    <text x="1580" y="305"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="36"
+          font-weight="700"
+          fill="#ffffff">
+      🌡️
+    </text>
+
+    <text x="1580" y="360"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="32"
+          font-weight="700"
+          fill="#00bec5">
+      ERA5 Climate
+    </text>
+
+    <g transform="translate(1370, 390)">
+      <text x="110" y="0"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="28"
+            font-weight="700"
+            fill="#1a1a1a">
+        99.5% coverage
+      </text>
+
+      <text x="0" y="40"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Daily temperature data
+      </text>
+      <text x="0" y="70"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • 0.25° resolution (~31km)
+      </text>
+      <text x="0" y="100"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • 16 climate features
+      </text>
+      <text x="0" y="130"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Lag windows (7, 14, 30d)
+      </text>
+      <text x="0" y="160"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        • Anomalies, extremes
+      </text>
+    </g>
+  </g>
+
+  <!-- Integration Arrows -->
+  <g id="integration-arrows">
+    <line x1="340" y1="620" x2="960" y2="700" stroke="#2c5cda" stroke-width="4" marker-end="url(#arrow-integrate)"/>
+    <line x1="960" y1="620" x2="960" y2="700" stroke="#2c5cda" stroke-width="4" marker-end="url(#arrow-integrate)"/>
+    <line x1="1580" y1="620" x2="960" y2="700" stroke="#2c5cda" stroke-width="4" marker-end="url(#arrow-integrate)"/>
+  </g>
+
+  <!-- Integrated Dataset -->
+  <g id="integrated-dataset">
+    <rect x="400" y="720" width="1120" height="300" rx="12" fill="#f0fff4" stroke="#00bec5" stroke-width="4"/>
+
+    <text x="960" y="780"
+          text-anchor="middle"
+          font-family="Inter, Arial, sans-serif"
+          font-size="40"
+          font-weight="700"
+          fill="#00bec5">
+      🎯 Integrated Dataset
+    </text>
+
+    <g transform="translate(450, 820)">
+      <rect x="0" y="0" width="320" height="160" rx="8" fill="#ffffff" stroke="#cc1a1b" stroke-width="2"/>
+      <text x="160" y="35"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="700"
+            fill="#cc1a1b">
+        Clinical
+      </text>
+      <text x="160" y="70"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        19 biomarkers
+      </text>
+      <text x="160" y="100"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        Demographics
+      </text>
+      <text x="160" y="130"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        Study identifiers
+      </text>
+
+      <text x="370" y="80"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="36"
+            font-weight="400"
+            fill="#424242">
+        +
+      </text>
+
+      <rect x="410" y="0" width="320" height="160" rx="8" fill="#ffffff" stroke="#2c5cda" stroke-width="2"/>
+      <text x="570" y="35"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="700"
+            fill="#2c5cda">
+        Socioeconomic
+      </text>
+      <text x="570" y="70"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        Heat vulnerability
+      </text>
+      <text x="570" y="100"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        Housing quality
+      </text>
+      <text x="570" y="130"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        Economic status
+      </text>
+
+      <text x="780" y="80"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="36"
+            font-weight="400"
+            fill="#424242">
+        +
+      </text>
+
+      <rect x="820" y="0" width="320" height="160" rx="8" fill="#ffffff" stroke="#00bec5" stroke-width="2"/>
+      <text x="980" y="35"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="24"
+            font-weight="700"
+            fill="#00bec5">
+        Climate
+      </text>
+      <text x="980" y="70"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        Daily temperature
+      </text>
+      <text x="980" y="100"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        Lag windows
+      </text>
+      <text x="980" y="130"
+            text-anchor="middle"
+            font-family="Inter, Arial, sans-serif"
+            font-size="20"
+            font-weight="400"
+            fill="#424242">
+        Heat indices
+      </text>
+    </g>
+  </g>
+
+  <!-- Branding -->
+  <g id="branding">
+    <text x="1740" y="1040"
+          font-family="Inter, Arial, sans-serif"
+          font-size="18"
+          font-weight="400"
+          fill="#666666"
+          text-anchor="end">
+      Wits Planetary Health Research
+    </text>
+  </g>
+
+</svg>
